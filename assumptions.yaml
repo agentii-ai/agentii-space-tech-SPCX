@@ -1,0 +1,39 @@
+# assumptions.yaml — the quantitative assumption ledger (spec 046 Q4).
+# Versioned; pinned by artifacts via assumption_pin. Agents NEVER write this file —
+# changes go through agentii.constitution (single-threaded approval).
+# Deviating from a value without an explicit declared justification is silent drift.
+version: 2
+effective: 2026-09-18
+approved_by: workspace-owner
+rationale: >
+  Ratified with constitution.md v1.0.0; extended to v1.1.0 (sector_wacc gains the
+  orbital-compute band required by P10). Risk-free rate is a sourced market print.
+  ERP and terminal growth are PROVISIONAL model inputs, not vendor prints, and are
+  flagged as deferred in the Sync Impact Report — confirm or replace before any DCF
+  is signed off. Credit-spread level was not captured and remains unsourced; add it
+  before the first trade idea. The orbital-compute band is wide and Low-conviction by
+  construction: no listed issuer reports orbital-compute revenue.
+
+macro:
+  risk_free_rate:   { value: 0.0480, source: "US 10Y Treasury, week of 2026-08-31/09-04", tolerance: 0.005 }
+  erp:              { value: 0.0475, source: "PROVISIONAL — no vendor series captured at ratification" }
+  terminal_growth:  { value: 0.0250, source: "PROVISIONAL — long-run nominal growth proxy", tolerance: 0.005 }
+  us_real_gdp_next_year: { value: 0.0180, source: "PROVISIONAL — no vendor series captured at ratification" }
+
+sector_wacc:            # skills computing WACC must land inside the band or explain
+  launch_services:          { value: 0.125, band: [0.10, 0.15] }
+  satellite_connectivity:   { value: 0.100, band: [0.085, 0.115] }
+  space_infrastructure:     { value: 0.110, band: [0.09, 0.13] }
+  earth_observation:        { value: 0.120, band: [0.10, 0.14] }
+  enabling_power_thermal:   { value: 0.105, band: [0.09, 0.12] }
+  microgravity_pharma:      { value: 0.115, band: [0.095, 0.135] }
+  primes_defense_space:     { value: 0.090, band: [0.075, 0.105] }
+  space_compute_orbit:      { value: 0.140, band: [0.12, 0.18] }   # P10 gate: wide and low-conviction
+
+# Propellant inputs underwrite the F5 launch-cost floor in constitution.md.
+# These are PROVISIONAL commodity references — the floor derivation is order-of-magnitude
+# and robust to a 2x error in these values, but they are not vendor prints.
+commodities:
+  lox_lo2:                      { value: 0.25, unit: USD/kg,  source: "PROVISIONAL commodity reference" }
+  lng_methane:                  { value: 0.75, unit: USD/kg,  source: "PROVISIONAL commodity reference" }
+  propellant_blended_at_pad:    { value: 1.50, unit: USD/kg,  source: "PROVISIONAL — blended cryogenic, delivered; drives the F5 floor" }

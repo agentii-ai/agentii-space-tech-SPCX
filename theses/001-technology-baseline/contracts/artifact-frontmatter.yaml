@@ -1,0 +1,81 @@
+# contracts/artifact-frontmatter.yaml — output frontmatter schema
+# Every artifact written under theses/001-technology-baseline/ MUST carry this block.
+# Enforced by implement; audited by converge.
+schema: artifact_frontmatter
+version: 1
+
+fields:
+  thesis_id:      {type: str, required: true, const: "001-technology-baseline"}
+  pillar:         {type: str, required: true, enum: [PIL-1, PIL-2, PIL-3, PIL-4, PIL-5, PIL-6, cross]}
+  ticker:         {type: str, required: true}
+  skill:          {type: str, required: true}
+  mode:           {type: str, required: true}
+  generated_at:   {type: iso8601, required: true}
+
+  # --- pins (Q33 / Q8 contract 5) ---
+  # CORRECTED 2026-09-18: `corpus_version` was omitted from this contract although
+  # `g1_gate.FIVE_PINS` requires it. An artifact missing any of the five is classified
+  # `resume` (partial-write class) by `dispatch.resume_verdict` and silently re-run —
+  # which is exactly what happened to the first SPCX artifact. All five are mandatory.
+  constitution_pin: {type: str, required: true, const: "1.2.0"}
+  assumption_pin:   {type: str, required: true, const: "2"}
+  skill_pin:        {type: str, required: true}
+  as_of:            {type: date, required: true, const: "2026-09-18"}
+  corpus_version:   {type: str, required: true}
+
+  # --- this thesis's additions ---
+  # §1c standing rule: every artifact must label which definition it quotes.
+  definitions_used:
+    type: list
+    required: true
+    item:
+      da_id: {type: str, required: true, pattern: "^DA-[0-9]{2}$"}
+      chosen_reading: {type: str, required: true}
+      # NOTE: "chosen" here means "the reading this artifact quotes", NOT "the
+      # resolution of the ambiguity". All bases must be reported; this field records
+      # which one a given number is quoted on so it cannot be misread.
+    min_items: 1
+
+  # P4 evidence grading. A claim with no grade defaults to CLAIMED — never DEMONSTRATED.
+  evidence_grade: {type: str, required: true, enum: [DEMONSTRATED, CLAIMED, MODELED]}
+
+  # P11 — deal securities (IRDM, GSAT, RKLB) must be tagged.
+  deal_security_basis: {type: str, required: false, enum: [standalone_pre_merger, post_close, not_applicable]}
+
+  # Recorded when a pillar's wrong_if cannot be evaluated. See spec.md §1c.
+  unresolvable:   {type: bool, required: false, default: false}
+
+requires:
+  # Declarations of what each skill needs before it can run. Mirrors the registry's
+  # `requires` field for the skills deployed in spec.md §3.
+  operational-kpi:  [sec_filings, xbrl_facts]
+  unit-economics:   [sec_filings, xbrl_facts]
+  secular-trends:   [sec_filings, src_documents]
+  supply-chain:     [sec_filings, src_documents]
+  what-if:          [sec_filings, xbrl_facts]
+  business-model:   [sec_filings, xbrl_facts]
+  competitive:      [sec_filings, src_documents]
+  risk:             [sec_filings, src_documents]
+  recent-quarter:   [sec_filings, earnings_call_transcript]
+  sector-overview:  [sec_filings, src_documents]
+  peer-bench:       [sec_filings, xbrl_facts]
+  ratio-analysis:   [sec_filings, xbrl_facts]
+
+validation_rules:
+  - id: da_id_registered
+    rule: "every definitions_used[].da_id must exist in spec.md §1c (DA-01 … DA-22)"
+    level: fail
+  - id: evidence_grade_present
+    rule: "evidence_grade is required; absence is a fail, not a default"
+    level: fail
+  - id: pins_match_thesis
+    rule: "constitution_pin / assumption_pin / as_of must match thesis.md frontmatter"
+    level: fail
+  - id: deal_security_tagging
+    rule: "any artifact on IRDM, GSAT or RKLB must set deal_security_basis (P11)"
+    level: fail
+  - id: no_single_basis_collapse
+    rule: >
+      an artifact quoting a DA-registered metric must report every competing basis,
+      not one. Quoting a single basis without the others is a §1c violation.
+    level: fail

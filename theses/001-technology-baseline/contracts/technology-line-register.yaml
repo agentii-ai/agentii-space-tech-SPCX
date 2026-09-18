@@ -1,0 +1,64 @@
+# contracts/technology-line-register.yaml
+# Schema for the PRIMARY artifact of thesis 001 (spec.md §6). Six entries, one per
+# pillar. This is the deliverable the whole thesis exists to produce.
+schema: technology_line_register
+version: 1
+output_path: _cross/technology-baseline_synthesis.md
+
+entry:
+  line_no:      {type: int, required: true, range: [1, 6]}
+  pillar:       {type: str, required: true, enum: [PIL-1, PIL-2, PIL-3, PIL-4, PIL-5, PIL-6]}
+  line_name:    {type: str, required: true}
+
+  # The physical or economic bound that governs the line. Units are mandatory —
+  # an entry without units fails (P2).
+  governing_bound:
+    statement:  {type: str, required: true}
+    value:      {type: float, required: true}
+    unit:       {type: str, required: true}
+    source:     {type: str, required: true}
+    derivation: {type: str, required: true}   # shown, not asserted (P4 rule 3)
+
+  binding_constraint:
+    type: str
+    required: true
+    enum: [POWER, THERMAL, MASS_LAUNCH_COST, RADIATION, REGULATORY_SPECTRUM, DEMAND, CAPITAL, MANUFACTURING_RATE]
+    # P3 Binding-Constraint Naming: exactly one value per line.
+
+  # Every quantitative claim tagged DEMONSTRATED / CLAIMED / MODELED (P4 rule 1).
+  claims:
+    type: list
+    required: true
+    item:
+      claim:          {type: str, required: true}
+      evidence_grade: {type: str, required: true, enum: [DEMONSTRATED, CLAIMED, MODELED]}
+      source:         {type: str, required: true}
+      definitions:    {type: list, required: false}   # DA refs, per §1c
+
+  wrong_if_verdict:
+    metric:      {type: str, required: true}
+    threshold:   {type: float, required: true}
+    observed:    {type: float, required: false}     # absent iff UNRESOLVABLE
+    basis:       {type: str, required: false}
+    verdict:     {type: str, required: true, enum: [HOLDS, FALSIFIED, UNRESOLVABLE-FROM-PUBLIC-SOURCES]}
+
+validation_rules:
+  - id: six_entries
+    rule: "exactly six entries, one per pillar, all six binding_constraint values distinct"
+    level: fail
+  - id: units_required
+    rule: "governing_bound.unit must be non-empty; a bare number fails P2"
+    level: fail
+  - id: derivation_shown
+    rule: "governing_bound.derivation must show the arithmetic, not restate the value"
+    level: fail
+  - id: unresolvable_needs_named_disclosure
+    rule: >
+      a verdict of UNRESOLVABLE-FROM-PUBLIC-SOURCES must name the specific disclosure
+      that would resolve it (spec.md §1c)
+    level: fail
+  - id: no_bare_ratio
+    rule: >
+      any cost ratio must state its basis. P5's ratio is reported on all three
+      terrestrial comparators; a single-value ratio fails.
+    level: fail

@@ -1,0 +1,4 @@
+# spec 046 Q77/Q82 — rebuildable caches, per-machine
+market-data/
+raw-data/
+# evidence quote snapshots inside each thesis ARE committed

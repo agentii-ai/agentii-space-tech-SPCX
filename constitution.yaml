@@ -1,0 +1,74 @@
+# constitution.yaml — executable L1 constraints (spec 046 Q16/Q58/Q67).
+# Workspace copy scaffolded by agentii.constitution; ratified by a human 2026-09-18.
+# Ratified against constitution.md v1.4.0 (MINOR amendments 2026-09-18) — no placeholders
+# remain; aggregate checks evaluate normally. Amend only via `agentii.constitution amend`
+# (Q33 SemVer rules). The 1.1.0–1.4.0 amendments (universe expansion, P10/P11, principle
+# register, coverage audit, A1a/A1b, F5a/F5b, Data-Integrity Register, disposition
+# classes, Sector Preferences rationale restatement) add no numeric constraints.
+#
+# v1.3.0 note — the A1a/A1b and F5a/F5b splits are SEMANTIC, not numeric, and therefore
+# introduce no new fields here. The Data-Integrity Register (DA-23/24/25/26/27/28) is
+# likewise a rule set rather than a constraint. Its operative requirements, in order of
+# blast radius:
+#   (a) any artifact reading `operating_income` must show the component derivation
+#       (`gross profit − opex`) in-line;
+#   (b) `EPS × shares` is INADMISSIBLE as a sign test — it passes on both sides of a
+#       flip at RKLB, FLY and VOYG. The gross-profit bound (operating income can never
+#       exceed gross profit, at any sign) is the fallback where (a) is unavailable;
+#   (c) the DA-23 detector requires a LISTING-DATE guard (DA-28) or it produces false
+#       positives on recent listings;
+#   (d) at MRK, BMY and WWD `OperatingIncomeLoss` is absent — record
+#       UNRESOLVABLE-FROM-PLATFORM, never a passed check;
+#   (e) DA-26 (annual-as-quarterly) is universal across 19 of 19 issuers and the
+#       mislabelled period VARIES by issuer — it cannot be screened by row position;
+#   (f) DA-27 (calendar-derived fiscal labels) affects every non-December year-end
+#       issuer in the universe and COMPOUNDS with DA-26 at those issuers.
+version: 1
+constraints:
+  - id: POS_SINGLE
+    arity: scalar
+    field: position_pct
+    max: 6                 # constitution.md → Risk Framework: absolute max
+  - id: POS_BINARY
+    arity: scalar
+    field: position_pct
+    max: 2                 # binary catalysts: launch outcomes, spectrum/licence, awards
+    when: catalyst_type == binary
+  - id: STOP_THESIS
+    arity: scalar
+    field: stop_loss_pct
+    max: 30                # wide by design; universe moves ±40% on single events
+  - id: CONC_SECTOR
+    arity: aggregate
+    group_by: sector
+    max: 25                # sub-sector cap (Sector Preferences table)
+  - id: CONC_THEME
+    arity: aggregate
+    group_by: theme
+    max: 40                # single-theme book: this cap binds before CONC_SECTOR
+  - id: EXPO_MACRO
+    arity: aggregate
+    group_by: macro_driven
+    max: 15
+
+# Q58 workspace-level budgets (task-count based; deterministic, harness-agnostic)
+budgets:
+  max_concurrent_subagents: 5
+  max_tasks_per_day: 40
+  max_theses_active: 6
+
+# Q67 drift thresholds: regime declarations paired with deterministic leading-indicator
+# triggers. The dispatcher daily sweep compares these mechanically; drift findings
+# go to converge + the IC agenda — detection is deterministic, correction is human.
+regime:
+  declared: EXPANSION
+  drift_triggers:
+    - indicator: ISM Manufacturing PMI
+      condition: ISM < 50 for 2 consecutive months
+      basis: "Aug 2026 print 54.6 — 8th consecutive month above 50; not triggering"
+    - indicator: US 10Y Treasury yield
+      condition: 10Y > 5.25%
+      basis: "4.80% at ratification — highest since 2023; breach deepens caution on duration"
+    - indicator: ISM prices-paid subindex
+      condition: prices-paid > 75 for 2 consecutive months
+      basis: "71.1 in Aug 2026 — elevated; watching for inflation re-acceleration"

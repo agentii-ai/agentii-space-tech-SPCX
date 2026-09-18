@@ -1,0 +1,544 @@
+{
+  "pack_version": "2.0",
+  "thesis": "001-technology-baseline",
+  "tickers": {
+    "AMGN": {
+      "artifacts": [
+        "artifacts/AMGN/2026-09-18_2055_unit-economics_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "AVAV": {
+      "artifacts": [
+        "artifacts/AVAV/2026-09-18_2225_supply-chain_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "BA": {
+      "artifacts": [
+        "artifacts/BA/2026-09-18_1239_supply-chain_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "BMY": {
+      "artifacts": [
+        "artifacts/BMY/2026-09-18_2055_unit-economics_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "BWXT": {
+      "artifacts": [
+        "artifacts/BWXT/2026-09-18_1239_secular-trends_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "CW": {
+      "artifacts": [
+        "artifacts/CW/2026-09-18_2205_supply-chain_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "FLY": {
+      "artifacts": [
+        "artifacts/FLY/2026-09-18_1239_unit-economics_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "GOOG": {
+      "artifacts": [
+        "artifacts/GOOG/2026-09-18_1239_secular-trends_methodology.md",
+        "artifacts/GOOG/2026-09-18_2359_business-model_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "GSAT": {
+      "artifacts": [
+        "artifacts/GSAT/2026-09-18_2040_competitive_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "HAWK": {
+      "artifacts": [
+        "artifacts/HAWK/2026-09-18_2225_operational-kpi_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "HEI": {
+      "artifacts": [
+        "artifacts/HEI/2026-09-18_2120_supply-chain_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "HWM": {
+      "artifacts": [
+        "artifacts/HWM/2026-09-18_1239_supply-chain_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "IRDM": {
+      "artifacts": [
+        "artifacts/IRDM/2026-09-18_1239_competitive_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "KRMN": {
+      "artifacts": [
+        "artifacts/KRMN/2026-09-18_2015_supply-chain_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "KTOS": {
+      "artifacts": [
+        "artifacts/KTOS/2026-09-18_2225_supply-chain_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "LHX": {
+      "artifacts": [
+        "artifacts/LHX/2026-09-18_1239_supply-chain_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "LMT": {
+      "artifacts": [
+        "artifacts/LMT/2026-09-18_1239_supply-chain_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "LUNR": {
+      "artifacts": [
+        "artifacts/LUNR/2026-09-18_1239_operational-kpi_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "MRCY": {
+      "artifacts": [
+        "artifacts/MRCY/2026-09-18_1239_secular-trends_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "MRK": {
+      "artifacts": [
+        "artifacts/MRK/2026-09-18_2040_unit-economics_methodology.md",
+        "artifacts/MRK/2026-09-18_2359_growth-strategy_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "MSFT": {
+      "artifacts": [
+        "artifacts/MSFT/2026-09-18_1239_secular-trends_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "NOC": {
+      "artifacts": [
+        "artifacts/NOC/2026-09-18_1239_supply-chain_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "NVDA": {
+      "artifacts": [
+        "artifacts/NVDA/2026-09-18_1239_secular-trends_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "PL": {
+      "artifacts": [
+        "artifacts/PL/2026-09-18_1239_operational-kpi_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "RKLB": {
+      "artifacts": [
+        "artifacts/RKLB/2026-09-18_1239_unit-economics_methodology.md",
+        "artifacts/RKLB/2026-09-18_2359_competitive_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "RTX": {
+      "artifacts": [
+        "artifacts/RTX/2026-09-18_1239_supply-chain_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "SATS": {
+      "artifacts": [
+        "artifacts/SATS/2026-09-18_1239_risk_methodology.md",
+        "artifacts/SATS/2026-09-18_2359_risk_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "SPCX": {
+      "artifacts": [
+        "artifacts/SPCX/2026-09-18_1239_operational-kpi_methodology.md",
+        "artifacts/SPCX/2026-09-18_1239_unit-economics_methodology.md",
+        "artifacts/SPCX/2026-09-18_2310_business-model_methodology.md",
+        "artifacts/SPCX/2026-09-18_2310_operational-kpi_methodology.md",
+        "artifacts/SPCX/2026-09-18_2345_risk_methodology.md",
+        "artifacts/SPCX/2026-09-18_2359_recent-quarter_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "TDG": {
+      "artifacts": [
+        "artifacts/TDG/2026-09-18_1239_supply-chain_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "TER": {
+      "artifacts": [
+        "artifacts/TER/2026-09-18_2205_operational-kpi_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "UTHR": {
+      "artifacts": [
+        "artifacts/UTHR/2026-09-18_1239_unit-economics_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "VOYG": {
+      "artifacts": [
+        "artifacts/VOYG/2026-09-18_2015_operational-kpi_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "VRT": {
+      "artifacts": [
+        "artifacts/VRT/2026-09-18_1239_unit-economics_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "WWD": {
+      "artifacts": [
+        "artifacts/WWD/2026-09-18_2120_supply-chain_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "YSS": {
+      "artifacts": [
+        "artifacts/YSS/2026-09-18_1239_operational-kpi_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    }
+  },
+  "synthesis": {
+    "pillar_verdicts": {},
+    "capability_timeline": {}
+  }
+}

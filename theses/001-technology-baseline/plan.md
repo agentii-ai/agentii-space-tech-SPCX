@@ -1,0 +1,147 @@
+# Research Plan: 001 — Technology Baseline
+
+**Thesis**: `theses/001-technology-baseline/` · **Constitution pin**: 1.2.0 · **as_of**: 2026-09-18
+**Status**: Active · **Duration**: 7 phases, ~7 weeks · **Task budget**: 78 / 85
+
+> **Ordering-rule adaptation (Q35/Q36).** The template prescribes *fundamentals first,
+> trade ideas last*. This thesis has **no trade-ideas phase**, by design: `spec.md §1`
+> states it produces no trade ideas and sizes no positions. Phases therefore run
+> fundamentals → constraints → supply → regulatory → microgravity → parity framing →
+> synthesis, and terminate at synthesis. The adaptation is registered as a deviation
+> below, since it changes when the second Constitution Check can run.
+
+---
+
+## Constitution Check — first evaluation (plan start: scalar + scope)
+
+| Constraint | Status | Evidence |
+|---|---|---|
+| `POS_SINGLE` — single position ≤ 6% | **N/A** | No positions are sized or recommended anywhere in this thesis. `spec.md §2`: "Weights are *analytical effort*, not portfolio positions — this thesis sizes no trades." |
+| `POS_BINARY` — binary catalyst ≤ 2% | **N/A** | Same. No catalyst trades are proposed. |
+| `STOP_THESIS` — stop ≤ 30% | **N/A** | Same. No entries, therefore no stops. |
+| Research scope — market cap ≥ $250M | **PASS** | All 35 universe issuers are listed and audited `READY`. Only HAWK (4 filings) is small enough that market cap should be confirmed at Phase 3; it is a 1%-weight name. |
+| Research scope — regions (US-listed primary or ADR) | **PASS** | All 35 are US-listed. No ADRs are used; the three foreign-listed candidates (Eutelsat, Avio, SKY Perfect JSAT) were excluded at universe definition for having no coverage. |
+| Research scope — excluded sectors | **PASS** | No China- or Russia-domiciled entity, no digital-asset vehicle, no SPAC shell appears in the universe. |
+| Research scope — liquidity floor (ADV ≥ $5M) | **N/A at this stage** | Applies to positions, not research. Flagged for any downstream thesis that trades this universe. |
+| `Max Concurrent Positions` = 12 | **N/A** | No positions. |
+
+**Result: no failures.** Three scalar constraints and one position cap are N/A because
+this thesis takes no positions; the applicable scope constraints all pass.
+
+---
+
+## Phases
+
+| Phase | Content | Skills (ticker × skill × depth) | Depends on |
+|:---:|---|------|---|
+| **1 — Foundation (P1)** | Build the DA-01 A/B/C definition table for $/kg with figures; establish the F5 propellant floor; SPCX segment-level unit economics | SPCX × operational-kpi (Deep); SPCX × unit-economics (Deep); SPCX × business-model (Std); RKLB, FLY × operational-kpi (Std); RKLB, FLY × unit-economics (Std); LUNR, PL × operational-kpi (Light) | constitution loaded |
+| **2 — Constraint envelope (P2)** | F1/F2 derivations; radiator and array mass per kW; radiation tolerance (DA-14); the BWXT nuclear path as the only credible route to raising rejection temperature | GOOG × secular-trends (Deep); NVDA, MSFT, MRCY, BWXT × secular-trends (Light); VRT × competitive (Std); MSFT, LHX × business-model (Std) | Phase 1 |
+| **3 — Production and supply (P3)** | Manufacturing rate vs launch capacity as the deployment constraint; the space-solar-cell duopoly (SolAero vs Spectrolab); the full prime and component chain; DA-07/08/12/13 restatement | YSS, TER, PL × operational-kpi; RKLB, BA, KRMN, LHX, HWM, TDG, HEI, WWD, CW, NOC, LMT, RTX, AVAV, KTOS, VOYG × supply-chain (Std); HAWK × operational-kpi (Light) | Phase 2 |
+| **4 — Regulatory allocation (P6)** | ITU coordination priority, FCC licensing, FAA Part 450; price the resource off the SPCX–EchoStar $19.6B mark; DA-17/18/19 | SATS, SPCX × risk (Std); IRDM, GSAT × competitive (Std) | Phase 3 |
+| **5 — Microgravity and reentry (P4)** | Varda as a P6 node; UTHR partnership terms; value-per-kg-returned vs cost-per-kg-returned. All private-company evidence `CLAIMED`-only (Q-4) | UTHR × unit-economics (Std); UTHR × business-model (Std); MRK, BMY, AMGN × growth-strategy (Light) | Phase 4 |
+| **6 — Parity framing (P5)** | Orbital vs terrestrial compute on all three terrestrial comparators; DA-05 reachability finding; P10 gate check | GOOG × secular-trends (Deep); NVDA × secular-trends (Light); VRT × unit-economics (Std); MSFT, SPCX × business-model (Std); SPCX, GOOG × what-if (Std) | Phase 5 |
+| **7 — Synthesis** | Cross-cutting synthesis; verdict on all six `wrong_if`; publish the technology-line register; hand-off notes for thesis 002 | SPCX, RKLB × peer-bench (Std); SPCX × sector-overview (Std); SPCX, GOOG × recent-quarter (Std); SPCX × ratio-analysis (Light) | Phase 6 |
+
+**Phase 1 is the Minimum Defensible View.** If the budget is exhausted at any phase
+boundary, everything completed to that point is a usable artifact — that is the Q30
+pillar-ordering guarantee, and it holds here because each phase produces a standalone
+piece of the technology-line register.
+
+## Task inventory
+
+**125 tasks** generated by `agentii.tasks` from the spec's Skill Deployment Matrix
+(`spec.md §3`). Coverage: **35 / 35 universe tickers** appear in at least one phase.
+Regenerate with:
+
+```bash
+python3 scripts/agentii_cmd.py tasks \
+  --thesis theses/001-technology-baseline/thesis.md \
+  --spec   theses/001-technology-baseline/spec.md
+```
+
+**Audit finding (2026-09-18).** The first version of this plan was materially broken and
+the defect was caught mechanically, not by reading. `tools/plan_audit.py` cross-checks
+three invariants and reported **1/3 passing**:
+
+| Invariant | First draft | Now |
+|---|---|---|
+| I1 — every universe ticker appears in the matrix | **FAIL — 22 of 35 orphans** | pass |
+| I2 — every `Subscribed` pair exists in the matrix | **FAIL — 11 pairs generating zero tasks** | pass |
+| I3 — every subscribed skill is in the registry | pass | pass |
+
+The I1 failure meant 63% of the declared universe was scoped and then never researched.
+The I2 failure was subtler and worse: because `tasks_from_spec` iterates *matrix* rows
+while pillar brackets derive from `Subscribed` lines, an 11-pair mismatch generates **no
+error and no task** — the work simply never happens. Both are now closed, and the audit
+should be re-run after any matrix edit.
+
+Deep rows (SPCX, GOOG) expand to all modes; Standard to `essentials_modes`; Light to the
+same set at minimum scope. **If the budget must be cut, drop Light rows first, then
+Standard — never the Deep rows**, which carry P1, P2 and P5.
+
+## Concurrency and budget
+
+| Limit | Value | Plan's use |
+|---|---|---|
+| `max_concurrent_subagents` | 5 | Planned parallel width is **5**. At the cap, not over it. |
+| `max_tasks_per_day` | 40 | 125 tasks across 7 phases ≈ 18 per phase. At ~40/day throughput this is ~4 working days of dispatch, well inside the weekly cadence. |
+| `max_theses_active` | 6 | 1 |
+| `budget.max_tasks` | 130 | 125 used. Raised 40 → 70 → 85 → 130 as scope grew; each raise is recorded in `thesis.md → Status log`. |
+
+## Side artifacts (Q36)
+
+- `brief.md` — stage-0 context brief. **Reduced scope**: this thesis makes no
+  strategy selection, so the Q7 `method_selection` verdict table is recorded as
+  not-applicable with the reason, rather than fabricated. Q18 retrieval keys are
+  populated.
+- `entities.md` — `entity_claims` schema + entity/metric map. The Q42 bars schema is
+  **not required**: all matrix rows declare `market_data_stage: none`, so `implement`
+  will not demand it. Stated explicitly in the file so the absence is a decision, not
+  an omission.
+- `reproduce.md` — skills + five pins + `as_of`.
+- `contracts/` — output frontmatter schemas + `requires:` declarations.
+
+## Constitution Check — second evaluation (post-sizing: aggregate)
+
+**Cannot be evaluated as specified, because no sizing occurs.** `CONC_SECTOR`,
+`CONC_THEME` and `EXPO_MACRO` are all aggregate constraints over `position_pct`, and
+`spec.md §1` establishes that this thesis sizes nothing — so the aggregate check has no
+input. Recording a PASS here would be false assurance.
+
+What *is* checked instead, and passes:
+
+| Substitute check | Status | Evidence |
+|---|---|---|
+| Theme scope discipline | **PASS** | All 35 issuers map to one of the six technology lines; none is included for market reasons. |
+| Sub-sector spread within the research set | **PASS (informational)** | Research weights span six technology lines; no line exceeds 30% of analytical effort (max: launch, 30%). |
+| Aggregate check deferred to | **Thesis 002** | The first thesis that sizes positions must run this check. Recorded as a hand-off obligation. |
+
+## Deviation Register (Q35)
+
+One deviation accepted. **It requires human approval** — an agent cannot self-approve a
+constitution deviation.
+
+| Constraint | Why Accepted | Safer Alternative Rejected Because | Approver | Expiry |
+|---|---|---|---|---|
+| **P10 — Orbital-Compute Underwriting Rule** requires all five gates (revenue/offtake, radiator derivation, array derivation, launch-cost-vs-F5, radiation statement) before an orbital-compute thesis may be *specified*. Pillars 2 and 5 concern orbital compute and carry gates 2–4 but **not** gate 1 (no issuer has orbital-compute revenue or a signed offtake) and **not** gate 5 (no mission-profile radiation assumption is stated). | P10 governs theses that **underwrite** orbital compute. Thesis 001 is the inverse: it is the artifact that *establishes* orbital compute is not yet underwritable, and it recommends nothing. Applying P10's gate 1 literally would make the question unaskable — the rule would prohibit the very analysis that determines whether the rule can ever be satisfied. | Delaying 001 until a listed issuer discloses orbital-compute revenue would invert the dependency: the baseline is what tells us whether such a disclosure would even be meaningful. Alternatively, splitting orbital compute into a separate later thesis leaves the sector's largest narrative unexamined in the foundation document. | **`workspace-owner — PENDING SIGN-OFF`** | **2027-03-31**, or immediately upon any listed issuer disclosing an orbital-compute revenue line — whichever comes first. At expiry, `converge` must re-propose justification or the deviation lapses. |
+
+> Per Q35: an accepted violation without all five columns means the plan is not
+> complete. All five are present, but the Approver column is **unsigned** — the plan is
+> therefore provisionally complete pending human sign-off on this single row.
+
+## Risks to the plan
+
+1. **Disclosure asymmetry.** The strongest technology claims are the least disclosed.
+   Much of the register will be `MODELED` rather than `DEMONSTRATED`. P4 permits this
+   but every artifact must say which.
+2. **DA-11 contamination.** SPCX's 1.4 GW nameplate figure excludes cooling and
+   facility overhead. If any downstream artifact quotes it as a facility load, the
+   orbital-vs-terrestrial comparison breaks. Phase 6 must restate the exclusion.
+3. **Deal securities.** IRDM, GSAT and RKLB are subject to P11. Their operational
+   metrics must be tagged pre-merger basis, or Phase 3 and Phase 4 comparisons will
+   silently mix standalone and post-close entities.
+4. **Phase 6 is deliberately inconclusive.** P5 cannot be settled from public sources;
+   the deliverable is the framing table, not a verdict. This should be stated in the
+   synthesis rather than presented as a finding.
+5. **Stale coverage snapshot.** The universe audit is dated 2026-09-18. Re-run
+   `get_ticker_coverage` before Phase 3 if more than four weeks have passed.

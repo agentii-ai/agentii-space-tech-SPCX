@@ -1,0 +1,117 @@
+# contracts/artifact-frontmatter.yaml — output frontmatter schema
+# Generated for `002-evidence-validation` at program specification, 2026-09-18.
+# Mirrors `theses/001-technology-baseline/contracts/artifact-frontmatter.yaml`, with the
+# thesis_id const and pillar enum bound to this thesis. The five pins are unchanged and
+# mandatory: an artifact missing any one is classified `resume` (partial-write class) by
+# `dispatch.resume_verdict` and silently re-run — the filesystem is the checkpoint (Q56).
+schema: artifact_frontmatter
+version: 1
+
+fields:
+  thesis_id:      {type: str, required: true, const: "002-evidence-validation"}
+  pillar:         {type: str, required: true, enum: [PIL-1, PIL-2, PIL-3, PIL-4, PIL-5, PIL-6, PIL-7, cross]}
+  ticker:         {type: str, required: true}
+  skill:          {type: str, required: true}
+  mode:           {type: str, required: true}
+  generated_at:   {type: iso8601, required: true}
+
+  # --- pins (Q33 / Q8 contract 5) — all five mandatory ---
+  constitution_pin: {type: str, required: true, const: "1.4.0"}
+  assumption_pin:   {type: str, required: true, const: "2"}
+  skill_pin:        {type: str, required: true}
+  as_of:            {type: date, required: true}
+  corpus_version:   {type: str, required: true}
+
+  # §1c standing rule: every artifact must label which definition it quotes.
+  definitions_used:
+    type: list
+    required: true
+    item:
+      da_id: {type: str, required: true, pattern: "^DA-[0-9]{2}$"}
+      chosen_reading: {type: str, required: true}
+    min_items: 1
+
+  # P4 evidence grading. A claim with no grade defaults to CLAIMED — never DEMONSTRATED.
+  evidence_grade: {type: str, required: true, enum: [DEMONSTRATED, CLAIMED, MODELED, DERIVED]}
+
+  # P11 — deal securities (IRDM, GSAT, RKLB) must be tagged.
+  deal_security_basis: {type: str, required: false, enum: [standalone_pre_merger, post_close, not_applicable]}
+
+  # Recorded when a pillar's wrong_if cannot be evaluated.
+  # Class matters: see constitution §Disposition Classes (P4).
+  unresolvable: {type: bool, required: false, default: false}
+  unresolvable_class: {type: str, required: false, enum: [UNRESOLVABLE-FROM-PUBLIC-SOURCES, UNRESOLVABLE-FROM-PLATFORM]}
+
+  # --- citations (added at clarify round 3, 2026-09-18; spec §1d) ---
+  # REQUIRED whenever the artifact asserts any DEMONSTRATED figure. This thesis's entire
+  # output is a claim about what is demonstrated, so an uncited DEMONSTRATED grade is
+  # unverifiable by construction.
+  #
+  # Canonical URL form, per the platform contract `contracts/citation-and-memory.md`:
+  #   https://agentii.ai/v/{ticker}/{citation_id}/{N}
+  # The ticker is NOT optional — the portal redirects to
+  #   api.agentii.ai/v1/view_document/{ticker}/{citation_id}?page_no=page{N}
+  # and resolves via pipeline.src_documents JOIN pipeline.sec_filings. A ticker-less
+  # route cannot perform the join. The short form agentii.ai/v/{citation_id}/{page}
+  # does NOT resolve.
+  citations:
+    type: list
+    required: true              # required when evidence_grade == DEMONSTRATED
+    min_items: 1
+    item:
+      figure:      {type: str, required: true}   # the specific number or fact
+      ticker:      {type: str, required: true, pattern: "^[A-Z][A-Z0-9.\\-]{0,6}$"}
+      form_type:   {type: str, required: true}   # 10-Q, 10-K, 8-K, earnings_call_transcript, ...
+      citation_id: {type: str, required: true, pattern: "^[a-z]+[0-9]+$"}   # e.g. sec8, sec109
+      page_no:     {type: int, required: true, minimum: 1}
+      url:         {type: str, required: true, pattern: "^https://agentii\\.ai/v/[A-Z][A-Z0-9.\\-]{0,6}/[a-z]+[0-9]+/[0-9]+$"}
+      located_via: {type: str, required: true, enum: [search_keyword_in_source, read_source_outline, read_source_pages, citation_retrieved_at_specification]}
+
+validation_rules:
+  - id: da_id_registered
+    rule: "every definitions_used[].da_id must exist in constitution §Data-Integrity Register (DA-23..DA-28) or 001 spec §1c (DA-01..DA-22)"
+    level: fail
+  - id: evidence_grade_present
+    rule: "evidence_grade is required; absence is a fail, not a default"
+    level: fail
+  - id: pins_match_thesis
+    rule: "constitution_pin / assumption_pin / as_of must match thesis.md frontmatter"
+    level: fail
+  - id: deal_security_tagging
+    rule: "any artifact on IRDM, GSAT or RKLB must set deal_security_basis (P11)"
+    level: fail
+  - id: no_single_basis_collapse
+    rule: >
+      an artifact quoting a DA-registered metric must report every competing basis,
+      not one. Quoting a single basis without the others is a §1c violation.
+    level: fail
+  - id: data_integrity_register_applied
+    rule: >
+      any artifact reading `operating_income` must show the component derivation
+      (`gross profit − opex`) in-line, or invoke the gross-profit bound where the
+      component identity is unavailable. `EPS × shares` is NOT an admissible sign
+      test (constitution Data-Integrity Register, DA-23/28).
+    level: fail
+  - id: unresolvable_class_required
+    rule: "unresolvable: true requires unresolvable_class — the two dispositions have different remedies"
+    level: fail
+  - id: citations_present
+    rule: >
+      any artifact asserting a DEMONSTRATED figure must carry a non-empty `citations`
+      block. There is no warning tier: under P4 a DEMONSTRATED grade IS a claim about a
+      source, so an uncited one is unverifiable by construction. (spec §1d)
+    level: fail
+  - id: citation_url_wellformed
+    rule: >
+      every citations[].url must match ^https://agentii\.ai/v/{TICKER}/{citation_id}/{page}$
+      with an uppercase ticker present. The ticker-less short form
+      agentii.ai/v/{citation_id}/{page} does NOT resolve — the portal route redirects to
+      api.agentii.ai/v1/view_document/{ticker}/{citation_id} and cannot join without it.
+    level: fail
+  - id: citations_pages_located
+    rule: >
+      every citations[].located_via must name the tool that established the page number.
+      A page number that was not located by a tool is a guess, and a guessed page number
+      produces a link that resolves to the wrong page — worse than no link, because it
+      looks correct.
+    level: fail

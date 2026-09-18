@@ -1,0 +1,72 @@
+# contracts/artifact-frontmatter.yaml — output frontmatter schema
+# Generated for `010-tier5-microgravity` at program specification, 2026-09-18.
+# Mirrors `theses/001-technology-baseline/contracts/artifact-frontmatter.yaml`, with the
+# thesis_id const and pillar enum bound to this thesis. The five pins are unchanged and
+# mandatory: an artifact missing any one is classified `resume` (partial-write class) by
+# `dispatch.resume_verdict` and silently re-run — the filesystem is the checkpoint (Q56).
+schema: artifact_frontmatter
+version: 1
+
+fields:
+  thesis_id:      {type: str, required: true, const: "010-tier5-microgravity"}
+  pillar:         {type: str, required: true, enum: [PIL-1, PIL-2, PIL-3, PIL-4, cross]}  # PROVISIONAL — stub spec; freeze on activation
+  ticker:         {type: str, required: true}
+  skill:          {type: str, required: true}
+  mode:           {type: str, required: true}
+  generated_at:   {type: iso8601, required: true}
+
+  # --- pins (Q33 / Q8 contract 5) — all five mandatory ---
+  constitution_pin: {type: str, required: true, const: "1.4.0"}
+  assumption_pin:   {type: str, required: true, const: "2"}
+  skill_pin:        {type: str, required: true}
+  as_of:            {type: date, required: true}
+  corpus_version:   {type: str, required: true}
+
+  # §1c standing rule: every artifact must label which definition it quotes.
+  definitions_used:
+    type: list
+    required: true
+    item:
+      da_id: {type: str, required: true, pattern: "^DA-[0-9]{2}$"}
+      chosen_reading: {type: str, required: true}
+    min_items: 1
+
+  # P4 evidence grading. A claim with no grade defaults to CLAIMED — never DEMONSTRATED.
+  evidence_grade: {type: str, required: true, enum: [DEMONSTRATED, CLAIMED, MODELED, DERIVED]}
+
+  # P11 — deal securities (IRDM, GSAT, RKLB) must be tagged.
+  deal_security_basis: {type: str, required: false, enum: [standalone_pre_merger, post_close, not_applicable]}
+
+  # Recorded when a pillar's wrong_if cannot be evaluated.
+  # Class matters: see constitution §Disposition Classes (P4).
+  unresolvable: {type: bool, required: false, default: false}
+  unresolvable_class: {type: str, required: false, enum: [UNRESOLVABLE-FROM-PUBLIC-SOURCES, UNRESOLVABLE-FROM-PLATFORM]}
+
+validation_rules:
+  - id: da_id_registered
+    rule: "every definitions_used[].da_id must exist in constitution §Data-Integrity Register (DA-23..DA-28) or 001 spec §1c (DA-01..DA-22)"
+    level: fail
+  - id: evidence_grade_present
+    rule: "evidence_grade is required; absence is a fail, not a default"
+    level: fail
+  - id: pins_match_thesis
+    rule: "constitution_pin / assumption_pin / as_of must match thesis.md frontmatter"
+    level: fail
+  - id: deal_security_tagging
+    rule: "any artifact on IRDM, GSAT or RKLB must set deal_security_basis (P11)"
+    level: fail
+  - id: no_single_basis_collapse
+    rule: >
+      an artifact quoting a DA-registered metric must report every competing basis,
+      not one. Quoting a single basis without the others is a §1c violation.
+    level: fail
+  - id: data_integrity_register_applied
+    rule: >
+      any artifact reading `operating_income` must show the component derivation
+      (`gross profit − opex`) in-line, or invoke the gross-profit bound where the
+      component identity is unavailable. `EPS × shares` is NOT an admissible sign
+      test (constitution Data-Integrity Register, DA-23/28).
+    level: fail
+  - id: unresolvable_class_required
+    rule: "unresolvable: true requires unresolvable_class — the two dispositions have different remedies"
+    level: fail
