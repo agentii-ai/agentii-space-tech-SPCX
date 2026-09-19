@@ -16,7 +16,7 @@ fields:
   generated_at:   {type: iso8601, required: true}
 
   # --- pins (Q33 / Q8 contract 5) — all five mandatory ---
-  constitution_pin: {type: str, required: true, const: "1.4.0"}
+  constitution_pin: {type: str, required: true, const: "1.6.0"}
   assumption_pin:   {type: str, required: true, const: "2"}
   skill_pin:        {type: str, required: true}
   as_of:            {type: date, required: true}
@@ -44,7 +44,7 @@ fields:
 
 validation_rules:
   - id: da_id_registered
-    rule: "every definitions_used[].da_id must exist in constitution §Data-Integrity Register (DA-23..DA-28) or 001 spec §1c (DA-01..DA-22)"
+    rule: "every definitions_used[].da_id must exist in constitution §Data-Integrity Register (DA-23..DA-30) or 001 spec §1c (DA-01..DA-22)"
     level: fail
   - id: evidence_grade_present
     rule: "evidence_grade is required; absence is a fail, not a default"

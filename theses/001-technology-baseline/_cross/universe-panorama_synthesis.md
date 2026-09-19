@@ -8,7 +8,7 @@ mode: default
 generated_at: 2026-09-18T23:55:00-04:00
 constitution_pin: "1.2.0"
 assumption_pin: "2"
-skill_pin: "n/a"
+skill_pin: "none"
 as_of: 2026-09-18
 corpus_version: "UNPINNED"
 coverage: "35 of 35 named universe tickers; 39 artifacts"

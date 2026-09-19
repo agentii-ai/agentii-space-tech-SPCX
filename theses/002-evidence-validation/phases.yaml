@@ -1,0 +1,17 @@
+# phases.yaml — pillar → phase map for `tools/tasks_md.py`
+#
+# The platform's `agentii.tasks` emits no phase at all, and files nothing. This file
+# supplies the map. It lives with the thesis so the phasing is versioned alongside the
+# spec that justifies it (spec.md §7).
+#
+# PHASE LOADS OVERLAP. A task bracketed [PIL-1/PIL-4/PIL-6] is filed once — under its
+# FIRST pillar — but serves all three. That is why the plan's phase table reports TRUE
+# per-pillar load (23 for Phase 4) while this map produces 3 tasks filed under Phase 4.
+# The gap is the first-pillar filing heuristic, not missing work.
+#
+# 002's assignment, and why it differs from pillar order:
+#   PIL-4 (DA-11 nameplate) and PIL-6 (entity-boundary) are BOTH SPCX-specific
+#   validation, so they share Phase 4 — the work is one pass over one filing (sec8).
+#   PIL-7 (reachability) precedes PIL-5 (ledger) because you cannot compute the
+#   conversion share until you know which falsifiers were evaluable.
+phases: {PIL-1: 1, PIL-2: 2, PIL-3: 3, PIL-4: 4, PIL-6: 4, PIL-7: 5, PIL-5: 6}

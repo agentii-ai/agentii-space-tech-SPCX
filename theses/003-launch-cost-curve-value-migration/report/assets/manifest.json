@@ -1,0 +1,81 @@
+{
+  "SPCX/sec7": {
+    "accession_number": "0001628280-26-052515",
+    "exhibit_filename": "earningsreleaseq22608042.htm",
+    "fetched_at": "2026-09-19T09:48:23Z",
+    "figures": [
+      {
+        "bytes": 186528,
+        "declared_height": "1365",
+        "file": "SPCX-sec7-p04.jpg",
+        "page_no": 4,
+        "sha256": "3cfe0af3de811a5341a13227f033ab5d4b7760e85e121a37d90bc2acd7faf411"
+      },
+      {
+        "bytes": 128909,
+        "declared_height": "1365",
+        "file": "SPCX-sec7-p05.jpg",
+        "page_no": 5,
+        "sha256": "8df40715175f602324412e0dbab65b30d41d445fe52c57d95cc22d1899886a1e"
+      },
+      {
+        "bytes": 90367,
+        "declared_height": "1365",
+        "file": "SPCX-sec7-p06.jpg",
+        "page_no": 6,
+        "sha256": "c1cca50065e14fafdb19d4808c6246bd701cc74c8726718b8b3036b484d3264c"
+      },
+      {
+        "bytes": 180679,
+        "declared_height": "1365",
+        "file": "SPCX-sec7-p07.jpg",
+        "page_no": 7,
+        "sha256": "512096b18181885eea5fdd70de127d985c9371bc1e5bdf2c351baef8da55fc09"
+      },
+      {
+        "bytes": 193315,
+        "declared_height": "1365",
+        "file": "SPCX-sec7-p08.jpg",
+        "page_no": 8,
+        "sha256": "59c8883dfa4d23a01b45dc94ed6133a69e3e02ce95ac02397bc65867e1f525fc"
+      },
+      {
+        "bytes": 177200,
+        "declared_height": "1365",
+        "file": "SPCX-sec7-p09.jpg",
+        "page_no": 9,
+        "sha256": "e095857016c0288355dff67d0c399c0f0ce1fe4f0ea8065478f11acf7c032761"
+      },
+      {
+        "bytes": 257779,
+        "declared_height": "1365",
+        "file": "SPCX-sec7-p10.jpg",
+        "page_no": 10,
+        "sha256": "8713a6133de10b1d0152befeaa5131a93a70b06eb43fd55821a26634d7e82f17"
+      },
+      {
+        "bytes": 148221,
+        "declared_height": "1365",
+        "file": "SPCX-sec7-p11.jpg",
+        "page_no": 11,
+        "sha256": "bf031e780fe57d35d6185634636df61cd17fc2afa3c8460081a58854891a372a"
+      },
+      {
+        "bytes": 182156,
+        "declared_height": "1365",
+        "file": "SPCX-sec7-p12.jpg",
+        "page_no": 12,
+        "sha256": "fb75afe94b5ca27e8ee85794067c2a4d618d475c99135dd423f6d0f2f9e78b0b"
+      },
+      {
+        "bytes": 144353,
+        "declared_height": "1365",
+        "file": "SPCX-sec7-p13.jpg",
+        "page_no": 13,
+        "sha256": "32e686008016b2a0c9669d838cf01296591499454d935f50297c1e2928572fa3"
+      }
+    ],
+    "form_type": "8-K",
+    "source_url": "https://api.agentii.ai/v1/view_document/SPCX/sec7"
+  }
+}

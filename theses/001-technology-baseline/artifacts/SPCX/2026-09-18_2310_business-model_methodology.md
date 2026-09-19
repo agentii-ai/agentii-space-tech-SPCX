@@ -7,7 +7,7 @@ mode: methodology
 generated_at: 2026-09-18T23:10:00-04:00
 constitution_pin: "1.2.0"
 assumption_pin: "2"
-skill_pin: "registry-1.0.0"
+skill_pin: "9479220eef91"
 as_of: 2026-09-18
 corpus_version: "UNPINNED"
 definitions_used:

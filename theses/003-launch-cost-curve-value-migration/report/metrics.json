@@ -1,0 +1,868 @@
+{
+  "pack_version": "2.0",
+  "thesis": "003-launch-cost-curve-value-migration",
+  "tickers": {
+    "FLY": {
+      "artifacts": [
+        "artifacts/FLY/2026-09-19_1230_what-if_methodology.md",
+        "artifacts/FLY/2026-09-19_1300_competitive_methodology.md",
+        "artifacts/FLY/2026-09-19_1415_recent-quarter_methodology.md",
+        "artifacts/FLY/2026-09-19_1445_ratio-analysis_methodology.md",
+        "artifacts/FLY/2026-09-19_1615_peer-bench_methodology.md"
+      ],
+      "key_metrics": {
+        "payload_class_label_span_min_kg": 200,
+        "payload_class_label_span_max_kg": 1200,
+        "payload_class_label_width_x": 6.0,
+        "class_label_dollar_per_kg_overstatement_at_200kg_x": 5.0,
+        "key_metrics_section_pages": 0,
+        "multi_launch_backlog_thousands_as_of_2026_06_30": 403070,
+        "total_backlog_thousands_as_of_2026_06_30": 1468081,
+        "weighted_average_share_step_x": 11.659,
+        "filed_operating_facts_stripped_of_total": "15/15",
+        "inclusive_opex_overstatement_pct_of_revenue_3m": 79.7,
+        "eps_filed_usd": -0.57,
+        "gross_margin_pct_3m": 20.29,
+        "operating_margin_pct_3m": -80.9,
+        "r_and_d_pct_of_revenue_3m": 60.78,
+        "total_opex_pct_of_revenue_3m": 101.18,
+        "launch_share_of_revenue_pct_3m": 7.99,
+        "spacecraft_solutions_share_of_revenue_pct_3m": 92.01,
+        "spacecraft_to_launch_revenue_multiple_x": 11.52,
+        "as_reported_over_pro_forma_pct_3m_2025": 25.44
+      },
+      "metric_sources": {
+        "payload_class_label_span_min_kg": [
+          "artifacts/FLY/2026-09-19_1230_what-if_methodology.md"
+        ],
+        "payload_class_label_span_max_kg": [
+          "artifacts/FLY/2026-09-19_1230_what-if_methodology.md"
+        ],
+        "payload_class_label_width_x": [
+          "artifacts/FLY/2026-09-19_1230_what-if_methodology.md",
+          "artifacts/FLY/2026-09-19_1300_competitive_methodology.md"
+        ],
+        "class_label_dollar_per_kg_overstatement_at_200kg_x": [
+          "artifacts/FLY/2026-09-19_1230_what-if_methodology.md"
+        ],
+        "key_metrics_section_pages": [
+          "artifacts/FLY/2026-09-19_1300_competitive_methodology.md"
+        ],
+        "multi_launch_backlog_thousands_as_of_2026_06_30": [
+          "artifacts/FLY/2026-09-19_1300_competitive_methodology.md"
+        ],
+        "total_backlog_thousands_as_of_2026_06_30": [
+          "artifacts/FLY/2026-09-19_1300_competitive_methodology.md"
+        ],
+        "weighted_average_share_step_x": [
+          "artifacts/FLY/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "filed_operating_facts_stripped_of_total": [
+          "artifacts/FLY/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "inclusive_opex_overstatement_pct_of_revenue_3m": [
+          "artifacts/FLY/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "eps_filed_usd": [
+          "artifacts/FLY/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "gross_margin_pct_3m": [
+          "artifacts/FLY/2026-09-19_1445_ratio-analysis_methodology.md"
+        ],
+        "operating_margin_pct_3m": [
+          "artifacts/FLY/2026-09-19_1445_ratio-analysis_methodology.md"
+        ],
+        "r_and_d_pct_of_revenue_3m": [
+          "artifacts/FLY/2026-09-19_1445_ratio-analysis_methodology.md"
+        ],
+        "total_opex_pct_of_revenue_3m": [
+          "artifacts/FLY/2026-09-19_1445_ratio-analysis_methodology.md"
+        ],
+        "launch_share_of_revenue_pct_3m": [
+          "artifacts/FLY/2026-09-19_1615_peer-bench_methodology.md"
+        ],
+        "spacecraft_solutions_share_of_revenue_pct_3m": [
+          "artifacts/FLY/2026-09-19_1615_peer-bench_methodology.md"
+        ],
+        "spacecraft_to_launch_revenue_multiple_x": [
+          "artifacts/FLY/2026-09-19_1615_peer-bench_methodology.md"
+        ],
+        "as_reported_over_pro_forma_pct_3m_2025": [
+          "artifacts/FLY/2026-09-19_1615_peer-bench_methodology.md"
+        ]
+      },
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "GSAT": {
+      "artifacts": [
+        "artifacts/GSAT/2026-09-19_1330_competitive_methodology.md",
+        "artifacts/GSAT/2026-09-19_1415_recent-quarter_methodology.md",
+        "artifacts/GSAT/2026-09-19_1515_risk_methodology.md",
+        "artifacts/GSAT/2026-09-19_1530_secular-trends_methodology.md"
+      ],
+      "key_metrics": {
+        "operating_margin_pct_3m": -7.37,
+        "revenue_growth_pct_3m": -3.54,
+        "wholesale_capacity_share_of_revenue_pct_3m": 62.0,
+        "merger_consideration_per_share_usd": 90.0,
+        "revenue_growth_pct_6m": 6.02,
+        "q1_2026_net_loss_basis_gap_thousands": 2602,
+        "retained_earnings_accumulated_deficit_thousands": -2206570,
+        "stripped_concepts": 4,
+        "monotonicity_violations": 3,
+        "wholesale_capacity_share_of_revenue_pct_6m": 64.0,
+        "da_confirmed_instances": 13,
+        "da_unexercised": 16
+      },
+      "metric_sources": {
+        "operating_margin_pct_3m": [
+          "artifacts/GSAT/2026-09-19_1330_competitive_methodology.md",
+          "artifacts/GSAT/2026-09-19_1415_recent-quarter_methodology.md",
+          "artifacts/GSAT/2026-09-19_1515_risk_methodology.md"
+        ],
+        "revenue_growth_pct_3m": [
+          "artifacts/GSAT/2026-09-19_1330_competitive_methodology.md",
+          "artifacts/GSAT/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "wholesale_capacity_share_of_revenue_pct_3m": [
+          "artifacts/GSAT/2026-09-19_1330_competitive_methodology.md",
+          "artifacts/GSAT/2026-09-19_1530_secular-trends_methodology.md"
+        ],
+        "merger_consideration_per_share_usd": [
+          "artifacts/GSAT/2026-09-19_1330_competitive_methodology.md"
+        ],
+        "revenue_growth_pct_6m": [
+          "artifacts/GSAT/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "q1_2026_net_loss_basis_gap_thousands": [
+          "artifacts/GSAT/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "retained_earnings_accumulated_deficit_thousands": [
+          "artifacts/GSAT/2026-09-19_1515_risk_methodology.md"
+        ],
+        "stripped_concepts": [
+          "artifacts/GSAT/2026-09-19_1515_risk_methodology.md"
+        ],
+        "monotonicity_violations": [
+          "artifacts/GSAT/2026-09-19_1515_risk_methodology.md"
+        ],
+        "wholesale_capacity_share_of_revenue_pct_6m": [
+          "artifacts/GSAT/2026-09-19_1530_secular-trends_methodology.md"
+        ],
+        "da_confirmed_instances": [
+          "artifacts/GSAT/2026-09-19_1530_secular-trends_methodology.md"
+        ],
+        "da_unexercised": [
+          "artifacts/GSAT/2026-09-19_1530_secular-trends_methodology.md"
+        ]
+      },
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "IRDM": {
+      "artifacts": [
+        "artifacts/IRDM/2026-09-19_1330_competitive_methodology.md",
+        "artifacts/IRDM/2026-09-19_1415_recent-quarter_methodology.md",
+        "artifacts/IRDM/2026-09-19_1515_risk_methodology.md",
+        "artifacts/IRDM/2026-09-19_1530_secular-trends_methodology.md"
+      ],
+      "key_metrics": {
+        "operating_margin_3m_2026_pct": 15.1,
+        "operating_margin_ex_transaction_costs_3m_2026_pct": 21.45,
+        "operating_income_decline_transaction_cost_share_pct": 88.0,
+        "merger_consideration_usd_per_share": 54.0,
+        "operating_margin_q2_2026_pct": 15.1,
+        "operating_margin_q2_2025_pct": 23.17,
+        "revenue_growth_yoy_pct": 3.84,
+        "operating_income_growth_yoy_pct": -32.33,
+        "operating_margin_fy2025_pct": 27.07,
+        "operating_margin_fy2024_pct": 24.12,
+        "transaction_cost_share_of_sga_increase_3m_pct": 63.8,
+        "operating_margin_change_3m_yoy_pp": -8.07,
+        "operating_margin_change_fy2025_vs_fy2024_pp": 2.95,
+        "transaction_cost_share_of_6m_margin_compression_pct": 46.2
+      },
+      "metric_sources": {
+        "operating_margin_3m_2026_pct": [
+          "artifacts/IRDM/2026-09-19_1330_competitive_methodology.md",
+          "artifacts/IRDM/2026-09-19_1515_risk_methodology.md",
+          "artifacts/IRDM/2026-09-19_1530_secular-trends_methodology.md"
+        ],
+        "operating_margin_ex_transaction_costs_3m_2026_pct": [
+          "artifacts/IRDM/2026-09-19_1330_competitive_methodology.md"
+        ],
+        "operating_income_decline_transaction_cost_share_pct": [
+          "artifacts/IRDM/2026-09-19_1330_competitive_methodology.md"
+        ],
+        "merger_consideration_usd_per_share": [
+          "artifacts/IRDM/2026-09-19_1330_competitive_methodology.md"
+        ],
+        "operating_margin_q2_2026_pct": [
+          "artifacts/IRDM/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "operating_margin_q2_2025_pct": [
+          "artifacts/IRDM/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "revenue_growth_yoy_pct": [
+          "artifacts/IRDM/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "operating_income_growth_yoy_pct": [
+          "artifacts/IRDM/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "operating_margin_fy2025_pct": [
+          "artifacts/IRDM/2026-09-19_1515_risk_methodology.md"
+        ],
+        "operating_margin_fy2024_pct": [
+          "artifacts/IRDM/2026-09-19_1515_risk_methodology.md"
+        ],
+        "transaction_cost_share_of_sga_increase_3m_pct": [
+          "artifacts/IRDM/2026-09-19_1515_risk_methodology.md"
+        ],
+        "operating_margin_change_3m_yoy_pp": [
+          "artifacts/IRDM/2026-09-19_1530_secular-trends_methodology.md"
+        ],
+        "operating_margin_change_fy2025_vs_fy2024_pp": [
+          "artifacts/IRDM/2026-09-19_1530_secular-trends_methodology.md"
+        ],
+        "transaction_cost_share_of_6m_margin_compression_pct": [
+          "artifacts/IRDM/2026-09-19_1530_secular-trends_methodology.md"
+        ]
+      },
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "LUNR": {
+      "artifacts": [
+        "artifacts/LUNR/2026-09-19_1430_recent-quarter_methodology.md",
+        "artifacts/LUNR/2026-09-19_1500_growth-strategy_methodology.md"
+      ],
+      "key_metrics": {
+        "operating_margin_q2_2026_pct": -22.9,
+        "operating_margin_fy2025_pct": -41.5,
+        "revenue_q2_2026_usd_thousands": 206168,
+        "operating_loss_q2_2026_usd_thousands": -47136,
+        "launch_amortisation_share_fy2025_revenue_pct": 14.19,
+        "launch_amortisation_share_q2_2026_revenue_pct": 3.44,
+        "launch_amortisation_numerator_change_yoy_pct": -6.6,
+        "cost_of_revenues_growth_yoy_pct": 174.0
+      },
+      "metric_sources": {
+        "operating_margin_q2_2026_pct": [
+          "artifacts/LUNR/2026-09-19_1430_recent-quarter_methodology.md"
+        ],
+        "operating_margin_fy2025_pct": [
+          "artifacts/LUNR/2026-09-19_1430_recent-quarter_methodology.md"
+        ],
+        "revenue_q2_2026_usd_thousands": [
+          "artifacts/LUNR/2026-09-19_1430_recent-quarter_methodology.md"
+        ],
+        "operating_loss_q2_2026_usd_thousands": [
+          "artifacts/LUNR/2026-09-19_1430_recent-quarter_methodology.md"
+        ],
+        "launch_amortisation_share_fy2025_revenue_pct": [
+          "artifacts/LUNR/2026-09-19_1500_growth-strategy_methodology.md"
+        ],
+        "launch_amortisation_share_q2_2026_revenue_pct": [
+          "artifacts/LUNR/2026-09-19_1500_growth-strategy_methodology.md"
+        ],
+        "launch_amortisation_numerator_change_yoy_pct": [
+          "artifacts/LUNR/2026-09-19_1500_growth-strategy_methodology.md"
+        ],
+        "cost_of_revenues_growth_yoy_pct": [
+          "artifacts/LUNR/2026-09-19_1500_growth-strategy_methodology.md"
+        ]
+      },
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "PL": {
+      "artifacts": [
+        "artifacts/PL/2026-09-19_1400_supply-chain_methodology.md",
+        "artifacts/PL/2026-09-19_1430_recent-quarter_methodology.md",
+        "artifacts/PL/2026-09-19_1500_growth-strategy_methodology.md",
+        "artifacts/PL/2026-09-19_1545_sector-overview_methodology.md",
+        "artifacts/PL/2026-09-19_1600_ratio-analysis_methodology.md"
+      ],
+      "key_metrics": {
+        "hosting_to_launch_commitment_multiple_x": 12.5,
+        "cost_of_revenue_two_basis_difference_pct_of_line": 32.3,
+        "segment_basis_gross_margin_overstatement_pp": 11.4,
+        "cost_of_revenue_reduction_needed_to_close_gap_pct": 79.7,
+        "operating_margin_at_zero_cost_of_revenue_pct_quarter": 9.4,
+        "operating_margin_at_zero_cost_of_revenue_pct_annual": 13.1,
+        "filed_operating_facts_stripped_of_total": "33/33",
+        "inclusive_opex_pairing_multiple_of_filed_loss_x": 2.25,
+        "gross_margin_gaap_pct_q1_fy2027": 53.53,
+        "gross_margin_non_gaap_pct_q1_fy2027": 56,
+        "operating_loss_gaap_thousands_fy2026": -95073,
+        "adjusted_ebitda_thousands_fy2026": 15495,
+        "operating_margin_pct_q1_fy2027": -37.06,
+        "opex_to_gross_profit_multiple_x": 1.692,
+        "warrant_remeasurement_share_of_net_loss_pct": 76.66,
+        "net_margin_pct_q1_fy2027": -147.5
+      },
+      "metric_sources": {
+        "hosting_to_launch_commitment_multiple_x": [
+          "artifacts/PL/2026-09-19_1400_supply-chain_methodology.md",
+          "artifacts/PL/2026-09-19_1600_ratio-analysis_methodology.md"
+        ],
+        "cost_of_revenue_two_basis_difference_pct_of_line": [
+          "artifacts/PL/2026-09-19_1400_supply-chain_methodology.md"
+        ],
+        "segment_basis_gross_margin_overstatement_pp": [
+          "artifacts/PL/2026-09-19_1400_supply-chain_methodology.md"
+        ],
+        "cost_of_revenue_reduction_needed_to_close_gap_pct": [
+          "artifacts/PL/2026-09-19_1400_supply-chain_methodology.md"
+        ],
+        "operating_margin_at_zero_cost_of_revenue_pct_quarter": [
+          "artifacts/PL/2026-09-19_1430_recent-quarter_methodology.md"
+        ],
+        "operating_margin_at_zero_cost_of_revenue_pct_annual": [
+          "artifacts/PL/2026-09-19_1430_recent-quarter_methodology.md"
+        ],
+        "filed_operating_facts_stripped_of_total": [
+          "artifacts/PL/2026-09-19_1430_recent-quarter_methodology.md"
+        ],
+        "inclusive_opex_pairing_multiple_of_filed_loss_x": [
+          "artifacts/PL/2026-09-19_1430_recent-quarter_methodology.md"
+        ],
+        "gross_margin_gaap_pct_q1_fy2027": [
+          "artifacts/PL/2026-09-19_1500_growth-strategy_methodology.md",
+          "artifacts/PL/2026-09-19_1545_sector-overview_methodology.md",
+          "artifacts/PL/2026-09-19_1600_ratio-analysis_methodology.md"
+        ],
+        "gross_margin_non_gaap_pct_q1_fy2027": [
+          "artifacts/PL/2026-09-19_1500_growth-strategy_methodology.md"
+        ],
+        "operating_loss_gaap_thousands_fy2026": [
+          "artifacts/PL/2026-09-19_1500_growth-strategy_methodology.md"
+        ],
+        "adjusted_ebitda_thousands_fy2026": [
+          "artifacts/PL/2026-09-19_1500_growth-strategy_methodology.md"
+        ],
+        "operating_margin_pct_q1_fy2027": [
+          "artifacts/PL/2026-09-19_1545_sector-overview_methodology.md",
+          "artifacts/PL/2026-09-19_1600_ratio-analysis_methodology.md"
+        ],
+        "opex_to_gross_profit_multiple_x": [
+          "artifacts/PL/2026-09-19_1545_sector-overview_methodology.md"
+        ],
+        "warrant_remeasurement_share_of_net_loss_pct": [
+          "artifacts/PL/2026-09-19_1545_sector-overview_methodology.md"
+        ],
+        "net_margin_pct_q1_fy2027": [
+          "artifacts/PL/2026-09-19_1600_ratio-analysis_methodology.md"
+        ]
+      },
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "RKLB": {
+      "artifacts": [
+        "artifacts/RKLB/2026-09-19_1200_unit-economics_methodology.md",
+        "artifacts/RKLB/2026-09-19_1215_operational-kpi_methodology.md",
+        "artifacts/RKLB/2026-09-19_1230_what-if_methodology.md",
+        "artifacts/RKLB/2026-09-19_1245_peer-bench_methodology.md",
+        "artifacts/RKLB/2026-09-19_1315_business-model_methodology.md",
+        "artifacts/RKLB/2026-09-19_1345_sector-overview_methodology.md",
+        "artifacts/RKLB/2026-09-19_1400_supply-chain_methodology.md",
+        "artifacts/RKLB/2026-09-19_1415_recent-quarter_methodology.md",
+        "artifacts/RKLB/2026-09-19_1445_ratio-analysis_methodology.md",
+        "artifacts/RKLB/2026-09-19_1515_risk_methodology.md"
+      ],
+      "key_metrics": {
+        "electron_basis_b_cost_per_kg_leo_mix_corrected_q2_2026": 22000,
+        "electron_basis_b_cost_per_kg_leo_mix_corrected_q2_2025": 16667,
+        "electron_cost_per_launch_usdm_q2_2026": 4.4,
+        "electron_cost_per_launch_usdm_q2_2025": 5.0,
+        "electron_revenue_per_launch_usdm_q2_2026": 9.1,
+        "disclosed_implied_gross_margin_pct_q2_2026": 51.648,
+        "disclosed_vs_audited_launch_gross_margin_gap_pp_q2_2026": 8.79,
+        "haste_missions_q2_2026": 2,
+        "neutron_implied_cost_per_kg_leo_usd_low": 3846,
+        "neutron_implied_cost_per_kg_leo_usd_high": 4231,
+        "neutron_a_prime_breakeven_payload_kg_at_50m_asp": 11851,
+        "neutron_a_prime_breakeven_payload_kg_at_55m_asp": 13035,
+        "electron_basis_a_cost_per_kg_leo_300kg_q2_2026": 30333,
+        "electron_basis_b_cost_per_kg_leo_300kg_q2_2026": 14667,
+        "falcon9_basis_a_cost_per_kg_leo_usd": 2939,
+        "demonstrated_cost_per_kg_vehicle_and_issuer_pairs_of_5": 1,
+        "total_revenue_usdk_q2_2026": 234066,
+        "launch_services_revenue_usdk_q2_2026": 44586,
+        "space_systems_revenue_usdk_q2_2026": 189480,
+        "pro_forma_total_revenue_usdk_q2_2026": 237842,
+        "rklb_gross_margin_pct_q2_2026": 36.13,
+        "rklb_r_and_d_share_of_revenue_pct_q2_2026": 35.22,
+        "iridium_acquisition_price_per_share_usd": 54,
+        "iridium_acquisition_enterprise_value_usdb": 8.0,
+        "rklb_non_gaap_gross_margin_pct_q2_2026": 41.5,
+        "rklb_gaap_vs_non_gaap_gross_margin_spread_pp_q2_2026": 5.4,
+        "solaero_contract_loss_provision_usdk": 4657,
+        "rklb_atm_equity_programme_proceeds_usdb_q2_2026": 1.08,
+        "operating_income_loss_served_usd_q2_2026": 57514000,
+        "operating_loss_usdk_filed_q2_2026": -57514,
+        "net_loss_usdk_filed_q2_2026": -49258,
+        "anti_dilutive_convertible_note_shares_q2_2026": 2607745,
+        "rklb_consolidated_operating_margin_pct_q2_2026_3m": -24.57,
+        "rklb_launch_services_segment_gross_margin_pct_q2_2026_3m": 42.86,
+        "rklb_space_systems_segment_gross_margin_pct_q2_2026_3m": 34.55,
+        "rklb_launch_share_of_revenue_pct_q2_2026_3m": 19.05,
+        "iridium_bridge_facility_committed_usdb": 3.6,
+        "irdm_termination_fee_usdm": 223.6,
+        "rklb_backlog_usdm_q2_2026_standalone_pre_merger": 2355.949,
+        "rklb_fy2025_net_loss_usdm_standalone_pre_merger": 198.2
+      },
+      "metric_sources": {
+        "electron_basis_b_cost_per_kg_leo_mix_corrected_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1200_unit-economics_methodology.md"
+        ],
+        "electron_basis_b_cost_per_kg_leo_mix_corrected_q2_2025": [
+          "artifacts/RKLB/2026-09-19_1200_unit-economics_methodology.md"
+        ],
+        "electron_cost_per_launch_usdm_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1200_unit-economics_methodology.md"
+        ],
+        "electron_cost_per_launch_usdm_q2_2025": [
+          "artifacts/RKLB/2026-09-19_1200_unit-economics_methodology.md"
+        ],
+        "electron_revenue_per_launch_usdm_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1215_operational-kpi_methodology.md"
+        ],
+        "disclosed_implied_gross_margin_pct_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1215_operational-kpi_methodology.md"
+        ],
+        "disclosed_vs_audited_launch_gross_margin_gap_pp_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1215_operational-kpi_methodology.md"
+        ],
+        "haste_missions_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1215_operational-kpi_methodology.md"
+        ],
+        "neutron_implied_cost_per_kg_leo_usd_low": [
+          "artifacts/RKLB/2026-09-19_1230_what-if_methodology.md"
+        ],
+        "neutron_implied_cost_per_kg_leo_usd_high": [
+          "artifacts/RKLB/2026-09-19_1230_what-if_methodology.md"
+        ],
+        "neutron_a_prime_breakeven_payload_kg_at_50m_asp": [
+          "artifacts/RKLB/2026-09-19_1230_what-if_methodology.md"
+        ],
+        "neutron_a_prime_breakeven_payload_kg_at_55m_asp": [
+          "artifacts/RKLB/2026-09-19_1230_what-if_methodology.md"
+        ],
+        "electron_basis_a_cost_per_kg_leo_300kg_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1245_peer-bench_methodology.md"
+        ],
+        "electron_basis_b_cost_per_kg_leo_300kg_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1245_peer-bench_methodology.md"
+        ],
+        "falcon9_basis_a_cost_per_kg_leo_usd": [
+          "artifacts/RKLB/2026-09-19_1245_peer-bench_methodology.md"
+        ],
+        "demonstrated_cost_per_kg_vehicle_and_issuer_pairs_of_5": [
+          "artifacts/RKLB/2026-09-19_1245_peer-bench_methodology.md"
+        ],
+        "total_revenue_usdk_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1315_business-model_methodology.md"
+        ],
+        "launch_services_revenue_usdk_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1315_business-model_methodology.md"
+        ],
+        "space_systems_revenue_usdk_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1315_business-model_methodology.md"
+        ],
+        "pro_forma_total_revenue_usdk_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1315_business-model_methodology.md"
+        ],
+        "rklb_gross_margin_pct_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1345_sector-overview_methodology.md"
+        ],
+        "rklb_r_and_d_share_of_revenue_pct_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1345_sector-overview_methodology.md"
+        ],
+        "iridium_acquisition_price_per_share_usd": [
+          "artifacts/RKLB/2026-09-19_1345_sector-overview_methodology.md"
+        ],
+        "iridium_acquisition_enterprise_value_usdb": [
+          "artifacts/RKLB/2026-09-19_1345_sector-overview_methodology.md"
+        ],
+        "rklb_non_gaap_gross_margin_pct_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1400_supply-chain_methodology.md"
+        ],
+        "rklb_gaap_vs_non_gaap_gross_margin_spread_pp_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1400_supply-chain_methodology.md"
+        ],
+        "solaero_contract_loss_provision_usdk": [
+          "artifacts/RKLB/2026-09-19_1400_supply-chain_methodology.md"
+        ],
+        "rklb_atm_equity_programme_proceeds_usdb_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1400_supply-chain_methodology.md"
+        ],
+        "operating_income_loss_served_usd_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "operating_loss_usdk_filed_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "net_loss_usdk_filed_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "anti_dilutive_convertible_note_shares_q2_2026": [
+          "artifacts/RKLB/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "rklb_consolidated_operating_margin_pct_q2_2026_3m": [
+          "artifacts/RKLB/2026-09-19_1445_ratio-analysis_methodology.md"
+        ],
+        "rklb_launch_services_segment_gross_margin_pct_q2_2026_3m": [
+          "artifacts/RKLB/2026-09-19_1445_ratio-analysis_methodology.md"
+        ],
+        "rklb_space_systems_segment_gross_margin_pct_q2_2026_3m": [
+          "artifacts/RKLB/2026-09-19_1445_ratio-analysis_methodology.md"
+        ],
+        "rklb_launch_share_of_revenue_pct_q2_2026_3m": [
+          "artifacts/RKLB/2026-09-19_1445_ratio-analysis_methodology.md"
+        ],
+        "iridium_bridge_facility_committed_usdb": [
+          "artifacts/RKLB/2026-09-19_1515_risk_methodology.md"
+        ],
+        "irdm_termination_fee_usdm": [
+          "artifacts/RKLB/2026-09-19_1515_risk_methodology.md"
+        ],
+        "rklb_backlog_usdm_q2_2026_standalone_pre_merger": [
+          "artifacts/RKLB/2026-09-19_1515_risk_methodology.md"
+        ],
+        "rklb_fy2025_net_loss_usdm_standalone_pre_merger": [
+          "artifacts/RKLB/2026-09-19_1515_risk_methodology.md"
+        ]
+      },
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "SATS": {
+      "artifacts": [
+        "artifacts/SATS/2026-09-19_1415_recent-quarter_methodology.md",
+        "artifacts/SATS/2026-09-19_1500_growth-strategy_methodology.md"
+      ],
+      "key_metrics": {
+        "operating_margin_q1_2026_pct": 10.71,
+        "operating_margin_q1_2026_ex_impairment_credit_pct": 8.91,
+        "impairment_credit_q1_2026_usd_thousands": 66159,
+        "operating_margin_q3_2025_pct": -460.45,
+        "regulatory_asset_realisation_usd_billions": 42.65,
+        "operating_dbs_value_usd_billions": 0.3,
+        "realisation_to_operating_dbs_multiple_x": 142,
+        "spacex_shares_held_millions": 261.8
+      },
+      "metric_sources": {
+        "operating_margin_q1_2026_pct": [
+          "artifacts/SATS/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "operating_margin_q1_2026_ex_impairment_credit_pct": [
+          "artifacts/SATS/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "impairment_credit_q1_2026_usd_thousands": [
+          "artifacts/SATS/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "operating_margin_q3_2025_pct": [
+          "artifacts/SATS/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "regulatory_asset_realisation_usd_billions": [
+          "artifacts/SATS/2026-09-19_1500_growth-strategy_methodology.md"
+        ],
+        "operating_dbs_value_usd_billions": [
+          "artifacts/SATS/2026-09-19_1500_growth-strategy_methodology.md"
+        ],
+        "realisation_to_operating_dbs_multiple_x": [
+          "artifacts/SATS/2026-09-19_1500_growth-strategy_methodology.md"
+        ],
+        "spacex_shares_held_millions": [
+          "artifacts/SATS/2026-09-19_1500_growth-strategy_methodology.md"
+        ]
+      },
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "SPCX": {
+      "artifacts": [
+        "artifacts/SPCX/2026-09-19_1200_unit-economics_methodology.md",
+        "artifacts/SPCX/2026-09-19_1215_operational-kpi_methodology.md",
+        "artifacts/SPCX/2026-09-19_1230_what-if_methodology.md",
+        "artifacts/SPCX/2026-09-19_1315_business-model_methodology.md",
+        "artifacts/SPCX/2026-09-19_1345_sector-overview_methodology.md",
+        "artifacts/SPCX/2026-09-19_1345_secular-trends_methodology.md",
+        "artifacts/SPCX/2026-09-19_1415_recent-quarter_methodology.md",
+        "artifacts/SPCX/2026-09-19_1445_ratio-analysis_methodology.md",
+        "artifacts/SPCX/2026-09-19_1615_peer-bench_methodology.md"
+      ],
+      "key_metrics": {
+        "usd_per_kg_launch_services_revenue_a_prime_prime_d2_customer_payload": 7448,
+        "usd_per_kg_space_segment_revenue_a_prime_d2_customer_payload": 11057,
+        "launch_only_share_of_consolidated_revenue_pct": 8.29,
+        "customer_launch_share_of_total_launches_pct": 26.3,
+        "mass_to_orbit_q2_2026_3m_tonnes": 485,
+        "mass_to_orbit_h1_2026_6m_tonnes": 1041,
+        "space_segment_gross_margin_pct": 65.8,
+        "consolidated_gross_margin_pct": 55.27,
+        "usd_per_kg_ladder_low_launch_services_over_mass_to_orbit": 939,
+        "usd_per_kg_ladder_high_space_segment_over_customer_payload": 11977,
+        "usd_per_kg_ladder_spread_ratio": 12.8,
+        "internal_launch_share_of_falcon_launches_pct": 73.0,
+        "space_segment_operating_margin_pct": -56.34,
+        "connectivity_segment_operating_margin_pct": 38.59,
+        "space_segment_share_of_consolidated_revenue_pct": 12.31,
+        "connectivity_segment_gross_margin_pct": 51.99,
+        "ai_capex_h1_2026_musd": 23551,
+        "space_capex_h1_2026_musd": 2226,
+        "revenue_per_customer_launch_q2_2026_musd": 64.8,
+        "customer_launch_share_q2_2026_pct": 26.3,
+        "revenue_q2_2026_3m_musd": 7814,
+        "operating_income_q2_2026_3m_musd": -143,
+        "net_income_q2_2026_3m_musd": -541,
+        "gross_margin_q2_2026_3m_pct": 55.27,
+        "launch_services_share_of_consolidated_revenue_q2_2026_3m_pct": 8.2928,
+        "launch_services_share_of_consolidated_revenue_h1_2026_6m_pct": 7.819,
+        "usd_per_kg_launch_services_over_customer_payload_h1_2026": 7409,
+        "usd_per_kg_space_segment_over_customer_payload_h1_2026": 11977,
+        "usd_per_kg_launch_services_over_mass_to_orbit_h1_2026": 939,
+        "same_page_usd_per_kg_spread_ratio": 12.8
+      },
+      "metric_sources": {
+        "usd_per_kg_launch_services_revenue_a_prime_prime_d2_customer_payload": [
+          "artifacts/SPCX/2026-09-19_1200_unit-economics_methodology.md"
+        ],
+        "usd_per_kg_space_segment_revenue_a_prime_d2_customer_payload": [
+          "artifacts/SPCX/2026-09-19_1200_unit-economics_methodology.md"
+        ],
+        "launch_only_share_of_consolidated_revenue_pct": [
+          "artifacts/SPCX/2026-09-19_1200_unit-economics_methodology.md"
+        ],
+        "customer_launch_share_of_total_launches_pct": [
+          "artifacts/SPCX/2026-09-19_1200_unit-economics_methodology.md"
+        ],
+        "mass_to_orbit_q2_2026_3m_tonnes": [
+          "artifacts/SPCX/2026-09-19_1215_operational-kpi_methodology.md"
+        ],
+        "mass_to_orbit_h1_2026_6m_tonnes": [
+          "artifacts/SPCX/2026-09-19_1215_operational-kpi_methodology.md"
+        ],
+        "space_segment_gross_margin_pct": [
+          "artifacts/SPCX/2026-09-19_1215_operational-kpi_methodology.md",
+          "artifacts/SPCX/2026-09-19_1315_business-model_methodology.md",
+          "artifacts/SPCX/2026-09-19_1345_sector-overview_methodology.md",
+          "artifacts/SPCX/2026-09-19_1445_ratio-analysis_methodology.md"
+        ],
+        "consolidated_gross_margin_pct": [
+          "artifacts/SPCX/2026-09-19_1215_operational-kpi_methodology.md",
+          "artifacts/SPCX/2026-09-19_1345_sector-overview_methodology.md"
+        ],
+        "usd_per_kg_ladder_low_launch_services_over_mass_to_orbit": [
+          "artifacts/SPCX/2026-09-19_1230_what-if_methodology.md"
+        ],
+        "usd_per_kg_ladder_high_space_segment_over_customer_payload": [
+          "artifacts/SPCX/2026-09-19_1230_what-if_methodology.md"
+        ],
+        "usd_per_kg_ladder_spread_ratio": [
+          "artifacts/SPCX/2026-09-19_1230_what-if_methodology.md"
+        ],
+        "internal_launch_share_of_falcon_launches_pct": [
+          "artifacts/SPCX/2026-09-19_1230_what-if_methodology.md"
+        ],
+        "space_segment_operating_margin_pct": [
+          "artifacts/SPCX/2026-09-19_1315_business-model_methodology.md",
+          "artifacts/SPCX/2026-09-19_1345_sector-overview_methodology.md",
+          "artifacts/SPCX/2026-09-19_1445_ratio-analysis_methodology.md"
+        ],
+        "connectivity_segment_operating_margin_pct": [
+          "artifacts/SPCX/2026-09-19_1315_business-model_methodology.md"
+        ],
+        "space_segment_share_of_consolidated_revenue_pct": [
+          "artifacts/SPCX/2026-09-19_1315_business-model_methodology.md"
+        ],
+        "connectivity_segment_gross_margin_pct": [
+          "artifacts/SPCX/2026-09-19_1345_sector-overview_methodology.md"
+        ],
+        "ai_capex_h1_2026_musd": [
+          "artifacts/SPCX/2026-09-19_1345_secular-trends_methodology.md"
+        ],
+        "space_capex_h1_2026_musd": [
+          "artifacts/SPCX/2026-09-19_1345_secular-trends_methodology.md"
+        ],
+        "revenue_per_customer_launch_q2_2026_musd": [
+          "artifacts/SPCX/2026-09-19_1345_secular-trends_methodology.md"
+        ],
+        "customer_launch_share_q2_2026_pct": [
+          "artifacts/SPCX/2026-09-19_1345_secular-trends_methodology.md"
+        ],
+        "revenue_q2_2026_3m_musd": [
+          "artifacts/SPCX/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "operating_income_q2_2026_3m_musd": [
+          "artifacts/SPCX/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "net_income_q2_2026_3m_musd": [
+          "artifacts/SPCX/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "gross_margin_q2_2026_3m_pct": [
+          "artifacts/SPCX/2026-09-19_1415_recent-quarter_methodology.md"
+        ],
+        "launch_services_share_of_consolidated_revenue_q2_2026_3m_pct": [
+          "artifacts/SPCX/2026-09-19_1445_ratio-analysis_methodology.md"
+        ],
+        "launch_services_share_of_consolidated_revenue_h1_2026_6m_pct": [
+          "artifacts/SPCX/2026-09-19_1445_ratio-analysis_methodology.md"
+        ],
+        "usd_per_kg_launch_services_over_customer_payload_h1_2026": [
+          "artifacts/SPCX/2026-09-19_1615_peer-bench_methodology.md"
+        ],
+        "usd_per_kg_space_segment_over_customer_payload_h1_2026": [
+          "artifacts/SPCX/2026-09-19_1615_peer-bench_methodology.md"
+        ],
+        "usd_per_kg_launch_services_over_mass_to_orbit_h1_2026": [
+          "artifacts/SPCX/2026-09-19_1615_peer-bench_methodology.md"
+        ],
+        "same_page_usd_per_kg_spread_ratio": [
+          "artifacts/SPCX/2026-09-19_1615_peer-bench_methodology.md"
+        ]
+      },
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "YSS": {
+      "artifacts": [
+        "artifacts/YSS/2026-09-19_1430_recent-quarter_methodology.md",
+        "artifacts/YSS/2026-09-19_1500_growth-strategy_methodology.md",
+        "artifacts/YSS/2026-09-19_1545_sector-overview_methodology.md",
+        "artifacts/YSS/2026-09-19_1600_ratio-analysis_methodology.md"
+      ],
+      "key_metrics": {
+        "revenue_growth_qoq_pct": -20.5,
+        "revenue_growth_yoy_pct": 10.4,
+        "contribution_margin_q2_2026_pct": 42,
+        "contribution_margin_q2_2025_pct": 24,
+        "fy2026_guidance_reduction_pct": -31.6,
+        "backlog_usd_millions": 592,
+        "gross_margin_q2_2026_pct": 23.97,
+        "gross_margin_q2_2025_pct": 11.36,
+        "operating_margin_q2_2026_pct": -44.64,
+        "opex_to_gross_profit_6m_2026_x": 4.424,
+        "opex_to_gross_profit_q2_2026_x": 2.863,
+        "sbc_to_gross_profit_6m_2026_pct": 215.6,
+        "operating_margin_6m_2026_pct": -72.66
+      },
+      "metric_sources": {
+        "revenue_growth_qoq_pct": [
+          "artifacts/YSS/2026-09-19_1430_recent-quarter_methodology.md",
+          "artifacts/YSS/2026-09-19_1500_growth-strategy_methodology.md"
+        ],
+        "revenue_growth_yoy_pct": [
+          "artifacts/YSS/2026-09-19_1430_recent-quarter_methodology.md",
+          "artifacts/YSS/2026-09-19_1500_growth-strategy_methodology.md"
+        ],
+        "contribution_margin_q2_2026_pct": [
+          "artifacts/YSS/2026-09-19_1430_recent-quarter_methodology.md"
+        ],
+        "contribution_margin_q2_2025_pct": [
+          "artifacts/YSS/2026-09-19_1430_recent-quarter_methodology.md"
+        ],
+        "fy2026_guidance_reduction_pct": [
+          "artifacts/YSS/2026-09-19_1500_growth-strategy_methodology.md"
+        ],
+        "backlog_usd_millions": [
+          "artifacts/YSS/2026-09-19_1500_growth-strategy_methodology.md"
+        ],
+        "gross_margin_q2_2026_pct": [
+          "artifacts/YSS/2026-09-19_1545_sector-overview_methodology.md"
+        ],
+        "gross_margin_q2_2025_pct": [
+          "artifacts/YSS/2026-09-19_1545_sector-overview_methodology.md"
+        ],
+        "operating_margin_q2_2026_pct": [
+          "artifacts/YSS/2026-09-19_1545_sector-overview_methodology.md"
+        ],
+        "opex_to_gross_profit_6m_2026_x": [
+          "artifacts/YSS/2026-09-19_1545_sector-overview_methodology.md",
+          "artifacts/YSS/2026-09-19_1600_ratio-analysis_methodology.md"
+        ],
+        "opex_to_gross_profit_q2_2026_x": [
+          "artifacts/YSS/2026-09-19_1600_ratio-analysis_methodology.md"
+        ],
+        "sbc_to_gross_profit_6m_2026_pct": [
+          "artifacts/YSS/2026-09-19_1600_ratio-analysis_methodology.md"
+        ],
+        "operating_margin_6m_2026_pct": [
+          "artifacts/YSS/2026-09-19_1600_ratio-analysis_methodology.md"
+        ]
+      },
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    }
+  },
+  "synthesis": {
+    "pillar_verdicts": {
+      "PIL-1": "HOLDS — falsifier does not fire, on a population of one",
+      "PIL-2": "HOLDS at SPCX; UNEXERCISED everywhere else",
+      "PIL-3": "HOLDS — demonstrated, not argued",
+      "PIL-4": "CLOSES on the registered bar; FIRES on two other bases; knife-edge on a third",
+      "PIL-5": "FALSIFIED in tolerance; HOLDS in kind",
+      "PIL-6": "NON-FORMABLE at three of four demand-side names"
+    },
+    "capability_timeline": {
+      "note": "Not applicable — this thesis is `market_data_stage: none` and carries no capability-adoption timeline. The nearest equivalent is the trigger register (§7).\n"
+    }
+  }
+}

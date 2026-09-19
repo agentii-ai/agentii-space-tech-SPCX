@@ -7,7 +7,7 @@ mode: regulatory-compliance-risk-assessment
 generated_at: 2026-09-18T14:05:00-04:00
 constitution_pin: "1.2.0"
 assumption_pin: "2"
-skill_pin: "registry-1.0.0"
+skill_pin: "none"
 as_of: 2026-09-18
 definitions_used:
   - da_id: "DA-17"

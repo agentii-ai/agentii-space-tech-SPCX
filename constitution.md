@@ -1,3 +1,68 @@
+---
+# The constitution's writer. `amend` is the owner's deliberate rewrite;
+# any other writer's write to this file is refused. The same rule governs
+# the thesis instruments — see contracts/thesis.md.
+writer: agentii.constitution
+---
+
+<!--
+Sync Impact Report (spec 046 Q33 — executable input, not decoration):
+  version: 1.4.0 → 1.5.0
+  amended: §Data-Integrity Register — TWO NEW ENTRIES, and both are a different KIND
+           from DA-23…DA-28. Those describe defective DATA. DA-29 describes a defective
+           CHECK; DA-30 describes a basis the PLATFORM collapses before any artifact
+           sees it. Neither could have been violated by an artifact written earlier,
+           because neither rule existed — but both name obligations no existing
+           artifact discharged, which is why this is a MINOR bump and not a PATCH.
+  added: DA-29 BACK-SOLVED AND OPAQUE CHECKS, carrying THE MECHANICAL CIRCULARITY
+         TEST: *if any term in a reconciliation appears NOWHERE in the source, the
+         check is a BACK-SOLVE.* Three instances registered: (1) 001's BWXT clearance,
+         assembled from a `$90.7M` term that appears in no filing — the filed Total
+         Costs and Expenses is $775.1M, and the check nevertheless CLOSED; (2) the
+         instrument's `computed` column is not reproducible from the instrument's own
+         returned tree (Q1 2026 operating income: computed 71,139,000 vs tree
+         106,691,000, internally inconsistent within one run); (3) three `reported`
+         mis-selections in a single filing, including PP&E `reported` carrying GROSS
+         for a NET concept. Consequence: `computed` may not be cited as a derivation,
+         and `reported` is not definitionally the filed value.
+  added: DA-30 TWO BASES ON ONE CONCEPT, COLLAPSED WITHOUT A BASIS FIELD. BWXT files
+         operating income equity-inclusive and equity-exclusive under one concept;
+         equity is 20.2% of the Q1 2026 figure. This is PRIOR TO the artifact
+         contract's `no_single_basis_collapse` rule — that rule governs an artifact
+         quoting one basis; here the platform has already collapsed two, so an
+         artifact cannot comply by diligence alone. It must first discover a second
+         basis exists.
+  corrected: DA-23's census. BWXT moves from **Clean** to a new row —
+         **CLEAN AT EVERY SUBTOTAL, STRIPPED AT A COMPONENT**, the first issuer where
+         both are simultaneously true. `GainLossOnSalesOfAssetsAndAssetImpairmentCharges`
+         is served as an absolute magnitude (4 of 4 verified losses stripped, 3 of 3
+         gains untouched, 0 negatives in a 29-fact series over six fiscal years), with
+         the exact strip signature `diff = 2 x 125` — and `status` marked the row
+         `pass`. **A census testing only parent concepts reports a clean issuer while a
+         component of the same statement is sign-corrupted.**
+  corrected: DA-23's detector-availability note, from ONE axis to TWO. The register
+         recorded only "gross profit is absent" and the coverage hole was phrased that
+         way. The second axis is whether `OperatingIncomeLoss` is a filed first-class
+         consolidated subtotal. **BWXT is RESOLVABLE (with LUNR) despite filing no
+         gross-profit line — MRK, BMY and WWD are not. A single-axis flag would bucket
+         BWXT with MRK when their dispositions are OPPOSITE.** Also recorded: the
+         absence is PRESENTATIONAL (BWXT files CostOfGoodsAndServicesSold), and two
+         independent NAME TRAPS sit on the detector — `GrossProfit` and plain
+         `Revenues` each return 0 facts — so **a zero-fact return is evidence about the
+         CONCEPT NAME, not about the ISSUER.**
+  NOT amended: no principle, axiom, bound, disposition class or sector bias changes.
+           Every bias and every falsifier stands as written at 1.4.0.
+  deferred: the DA-29/DA-30 obligations are NOT discharged by any of the 23 artifacts
+            written at pin 1.4.0 — none names the source of every reconciliation term,
+            and none names an operating-income basis. Per the 1.3.0 precedent this is
+            REPORTED and NOT separately dispatched: the obligation is folded into
+            Phase 7's validation ledger, which is the artifact whose function is
+            exactly this census. All 23 remain valid at their recorded pin; none is
+            silently re-run (Q56 filesystem-as-checkpoint).
+  Re-examination scope: bounded to artifacts that read `operating_income` or cite a
+  reconciliation — the class DA-29/DA-30 bind. Everything else is untouched.
+-->
+
 <!--
 Sync Impact Report (spec 046 Q33 — executable input, not decoration):
   version: 1.3.0 → 1.4.0
@@ -62,7 +127,10 @@ Sync Impact Report (spec 046 Q33 — executable input, not decoration):
          footnote: every `operating_income` ranking places the worst loss-makers
          first. THREE detectors now registered in descending reliability — the
          component identity (fully reliable), the gross-profit bound (new;
-         strictly stronger than sign reconciliation; VOYG fails it by $46,951M
+         strictly stronger than sign reconciliation WHERE GROSS MARGIN IS LOW — its power
+         scales INVERSELY with gross margin, so it is near-useless at high-margin issuers
+         (a false negative at every level at SPCX, ~65% GM; 4 of 4 at FLY, ~20% GM).
+         §CORRECTED at 002 Phase 3: VOYG does NOT fail it — see the entry below
          across three consecutive quarters), and margin plausibility (weakest).
          The EPS x shares test is INADMISSIBLE — it passes on both sides of a flip
          at RKLB, FLY and VOYG. Three open candidates (BA 2025 Q3, LUNR, VOYG),
@@ -71,7 +139,11 @@ Sync Impact Report (spec 046 Q33 — executable input, not decoration):
          as UNRESOLVABLE-FROM-PLATFORM rather than as a passed check.
          DA-24 ASSET-SALE CONTAMINATION (EchoStar 2025 Q3 operating income = 4.6x
          revenue). DA-25 NORMALISED PER-UNIT METRICS. DA-26 ANNUAL MISLABELLED AS
-         QUARTERLY — universal, 19 of 19 issuers; the mislabelled period VARIES by
+         QUARTERLY — universal, 19 of 19 issuers [⚠️ SUPERSEDED at v1.6.0 —
+         corrected to "20 tested, 19 exhibiting; FLY is the falsifying
+         counterexample". This entry is the record of what was decided at v1.3.0 and
+         is NOT rewritten; the live claim is in §Data-Integrity Register]; the
+         mislabelled period VARIES by
          issuer so it cannot be screened by position; it is a whole-statement
          failure (at AMGN the Q4 row carries the annual for revenue AND operating
          income). DA-27 FISCAL-PERIOD LABELS DERIVED FROM THE CALENDAR QUARTER —
@@ -142,8 +214,8 @@ Sync Impact Report (spec 046 Q33 — executable input, not decoration):
 
 # Investment Constitution — Agentii Space & Orbital Economy (SPCX Core)
 
-**CONSTITUTION_VERSION**: 1.4.0
-**constitution_pin**: 1.4.0
+**CONSTITUTION_VERSION**: 1.6.0
+**constitution_pin**: 1.5.0
 **RATIFICATION_DATE**: 2026-09-18
 **LAST_AMENDED_DATE**: 2026-09-18
 
@@ -249,11 +321,13 @@ thesis pillar reference.
 | F5b | Partially reusable launch-cost floor (upper stage, soft) | §F5b | bound |
 | F5c | Fully expendable launch-cost floor (whole-vehicle manufacturing, and the only architecture with a `DEMONSTRATED` price) | §F5c | bound |
 | DA-23 | Sign stripping on negative `operating_income`; also any level failing the gross-profit bound | §Data-Integrity Register | **defect** |
-| DA-24 | Asset-sale contamination of `operating_income` | §Data-Integrity Register | **defect** |
+| DA-24 | **Non-operating contamination** of `operating_income` — a GAIN *or* a CHARGE (the defining SATS instance is an inverted impairment, not a sale; independence proof withdrawn) | §Data-Integrity Register | **defect** |
 | DA-25 | Normalised per-unit metrics | §Data-Integrity Register | **defect** |
-| DA-26 | Annual figures mislabelled as quarterly in the metrics block — **universal, 19 of 19** | §Data-Integrity Register | **defect** |
+| DA-26 | Annual figures mislabelled as quarterly in the metrics block — **20 tested, 19 exhibiting; FLY is the falsifying counterexample (corrected v1.6.0, was "universal, 19 of 19")** | §Data-Integrity Register | **defect** |
 | DA-27 | Fiscal-period labels derived from the calendar quarter, not the issuer's fiscal calendar — **n = 4 of 4** | §Data-Integrity Register | **defect** |
 | DA-28 | Capital-structure discontinuity around an IPO invalidates share-count detectors | §Data-Integrity Register | **defect** |
+| DA-29 | **Back-solved and opaque checks** — a reconciliation that closes is not thereby a check; `computed` is an opaque assertion, not a derivation | §Data-Integrity Register | **defective CHECK** (not defective data) |
+| DA-30 | **Two bases on one concept, collapsed without a basis field** — prior to `no_single_basis_collapse` | §Data-Integrity Register | **platform collapse** |
 
 **DA-01 … DA-22** remain defined in `001-technology-baseline/spec.md` §1c and are
 inherited workspace-wide by reference; they are **definitional ambiguities**, not
@@ -336,9 +410,53 @@ Sub-sector is the primary unit — "space" as one sector is too coarse to size r
 
 ## Universe Definition
 
-The universe is tiered by *role in the value chain*, not by market cap. Tier 0 is
-the anchor; the number of positions drawn from each tier is capped by the risk
-framework below.
+The universe is tiered by **one axis: function in the value chain.** Tier 0 is the anchor;
+the number of positions drawn from each tier is capped by the risk framework below.
+
+**The membership test, stated so a new name does not need judgement.** For each tier, ask:
+*does the issuer's **primary revenue** come from this function?* Membership is settled by
+revenue composition, not by market cap, index membership, or thematic resemblance.
+
+**Where a name spans functions, the tier is set by primary revenue and every other function
+is carried as a DECLARED CROSS-TIER DEPENDENCY — never absorbed as a pillar of the host
+thesis.** This rule exists because its absence was measured: thesis 005 (Tier 1) had grown
+three pillars belonging to other tiers — a supply-chain duopoly, a single-deal merger model,
+and a financing screen — until only one of its six pillars was about its own cohort. A
+cross-tier question belongs to the thesis that owns that tier, and the host thesis cites it.
+
+> ⚠️ **RE-CUT at v1.6.0.** The previous framing claimed to tier by *"role in the value
+> chain, not by market cap"* while doing neither consistently: **Tier 1 spanned at least
+> nine distinct value-chain roles** (launch, lunar, Earth observation, components, stations,
+> satellite manufacturing, RF/SIGINT, space data, suborbital tourism) and was in fact a
+> **size cohort**; **Tier 4 spanned at least five unrelated industries** (data-centre
+> thermal, GPU silicon, hyperscale cloud, batteries, telecom) and was in fact a **theme**.
+> A taxonomy that mixes axes cannot tell you whether a new name belongs in a thesis, which
+> is the failure the membership test above is written to prevent.
+>
+> **Two membership moves follow**, and both are consequences of the test rather than
+> judgement calls: **PL, BKSY, HAWK and SPIR move Tier 1 → Tier 2** (operating a
+> constellation is not manufacturing one), and **VRT leaves Tier 4's membership** for a
+> named comparator role (a thesis cannot hold its subject and its control; thesis 009's own
+> §3 called the hyperscalers *"the alternative the orbital case must beat"* while listing
+> them as members).
+>
+> **WHEN THE TEST IS EVALUATED — added at v1.6.0 because the test alone is not decidable
+> across time.** A membership test that is applied once and never revisited goes stale the
+> moment a name changes function, and **M&A moves names across tiers by design** — a launch
+> company that acquires a constellation becomes a constellation operator. Accordingly:
+>
+> 1. **Membership is evaluated as of the thesis's `as_of` date**, and the evaluation is
+>    recorded in the thesis's §2 — not left implicit in the tier table.
+> 2. **A name whose primary revenue changes function re-tiers at the NEXT constitution
+>    amendment**, not mid-thesis. **Work already produced is grandfathered at the pin it
+>    records** (Q56 — the filesystem is the checkpoint), so a re-tier never discards
+>    verified work.
+> 3. **Where a pending transaction would move a name, the thesis states the
+>    empty-result disposition in advance** — the measured instance: thesis 005's own
+>    membership test says **RKLB leaves Tier 1 if the Iridium acquisition closes**, taking
+>    the cohort's only build-versus-launch discloser with it. That is a `no_listed_expression`
+>    outcome for the tier, not a `no_thesis` outcome for the question, and it is recorded
+>    rather than discovered.
 
 ### Agent-Coverage Audit
 
@@ -348,12 +466,22 @@ Fifty-nine named securities; thirty-seven are agent-ready today.
 | Class | Definition | Agent-ready | Count |
 |---|---|---|---|
 | **READY** | Sector + industry + cohort assigned, `sec_filings` > 0, `xbrl_facts` > 0, `src_documents` > 0. Fully usable without manual setup. | Yes | 37 |
-| **PARTIAL** | `sector` is `null` and the `sec_filings` counter reads 0, but XBRL facts, source documents and transcripts are rich. Researchable — the sector must be supplied by hand before any sector-aggregate constraint can evaluate. | Yes, with manual sector | 9 |
+| **PARTIAL** | **`sector` is `null` — nothing more.** These names carry rich XBRL facts, source documents and transcripts; the sector must be supplied by hand before any sector-aggregate constraint can evaluate. | Yes, with manual sector | 9 |
 | **NOT_READY** | `xbrl_facts` = 0 and `src_documents` = 0. Nothing but an institutional-holdings stub dated 2025-12-31. | No | 13 |
 
 *Classification is by research readiness, not raw row count: institutional holdings
 and insider trades are supplementary, so a name missing only those (e.g. HAWK, which
 is otherwise fully cohort-assigned) still counts as READY.*
+
+> ⚠️ **CORRECTED at v1.6.0 — the `PARTIAL` definition previously required `sec_filings == 0`
+> as a second condition, and that was a bookkeeping artifact dressed as a data gap.** The
+> bulk `list_coverage` endpoint does not report `sec_filings` for every covered ticker — the
+> document's own caveat, four paragraphs below, says so: *"Tickers absent from it are not
+> thereby uncovered."* Measured on names this table had deferred: **LLY 75,248 XBRL facts /
+> 81 documents / 19 transcripts; AMZN 22,062 / 86 / 19; AAPL 16,450 / 77 / 19; BKSY 17,568 /
+> 79 / 19** — all `completion_pct: 86`. **They were researchable throughout.** The lesson is
+> the register's own: a field that is *absent* is not a field that is *false*, and a
+> readiness class must not be defined by a counter the platform does not guarantee.
 
 **Two methodology caveats — both cost real analysis time before they were found:**
 
@@ -380,26 +508,32 @@ transaction rather than by standalone fundamentals. `DEAL` names are subject to 
 |---|---|---|---|
 | SPCX | SpaceX (Space Exploration Technologies Corp.) | Launch, Starlink connectivity, AI compute. Reports three segments as of Q2 2026: Space, Connectivity, AI. | READY — 8 filings, 1,517 XBRL facts |
 
-### Tier 1 — Listed Space Pure-Plays
+### Tier 1 — Launch, Spacecraft & In-Space Services
+
+*Membership test: primary revenue from building or flying launch vehicles, spacecraft, landers
+or in-space infrastructure. Operating a constellation is the next tier's function, not this
+one — which is why PL, BKSY, HAWK and SPIR now sit in Tier 2.*
 | Ticker | Company | Role | Coverage | Deal |
 |---|---|---|---|---|
 | RKLB | Rocket Lab | Launch (Electron/Neutron) + space systems; owns SolAero, a space-solar-cell supplier. **Acquiring Iridium ~$8B** to become a vertically integrated launch-plus-constellation operator | READY — 83 filings | DEAL (as acquirer) |
 | FLY | Firefly Aerospace | Launch and lunar/spacecraft systems | READY — 19 filings | — |
 | LUNR | Intuitive Machines | Lunar landers and space services | READY — 69 filings | — |
-| PL | Planet Labs | Earth observation constellation | READY — 62 filings | — |
 | KRMN | Karman Holdings | Missile/space and defense component supplier | READY — 30 filings | — |
 | VOYG | Voyager Technologies | Space station (Starlab), defense and space systems; **acquired Astrobotic for ~$300M** | READY — 18 filings | — |
 | YSS | York Space Systems | Satellite manufacturing and space systems; IPO'd Jan 2026 above $4B; **acquired All.Space for ~$355M** | READY — 10 filings | — |
-| HAWK | HawkEye 360 | RF geolocation and space-based signals intelligence | READY — 4 filings (no institutional-holdings row) | — |
-| BKSY | BlackSky | Earth observation and analytics | **PARTIAL** — sector unassigned | — |
 | RDW | Redwire | Space infrastructure, deployable structures, in-space biotech payloads | **NOT_READY** — no data | — |
-| SPIR | Spire Global | Space-based data (weather, maritime, aviation) | **NOT_READY** — no data | — |
 | SPCE | Virgin Galactic | Suborbital human spaceflight | **NOT_READY** — no data | — |
 
 > Astroscale (TYO: 186A, space debris removal) is a listed pure-play but is **not**
 > platform-covered and trades in Tokyo — out of scope until an ADR exists.
 
-### Tier 2 — Satellite Connectivity and Services
+### Tier 2 — Constellation Operators: Connectivity, Spectrum & Geospatial
+
+*Membership test: primary revenue from OPERATING a constellation — a licensed spectrum
+position, a subscriber base, or a data product delivered from orbit. The geospatial
+operators (PL, BKSY, HAWK, SPIR) were moved here at v1.6.0: they share the licensed-orbit
+and data-product structure this tier's valuation question tests, and they do not manufacture
+anything, which is what the previous tier was for.*
 | Ticker | Company | Role | Coverage | Deal |
 |---|---|---|---|---|
 | IRDM | Iridium Communications | LEO voice/data constellation. 66 satellites, licensed L-band spectrum, 2.5M subscribers, $871.7M revenue and $114.4M net income (2025) | READY — 77 filings | **DEAL — being acquired by RKLB at $54/sh** |
@@ -407,6 +541,10 @@ transaction rather than by standalone fundamentals. `DEAL` names are subject to 
 | SATS | EchoStar | Spectrum holder; ~$19.6B AWS-4/H-Block/AWS-3 spectrum sale to SPCX (FCC-approved, transfer closed) | READY — 62 filings | — |
 | ASTS | AST SpaceMobile | Direct-to-cell satellite broadband | **PARTIAL** — sector unassigned | — |
 | VSAT | Viasat | GEO/LEO broadband and government satcom | **PARTIAL** — sector unassigned | — |
+| PL | Planet Labs | Earth observation constellation and data product | READY — 62 filings | — |
+| HAWK | HawkEye 360 | RF geolocation and space-based signals intelligence | READY — 4 filings (no institutional-holdings row) | — |
+| BKSY | BlackSky | Earth observation and analytics | READY — **17,568 XBRL facts, 79 source documents, 19 transcripts**, 86% complete; only `sector` is unassigned. Reclassified from `PARTIAL` at v1.6.0 | — |
+| SPIR | Spire Global | Space-based data (weather, maritime, aviation) | **NOT_READY** — no data | — |
 | MDA | MDA Space | Canadian space robotics (Canadarm heritage), satellite subsystems | **NOT_READY** — no data | — |
 | TSAT | Telesat | GEO/LEO operator; Lightspeed LEO constellation | **NOT_READY** — no data | — |
 | GILT | Gilat Satellite Networks | Ground segment and satellite networking | **NOT_READY** — no data | — |
@@ -454,12 +592,21 @@ transaction rather than by standalone fundamentals. `DEAL` names are subject to 
 > filed under `industrial.aerospace_defense`.
 
 ### Tier 4 — Enabling Layer (Power, Thermal, Compute)
-The layer where A2's constraints actually bind — and where the orbital-compute thesis
-lives or dies under P10.
+
+*Membership test: primary revenue from SELLING power, thermal management or compute capacity,
+where the orbital case is a stated demand path. The layer where A2's constraints bind, and
+where the orbital-compute question lives or dies under P10.*
+
+> ⚠️ **VRT MOVED OUT OF MEMBERSHIP at v1.6.0.** Vertiv is the **terrestrial comparator** — the
+> thing orbital compute must beat — and a thesis cannot hold its subject and its control.
+> Thesis 009's own §3 said so while listing it as a member: *"the **alternative** the orbital
+> case must beat."* VRT is retained as a **named comparator**, cited for the cooling penalty
+> and the terrestrial cost floor, and is **not a universe member of any Tier 4 thesis**. The
+> same rule applies to any name whose role is to bound the thesis rather than to be subject
+> to it.
 
 | Ticker | Company | Relevance to A2 | Coverage |
 |---|---|---|---|
-| VRT | Vertiv | Thermal management at scale — the terrestrial comparator that defines the orbital cooling penalty | READY — 90 filings (sector: machinery) |
 | NVDA | NVIDIA | Compute silicon. An H100 already flew on Starcloud-1; radiation tolerance and thermal coupling determine viability of orbital inference | READY — 169 filings, cohort mvp_2026q2 |
 | **GOOG** | Alphabet | **Project Suncatcher** — TPU-based orbital data centers, two prototypes targeted by early 2027, 81-satellite reference configuration. The most detailed public engineering disclosure in the sector | READY — 146 filings, cohort mvp_2026q2. **Query as `GOOG`, not `GOOGL`** — the latter returns an empty record |
 | MSFT | Microsoft | Azure Space; cloud-side demand for orbital data | READY — 52 filings, cohort mvp_2026q2 |
@@ -839,7 +986,12 @@ is inherited by reference.
 |---|---|
 | **Census** | **6 of 6 loss-making issuers** return negative operating income as a **positive value of identical magnitude**. **19 of 19 profitable issuers** are unaffected. **Zero exceptions on either side.** |
 | **Flipped** | SPCX (−143.0 → +143.0), YSS (−41.3 → +41.3), RKLB (−57.5 → +57.5), FLY (−95.2 → +95.2), **BA (−5,761 → +5,761)**, **PL (−34.888 → +34.888 — the cleanest instance, an exact component match on directly-available quarterly figures)** |
-| **Clean** | GOOG, IRDM, VRT, UTHR, NVDA, MSFT, MRCY, BWXT, LHX, HWM, TDG, NOC, LMT, RTX, KRMN, GSAT, AMGN, BMY, MRK, WWD, HEI, SATS |
+| **Clean — SUBTOTAL-LEVEL ONLY, and the qualifier is load-bearing** | GOOG, IRDM, LHX, HWM, TDG, NOC, LMT, RTX, KRMN, AMGN, BMY, MRK, WWD, HEI. **⚠️ `Clean` here means only that the PARENT series tests clean. At 002 Phase 3 it was established that an issuer can be clean at every subtotal while a COMPONENT of the same statement is sign-corrupted — BWXT, VRT, UTHR and MRCY are all instances. FOUR issuers previously listed in this row have been REMOVED for exactly that reason: MRCY (11 of 13 filed periods stripped; the clean verdict came from testing only the filed-positive period), UTHR (11 of 11 verified negative components stripped while all 35 parent facts are correctly positive), SATS (12/12 filed-negative subtotals stripped, 8/8 filed-positive clean), and — **added at v1.6.0, on thesis 003's finding — GSAT**, whose `OperatingIncomeLoss` is served as **+4,775,000 against a filed (4,775)K loss**; the strip was **verified directly at v1.6.0 by calling both endpoints on one accession** (see the endpoint note below). A subtotal-level census CANNOT support an unqualified `Clean`.** |
+| **⚠️ THE STRIP IS ENDPOINT-SPECIFIC — established at v1.6.0, and it is a REMEDY, not a caveat** | On **one filing, one concept, one period** (GSAT accession `0001366868-26-000039`, `us-gaap:OperatingIncomeLoss`, Q2 2026): **`search_xbrl_facts` returns `4775000`; `get_statement` returns `-4775000`**, labelled *"(Loss) income from operations"*. Magnitude agrees exactly; **only the sign differs.** So DA-23 is **not "the platform"** — it is **one extraction endpoint disagreeing with another on the same filed fact**, which means the defect is **localised and fixable at that endpoint**, and that **`get_statement` is the reliable read where the two disagree**. Any artifact quoting `search_xbrl_facts` alone inherits the strip silently. |
+| **⚠️ UNEVIDENT — the test could not run** | **NVDA.** The entire income statement has **zero negatives** (`OperatingIncomeLoss` 69 facts, all non-negative 2014–2026), so **the sign test can neither pass nor fail.** *This is not clean; it is unevident* — the DA-23 analogue of the register's own margin-conditioned-power rule. **A test that cannot fail is not a passing test, and 001's "12 issuer-quarters" rule count must be re-scored to *issuer-quarters where DA-23 was TESTABLE*.** |
+| **⚠️ UNEXERCISED — the test ran on nothing** | **VRT.** All 61 `OperatingIncomeLoss` facts are positive, so the `\|x\|` channel **had nothing to act on** — 13/13 identities close but vacuously. **`Unexercised` and `Clean` are different results and must not be reported as the same.** |
+| **⚠️ CLEAN AT SUBTOTALS, STRIPPED ELSEWHERE ON THE STATEMENT** | **VRT and NVDA** — the stripping sits on CASH-FLOW subtotals (VRT `NetCashProvidedByUsedInFinancingActivities` correct at `+11.9` in one period and stripped at `−3.0` in another; NVDA investing `+26,429,000,000` vs filed `(26,429)`). **The discriminator is the SIGN OF THE VALUE, not the concept and not the period. A census scoped to the income statement cannot see this.** |
+| **⚠️ CLEAN AT EVERY SUBTOTAL, STRIPPED AT A COMPONENT — registered at 002 Phase 3, BWXT** | **BWXT is the first issuer where "clean" and "stripped" are simultaneously true, and the census statistic above cannot see the second.** Every subtotal reconciles; the defect is one level down. `GainLossOnSalesOfAssetsAndAssetImpairmentCharges` is served as an **absolute magnitude — 4 of 4 page-verified filed losses stripped to positive, 3 of 3 gains untouched, 0 negatives in the entire 29-fact served series across six fiscal years.** The arithmetic signature is exact: **`diff 250 = 2 × 125`, the mark of a strip** — and `status` marked that row **`pass`**. **Consequence: a census that tests only the parent concepts reports a clean issuer while a component of that same statement is sign-corrupted. Component-level census is a distinct requirement from subtotal-level census.** |
 | **Consequence** | **An inversion, not a footnote.** Any `operating_income` ranking places the *worst loss-makers at the top* — SPCX's $143M loss outranks IRDM's $34M profit. Every margin, ratio and screen built on the raw field is wrong for every loss-making issuer in the universe, and **silently so**, because the returned value is internally plausible. |
 | **Remedy** | Recompute from components before any use. An artifact quoting a raw `operating_income` must show the component derivation in-line. |
 
@@ -850,7 +1002,7 @@ than the first in a specific way, and the ordering now matters.
 | # | Detector | Rule | Reliability |
 |---|---|---|---|
 | **1** | **Component identity** | `gross profit − opex = operating_income` | **Fully reliable where quarterly gross profit exists.** The only test that confirms a *value*, not just a sign. |
-| **2** | **Gross-profit bound** | **Operating income can never EXCEED gross profit, at any sign.** Contributed by the universe-wide pass. | **Strictly stronger than sign reconciliation** and available where the component identity is not. **VOYG fails it by $46,951M across three consecutive quarters.** |
+| **2** | **Gross-profit bound** | **Operating income can never EXCEED gross profit, at any sign.** Contributed by the universe-wide pass. | **A SCREEN, not a classifier**, and its power scales **inversely with gross margin**: near-useless at high-margin issuers (a **false negative at every level at SPCX**, ~65% GM; **4 of 4 at FLY**, ~20% GM). **⚠️ CORRECTED at 002 Phase 3: the entry originally claimed *"VOYG fails it by $46,951M across three consecutive quarters"* — that was computed by applying the bound to the SIGN-STRIPPED MAGNITUDE, and then treating the violation as mutually exclusive with sign-stripping. VOYG is a PLAIN DA-23 sign strip. Restored, `−51.408 < +4.457` violates nothing. The bound fires on 16 of 17 VOYG periods, continuously since FY2024 — not three.** |
 | **3** | **Margin plausibility vs industry norms** | An operating margin far outside the sector's range | **Weakest.** Used only where 1 and 2 are unavailable — at BA 2025 Q3 and LUNR. |
 | **—** | ~~`EPS × shares ≈ net income`~~ | — | **INADMISSIBLE as a sign test.** Confirmed unreliable: it **passes on both sides of a flip** at RKLB, FLY *and* VOYG. Its use is a defect, not a shortcut. |
 
@@ -870,23 +1022,69 @@ will pass VOYG and be wrong.
 > all**, so the field is not *wrong* there — it is *unavailable*, and an artifact that
 > treats absence as a zero, or as a clean read, is failing silently. **Absence must be
 > recorded as `UNRESOLVABLE-FROM-PLATFORM`, never as a passed check.**
+>
+> **⚠️ CORRECTED at 002 Phase 3 — DETECTOR AVAILABILITY IS TWO AXES, NOT ONE, and the
+> single-axis reading put opposite dispositions in the same bucket.** The register
+> previously recorded only one axis — *"gross profit is absent"* — and the coverage hole
+> above is phrased that way. The second axis is **whether `OperatingIncomeLoss` is filed
+> as a first-class consolidated subtotal.** **BWXT sits in the RESOLVABLE cell (with
+> LUNR): it files no gross-profit line, yet operating income is recoverable exactly,
+> because the filer's own calculation linkbase supplies the identity. MRK, BMY and WWD
+> sit in the unresolvable cell. Recording only `gross_profit_line_present` would bucket
+> BWXT with MRK when their dispositions are OPPOSITE.**
+>
+> **And the absence is PRESENTATIONAL, not conceptual.** BWXT files
+> `CostOfGoodsAndServicesSold` (662,849) — the filer simply presents **no subtotal**.
+> **Two independent NAME TRAPS sit on the same detector:** `GrossProfit` returns 0 facts
+> **and plain `Revenues` returns 0 facts** (the filed concept is
+> `RevenuesFromExternalCustomers` / `RevenueFromContractWithCustomerExcludingAssessedTax`).
+> **A zero-fact return is therefore evidence about the CONCEPT NAME, not about the
+> ISSUER** — resolved only by reading the statement face.
 
-> **Edge case worth preserving.** MRCY is DA-23-clean with an operating income of
-> **$0.280M on $983.6M of revenue** (0.03% margin). A sign error there would be
-> *invisible by inspection* — the magnitude is plausible either way. This is why the
-> component identity is mandatory rather than a spot-check.
+> **⚠️ Edge case — RETESTED AND REFUTED AT 002 PHASE 3.** The register recorded MRCY as
+> *"DA-23-clean with an operating income of $0.280M on $983.6M of revenue (0.03% margin)…
+> This is why the component identity is mandatory rather than a spot-check."*
+> **The identity WAS run, and the verdict was still wrong. MRCY is the most contaminated
+> issuer in the phase: 11 of 13 filed periods are losses served as identical positive
+> magnitudes, and the only 2 correct values are the only 2 filed-positive periods.**
+>
+> **The method error is the finding.** 001 ran the identity on **the period it was
+> reporting** and not on **the period it was comparing against** — and the reported period
+> is one of the two filed-positive ones, so it passed **by construction**.
+>
+> > **A detector run only on the subject of a comparison cannot detect a comparison error.**
+>
+> **What follows is the most compact DA-23 reproduction in the thesis.** 001's `−98.6%`
+> **is reproducible only from the stripped comparator**: on filed signs the movement is
+> **+19,907 favourable and the percent change is UNDEFINED, because it crosses zero.**
+> Its prior-year margin of `2.2%` is filed as **(2.1)%** — so the movement is **+2.1 points
+> of IMPROVEMENT, not deterioration.** And its `—` for prior-year gross profit **hides a
+> filed 254,494 = 27.9%**, with p.33 stating the **70 bp improvement** verbatim.
+>
+> **Two portable detectors came out of this issuer.** (1) **Articulation:** a served series
+> fails articulation by **exactly 2 × the stripped term**. (2) **Per-value-sign, provable in
+> one line:** `Other (expense) income, net` filed `(3,093) | 2,304 | (5,613) | (2,900)` — 12
+> of 13 filed negatives served as magnitudes, and **the one filed-positive is the one cell
+> served unchanged. No concept- or issuer-level transformation can produce that.**
 
-### DA-24 — ASSET-SALE CONTAMINATION of `operating_income`
+### DA-24 — NON-OPERATING CONTAMINATION of `operating_income`
 
-A gain on the disposal of an asset flows through the operating line, so the field
-measures a transaction rather than operations.
+A non-operating item flows through the operating line, so the field measures a
+transaction or a write-down rather than operations.
+
+> **⚠️ CORRECTED AT 002 PHASE 3 — THIS ENTRY'S DEFINING INSTANCE WAS MISCHARACTERISED, AND ITS
+> INDEPENDENCE PROOF DOES NOT HOLD.** Both corrections come from re-testing the entry against
+> its own origin issuer. **The entry was named for a GAIN and the thing it was named after is
+> a LOSS.**
 
 | | |
 |---|---|
-| **Instance** | EchoStar (SATS) 2025 Q3 operating income was **4.6× revenue** ($16.6B on $3.6B) — a spectrum-licence sale. Quarterly operating-margin progression 2.3% → 5.7% → **460.5%** → **118.1%** → 10.7% makes the event unmistakable. |
-| **Distinct mechanism** | **Classification**, not sign. DA-23 corrupts the *sign*; DA-24 corrupts the *composition*. |
-| **Identical consequence and remedy** | Both make the field unusable as a margin input; both are fixed by recomputing from components. |
-| **Independence — measured** | SATS exhibits **DA-24 without DA-23** (its EPS × shares reconciles to 0.3%). This is the cleanest proof the two diagnoses are **distinct** and must remain separate register entries, not merged. |
+| **Instance — CORRECTED** | EchoStar (SATS) 2025 Q3 operating income was **4.6× revenue** — the magnitude reproduces exactly (`16,641,875 / 3,614,258 = 4.605×`). **But it is NOT a spectrum-licence sale.** It is a **non-cash 5G-Network IMPAIRMENT CHARGE of `$16,481,468` thousand**, triggered by the AT&T/SpaceX transactions. **The licences REMAIN ON THE BALANCE SHEET at 2026-03-31 (`$34,550,802` thousand); AT&T took only a SHORT-TERM SPECTRUM MANAGER LEASE; and NO GAIN IS RECOGNISED BECAUSE NOTHING HAS CLOSED.** **This is the entry's shape with the OPPOSITE SIGN.** |
+| **The progression was contaminated too** | The quoted series `2.3% → 5.7% → 460.5% → 118.1% → 10.7%` reproduces arithmetically **but is wrong twice over: four of its five terms are the ABSOLUTE VALUES OF LOSSES, and the 118.1% term is annual-on-annual (a DA-26 instance sitting inside a DA-24 exhibit). Q4 2025 is therefore ABSENT from the progression entirely.** Correct filed series: **`(2.28)% → (5.73)% → (460.46)% → (20.54)% → +10.71%`.** |
+| **⚠️ The definition must name a GAIN *AND* a CHARGE** | **VRT supplies the charge case independently**: its only acquisition item above the operating line is PurgeRite contingent consideration at a **`$62.0M` charge**. **A definition written for a gain will not fire on a write-down, and vice versa.** |
+| **Distinct mechanism** | **Composition**, not sign. DA-23 corrupts the *sign*; DA-24 corrupts the *composition*. **At SATS the two co-occur inside one figure** — the impairment is both a DA-24 contamination *and* sign-stripped — which is why the independence claim below failed. |
+| **⚠️ Independence — MEASURED, AND THE MEASUREMENT FAILS** | The entry previously claimed: *"SATS exhibits DA-24 without DA-23 (its EPS × shares reconciles to 0.3%). This is the cleanest proof the two diagnoses are distinct."* **THE PROOF IS INVALID, on two independent grounds.** **(1) It uses a test the register forbids.** DA-23's own detector table rules `EPS × shares` **INADMISSIBLE as a sign test** — it passes on both sides of a flip. **DA-24's foundation rested on a measurement the register had already declared unusable.** **(2) Even taken at face value it is arithmetically blind.** The residual `\|EPS\|×shares − \|NI\|` is **INVARIANT UNDER A GLOBAL FLIP** — both operands carry the same strip, so the check returns the same value whether or not a strip is present. **It cannot detect the defect it was used to rule out.** **AND the claim is substantively false: DA-23 IS present at SATS in the same periods** (12/12 filed-negative subtotals stripped, 8/8 filed-positive clean, zero exceptions). **"DA-24 without DA-23" is false at SATS.** |
+| **Status of the entry** | The entry **remains valid as a defect class** — non-operating contamination of the operating line is real and VRT, SATS and MRCY all exhibit it in one direction or the other. **What is withdrawn is the specific SATS instance's characterisation and the independence proof.** **Independence is now UNSUPPORTED rather than disproven** — the two defects co-occur at SATS, which is consistent with both a shared cause and a coincidence, and **no admissible measurement currently separates them.** Any artifact asserting independence must supply one. |
 
 ### DA-25 — NORMALISED PER-UNIT METRICS
 
@@ -901,9 +1099,20 @@ may not be reproducible from the audited segment tables.
 
 ### DA-26 — ANNUAL figures mislabelled as QUARTERLY in the metrics block
 
-**19 of 19 issuers checked exhibit it — it is universal, not sporadic.** HWM, TDG, BA,
-GOOG, MSFT, NVDA, SATS, NOC, LMT, RTX, PL, KRMN, VOYG, GSAT, MRK, AMGN, BMY, WWD, HEI.
-Most exhibit it **twice, in consecutive years**.
+**20 issuers tested, 19 exhibit it — and the twentieth falsifies "universal".** HWM, TDG,
+BA, GOOG, MSFT, NVDA, SATS, NOC, LMT, RTX, PL, KRMN, VOYG, GSAT, MRK, AMGN, BMY, WWD, HEI
+all exhibit it. **FLY does not**: its served rows carry **interim cumulative** figures and
+never annual ones, and every cumulative identity reconciles. Most exhibitors show it
+**twice, in consecutive years**.
+
+> ⚠️ **CORRECTED at v1.6.0 — this entry read "universal, 19 of 19" until thesis 003
+> tested a twentieth issuer.** The count was not wrong about the nineteen it named. It was
+> **untestable as stated**: a population of nineteen that happens to exclude the one
+> counterexample cannot distinguish a universal defect from a merely common one, and the
+> word "universal" was doing work the census could not support. Thesis 003's
+> `_cross/launch-cost-curve-value-migration_synthesis.md` correction #4 records this, and
+> its instruction travels with the finding: **do not report DA-26 as universal, and do not
+> apply it without running the screen.** DA-26 is **screen-conditional**, not universal.
 
 | | |
 |---|---|
@@ -964,6 +1173,40 @@ period-and-sign extraction layer that is reliable for December-year-end US issue
 degrades for everyone else — and they were registered together because **a thesis that
 patches one and not the others will still be wrong**, by a route it has not tested.
 
+### DA-29 — BACK-SOLVED AND OPAQUE CHECKS: a reconciliation that closes is not thereby a check
+
+**This entry is a different kind from DA-23…DA-28.** Those describe **defective data**. This
+describes a **defective check** — an inconsistency that *closes* while testing nothing. It is
+registered because the programme has now been misled by this class more than once, and
+because **a passing check is the artifact most likely to be accepted without examination.**
+
+> **THE MECHANICAL CIRCULARITY TEST.** **If any term in a reconciliation appears NOWHERE in
+> the source, the check is a BACK-SOLVE.** A genuine reconciliation is assembled from values
+> that exist independently and then shown to agree. A back-solve takes the one value it wants
+> to produce and derives the rest to fit. **The two are indistinguishable by arithmetic — both
+> close exactly — so the test cannot be run on the closure. It must be run on the TERMS.**
+> **Operationally: locate every term in the filed statement. If one cannot be located, the
+> closure is uninformative regardless of its precision.**
+
+| | |
+|---|---|
+| **Instance 1 — 001's unsourced clearance** | 001 cleared BWXT via a reconciliation containing **`$90.7M`**. The filed `Total Costs and Expenses` is **$775.1M**; the two differ by **684,391**, and **$90.7M appears in no BWXT filing.** The check closed. **It was a back-solve, and 001 read it as a clearance.** 002's replacement (775,091 and 21,565) has **every term filed**. |
+| **Instance 2 — `computed` is not reproducible from the instrument's own tree** | At BWXT Q1 2026, `OperatingIncomeLoss` `computed` = **71,139,000** while **the instrument's own returned calculation tree yields 106,691,000 — internally inconsistent within a single run**, with the same run reporting the parent concept exact. **The instrument never discloses which role produced each `computed` row**, so a `computed` value cannot be independently reproduced from the material the instrument itself returns. **Consequence: `computed` is an opaque assertion, not a derivation, and may not be cited as one.** |
+| **Instance 3 — `reported` mis-selection, three times in one filing** | At the same filing: Q1 2025 operating income `reported` **97,746** vs filed **96,630**; equity `reported` **1,286,000** vs `computed` **1,280,614,000**; and **PP&E `reported` carrying GROSS for a NET concept.** **The `reported` column is therefore not definitionally the filed value.** It must be reconciled to the statement face before use. |
+
+**Why the class is dangerous.** Every other register entry produces a *wrong number*, which a
+downstream reader may catch by plausibility. **This class produces a RIGHT-LOOKING number and
+a closed check**, and it survives review *precisely because the arithmetic is exact.* The
+remedy is procedural and cannot be automated away: **name the source of every term.**
+
+### DA-30 — TWO BASES ON ONE CONCEPT, COLLAPSED WITHOUT A BASIS FIELD
+
+| | |
+|---|---|
+| **Instance** | **BWXT files `OperatingIncomeLoss` on two bases** — equity-inclusive (per its calculation linkbase and its own footnote) and equity-exclusive otherwise. **The platform serves both under one concept with no basis field. Equity is 20.2% of the Q1 2026 figure.** |
+| **Relation to the artifact contract** | Distinct from, and prior to, the contract's `no_single_basis_collapse` rule. That rule governs an **artifact** that quotes one competing basis and not the others. **This is the platform collapsing two bases before any artifact sees them** — so the artifact cannot comply by diligence alone; it must first *discover* that a second basis exists. |
+| **Consequence** | Quoting "operating income" for a BWXT-class issuer is **incomplete by construction** until the basis is named. **Requirement: any artifact quoting a multi-basis concept must name the basis, and must state where the basis was established.** No artifact in thesis 002 names it — recorded as a live §1c gap. |
+
 ### Disposition Classes (P4)
 
 Two failure modes were previously conflated under one label. They demand different
@@ -1022,6 +1265,33 @@ relevant output, not a gap in the research.
 
 ## Amendment Log
 
+### 1.5.0 — 2026-09-18 — Two register entries of a new kind: DA-29, DA-30
+
+**Added DA-29 — BACK-SOLVED AND OPAQUE CHECKS**, the register's first entry describing a
+defective *check* rather than defective *data*. A reconciliation that closes is not thereby
+a check: **if any term appears nowhere in the source, it is a back-solve**, and a back-solve
+closes exactly, so the test must be run on the terms and not on the closure. 001's BWXT
+clearance contained a `$90.7M` term that appears in no filing — the filed Total Costs and
+Expenses is **$775.1M** — and closed anyway.
+
+**Added DA-30 — TWO BASES ON ONE CONCEPT, COLLAPSED WITHOUT A BASIS FIELD.** BWXT files
+operating income equity-inclusive and equity-exclusive under one platform concept; equity is
+**20.2%** of the Q1 2026 figure. This is *prior to* the artifact contract's
+`no_single_basis_collapse` rule, and therefore not dischargeable by diligence alone.
+
+**Corrected DA-23 twice.** (1) **BWXT moves out of `Clean`** into a new row — **clean at
+every subtotal, stripped at one component**, the first issuer where both hold at once:
+`GainLossOnSalesOfAssetsAndAssetImpairmentCharges` served as an absolute magnitude, with the
+exact strip signature `diff = 2 × 125`, and `status` marked `pass`. (2) **Detector
+availability is TWO axes, not one** — BWXT is *resolvable* despite filing no gross-profit
+line (its own calculation linkbase supplies the identity), while MRK, BMY and WWD are not. A
+single-axis flag would bucket BWXT with MRK when their dispositions are **opposite**.
+
+**No principle, axiom, bound, disposition class or sector bias changed.** Every bias and
+every falsifier stands as written at 1.4.0. Reported for the gate-5 budget confirm; **not
+separately dispatched** — the DA-29/DA-30 obligations on the 23 pre-existing artifacts are
+folded into Phase 7's validation ledger, which is the artifact whose function is that census.
+
 ### 1.4.0 — 2026-09-18 — MINOR: Sector Preferences rationales restated against A1b
 Caught by `agentii.clarify` round 2 on 002. **The v1.3.0 A1a/A1b split was not propagated
 to the Sector Preferences table**, leaving the document internally contradictory in three
@@ -1059,7 +1329,9 @@ DA-23 sign stripping (**census extended to 6 of 6 loss-making stripped, 19 of 19
 profitable clean**, with three detectors registered in descending reliability and the
 EPS test ruled inadmissible), DA-24 asset-sale contamination, DA-25 normalised per-unit
 metrics, and three found by the same universe-wide sweep — **DA-26** annual figures
-mislabelled as quarterly (**universal, 19 of 19**), **DA-27** fiscal-period labels
+mislabelled as quarterly (**universal, 19 of 19** — ⚠️ SUPERSEDED at v1.6.0: *20
+tested, 19 exhibiting; FLY is the falsifying counterexample*; kept as the v1.3.0
+decision record, not rewritten), **DA-27** fiscal-period labels
 derived from the calendar quarter (**n = 4 of 4**, partitioning the population by fiscal
 year-end), **DA-28** IPO capital-structure discontinuity invalidating share-count
 detectors. Also registered: the **coverage hole** at MRK, BMY and WWD where
@@ -1100,7 +1372,7 @@ Initial ratification. No prior pins existed; no re-examination dispatched.
 *SemVer rules (Q33): MAJOR = a principle removed or incompatibly redefined; MINOR =
 a principle added or substantially extended; PATCH = wording only. MAJOR/MINOR bumps
 mark `constitution_pin`-older theses `stale` and dispatch re-examination after the
-gate-5 budget confirm. PATCH never triggers review. Current version: **1.3.0**.*
+gate-5 budget confirm. PATCH never triggers review. Current version: **1.5.0**.*
 
 *Note on the A1 and F5 splits (v1.3.0): both are MINOR, not MAJOR, because each
 **preserves** its parent's binding half and adds a child that carries the previously
@@ -1145,5 +1417,13 @@ Sync Impact Report entry
   bump: minor
   note: Sector Preferences rationales restated against A1a/A1b (three rows: Launch Services, Space Infrastructure & Components, Earth Observation). All biases retained — Launch stays OW/High on an A1a-consistent basis; Infrastructure stays Neutral/Medium on dilution grounds; EO stays UW/Low as a timing rather than structural judgment. Corrects an internal contradiction left by v1.3.0, which amended A1 without propagating to the sub-sector table.
   old → new: [record changed principles here]
+  deferred: [none]
+-->
+
+<!--
+Sync Impact Report entry
+  bump: minor
+  note: DA-26 corrected to a falsified census (20 tested, 19 exhibiting; FLY the counterexample) per 003 correction #4; the PARTIAL class redefined to drop the sec_filings==0 condition that mislabelled researchable names; §Universe Definition re-cut to ONE axis (function in the value chain) with an explicit membership test, moving PL/BKSY/HAWK/SPIR to Tier 2 and VRT out of Tier 4 membership
+  old → new: 1.5.0 → 1.6.0
   deferred: [none]
 -->

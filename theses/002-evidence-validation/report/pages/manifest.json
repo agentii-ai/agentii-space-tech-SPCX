@@ -1,0 +1,87 @@
+{
+  "page_count": 13,
+  "section_count": 13,
+  "dpi": 192,
+  "width": 1632,
+  "height": 2112,
+  "files": [
+    {
+      "page": 1,
+      "path": "page-01.png",
+      "width": 1632,
+      "height": 2112
+    },
+    {
+      "page": 2,
+      "path": "page-02.png",
+      "width": 1632,
+      "height": 2112
+    },
+    {
+      "page": 3,
+      "path": "page-03.png",
+      "width": 1632,
+      "height": 2112
+    },
+    {
+      "page": 4,
+      "path": "page-04.png",
+      "width": 1632,
+      "height": 2112
+    },
+    {
+      "page": 5,
+      "path": "page-05.png",
+      "width": 1632,
+      "height": 2112
+    },
+    {
+      "page": 6,
+      "path": "page-06.png",
+      "width": 1632,
+      "height": 2112
+    },
+    {
+      "page": 7,
+      "path": "page-07.png",
+      "width": 1632,
+      "height": 2112
+    },
+    {
+      "page": 8,
+      "path": "page-08.png",
+      "width": 1632,
+      "height": 2112
+    },
+    {
+      "page": 9,
+      "path": "page-09.png",
+      "width": 1632,
+      "height": 2112
+    },
+    {
+      "page": 10,
+      "path": "page-10.png",
+      "width": 1632,
+      "height": 2112
+    },
+    {
+      "page": 11,
+      "path": "page-11.png",
+      "width": 1632,
+      "height": 2112
+    },
+    {
+      "page": 12,
+      "path": "page-12.png",
+      "width": 1632,
+      "height": 2112
+    },
+    {
+      "page": 13,
+      "path": "page-13.png",
+      "width": 1632,
+      "height": 2112
+    }
+  ]
+}

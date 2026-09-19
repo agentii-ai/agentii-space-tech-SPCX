@@ -7,7 +7,7 @@ mode: methodology
 generated_at: 2026-09-18T13:10:00-04:00
 constitution_pin: "1.2.0"
 assumption_pin: "2"
-skill_pin: "registry-1.0.0"
+skill_pin: "none"
 as_of: 2026-09-18
 definitions_used:
   - da_id: "DA-04"

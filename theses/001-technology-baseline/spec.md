@@ -5,7 +5,7 @@
 **Status**: Active
 **Time Horizon**: 2026-Q4 (baseline refresh at each issuer's Q3 2026 reporting)
 
-**Claim**: The orbital economy's investment cases are bounded by six technology lines with hard physical or economic floors. Launch cannot fall below the propellant floor that reusability does not remove — yet launch is 12.3% of revenue at the company that dominates it, and its throughput fell. Orbital compute was out-chosen, not out-built.
+**Claim**: Six technology lines bound the orbital economy's investment cases, each with a hard physical or economic floor. Launch cannot fall below the propellant floor — yet launch is 12.3% of revenue at the company that dominates it. Orbital compute was out-chosen, not out-built.
 
 ## 1. Research Question
 

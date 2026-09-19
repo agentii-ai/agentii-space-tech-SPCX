@@ -1,0 +1,97 @@
+# contracts/value-pool-map.yaml
+# Schema for PRIMARY artifact 2 of thesis 003 (spec.md §6). Segment-level revenue growth and
+# operating margin across the nine-name universe, on the issuer's own boundaries AND on a
+# normative restatement, with the spread REPORTED rather than collapsed (spec §5).
+schema: value_pool_map
+version: 1
+output_path: _cross/value-pool-map.md
+requires:
+  - contracts/artifact-frontmatter.yaml
+  - _cross/launch-cost-curve.md              # the curve is the independent variable; the map is the dependent one
+  - theses/001-technology-baseline/artifacts/  # the segment register and the DA census, consumed not re-derived
+
+entry:
+  issuer:  {type: str, required: true}   # ticker
+  segment: {type: str, required: true}   # the issuer's OWN segment name, verbatim
+
+  # The issuer's boundary, as filed.
+  as_reported:
+    revenue:          {type: float, required: true, unit: USD}
+    revenue_growth:   {type: float, required: false, unit: pct_yoy}
+    operating_income: {type: float, required: false, unit: USD}
+    operating_margin: {type: float, required: false, unit: pct}
+    evidence_grade:   {type: str, required: true, enum: [DEMONSTRATED, CLAIMED, MODELED, DERIVED]}
+    source:           {type: str, required: true}
+
+  # The normative restatement. REQUIRED WHEREVER it differs from as_reported — the spread is
+  # the finding, not an adjustment to be netted away.
+  as_restated:
+    revenue:          {type: float, required: false, unit: USD}
+    revenue_growth:   {type: float, required: false, unit: pct_yoy}
+    operating_income: {type: float, required: false, unit: USD}
+    operating_margin: {type: float, required: false, unit: pct}
+    evidence_grade:   {type: str, required: true, enum: [DEMONSTRATED, CLAIMED, MODELED, DERIVED]}
+    restatement_basis: {type: str, required: true}   # DA-21: what was moved and between which boundaries
+
+  # The spread is a FIELD, not an inference. A reader must not have to subtract.
+  spread:
+    revenue_pp:   {type: float, required: false, unit: pp}
+    margin_pp:    {type: float, required: false, unit: pp}
+    interpretation: {type: str, required: true, enum: [definitional, timing, mixed, unresolved]}
+
+  # The component derivation, in-line. Mandatory — see validation rule below.
+  operating_income_derivation:
+    gross_profit: {type: float, required: true, unit: USD}
+    opex:         {type: float, required: true, unit: USD}
+    shown:        {type: str, required: true}   # the arithmetic, not a restatement
+
+  # P2's test, applied per issuer. A captive operator flies its own payloads — no transaction
+  # price exists at all (DA-06), which is the structural reason its margin is not comparable.
+  operator_class:
+    type: str
+    required: true
+    enum: [captive_integrated, independent_launch, payload_customer, enabler, adjacent]
+    # The positive control: issuers whose launch margin is defensible are those selling to
+    # third parties, where a price exists. Captive-integrated issuers must be flagged.
+
+  deal_security_basis: {type: str, required: false, enum: [standalone_pre_merger, post_close, not_applicable]}   # P11
+
+validation_rules:
+  - id: spread_reported_not_collapsed
+    rule: >
+      where as_restated is present and differs, spread.revenue_pp and spread.margin_pp must
+      be populated. Collapsing two boundaries into one figure without reporting the spread
+      is the DA-30 collapse and fails.
+    level: fail
+  - id: segment_name_verbatim
+    rule: >
+      segment must be the issuer's own name. Renaming a segment to a house taxonomy destroys
+      the comparability the map exists to create, and is a DA-21 violation.
+    level: fail
+  - id: component_derivation_present
+    rule: >
+      any entry reading operating_income shows gross_profit − opex in-line, AND STATES WHICH
+      OPEX DEFINITION WAS USED. The identity is CONDITIONAL, not universal: `CostsAndExpenses`
+      is INCLUSIVE of cost of sales, so `gross profit − CostsAndExpenses` does NOT equal
+      operating income wherever a cost-of-sales line exists — it is false at UTHR by exactly
+      cost of sales, six of six periods (002 §4.2 item 15). The identity holds only on opex
+      EXCLUSIVE of cost of sales; 001's AMGN check passed only by silently using that form.
+      `EPS × shares` is NOT an admissible derivation, and neither is `net income + addbacks`
+      (constitution §Data-Integrity Register, DA-23/28).
+      Where the component identity is unavailable, invoke the gross-profit bound instead —
+      which is itself a false negative at low gross margin, and is UNEXERCISED at SPCX.
+    level: fail
+  - id: deal_security_tagging
+    rule: "entries for IRDM, GSAT or RKLB must set deal_security_basis (P11)"
+    level: fail
+  - id: captive_flagged
+    rule: >
+      operator_class must be set. A captive_integrated issuer's segment margin is not
+      comparable to an independent_launch issuer's and the artifact must say so in-line —
+      DA-06's point that for a vertically integrated operator no transaction price exists.
+    level: fail
+  - id: no_constellation_valuation
+    rule: >
+      P10 bounds this artifact. The map reports segment revenue and margin as filed; it does
+      not value any constellation. An entry asserting a per-constellation value fails.
+    level: fail

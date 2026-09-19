@@ -16,9 +16,14 @@ fields:
   generated_at:   {type: iso8601, required: true}
 
   # --- pins (Q33 / Q8 contract 5) — all five mandatory ---
-  constitution_pin: {type: str, required: true, const: "1.4.0"}
+  constitution_pin: {type: str, required: true, const: "1.5.0"}
   assumption_pin:   {type: str, required: true, const: "2"}
-  skill_pin:        {type: str, required: true}
+  # Canonical form enforced from 2026-09-19: 12 lowercase hex, or the sentinel `none`
+  # for a synthesis artifact with no single skill. The VALUE was previously unchecked —
+  # only presence was — so `registry-1.0.0` (a whole-registry version, not a skill hash)
+  # passed every check in this repo while pinning nothing. See `tools/check_contract.py`
+  # rule `skill_pin_wellformed`, which is the executable form of this pattern.
+  skill_pin:        {type: str, required: true, pattern: "^(none|n/a|[0-9a-f]{12})$"}
   as_of:            {type: date, required: true}
   corpus_version:   {type: str, required: true}
 
@@ -34,6 +39,20 @@ fields:
   # P4 evidence grading. A claim with no grade defaults to CLAIMED — never DEMONSTRATED.
   evidence_grade: {type: str, required: true, enum: [DEMONSTRATED, CLAIMED, MODELED, DERIVED]}
 
+  # ⚠️ ADDED 2026-09-19 — WITHOUT THIS, `synthesize_report.py pack` REFUSES.
+  # `extract_metrics()` reads `key_metrics` from each artifact's frontmatter to build
+  # `report/metrics.json` (the KPI tiles and kpi_trend charts), and `_require_metrics()`
+  # raises `MetricsMissingError: PACK REFUSED (Q97(1))` before writing when no ticker has
+  # any — so a thesis with no `key_metrics` anywhere cannot produce a report at all.
+  # That check was written BECAUSE thesis 001 shipped an empty metrics.json with a
+  # success exit; 001 predates it, 003 inherits it. Optional per-artifact, but the bundle
+  # must be non-empty. Values are RAW (ints stay ints, strings preserved verbatim) — the
+  # report's LLM does the formatting, never the artifact.
+  key_metrics:
+    type: map
+    required: false
+    note: "raw machine-ready figures this artifact asserts; key lowercased, value verbatim"
+
   # P11 — deal securities (IRDM, GSAT, RKLB) must be tagged.
   deal_security_basis: {type: str, required: false, enum: [standalone_pre_merger, post_close, not_applicable]}
 
@@ -44,7 +63,11 @@ fields:
 
 validation_rules:
   - id: da_id_registered
-    rule: "every definitions_used[].da_id must exist in constitution §Data-Integrity Register (DA-23..DA-28) or 001 spec §1c (DA-01..DA-22)"
+    rule: >
+      every definitions_used[].da_id must exist in constitution §Data-Integrity Register
+      (DA-23..DA-30 — the register was introduced at v1.3.0 with six entries and amended at
+      v1.5.0 with DA-29/DA-30) or 001 spec §1c (DA-01..DA-22). Bounding this at DA-28 would
+      reject valid DA-29/DA-30 references.
     level: fail
   - id: evidence_grade_present
     rule: "evidence_grade is required; absence is a fail, not a default"
@@ -63,10 +86,23 @@ validation_rules:
   - id: data_integrity_register_applied
     rule: >
       any artifact reading `operating_income` must show the component derivation
-      (`gross profit − opex`) in-line, or invoke the gross-profit bound where the
-      component identity is unavailable. `EPS × shares` is NOT an admissible sign
-      test (constitution Data-Integrity Register, DA-23/28).
+      (`gross profit − opex`) in-line TOGETHER WITH the opex definition used, or invoke the
+      gross-profit bound where the component identity is unavailable. The identity is
+      CONDITIONAL: `CostsAndExpenses` is INCLUSIVE of cost of sales, so it is false at UTHR
+      by exactly cost of sales, six of six periods (002 §4.2 item 15). `EPS × shares` is NOT
+      an admissible sign test (constitution Data-Integrity Register, DA-23/28).
     level: fail
   - id: unresolvable_class_required
     rule: "unresolvable: true requires unresolvable_class — the two dispositions have different remedies"
+    level: fail
+  - id: cross_thesis_pillar_namespaced
+    rule: >
+      A cross-thesis pillar reference MUST carry its thesis namespace (`001:PIL-n`,
+      `002:PIL-n`), because the identifiers COLLIDE across theses. `PIL-4` alone is
+      ambiguous three ways: 001's microgravity pillar, 002's nameplate pillar, and 003's
+      Neutron-arithmetic pillar — with different thresholds, different sources and
+      different verdicts. Established by 002 §2.6, which found the collision between
+      001:PIL-4 and 002:PIL-4 and namespaced its own census in response. The `pillar`
+      field above stays unnnamespaced because it is scoped to THIS thesis's frontmatter
+      — the rule binds CITATIONS in prose, not the field.
     level: fail

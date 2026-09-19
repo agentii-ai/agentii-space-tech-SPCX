@@ -1,6 +1,6 @@
 {
-  "page_count": 15,
-  "section_count": 15,
+  "page_count": 16,
+  "section_count": 16,
   "dpi": 192,
   "width": 1632,
   "height": 2112,
@@ -92,6 +92,12 @@
     {
       "page": 15,
       "path": "page-15.png",
+      "width": 1632,
+      "height": 2112
+    },
+    {
+      "page": 16,
+      "path": "page-16.png",
       "width": 1632,
       "height": 2112
     }

@@ -38,6 +38,21 @@ thesis's entire scope.
 artefacts of a claimed denominator, an unsourced physical constant, or an extraction
 defect that 001 identified but could not repair?**
 
+**Claim**: 001's headline conclusions rest on a narrower base of `DEMONSTRATED` inputs than their stated precision implies — three payload denominators underpinning the sector's cost conclusions are `CLAIMED` rather than filed, the constitution's named binding constraint for orbital compute (F2) rests on an admitted placeholder and an unclosed heat-pump loop, and the platform's XBRL extraction carries a measured defect (DA-23) whose remedy has been applied to 12 issuer-quarters rather than the universe; validating these inputs will either confirm 001's conclusions within a quantified band or restate them, and the answer determines how much precision any downstream thesis is entitled to.
+
+> **Format note 2026-09-19.** This claim must stay on **one line**.
+> `synthesize_report.py:133` extracts it with `^\*\*Claim\*\*:\s*(.+)$` under
+> `re.MULTILINE`, and `.+` does not cross a newline — so a wrapped claim reaches the
+> report cover **truncated mid-sentence**, which is exactly what the first build of
+> 002's report shipped. Thesis 001's claim is a single line for the same reason.
+> Any rewording must preserve this.
+
+> **Added 2026-09-19.** The claim was present in `thesis.md`'s frontmatter but absent from
+> this spec as a `**Claim**:` line, which is the form the report packer reads
+> (`synthesize_report.py:_header_facts`). Without it the report cover printed
+> `claim: (none)`. No wording is new — this is the thesis's own stated claim, moved to where
+> the toolchain reads it.
+
 The premise is uncomfortable and worth stating plainly: **001's conclusions are more
 precise than their inputs justify.** Three of the sector's headline figures rest on
 denominators that are `CLAIMED` rather than filed; the constitution's *named binding
@@ -100,6 +115,26 @@ as passed by default.
 demonstrated $/kg by more than 15%.
 
 **wrong_if**: `metric=abs_pct_change_in_demonstrated_price_per_kg_to_LEO_after_denominator_validation threshold=0.15 source=government_launch_manifest_or_issuer_filing op=>`
+
+**⚠️ THE FALSIFIER AS WRITTEN FIRES ON ITS OWN QUESTION — corrected in Phase 1.** Three
+defects were measured against RKLB, and all three are structural rather than incidental:
+
+| # | Defect | Measured | Correction |
+|---|---|---|---|
+| **1** | **The `abs()`/`op=>` form is direction-blind.** Basis A can move **down** — at the circulating HASTE-ASP proxy it restates **−31.3% to $20,833/kg**. As written, *"restated upward, thesis strengthened"* and *"restated downward, thesis threatened"* register **identically**. | Confirmed | **A directional split is required**: report `up` and `down` separately, with the up-moves marked as strengthening and the down-moves as threatening. |
+| **2** | **The test is not discriminable at quarterly frequency.** DA-25 escalated: **Q2 2025 had *zero* HASTE missions and RKLB's disclosed figures still diverged from the audited segment table by −15.3% (revenue) and −22.9% (cost).** Across four periods the gap ranges **−22.9% to +22.5% with no HASTE correlation** — so the divergence is the metric's **period-normalisation**, not the mission mix. | The metric's own noise is **±20%-class** — *larger than the 15% threshold* | **Evaluate at H1 or FY only.** A ±15% test against a quarterly RKLB figure cannot separate a denominator restatement from the metric's own noise. |
+| **3** | **Two channels each move $/kg by ≥50%, and the filing closes neither.** **Channel O**: ~200 kg to SSO against 300 kg to low-inclination LEO → **+50.0%**, and *contradicted* by the 10-K's own "38 to 120 degrees" envelope. **Channel M**: **2 of 6** Q2 "Electron launch missions" were **HASTE — suborbital, 0 kg to LEO**, so a third of the Q2 denominator delivered nothing to orbit. Combined corner: **+125%**. | Falsifier fires | **Disposition: `unresolvable: true` / `UNRESOLVABLE-FROM-PUBLIC-SOURCES`** — the *capacity* denominator resolved (300 kg, filed, Δ = 0.00%); the *±15% stability test* did not. |
+
+**What survives, and it is the important part.** Every open channel on basis B is
+**one-signed upward** — a capacity ceiling is the *largest* denominator the vehicle can
+carry, so it **understates** cost per kilogram. **The residual flatters the metric, not the
+thesis.** PIL-1's conclusion is strengthened by the uncertainty rather than threatened:
+`$14,667/kg` and `$30,333/kg` are **floors**.
+
+**Also recorded:** **DA-01 basis C is structurally unconstructible** for a vertically
+integrated issuer, with a filed reason — *"Management does not regularly review either
+reporting segment's total assets or operating expenses"* (`sec109` p.33). **Do not wait
+for it.**
 
 **Subscribed**: `RKLB × unit-economics`, `RKLB × operational-kpi`, `SPCX × unit-economics`, `SPCX × operational-kpi`, `FLY × unit-economics`
 
@@ -168,11 +203,8 @@ is therefore scoped to the whole register, not to sign stripping.
    **silently**. The pillar's obligation is to record these as
    `UNRESOLVABLE-FROM-PLATFORM` rather than as passed checks.
 2. **The three open candidates** — BA 2025 Q3 (net-loss bridge confirmed, margin
-   unverified), LUNR (42.1% operating margin implausible; component identity unavailable
-   — no gross profit line), and **VOYG**, which is a **different sub-mechanism**:
-   not a sign inversion but an **unreconcilable level**. `OperatingIncomeLoss` of
-   $51.408M against gross profit of $4.457M fails the gross-profit bound outright.
-   **An artifact testing only for sign will pass VOYG and be wrong.** Each candidate is
+   unverified), LUNR (RESOLVED: annual row mislabelled Q4; component identity RUNS — see §2)
+   — no gross profit line), and **VOYG** — ⚠️ **MIS-CLASSIFIED HERE, CORRECTED IN PHASE 3: VOYG is the PLAINEST DA-23 sign strip in the register, not a different sub-mechanism.** `us-gaap:OperatingIncomeLoss` stores a filed `Loss from operations` of **$(51,408)K** as its absolute value; the component identity closes **17 of 17 periods, zero failures**. **The error in the original classification: the gross-profit bound was applied to the SIGN-STRIPPED MAGNITUDE (51.408 > 4.457 fires correctly), and the violation was then treated as MUTUALLY EXCLUSIVE with sign-stripping. It is not** — a sign-stripped loss whose magnitude exceeds gross profit fails the bound too. Restored, `−51.408 < +4.457` violates nothing. **⚠️ AND THE TRAP WARNING BELOW WAS INVERTED: VOYG is CAUGHT by a sign test and MISSED by a bound-only test.** The bound is a **SCREEN, not a classifier** — it fires on **16 of 17 periods**, continuously since FY2024, not "three consecutive quarters." Each candidate is
    either explained or registered as a further defect.
 
 **The claim:** every universe issuer is tested against the **register as a whole** — not
@@ -212,9 +244,23 @@ orbital-compute debate actually turns on: **1.4 GW of ground-based AI compute at
 against MSFT's ~2.9–11.6 GW of annual new-build capacity.** Comparing an IT-load
 number against a capex-derived number is comparing two different quantities.
 
-**The claim:** the facility draw can be restated on a **PUE-inclusive basis** from
-disclosed or benchmarked inputs, and the ratio of true facility draw to stated IT load
-lands **within 1.2–1.5×** — the conventional range for modern hyperscale facilities.
+**⚠️ The claim as written is WRONG, and Phase 1 found the input the specification missed.**
+This pillar asserted the ratio *"lands within 1.2–1.5×"*. Measured against a source the
+spec never read — the **Q2 2026 earnings call (`ect1` p.4)**, where facility-side power is
+disclosed against the same compute basis — the ratio is **1.50× expected and 2.00×
+tentative target**, giving a restated facility draw of **2.1 GW central / 2.8 GW at the
+issuer's own target, against 1.4 GW as filed.** **So the falsifier FIRES on the target
+reading and sits exactly at threshold on the expected one: the 1.2–1.5× claim holds at the
+floor and fails at the ceiling.** Recorded rather than quietly widened — a claim that
+survives only on its most favourable reading is not the claim that was made.
+
+**A second correction: DA-11's quantity is narrower than "IT load."** The 1.4 GW is **GPU
+nameplate** — it excludes host CPUs, DRAM, NICs, storage and PSU losses *as well as*
+cooling. So there are two readings, and the artifact reports both.
+
+**The claim (restated):** the facility draw can be restated from disclosed inputs, and the
+ratio is **1.50× expected / 2.00× at target** — i.e. the restatement *does not* land inside
+the conventional hyperscale band, which is itself the finding.
 
 **Why this priority**: P4 rather than P1 because the comparison is directional rather
 than knife-edge. Even at the top of the range, MSFT's annual build dwarfs SPCX's
@@ -250,13 +296,21 @@ numbers should be sized smaller than one sized on `DEMONSTRATED` ones.
 
 **Independently falsifiable**: fewer than half of 001's headline figures convert.
 
+**⚠️ What counts as a conversion — clarified at the implement preflight (CHK004).** A
+figure that **P6 classifies boundary-contaminated**, or that **P2 leaves unbounded**, does
+**not** convert to `DEMONSTRATED` — it becomes `DERIVED` or stays `CLAIMED`. This matters
+because it means **P6 succeeding can push P5's share *down*.** That is not a contradiction:
+the conversion share is a measure of the **evidence base**, not of effort, and it is
+*supposed* to fall when figures turn out to be contaminated. Had this not been stated, two
+pillars could each have counted the same figure in opposite directions.
+
 **wrong_if**: `metric=share_of_001_headline_figures_converted_to_DEMONSTRATED threshold=0.5 source=validation_ledger op=<`
 
 **Subscribed**: `SPCX × ratio-analysis`, `RKLB × ratio-analysis`, `VRT × ratio-analysis`, `GOOG × ratio-analysis`
 
 ---
 
-### Pillar 6 — Every SPCX-dependent finding is checked for entity-boundary contamination (Priority: P5b — inserted at specification review)
+### Pillar 6 — Every SPCX-dependent finding is checked for entity-boundary contamination (Priority: P6 — inserted at specification review)
 
 **Added after reading 001's published synthesis**, which carries this as carry-forward 0b
 and leaves it unresolved: *"REVIEW EVERY SPCX-DEPENDENT FINDING FOR ENTITY-BOUNDARY
@@ -312,7 +366,7 @@ that cannot be classified as either clean or contaminated.
 
 ---
 
-### Pillar 7 — Every 001 falsifier is classified as evaluable, platform-blocked, or source-blocked (Priority: P6)
+### Pillar 7 — Every 001 falsifier is classified as evaluable, platform-blocked, or source-blocked (Priority: P7)
 
 001 left **six** `wrong_if` criteria, several of which were never evaluated. Their
 current states are heterogeneous and were never systematically classified:
@@ -343,7 +397,7 @@ classes with a named resolving source.
 
 **wrong_if**: `metric=count_of_001_falsifiers_unclassified_or_without_named_resolving_source threshold=0 source=validation_ledger op=>`
 
-**Subscribed**: `SATS × risk`, `IRDM × competitive`, `UTHR × unit-economics`, `YSS × operational-kpi`
+**Subscribed**: `SATS × risk`, `SATS × competitive`, `SPCX × risk`, `IRDM × competitive`, `UTHR × unit-economics`, `YSS × operational-kpi`
 
 ---
 
@@ -504,7 +558,7 @@ positions — this thesis sizes no trades.
 | UTHR | United Therapeutics | med.medicines_biotech | 4% | The clearest `UNRESOLVABLE-FROM-PUBLIC-SOURCES` case (P6) and the 87.3% gross-margin benchmark |
 | SATS | EchoStar | tech.telecom_services | 5% | DA-24 asset-sale contamination, and proof that DA-23 and DA-24 are independent |
 | VOYG | Voyager Technologies | industrial.aerospace_defense | 4% | **DA-23 candidate and a new sub-mechanism** — not a sign inversion but an unreconcilable **level**: `OperatingIncomeLoss` $51.408M against gross profit $4.457M, failing the gross-profit bound by **$46,951M** across three consecutive quarters |
-| LUNR | Intuitive Machines | industrial.aerospace_defense | 3% | **DA-23 candidate with no available detector** — a 42.1% operating margin is implausible (2024 quarters ran ~7.4%) and **no quarterly gross-profit line exists**, so the component identity cannot run. Recorded as a **detector-availability** finding |
+| LUNR | Intuitive Machines | industrial.aerospace_defense | 3% | **RESOLVED in Phase 3 — and this spec row was WRONG.** The 42.1% is the **absolute value of LUNR's FY2025 *ANNUAL* operating margin mislabelled as Q4 2025** (DA-26 + DA-23 + an unregistered **revenue-basis truncation**). **The claim "no quarterly gross-profit line exists, so the component identity cannot run" is false** — all four detectors run; the error came from a **concept-name trap** (`GrossProfit` returns zero facts, so `CostsExpenses` was never tried). `Revenues − CostsExpenses = −87,231,000` vs reported `+87,231,000`, **closing exactly twelve for twelve periods.** **DA-23 CONFIRMED, instance #7.** |
 | HAWK | HawkEye 360 | industrial.aerospace_defense | 3% | **DA-28 site** — four non-agreeing share counts (4.2M–98.0M) in one extract; EPS bridge fails by **72%** against sub-1% for clean issuers, because a Q2 2026 listing straddles two capital structures |
 | BA | Boeing | industrial.aerospace_defense | 3% | **DA-23 flip instance #5** (−5,761 → +5,761) **and a DA-23 candidate** — 2025 Q3 net-loss bridge confirmed but the margin remains unverified, so it is resolved by detector 3 (margin plausibility) only |
 | IRDM | Iridium Communications | tech.telecom_services | 4% | **DA-23 control group** — one of the 19 issuer-quarters where the profitable side is clean (+34.0 → +34.0). The positive control matters: a detector that clears everything is not a detector. Also **P11 deal security** (RKLB acquiring at $54/sh) |
@@ -525,7 +579,7 @@ figure of theirs is contested, not because they are in the universe.
 |---|---|:---:|---|:---:|---|
 | unit-economics | business-intelligence | Deep | RKLB, SPCX | none | Rebuild $/kg from filed components on all DA-01 bases; test the denominator sensitivity that **P1** turns on |
 | operational-kpi | business-intelligence | Deep | SPCX, RKLB, YSS | none | Payload masses, launch counts, mass-to-orbit restated on DA-07/DA-08 bases; the DA-11 nameplate restatement (**P4**); YSS's $110.466M operating figure |
-| secular-trends | equity-research-core | Deep | BWXT, GOOG, NVDA, MRCY | none | F2's nuclear path and Suncatcher's compute-per-satellite claim — both graded against sourced physics (**P2**); NVDA's H100 thermal datapoint and MRCY's 0.03% margin |
+| secular-trends | equity-research-core | Standard | BWXT, GOOG, NVDA, MRCY | none | F2's nuclear path and Suncatcher's compute-per-satellite claim, graded against sourced physics (**P2**); NVDA's H100 thermal datapoint; MRCY's 0.03% margin. **Reduced from Deep to Standard at plan evaluation** — see `plan.md` §Evaluation. `secular-trends` at **Deep expands to 8 modes**, five of which (EV-trend, quantum/renewable, strategic-position, capacity-and-readiness, market-perception) **cannot source a physics constant**, which is what P2 asks for. Kept as a **single row**: splitting it into Deep+Standard rows caused the generator to silently drop one, leaving BWXT — the name carrying P2's nuclear case — with **zero** secular-trends tasks |
 | recent-quarter | equity-research-core | Standard | SPCX, RKLB, FLY, BWXT, GOOG, VRT, MSFT, NVDA, MRCY, YSS, UTHR, SATS, VOYG, LUNR, HAWK, BA, IRDM | none | **The register is applied here** — `validate_calculation` / gross-profit bound across every issuer-quarter, all seventeen names, three detectors (**P3**) |
 | ratio-analysis | quantitative-analysis | Standard | SPCX, RKLB, VRT, GOOG | none | Cross-check every derived ratio against the component identity; catches DA-23/DA-24 residuals (**P3**, **P5**) |
 | unit-economics | business-intelligence | Standard | VRT, UTHR, FLY | none | Terrestrial PUE and cooling benchmarks (**P4**); UTHR's margin benchmark (**P6**) |
@@ -551,7 +605,7 @@ delivery mechanism for P3.
 
 | Tier | Skills | mode-set | Tickers | Output |
 |:---:|------|---|--------|------|
-| Deep | unit-economics, operational-kpi, secular-trends | all modes | SPCX, RKLB, BWXT, GOOG | Full-mode validation on the four names carrying P1, P2 and P4 |
+| Deep | unit-economics, operational-kpi, secular-trends | all modes | SPCX, RKLB, **BWXT** | Full-mode validation on the three names carrying P1, P2 and P4. **Reduced from four at plan evaluation** — GOOG moved to Standard because `secular-trends` at Deep expands to **8 modes** (EV-trend, quantum/renewable, data-value, AI-trend, strategic-position, capacity-and-readiness, market-perception, exposure) and its Pillar 2 contribution is **one sourced constant**, which the `exposure` mode alone can carry |
 | Standard | recent-quarter, ratio-analysis, unit-economics, risk | essentials_modes | As listed | Census, cross-checks, reachability classification |
 | Light | competitive, business-model, supply-chain | essentials_modes | As listed | Scoping checks that bound the above |
 
@@ -585,6 +639,20 @@ the `recent-quarter` row, which is the entire delivery mechanism for P3.
 - **Cross-cutting (not resume-tracked)**: `_cross/{name}.md`.
 - **Primary artifact**: `_cross/validation-ledger.md` — the table of every 001 headline
   figure with its validated grade and source. This is what 003–011 cite.
+  **Schema — one row per figure:** `{figure, source_artifact, original_grade,
+  validated_grade, band, citation, pillar, disposition}`. The **`citation` column is
+  mandatory** per §1d, and the conversion share is
+  `rows whose grade moved to DEMONSTRATED ÷ total rows` — **published with its row
+  count**, so the 50% threshold in P5 can be judged against a real denominator rather
+  than pre-committed (Clarification Q-5).
+- **Phase 2 deliverable**: `_cross/f2-constant-sourcing.md` — each of F2's two unsourced
+  constants with its citation, its uncertainty interval, and the **re-derived radiator
+  mass per MW both with and without the heat-pump COP penalty**. If the band exceeds
+  ±50%, F2 downgrades to a qualitative bound and **003 and 009 must be notified**.
+- **Phase 4 deliverable**: `_cross/spcx-nameplate-and-boundary.md` — the PUE-inclusive
+  restatement of the 1.4 GW nameplate **and** the per-series entity-boundary
+  classification (Space: clean · Connectivity: clean · AI: **contaminated**).
+  **This is a soft gate on 011**, whose migration claim cannot finalise without it.
 - Snapshot: `snapshots/002-evidence-validation/{YYYY-MM-DD}_thesis.md`
 - **Frontmatter**: per `contracts/artifact-frontmatter.yaml`, with `thesis_id:
   "002-evidence-validation"`. All five pins are mandatory: `constitution_pin: 1.4.0`,

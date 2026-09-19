@@ -1,6 +1,6 @@
 # constitution.yaml — executable L1 constraints (spec 046 Q16/Q58/Q67).
 # Workspace copy scaffolded by agentii.constitution; ratified by a human 2026-09-18.
-# Ratified against constitution.md v1.4.0 (MINOR amendments 2026-09-18) — no placeholders
+# Ratified against constitution.md v1.5.0 (MINOR amendments 2026-09-18) — no placeholders
 # remain; aggregate checks evaluate normally. Amend only via `agentii.constitution amend`
 # (Q33 SemVer rules). The 1.1.0–1.4.0 amendments (universe expansion, P10/P11, principle
 # register, coverage audit, A1a/A1b, F5a/F5b, Data-Integrity Register, disposition

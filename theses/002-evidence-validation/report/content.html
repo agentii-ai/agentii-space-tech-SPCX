@@ -1,0 +1,217 @@
+<section class="page">
+<span class="sec-kicker">Evidence Validation · Thesis 002 · As of 2026-09-18</span>
+<h2>The answer, up front</h2>
+<div class="stat-row">
+<div class="stat"><div class="num">4 / 9</div><div class="lbl">Readings Fire</div><div class="sub">+3 land on the threshold with zero margin</div></div>
+<div class="stat"><div class="num">46.47</div><div class="lbl">Percentage Points</div><div class="sub">one ratio, graded vs what its label names</div></div>
+<div class="stat"><div class="num">14 / 17</div><div class="lbl">Issuers Stripped</div><div class="sub">a census of a default, not a defect</div></div>
+<div class="stat"><div class="num">3 / 32</div><div class="lbl">Corrections Propagated</div><div class="sub">recorded, correct, consumed by none</div></div>
+</div>
+<div class="headline"><b>The news:</b> this thesis <b>falsified its own pillar</b>. PIL-5 asked whether at least half of 001's headline figures convert to <b>DEMONSTRATED</b>. Four of nine admissible readings fire; three more land exactly on the threshold with <b>zero margin</b>.</div>
+<p>The reason is not that 001's numbers are wrong. <b>It is that a converted figure is not a converted basis.</b> A number can be reproduced exactly from filed cells and still not be the quantity its label names — off by <b>46.47 percentage points</b> on a single SPCX ratio.</p>
+<p><b>What this means for the programme.</b> <b>DEMONSTRATED is not a sufficient grade for an input.</b> Any thesis from 003 onward that cites this validated set must carry <b>the basis alongside the grade</b>, or it inherits a figure that reproduces and means something else. That is the widest-reaching result in this report.</p>
+<p><b>What it does not mean.</b> 001's arithmetic largely held. Per-ticker sums reproduced at IRDM, MRCY, UTHR and SPCX. What failed is <b>clearance and labelling</b> — a narrower and more fixable defect than "the model is wrong."</p>
+<p><b>Method note.</b> The spec never states the denominator, so the ledger publishes <b>every admissible reading</b> rather than selecting one. A falsifier that passes or fails on an unstated denominator is not falsifiable — publishing the ladder is the finding.</p>
+<p><b>How to read this report.</b> The falsification and its ladder come first, because they are the news; the defect register follows, then the corrections census, then the tooling caveats a reader needs before trusting any figure above, and finally the instructions for 003–011 and the gaps that remain. <b>The main line — "space is a cost curve, not a value pool" — is not overturned here; what this report moves is the evidentiary floor beneath it.</b></p>
+</section>
+
+
+<section class="page">
+<span class="sec-kicker">The Falsification · PIL-5 · Nine Readings</span>
+<h2>Nine readings: four fire, three sit on the threshold</h2>
+<p>The falsifier is <code>share_of_001_headline_figures_converted_to_DEMONSTRATED &lt; 0.5</code>. Six candidates for the denominator were identified; all nine resulting readings are reported.</p>
+<table>
+<thead><tr><th>Reading (denominator named)</th><th>Rows</th><th>Share</th><th>vs 0.5</th></tr></thead>
+<tbody>
+<tr><td>All six headline lines</td><td>6</td><td><b>0.5000</b></td><td>not below — <b>zero margin</b></td></tr>
+<tr><td>same, CHK004-strict (Line 2 out)</td><td>6</td><td><b>0.3333</b></td><td><b>TRIGGERED</b></td></tr>
+<tr><td>six plus the 12.3% claim</td><td>7</td><td><b>0.4286</b></td><td><b>TRIGGERED</b></td></tr>
+<tr><td>the four value-bearing lines</td><td>4</td><td>0.7500</td><td>not below</td></tr>
+<tr><td>same, CHK004-strict</td><td>4</td><td><b>0.5000</b></td><td><b>zero margin</b></td></tr>
+<tr><td>every numeric claim in 001's register</td><td>27</td><td><b>[0.0000, 0.7778]</b></td><td><b>UNRESOLVED</b></td></tr>
+<tr><td>SPCX — value / +components / +basis</td><td>12</td><td>0.8333 / 0.5000 / <b>0.2500</b></td><td><b>TRIGGERED</b></td></tr>
+<tr><td>SPCX incl. null slot</td><td>13</td><td>0.7692 / <b>0.4615</b> / <b>0.2308</b></td><td><b>TRIGGERED</b></td></tr>
+<tr><td>GOOG — cells / series</td><td>140 / 14</td><td>0.5643 / <b>0.1429</b></td><td><b>TRIGGERED</b></td></tr>
+</tbody>
+</table>
+<p><b>Four readings fire. Three land exactly on the threshold.</b> Only two admit a comfortable pass — and both are the readings that count a figure as converted without asking what it is a figure <i>of</i>.</p>
+<p><b>The register reading is inert by 78%.</b> Twenty-one of twenty-seven of 001's numeric claims are already <b>DEMONSTRATED</b> and cannot move, so its uncertainty band is <b>wider than the threshold distance</b> — the reading cannot adjudicate the question it is being asked.</p>
+<p><b>What this means.</b> The pillar cannot be scored as passed by choosing a denominator: a falsifier that passes or fails on an unstated denominator is not falsifiable. <b>Any downstream thesis citing PIL-5 as satisfied is citing a reading, not a result</b> — which is why the ladder, not a single number, is the deliverable.</p>
+</section>
+
+
+<section class="page">
+<span class="sec-kicker">The Falsification · The Substantive Finding</span>
+<h2>A converted figure is not a converted basis</h2>
+<div class="headline"><b>One ratio, two answers, no basis field.</b> SPCX <code>operating_margin</code> is served as <b>+29.79%</b>. It is a filed <b>−16.68%</b>. The difference is <b>46.47 percentage points</b> — and both numbers are arithmetically correct.</div>
+<p><b>What happened.</b> The served value divides an <b>AI-segment six-month loss</b> by <b>consolidated revenue</b>. It is a real computation on real filed cells. It is also not the operating margin of the company, and the artifact that serves it names no basis — <b>which means the error is invisible to any check that recomputes the same way.</b></p>
+<p><b>Why this is the thesis's central finding.</b> Every other defect in this report produces a number that is <i>wrong</i> — catchable by magnitude, by sign, by plausibility. This one produces a number that is <b>exactly right and answers a different question</b>. It survives every check the programme currently runs, because the check and the number are computed the same way.</p>
+<table>
+<thead><tr><th>Concept served by the platform</th><th>Bases the issuer actually reports</th></tr></thead>
+<tbody>
+<tr><td>SPCX <code>operating_margin</code></td><td>consolidated · AI segment · Space segment · Connectivity segment · year-ago segment</td></tr>
+<tr><td>SPCX capex</td><td>compute-bearing class only · cash additions · total additions at cost · cash + Δpayable</td></tr>
+<tr><td>GOOG diluted EPS</td><td>Class A · Class B · Class C · consolidated</td></tr>
+<tr><td>UTHR gross margin</td><td>five bases, spanning 158.69 points, including two negatives</td></tr>
+</tbody>
+</table>
+<p><b>The instruction that follows.</b> A downstream thesis must state the <b>basis</b>, not only the grade. Where a concept is reported on more than one basis and the platform collapses them with no basis field, the artifact cannot comply by diligence alone — <b>it must first discover that a second basis exists.</b></p>
+</section>
+
+
+<section class="page">
+<span class="sec-kicker">What Survived · 001's Arithmetic</span>
+<h2>The numbers held; the labels did not</h2>
+<p>001's per-ticker arithmetic was re-derived from filed cells in every case examined. It reproduced.</p>
+<table>
+<thead><tr><th>Issuer</th><th>What was checked</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td><b>IRDM</b></td><td>225,237 − 191,229 = 34,008 · 50,258/216,906 = 23.17% · +3.84%</td><td>correct</td></tr>
+<tr><td><b>MRCY</b></td><td>revenue $983.6M / $912.0M / +7.9% · R&amp;D $59.7M / $67.6M / −11.7%</td><td>reproduced exactly</td></tr>
+<tr><td><b>UTHR</b></td><td>all ten per-ticker figures: −1.917% · −9.246% · +9.179% · +7.593% · +13.417% · 42.23%/45.64%</td><td>all reproduce</td></tr>
+<tr><td><b>SPCX</b></td><td>$15.0B reproduces exactly; the $(1,257)M AI operating line is filed</td><td>confirmed</td></tr>
+</tbody>
+</table>
+<p><b>So the correction target is narrower than it looks.</b> What failed is the <i>clearance</i> — the test that declared a figure clean — and the <i>labelling</i>. Not the sums. And the labels are what downstream theses price.</p>
+<p><b>Two clearances failed a test that could not have failed.</b> 001 cleared MSFT by testing only its <b>subtotal</b> facts, which are positive by construction for a profitable issuer — so the test passes regardless of what happened one level down, where two of three facts in a single row are in fact stripped. The same shape appears at IRDM, where 001's own clearance is refuted by four concepts confirmed stripped <b>in the very quarter it reads</b>.</p>
+<p><b>The rule this produces.</b> <i>A detector run only on the subject of a comparison cannot detect a comparison error.</i> <b>That means the repair target for 003 onward is the clearance step and the label — not the arithmetic, which largely reproduces.</b> MRCY is the proof: the component identity was run — on the period 001 was <b>reporting</b>, not the one it was <b>comparing against</b>. The reported period is one of the two filed-positive ones, so it passed by construction.</p>
+</section>
+
+
+<section class="page">
+<span class="sec-kicker">The Defect Register · DA-23…DA-30 · Incidence</span>
+<h2>A census of a default</h2>
+<div class="stat-row">
+<div class="stat"><div class="num">14 / 17</div><div class="lbl">DA-23 Exhibited</div><div class="sub">2 subtotal-clean · 1 unevident · 1 unexercised</div></div>
+<div class="stat"><div class="num">7 / 17</div><div class="lbl">DA-29 / DA-30 Engaged</div><div class="sub">10 issuers never engage them</div></div>
+<div class="stat"><div class="num">20</div><div class="lbl">DA-26 Count</div><div class="sub">moved 19 → 20, universality falsified</div></div>
+</div>
+<p><b>DA-23 sign stripping is not a rare defect.</b> A filed negative is served as a positive of identical magnitude. At RKLB Q2 2026 the served <code>OperatingIncomeLoss</code> is <b>+57,514,000</b> against a filed <b>(57,514)</b> thousand, where the served components give <b>−57,514,000</b> — the filed cells are at <a href="https://agentii.ai/v/RKLB/sec109/6">📄 RKLB 10-Q p.6</a>. <b>Any screen on the raw field inverts: the worst loss-makers rank at the top.</b></p>
+<table>
+<thead><tr><th>Entry</th><th>What it is</th><th>Incidence</th></tr></thead>
+<tbody>
+<tr><td><b>DA-23</b></td><td>sign stripping, income statement <i>and</i> cash flow</td><td><b>14 / 17</b> — a default</td></tr>
+<tr><td><b>DA-24</b></td><td>non-operating item inside the operating line</td><td>4 present · 11 refuted/clean</td></tr>
+<tr><td><b>DA-25</b></td><td>normalised per-unit metrics</td><td>8 confirmed · 5 refuted · 2 not testable</td></tr>
+<tr><td><b>DA-26</b></td><td>annual mislabelled as quarterly</td><td>9 confirmed · 1 falsifies universality</td></tr>
+<tr><td><b>DA-27</b></td><td>fiscal labels from the calendar quarter</td><td>6 confirmed · 5 kind-4 · 4 refuted</td></tr>
+<tr><td><b>DA-28</b></td><td>capital-structure discontinuity</td><td>8 present/confirmed · 2 not testable</td></tr>
+<tr><td><b>DA-29</b></td><td>back-solved and opaque checks</td><td><b>7 engaged · 10 unengaged</b></td></tr>
+<tr><td><b>DA-30</b></td><td>two bases, one concept, no basis field</td><td><b>7 engaged · 10 unengaged</b></td></tr>
+</tbody>
+</table>
+<p><b>The two entries added at 1.5.0 are engaged by 7 of 17 issuers and unengaged by 10</b> — and an unengaged cell is not a passed check. That is a coverage finding about the register, not about the issuers. <b>It means an unengaged cell must be scored as untested, never as clean</b> — otherwise the register's own coverage gap is read out as the platform's clean bill of health.</p>
+</section>
+
+
+<section class="page">
+<span class="sec-kicker">The Defect Register · Corrections to the Register Itself</span>
+<h2>What this thesis changed about the register</h2>
+<table>
+<thead><tr><th>Correction</th><th>Detail</th></tr></thead>
+<tbody>
+<tr><td><b>The <code>Clean</code> row is subtotal-level only</b></td><td><b>MRCY, UTHR and SATS were removed from it.</b> An issuer can be clean at every subtotal while a <i>component</i> of the same statement is sign-corrupted — BWXT is the first where both hold at once.</td></tr>
+<tr><td><b>NVDA is UNEVIDENT, not clean</b></td><td>All 69 <code>OperatingIncomeLoss</code> facts are non-negative 2014–2026. The sign test <b>can neither pass nor fail</b>.</td></tr>
+<tr><td><b>VRT is UNEXERCISED</b></td><td>61 of 61 facts positive; 13 of 13 identities close <b>vacuously</b>.</td></tr>
+<tr><td><b>Stripping is not an income-statement phenomenon</b></td><td>VRT and NVDA are stripped on <b>cash-flow subtotals</b>. The discriminator is the <b>sign of the value</b>, not the concept and not the period.</td></tr>
+<tr><td><b>DA-24's defining instance is inverted</b></td><td>SATS's 4.6× event is a <b>non-cash impairment charge</b>, not a sale — the licences remain on the balance sheet. Its independence proof is <b>withdrawn</b>.</td></tr>
+<tr><td><b>DA-26's universality is falsified</b></td><td>The count moved <b>19 → 20</b>, and <b>FLY is a counterexample</b>.</td></tr>
+</tbody>
+</table>
+<p><b>Why the register needed correcting at all.</b> The register's own census statistic tested <i>parent concepts</i>. A contaminant inside a filed subtotal is <b>absorbed by it</b> — so a census that brackets a subtotal <b>proves presence, never absence</b>. At SPCX the same measurement read "not evident" from a census that closed with zero residual, while the contamination sat inside the thing being measured. <b>That means every "clean" reading in the register is a statement about the census's reach, not about the issuer</b> — and a downstream thesis needs to know which one it is holding.</p>
+</section>
+
+
+<section class="page">
+<span class="sec-kicker">Corrections · The Finding That Outlives the Thesis</span>
+<h2>Three of thirty-two corrections propagated</h2>
+<div class="headline"><b>The process finding.</b> <code>upstream_stale</code> is mandatory in all 41 artifacts, <b>correct in all 41</b>, and <b>consumed by none</b>. A correction that is recorded and never propagated is indistinguishable in effect from one never made.</div>
+<p><b>The measured case.</b> 001 attributed a <b>72.0%</b> gross margin to UTHR. It is <b>AMGN's</b> number. UTHR's filed consolidated margin is <b>87.30%</b>, in a band of <b>82.93–89.24%</b> across nine periods. The barrier the microgravity case must clear is therefore <b>15.30 points higher</b> than stated — <b>the case is harder, not easier.</b></p>
+<p><b>That correction has now been derived three times and absorbed zero times.</b> The upstream line still reads 72.0.</p>
+<table>
+<thead><tr><th>Correction</th><th>Propagated?</th></tr></thead>
+<tbody>
+<tr><td>SATS DA-24 inversion — the founding instance is a charge, not a sale</td><td><b>yes</b> — delivered to thesis 003</td></tr>
+<tr><td>DA-23 census narrowed to subtotal-level</td><td><b>yes</b></td></tr>
+<tr><td>VOYG sign strip reclassified</td><td><b>yes</b></td></tr>
+<tr><td>UTHR 72.0% → 87.30%, a 15.30 pp barrier correction</td><td><b>no</b> — derived 3×, absorbed 0×</td></tr>
+<tr><td>001's falsifier-census membership (PIL-4, 5, 6 — not 3, 5, 6)</td><td><b>no</b></td></tr>
+<tr><td>SPCX <code>12.3%</code> — wrong on four independent axes</td><td><b>no</b></td></tr>
+</tbody>
+</table>
+<p><b>What this appears to require.</b> A pin that records staleness and dispatches nothing is not a control — it is a comment. The remedy is a <b>resumption queue</b> discharged by name, not a field every artifact carries and no process reads.</p>
+</section>
+
+
+<section class="page">
+<span class="sec-kicker">Reachability · PIL-7's Output</span>
+<h2>Eleven falsifiers classified; the metric is zero</h2>
+<p>Every falsifier in 001 and 002 was classified against the disposition classes, <b>each with a named resolving source</b>. The pillar's own metric — <code>count_of_001_falsifiers_unclassified_or_without_named_resolving_source</code> — is <b>0</b>.</p>
+<table>
+<thead><tr><th>Class</th><th>Count</th><th>Character</th></tr></thead>
+<tbody>
+<tr><td><code>UNRESOLVABLE-FROM-PUBLIC-SOURCES</code></td><td><b>9</b></td><td>no public source carries it — each names the disclosure that would resolve it</td></tr>
+<tr><td><code>UNRESOLVABLE-FROM-PLATFORM</code></td><td><b>12</b></td><td>public and reachable in principle, not by this toolchain</td></tr>
+<tr><td><code>REACHABLE-BUT-NOT-RECORDABLE</code></td><td><b>2</b></td><td>the datum is reachable; the <b>contract</b> cannot record it</td></tr>
+<tr><td><code>UNVALIDATED-BY-PLATFORM</code></td><td><b>3</b></td><td>the validator ran and its result is not admissible</td></tr>
+<tr><td><code>UNEXERCISED</code>/<code>UNEVIDENT</code>/not-testable</td><td><b>31</b></td><td>each with a named kind and the kind's own remedy</td></tr>
+<tr><td>testable, blocked by <b>effort</b></td><td><b>1</b></td><td>on-platform work: ~19 issuer Item 1A reads</td></tr>
+</tbody>
+</table>
+<p><b>The distribution is the finding.</b> The largest class is not "unresolvable" — it is <b>testable and not tested</b>: 31 cells a named remedy could move.</p>
+<p><b>And two of the classes have different remedies that were being merged.</b> "No public source carries it" needs monitoring. "Public but unreachable" needs platform reach. A third case exists where the datum is reachable and the <b>result cannot be recorded</b> — that needs a contract allowance, not a research task. <b>Reading them as one class means three different remedies get dispatched as one</b> — which is how 31 testable cells stayed untested.</p>
+</section>
+
+
+<section class="page">
+<span class="sec-kicker">Instruments · What A Reader Must Know</span>
+<h2>The tooling reports success in cases where it did not run</h2>
+<p>These are platform behaviours, not issuer behaviours. Each one makes an <b>absence of signal</b> read as a pass.</p>
+<table>
+<thead><tr><th>Behaviour</th><th>Consequence</th></tr></thead>
+<tbody>
+<tr><td><b><code>validate_calculation</code> passes a wrong-signed value</b></td><td>Its <code>reported</code> column <b>shares the stripped store</b>, so it compares a stripped value to a stripped value. At SATS it returned <code>pass</code> on a figure the filing prints as negative.</td></tr>
+<tr><td><b>It can also return zero rows</b></td><td>On a concept that <b>is</b> filed and seven arcs deep. A validator that never ran and one that ran and passed are <b>the same row</b> in every tally.</td></tr>
+<tr><td><b>93% false-positive when it fails</b></td><td>Of 57 VRT rows, 39 fails yielded <b>three</b> true defects — and the true one is indistinguishable from the false ones by inspection.</td></tr>
+<tr><td><b><code>computed</code> is not a derivation</b></td><td>At NVDA that column carried a <b>37× error</b>. It is not reproducible from the instrument's own returned tree.</td></tr>
+<tr><td><b><code>reported</code> is not the filed value</b></td><td>At NVDA it was a <b>segment</b> value; at MSFT a segment's 14,386 against a filed 155,237.</td></tr>
+<tr><td><b>A <code>us-gaap:</code> zero is evidence about the tag</b></td><td>Filer extensions are silently missed — SATS's own impairment concept is one.</td></tr>
+</tbody>
+</table>
+<p><b>The pattern.</b> In every case the failure mode is not a wrong answer — it is <b>no answer, reported as a clean one</b>. That is why this thesis's own tools now refuse to certify what they have not tested. <b>This means that for any downstream thesis a platform "pass" is a claim to be re-derived, not a clearance to be inherited.</b></p>
+</section>
+
+
+<section class="page">
+<span class="sec-kicker">Implications · 003–011</span>
+<h2>What downstream theses must change</h2>
+<div class="headline"><b>The one instruction:</b> carry the <b>basis</b>, not just the grade. A figure graded <b>DEMONSTRATED</b> may still not be the quantity its label names.</div>
+<p><b>1. A grade is not a licence to quote.</b> Every input inherited from this validated set must name the basis it was computed on. Where the platform collapses two bases into one concept, the artifact must <b>discover the second basis first</b> — diligence alone cannot comply.</p>
+<p><b>2. Recompute from components before using any operating figure.</b> DA-23 affects <b>14 of 17 issuers</b>. The remedy is the component identity shown in-line, and <code>EPS × shares</code> is <b>not admissible</b> as a sign test — it inverts in both directions.</p>
+<p><b>3. Re-score 001's evidence count.</b> Three issuers fall out of the "clean" denominator on testability grounds alone, so 001's quoted count should be restated as <i>issuer-quarters where the test could actually run</i>.</p>
+<table>
+<thead><tr><th>Thesis</th><th>What this report changes for it</th></tr></thead>
+<tbody>
+<tr><td><b>003</b></td><td>Received the SATS correction: <code>10.7%</code> → <code>8.91%</code>, and the event is an <b>impairment charge</b>, not a gain. <b>Its cost-curve work rests on a figure whose direction was inverted.</b></td></tr>
+<tr><td><b>004–010</b></td><td>Any segment or consolidated figure must carry its basis. The SPCX <code>operating_margin</code> finding applies directly to 004's SOTP.</td></tr>
+<tr><td><b>011</b></td><td>Screens built on <code>operating_income</code> rank the worst loss-makers first unless recomputed. Break-even inputs are clean by construction; operating-line screens are not.</td></tr>
+</tbody>
+</table>
+<p><b>And the programme-level point.</b> The main line — <i>"space is a cost curve, not a value pool"</i> — is not overturned here. What this thesis does is <b>narrow the evidentiary base it can be asserted from</b>. <b>This means the main line survives as a conclusion with a stated floor — and 003–011 inherit that floor, not 001's four-significant-figure precision.</b></p>
+</section>
+
+
+<section class="page">
+<span class="sec-kicker">Limitations · What Could Not Be Resolved</span>
+<h2>The three irreducible gaps</h2>
+<table>
+<thead><tr><th>Gap</th><th>Why it cannot close</th><th>Class</th></tr></thead>
+<tbody>
+<tr><td><b>SPCX facility-side draw</b></td><td>Not disclosed. A 216-page filing and 17 transcript pages carry <b>zero</b> hits for the relevant terms. The number will appear only when it is material — which is when it stops mattering.</td><td><code>UNRESOLVABLE-FROM-PUBLIC-SOURCES</code></td></tr>
+<tr><td><b>FCC IBFS / ITU registries</b></td><td><b>Public and free</b>, but outside this toolchain. The remedy is a <b>connector</b>, not monitoring — merging this class with "no source exists" would dispatch a monitoring task for an already-public source.</td><td><code>UNRESOLVABLE-FROM-PLATFORM</code></td></tr>
+<tr><td><b>MRK, BMY, WWD operating income</b></td><td>The concept is <b>absent or segment-only</b>. No detector of any kind can run there, so the field is not wrong — it is <b>unavailable</b>, and absence must never be recorded as a passed check.</td><td><code>UNRESOLVABLE-FROM-PLATFORM</code></td></tr>
+</tbody>
+</table>
+<p><b>Three gaps, three different remedies.</b> One is a monitoring task, one is a connector, one is a coverage hole in the data layer. Collapsing them into a single "insufficient data" label — which is what the programme did before this thesis — destroys the only information that makes them actionable. <b>This means the class label, not the missing number, is what the programme must carry forward.</b></p>
+<p><b>And one caveat on this report itself.</b> Thesis 002's material is an <b>evidence audit</b>, not a sector thesis. Every finding here is a statement about <b>what can be reproduced from primary sources</b> — not about what the space economy is worth. The two questions are related but they are not the same question, and this report only answers the first.</p>
+</section>

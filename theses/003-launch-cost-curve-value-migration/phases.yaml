@@ -1,0 +1,27 @@
+# phases.yaml — pillar → phase map for `tools/tasks_md.py`
+#
+# The platform's `agentii.tasks` emits no phase at all, and files nothing. This file
+# supplies the map. It lives with the thesis so the phasing is versioned alongside the
+# spec that justifies it (spec.md §7).
+#
+# PHASE LOADS OVERLAP. A task bracketed [PIL-1/PIL-4] is filed once — under its FIRST
+# pillar — but serves both. The per-pillar load in plan.md's phase table is the true
+# figure; this map produces the filing, and the gap between them is the first-pillar
+# heuristic, not missing work.
+#
+# 003's assignment, and why it is not pillar order:
+#   PIL-3 (the curve is CLAIMED, not DEMONSTRATED) and PIL-5 (RKLB's per-launch
+#   disclosure) are BOTH readings of ONE series — RKLB's `cost per launch` /
+#   `revenue per launch` and its reconciliation to the audited segment table. Same
+#   issuer, same table, same pass. They share Phase 4.
+#   PIL-1 (curve matrix) sits at Phase 1 and its floor inputs continue into Phase 2;
+#   first-pillar filing places its tasks at 1.
+#   PIL-2 (value pool) is Phase 3, PIL-4 (Neutron) is Phase 5, PIL-6 (pass-through)
+#   is Phase 6 — each maps one-to-one onto a phase in spec §7.
+#
+# NOTE the phase NUMBERS here are the spec's phase numbers, not the L1–L4 dependency
+# LEVELS added to spec §7 on 2026-09-19. Phase 3 runs at level L1 (concurrently with
+# Phase 1) and Phase 5 at L3 — the numbering is execution order within a lane, and the
+# levels are the true scheduling constraint. See plan.md § "Dependency graph and
+# critical path".
+phases: {PIL-1: 1, PIL-2: 3, PIL-3: 4, PIL-4: 5, PIL-5: 4, PIL-6: 6}

@@ -1,12 +1,24 @@
 # Research Thesis: 003 — Launch Cost Curve & Value Migration
 
-**Constitution Ref**: constitution.md v1.4.0 (`constitution_pin: 1.4.0`)
+**Claim**: Launch cost is the sector's master cost variable and not its master value variable. The curve is real but thin — one vehicle has a measured marginal cost, and on the corrected denominator its cost per kilogram rose 32.0% while its cost per launch fell 12.0%. The value pool migrated to whoever owns the demand, and the released value did not pass through to the payload customer.
+
+**Constitution Ref**: constitution.md v1.5.0 (`constitution_pin: 1.5.0`)
 **Created**: 2026-09-18
-**Status**: Active · **Wave 2** (moved from wave 1 at clarify round 2, 2026-09-18 —
-001 already settled the cost curve's *level* and that value left launch; 003 is refinement)
+**Status**: Active · **Wave 1** — **RESTORED at post-002 review, 2026-09-18.** The
+clarify-round-2 demotion to wave 2 rested on one premise, stated verbatim in the field it
+was written into: *"001 already settled the cost curve's* level *and that value left
+launch."* **002's ledger falsified that premise — `001:PIL-1`, the launch-cost floor at
+±15% after denominator validation, FIRED.** A demotion justified by a settled level cannot
+survive the level not settling. **Programme slot: 002 completed 2026-09-18 and vacates its
+wave-1 slot, so 003 takes it without displacing anyone (`max_theses_active: 6` holds).**
 **板块**: Foundation · **Wave**: 1
 **Binding constraint (P3)**: `MASS_LAUNCH_COST`
-**Time Horizon**: 2026-Q4, terminating at the wave-1 hand-off to 004–006
+**Time Horizon**: 2026-Q4, Wave 1 — 003 supplies the curve that **004 and 005 price off**
+(`PROGRAM.md` §5: *"SPCX sizes off the curve"*; *"launch pure-plays **ARE** the curve"*),
+and now runs **before** them (post-002 review, 2026-09-18). The clarify-round-3 wording —
+*"003 refines the curve after Wave 1's tier theses have priced off 001's register, and does
+not gate them"* — **asserted a dependency reason for a scheduling move, and both halves are
+now wrong: the curve is not settled, and for 005 the edge is closer to hard than soft.**
 **Depends on**: `001-technology-baseline` (pin 1.2.0 — the baseline this thesis inherits);
 `002-evidence-validation` (payload denominators and F2 physics — **consumed, never
 re-derived here**)
@@ -132,7 +144,7 @@ only two of them — which is the first substantive finding this pillar expects 
 |---|---|---|---|
 | **Fully reusable** | Starship (SPCX) | Propellant — nothing else consumed | **F5a** — hard, ~$46–92/kg at 100 t |
 | **Partially reusable** | Falcon 9 (SPCX); Neutron (RKLB, forward) | The **expended upper stage** (~$8–12M) | **F5b** — soft, a manufacturing curve |
-| **Fully expendable** | **Electron (RKLB), Alpha (FLY)** | The **entire vehicle** — no stage is recovered | **none named.** The two vehicles for which the universe has *any* demonstrated data sit on the architecture F5 does not cover |
+| **Fully expendable** | **Electron (RKLB), Alpha (FLY)** | The **entire vehicle** — no stage is recovered | **F5c** — whole-vehicle manufacturing floor. ⚠️ **CORRECTED 2026-09-19: this cell previously read *"none named."* That was WRONG** — F5 was split **three** ways at constitution **v1.3.0**, and **F5c** completes it. The tiers are **exhaustive**; no architecture lacks a floor. |
 
 **The claim:** all three DA-01 bases can be stated for every vehicle in the universe, the
 floor applied to each is the one its architecture implies, and **no vehicle shows a
@@ -258,9 +270,34 @@ because 004 and 005 both need it.
 Falcon 9's basis-A figure — the case simply does not close — or a sourced payload that puts
 Neutron on the F5a architecture rather than F5b.
 
-**wrong_if**: `metric=implied_neutron_price_per_kg_to_LEO_at_disclosed_revenue_per_launch threshold=2939 source=RKLB_filing_and_published_vehicle_spec op=>`
+**wrong_if**: `metric=implied_neutron_price_per_kg_to_LEO_at_disclosed_ASP threshold=5567 band=[5567,7448] source=RKLB_filing_and_published_vehicle_spec op=>`
 
-**Subscribed**: `RKLB × what-if`, `RKLB × unit-economics`, `FLY × competitive`, `RKLB × peer-bench`, `SPCX × unit-economics`
+> ⚠️ **CORRECTED 2026-09-18 — the old `threshold=2939` is WITHDRAWN, for two independent
+> reasons.**
+> **(1) It was denominator-failed.** Falcon 9 basis A is `$2,939/kg @ 22.8 t`, and `"22.8"`
+> returns **zero pages** in the filing. On the **matched-pair** payload basis the same filing
+> yields **$5,567/kg (Q2 2025)** and **$7,448/kg (Q2 2026)** — a **1.34×** band. Test a
+> **band**, not a point.
+> **(2) The falsifier carried a basis collapse inside its own definition.** The `~3.1 t` bar
+> is `$9.1M ÷ $2,939/kg` — **an Electron-class price over a Neutron denominator.** On
+> Neutron's own disclosed ASP (**$50–55M**) the implied figure is **$3,846–4,231/kg**, which
+> **exceeds 2,939 and FIRES**; the equivalent bar is **17.0–18.7 t**, far above Neutron's
+> **filed ~13 t** capacity. **P4 may FALSIFY**, and the pillar must carry that possibility
+> rather than assume the case closes.
+> **Two stale premises also corrected**: *"the payload is a `CLAIMED` input"* is no longer
+> true (payload is now **filed at ~13,000 kg**, reusable config — the expendable config still
+> has no filed source), and **Neutron has not flown**.
+
+**Subscribed**: `RKLB × what-if`, `RKLB × unit-economics`, `FLY × competitive`, `RKLB × peer-bench`, `SPCX × unit-economics`, **`FLY × peer-bench`**
+
+> **⚠️ `FLY × peer-bench` ADDED 2026-09-19, and it fixes two defects at once.**
+> **(1) PIL-4 was a STRICT SUBSET of PIL-1** — all five of its pairs were also PIL-1's, so
+> PIL-4 could **never appear first in a bracket** and **generated zero tasks of its own.**
+> Phase 5 (Neutron arithmetic) therefore filed **nothing**. **(2) `FLY × peer-bench` was an
+> ORPHANED matrix row** — present in §3, subscribed by no pillar. **And §3's own purpose text
+> for that row already declares it serves P4**, so the matrix intended this subscription and
+> the §1b block simply omitted it. The pairing is also methodologically right: **Neutron's case
+> is a comparison against Falcon 9 and Alpha**, which is peer-bench work by definition.
 
 ---
 
@@ -362,12 +399,14 @@ They are why a curve thesis is a distinct workstream rather than a comparison pa
    **unvalidated**, not as validated at face value. `DA-02` (which orbit) and `DA-06`
    (price vs cost) are applied on every line, and `DA-21` (issuer-defined segment
    boundaries) on every segment comparison.
-2. **The F5a/F5b architecture test.** Before any floor is cited, the vehicle's architecture
+2. **The F5a/F5b/F5c architecture test.** Before any floor is cited, the vehicle's architecture
    is named and the question "what is *expended* on each flight?" is answered. Fully
    reusable → F5a's propellant floor. Partially reusable → F5b's upper-stage manufacturing
-   curve. **Fully expendable → neither, and the absence of a named floor is recorded as a
-   finding**, not filled with the nearest available number. This is the instrument that
-   prevents P1's named failure mode, and it is the reason P4 tests Neutron on F5b.
+   curve. **Fully expendable → F5c's whole-vehicle manufacturing floor.** The three tiers are
+   **exhaustive**: every architecture has a floor, so there is **no "absence of a named
+   floor" case** — an earlier draft of this line asserted one and was **wrong** (see the
+   corrected note below). This is the instrument that prevents P1's named failure mode, and
+   it is the reason P4 tests Neutron on F5b.
 3. **`CLAIMED` / `DEMONSTRATED` curve separation.** Every cost-reduction claim is graded and
    the register reports the ratio. A target, a roadmap and a press figure are all `CLAIMED`
    under P4 and cannot satisfy a falsifier; a filed per-launch metric or an audited segment
@@ -375,7 +414,8 @@ They are why a curve thesis is a distinct workstream rather than a comparison pa
    division or the averaging assumption is ours, it is graded `DEMONSTRATED` (figures) /
    `MODELED` (the derivation) — 001's convention, carried forward unchanged.
 
-**Evidence discipline.** Per P4 and the v1.3.0 register, any artifact reading
+**Evidence discipline.** Per P4 and the Data-Integrity Register — introduced at v1.3.0,
+**amended at v1.5.0 with DA-29/DA-30**, binding in full — any artifact reading
 `operating_income` shows the component derivation in-line, and the **component identity** —
 not `EPS × shares` — is the sign discriminator. DA-23's census is a **floor, not a census**:
 001 confirmed 6 issuers and left the true scope unknown, so every issuer touched here is a
@@ -397,7 +437,7 @@ curve or a position to the value-pool map.
 | SPCX | SpaceX | industrial.aerospace_defense | 20% | **The curve's reference vehicle.** Falcon 9 (partially reusable), Starship (fully reusable) — two of the three architectures — plus mass to orbit, the three-segment structure that P2 reads, and the basis A/A′/B/C inputs |
 | RKLB | Rocket Lab | industrial.aerospace_defense | 20% | **The curve's only measured point.** Electron basis A and B, the `cost per launch` / `revenue per launch` series (P3, P5, P6), the build-vs-launch cadence, the SolAero solar-cell leg, and Neutron (P4). A P11 deal security as acquirer |
 | FLY | Firefly Aerospace | industrial.aerospace_defense | 10% | **The disclosure-uniqueness control.** Alpha is a second fully expendable vehicle; FLY discloses neither per-launch metric, which makes RKLB's disclosure a finding rather than a convention. Also an EGC — a structural explanation for thin disclosure |
-| SATS | EchoStar | tech.telecom_services | 8% | **The counter-case to launcher capture**: value realised by selling the regulatory asset (~$27B of spectrum gains in 2025 H2 against $15.0B of revenue) rather than by operating. DA-24 contaminated — the asset-sale gain runs through `operating_income` |
+| SATS | EchoStar | tech.telecom_services | 8% | **The counter-case to launcher capture — CORRECTED 2026-09-18, see §Notification.** The Q3 2025 event named here as a *"$27B spectrum gain"* **was not a gain**: it is a **non-cash 5G-Network IMPAIRMENT CHARGE of $16,481,468 thousand**, the licences **remain on the balance sheet**, AT&T took only a **short-term spectrum-manager lease**, and **nothing has closed.** `~$27B` does not reproduce from any filing. DA-24 present as an **INVERTED impairment**, not a sale |
 | IRDM | Iridium Communications | tech.telecom_services | 8% | **The best-performing independent operator**, and the P2 test: 15.1% operating margin *falling* from 23.2% while revenue grew 3.8%. P11 deal security (RKLB) |
 | GSAT | Globalstar | tech.telecom_services | 7% | **The purest monopsony in the universe** and its thinnest operator margin — 7.4%, on revenue that *declined* 3.5%. If value migrated to operators, it did not arrive here. P11 deal security (AMZN) |
 | LUNR | Intuitive Machines | industrial.aerospace_defense | 7% | **Payload customer**: lunar services, launch as a cost input. DA-23 candidate — a 42.1% operating margin at Q4 2025 is not credible |
@@ -448,11 +488,14 @@ use, not assumed.
 | Standard | business-model, what-if, recent-quarter, ratio-analysis, peer-bench, competitive, secular-trends, sector-overview | essentials_modes | As listed | Segment restatement, Neutron arithmetic, the quarterly series, the margin ladder and the value-pool map |
 | Light | growth-strategy, supply-chain, risk | essentials_modes | As listed | Demand-side scoping, the duopoly leg inside the universe, and P11 tagging |
 
-**Budget note.** This is a targeted synthesis, not a second baseline: roughly **40 tasks
-across 9 names**, against 001's 126 across 35 and 002's ~34 across 12. The budget is set to
-**40** in `thesis.md`. If it must come down, drop the Light rows first — **never** the two
-Deep rows, which carry P1 and the only demonstrated curve data — and never the
-`recent-quarter` row, which is the entire delivery mechanism for P5.
+**Budget note.** This is a targeted synthesis, not a second baseline: **45 distinct
+`(ticker, skill)` analyses across 9 names**, against 001's 126 across 35 and 002's ~34
+across 12. Those 45 resolve to **~90 mode-tasks** once Deep rows expand to all modes and
+Standard/Light rows to `essentials_modes`, at 001's measured **2.07×** expansion. The budget
+is set to **80** in `thesis.md`; the resulting gap is registered in `plan.md`'s Deviation
+Register rather than absorbed silently. If it must come down, drop the Light rows first —
+**never** the two Deep rows, which carry P1 and the only demonstrated curve data — and
+never the `recent-quarter` row, which is the entire delivery mechanism for P5.
 
 ## 5. Cross-Cutting Analysis
 
@@ -471,14 +514,23 @@ Deep rows, which carry P1 and the only demonstrated curve data — and never the
   ability to absorb the curve is constrained — which is itself a P6 input, not an opinion.
 - **Constitution interaction.** A1a settled and not re-tested; **A1b tested explicitly** in
   P2 (a thesis assuming it without a test is `UNFRAMED_REFERENCE`); **F5a/F5b applied per
-  architecture** in P1 and P4, with the fully-expendable gap surfaced; **DA-01/DA-02/DA-03/
+  architecture** in P1 and P4, with the **F5c tier applied to fully expendable vehicles**;
+  **DA-01/DA-02/DA-03/
   DA-06/DA-21/DA-25** applied on every line; **P4** governs every grade; **P10** bounds P2 —
   the value pool is mapped without valuing any constellation; **P11** tags IRDM, GSAT and
   RKLB.
-- **A constitution gap this thesis expects to surface.** F5a/F5b cover fully and partially
-  reusable vehicles. **Fully expendable vehicles — Electron and Alpha, the two vehicles for
-  which the universe has demonstrated cost data at all — sit outside both.** Recorded as an
-  amendment candidate for human approval, not executed here.
+- **⚠️ CORRECTED 2026-09-18 — there is NO constitution gap here, and an earlier draft of this
+  line registered one.** It read: *"F5a/F5b cover fully and partially reusable vehicles.
+  Fully expendable vehicles — Electron and Alpha — sit outside both,"* recorded as an
+  amendment candidate. **That was wrong.** F5 was split **three** ways at constitution
+  **v1.3.0** — five minor versions below this thesis's own pin of 1.5.0 — and **F5c (fully
+  expendable, whole-vehicle manufacturing floor)** completes it. **Nothing is open.**
+  **The constitution's actual registered finding is an INVERSION, not a gap**: the sector's
+  cost conversation is conducted about the architectures whose floor is **unproven**
+  (F5a/F5b — no `DEMONSTRATED` price on either), while **F5c holds the only `DEMONSTRATED`
+  price in the sector.** That inversion is a **P3 finding** and is stronger than the gap it
+  replaces. Recorded rather than silently fixed: re-proposing a settled amendment is this
+  thesis's own instance of the A29 defect — a correction that exists and is not read.
 - **Pair-trade candidates: none.** This thesis produces no positions by design. The relative
   axis it does produce — launcher margin versus operator margin — is handed to 005, 006 and
   011 to convert.
@@ -496,7 +548,7 @@ Deep rows, which carry P1 and the only demonstrated curve data — and never the
 - Snapshot: `snapshots/003-launch-cost-curve-value-migration/{YYYY-MM-DD}_thesis.md`
 - **Frontmatter**: per `contracts/artifact-frontmatter.yaml`, with `thesis_id:
   "003-launch-cost-curve-value-migration"`. All five pins are mandatory:
-  `constitution_pin: 1.4.0`, `assumption_pin: "2"`, `skill_pin`, `as_of`,
+  `constitution_pin: 1.5.0`, `assumption_pin: "2"`, `skill_pin`, `as_of`,
   `corpus_version`.
 - **Synthesis task.** 001 found that `agentii.tasks` emits **no** synthesis task, so a
   thesis whose Output Contract requires a `_cross/` artifact must hand-add one. **Two are
@@ -506,18 +558,60 @@ Deep rows, which carry P1 and the only demonstrated curve data — and never the
 
 | Phase | Tasks | Duration | Dependencies |
 |:---:|------|:---:|------|
-| 1 — Curve matrix (P1) | DA-01 A/B/C for every vehicle; architecture labels; the three-way floor table; absent cells named with their resolving source | Week 1 | Constitution v1.3.0 loaded; 002's denominators consumed |
-| 2 — Floor inputs (P1, P4) | Source propellant mass and price; the expended-stage cost band; convert basis B for Falcon 9; record what 003 owns of the validation queue | Week 2 | Phase 1 |
-| 3 — Value-pool map (P2) | Segment revenue growth and margin across all nine names; DA-21 restatement; the captive-versus-independent operator test | Week 3 | Phase 2 |
-| 4 — Curve direction (P3, P5) | The `CLAIMED`/`DEMONSTRATED` register; the per-launch series and its averaging assumption; the 22.5% revenue-side reconciliation and its timing hypothesis | Week 4 | Phase 3 |
-| 5 — Neutron arithmetic (P4) | Source the payload; test the ~3.1 t break-even; confirm the F5b architecture; state the conclusion conditionally | Week 5 | Phase 4 |
-| 6 — Pass-through (P6) | Cost-versus-price at the only issuer disclosing both; demand-side programme-cost shares; the A1a-reconciliation statement | Week 6 | Phase 5 |
-| 7 — Hand-off | Publish the citable curve and map for 004–006; record every unconverted figure with its disposition class | Week 7 | Phase 6 |
+| 1 — Curve matrix (P1) | DA-01 A/B/C for every vehicle; architecture labels; the three-way floor table; absent cells named with their resolving source | **L1** | Constitution v1.5.0 loaded; 002's denominators consumed |
+| 2 — Floor inputs (P1, P4) | Source propellant mass and price; the expended-stage cost band; convert basis B for Falcon 9; record what 003 owns of the validation queue | **L2** | **Phase 1** (shared `unit-economics`; Phase 2 fills Phase 1's cells) |
+| 3 — Value-pool map (P2) | Segment revenue growth and margin across all nine names; DA-21 restatement; the captive-versus-independent operator test | **L1** | **None — starts alongside Phase 1** ⚠️ *corrected: no shared skill (`{business-model, sector-overview, supply-chain}` vs `{unit-economics, peer-bench}`) and no shared input — a propellant price is not an input to a value-pool map* |
+| 4 — Curve direction (P3, P5) | The `CLAIMED`/`DEMONSTRATED` register; the per-launch series and its averaging assumption; **both legs of the DA-25 reconciliation** (revenue-side 22.5%; margin-side 51.6% vs 42.9%). ⚠️ **The `timing` hypothesis is FALSIFIED** — Q2 2025 is the zero-HASTE control and the gap still diverges −15.3%/−22.9%; the mechanism is **period-normalisation**, and the 5% threshold is not discriminable on the metric's own noise (4 of 6 periods breach it) | **L2** | **Phase 3** (needs its DA-21 segment boundaries) |
+| 5 — Neutron arithmetic (P4) | Source the payload (**filed at ~13,000 kg**); test against the **matched-pair band [5,567, 7,448]**; confirm the F5b architecture; state the conclusion conditionally — **carrying that the case may FALSIFY** | **L3** | **Phase 2 — not Phase 4** ⚠️ *corrected: it needs the F5b floor and the Falcon 9 band; nothing in it touches the per-launch series* |
+| 6 — Pass-through (P6) | Cost-versus-price at the only issuer disclosing both; demand-side programme-cost shares; the A1a-reconciliation statement | **L3** | **Phase 4 — not Phase 5** ⚠️ *corrected: it needs the per-launch series, not Neutron arithmetic* |
+| 7 — Hand-off | Publish the citable curve and map for 004–006; record every unconverted figure with its disposition class | **L4** | Phases 1–6 |
+
+> **⚠️ Dependency column CORRECTED 2026-09-19.** The table previously declared a strict
+> serial chain **1→2→3→4→5→6→7**, i.e. **7 levels**. Audited against what each phase actually
+> consumes, **three of the six edges do not exist** (2→3, 4→5, 5→6), and the graph collapses
+> to **4 levels** with two independent lanes at every level:
+>
+> ```
+> L1:  1 (curve matrix) ∥ 3 (value-pool map)
+> L2:  2 (floor inputs) ∥ 4 (curve direction)
+> L3:  5 (Neutron)      ∥ 6 (pass-through)
+> L4:  7 (hand-off)
+> ```
+>
+> **Cost lane** = 1→2→5 · **Value lane** = 3→4→6. The lanes share no skill, no source and no
+> pillar. **`plan_audit.py` does not check phase ordering** (its invariants I1–I4 are all
+> coverage), so this defect was invisible to every gate in the workspace. Rationale and
+> per-edge evidence: `plan.md` § "Dependency graph and critical path".
 
 ## Clarifications
 
-Recorded by `agentii.specify` at creation, 2026-09-18. No `agentii.clarify` round has run;
-the following are recorded as open for that pass.
+- [2026-09-18] Q: Wave assignment and dependency direction: PROGRAM.md places 003 in Wave 2 (opens as 001 closes) with 004-006 in Wave 1, while the spec header says Wave 2 in Status but Wave 1 in the metadata field, and its Time Horizon says 003 terminates at a wave-1 hand-off to 004-006. → A: 003 follows 004-006. PROGRAM.md governs: 004-006 price off 001s register in Wave 1 and 003 refines the curve in Wave 2. The specs two stale header fields are corrected to match.
+
+> **⚠️ SUPERSEDED — POST-002 SEQUENCING REVIEW, 2026-09-18.** This answer is recorded as
+> given and is **no longer the spec's position**. It was answered against a **stale copy of
+> `PROGRAM.md`**: the wave table I read still showed the clarify-round-2 demotion, while the
+> file had already been revised at 17:55 the same day. Three things broke the answer —
+> (1) **the demotion's premise was falsified**: `001:PIL-1`, the launch-cost floor at ±15%
+> after denominator validation, **FIRED**, so 001 did *not* settle the curve's level;
+> (2) **the dependency graph always disagreed with the wave table** — `PROGRAM.md` §5 draws
+> `003 ──> 004` (*"SPCX sizes off the curve"*) and `003 ──> 005` (*"launch pure-plays **ARE**
+> the curve"*), and for 005 that edge is closer to hard than soft, so running 005 first makes
+> it re-derive what 003 exists to produce; (3) **the slot arithmetic worked** — 002 completed
+> and vacated wave 1, so 003 takes it without displacing anyone.
+>
+> **The corrected position is in the header above:** `Wave: 1`, with 003 supplying the curve
+> 004 and 005 price off, and running **before** them. The Q-3, Q-5 and budget answers in this
+> round are unaffected. Kept rather than deleted, per the workspace's annotate-don't-rewrite
+> policy — and because the failure mode is worth recording: **an answer is only as current as
+> the document it was read from.**
+- [2026-09-18] Q: Q-3 payload admissibility: does the rule 002 applies to Electron, rejecting company-published vehicle specs, apply equally to Neutrons payload denominator? → A: Yes, reject it on the same grounds. A rule applied to one issuer and waived for another is not a rule. P4 becomes conditional: it executes only on a filed document, manifest or contract, and is otherwise recorded UNRESOLVABLE-FROM-PUBLIC-SOURCES with the uncertainty band carried explicitly.
+- [2026-09-18] Q: Q-5 thresholds: P3s 50 percent demonstrated-share bar and P6s 10 percent programme-cost bar are judgements set to be falsifiable, not measurements. Confirm or change. → A: Keep both as written. P3 fires at 50 percent or more of the curve DEMONSTRATED, otherwise indeterminate; P6 fires at 10 percent or more of programme cost being launch. Changing either later is a PATCH to spec, not a MAJOR event.
+- [2026-09-18] Q: Declare the thesis budget max_tasks and max_retries_per_task (Q58) and expiry_triggers (Q59). → A: budget {max_tasks: 80, max_retries_per_task: 2}; expiry_triggers [earnings_release, constitution_bump, skill_version_mix]. Sized for a refinement thesis that consumes 001 and 002 rather than re-deriving them.
+
+Recorded by `agentii.specify` at creation, 2026-09-18. **`agentii.clarify` round 3 ran
+2026-09-18** — four answers are encoded above (wave assignment, Q-3 payload admissibility,
+Q-5 thresholds, budget/expiry). The items below remain **recorded open**, each with its
+provisional reading; they were not blocking and were not asked.
 
 - **Q-1 (P1, basis adoption)** — Does the curve's headline become a single basis, or is the
   *spread* the deliverable? **Provisional, pending clarify:** the spread. Per the §1c
@@ -543,3 +637,71 @@ the following are recorded as open for that pass.
 - **Q-5 (P3/P6, thresholds)** — P3's 50% demonstrated-share bar and P6's 10% programme-cost
   bar are judgements set to be falsifiable, not measurements. **Flagged for human
   confirmation; if answered differently this is a PATCH to spec, not a MAJOR event.**
+
+> ## ⚠️ UPSTREAM NOTIFICATION FROM THESIS 002 — F2 HAS DOWNGRADED (2026-09-18)
+>
+> Thesis 002's Phase 2 acceptance test **fired**. The plan committed to notifying this
+> thesis if it did.
+>
+> **F2 — radiative heat rejection, the constitution's *named binding constraint for orbital
+> compute* — is now a QUALITATIVE bound, not a quotable figure.** The radiator band is
+> **undefined rather than wide**: the 8 kg/m² areal density is an admitted placeholder with
+> no sourced value anywhere on the platform, and F2's own admissible source class
+> (peer-reviewed literature / flown-hardware disclosure) **does not exist in the corpus**.
+>
+> **What survives, and it is robust:** order **10³ m²** and order **10¹ t per MW** — stable
+> across a 7.72× area range, a 3× density range and a 2× COP penalty. **The constraint still
+> binds; it cannot be quoted to four significant figures.** Do not cite F2 to a point value.
+>
+> **Two corrections that travel with this:**
+> 1. **001's 24× nuclear reduction is ~16×.** With a COP = 2 heat pump folded in — the loop
+>    001 left open — it is **470 m²/MW, not 313**. The 24× assumed a free pump.
+> 2. **The eclipse multiplier is 1.587×, not 8×.** Dawn-dusk SSO has no eclipse; array falls
+>    5,080 → 3,201 m²/MW. The "8× more productive" claim implies an unstated reference
+>    terrestrial capacity factor of **18.6%** — at an assumed CF it is trivially satisfied,
+>    at an unstated CF it has no truth value.
+>
+> Source: `theses/002-evidence-validation/artifacts/GOOG/2026-09-18_1500_secular-trends_methodology.md`
+
+
+---
+
+## ⚠️ Notification — 2026-09-18 — a SATS input to this thesis is mis-stated, in two ways
+
+Appended by thesis 002 (Phase 5, `SATS × risk`). **This is a correction, not a new finding;
+003 has not been rewritten.** 003's cost-curve work cites a SATS figure whose direction is
+inverted.
+
+> **Two errors, both from `artifacts/SATS/2026-09-18_1500_risk_methodology.md` and
+> `..._recent-quarter_methodology.md` in thesis 002:**
+>
+> **1. `10.7%` corrects to `8.91%`.** The `10.7%` is the **filed Q1 2026 figure carrying the
+> impairment credit**; the ex-item figure is **`+8.91%`**. The difference is the credit.
+>
+> **2. 003 names the WRONG CONTAMINANT AND THE WRONG SIGN.** 003 describes the Q3 2025
+> event as a **spectrum asset-sale GAIN**. **There was no gain.** The filed event is a
+> **non-cash 5G-Network IMPAIRMENT CHARGE of `$16,481,468` thousand** (Wireless
+> 16,199,344 + B&SS 282,124), triggered by the AT&T/SpaceX transactions.
+> **The licences remain on the balance sheet** at 2026-03-31 (`$34,550,802` thousand);
+> **AT&T took only a short-term spectrum manager lease; nothing has closed.**
+> **001's "spectrum gains" is REFUTED** — the only disposal item on the FY2025 cash-flow
+> statement is `Asset sales and other losses (gains) (100,028)`.
+>
+> **Why it matters for a COST-CURVE thesis.** A gain inflow and a non-cash write-down are
+> not the same economic event. A gain implies proceeds and a realised price — **a price
+> point is exactly what a cost-curve thesis would want to use.** No proceeds exist here, so
+> **any $/unit or capacity figure 003 derived from this event has no underlying
+> transaction.** The corrected margin progression is
+> **`(2.28)% → (5.73)% → (460.46)% → (20.54)% → +10.71%`**, against the quoted
+> `2.3 / 5.7 / 460.5 / 118.1 / 10.7`.
+>
+> **Two further cautions carried from the same work.**
+> **Second-order contamination:** the Q1 2026 year-over-year improvement is **80.6% D&A
+> relief plus the credit**, and **the D&A relief is permanent** (Other segment 303,929 →
+> 11,305, accretion continuing prospectively). **An add-back-only normalisation still
+> flatters FY2026** — removing the one-off is not sufficient when a recurring cost base has
+> been reset.
+> **`~$27B` does not reproduce** from any filing; the nearest figures are carrying values,
+> which are balance-sheet amounts rather than transaction values.
+
+> Source: `theses/002-evidence-validation/artifacts/SATS/2026-09-18_1500_risk_methodology.md`

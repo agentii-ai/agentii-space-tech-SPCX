@@ -7,7 +7,7 @@ mode: methodology
 generated_at: 2026-09-18T12:39:00-04:00
 constitution_pin: "1.2.0"
 assumption_pin: "2"
-skill_pin: "registry-1.0.0"
+skill_pin: "0730fd170124"
 as_of: 2026-09-18
 corpus_version: "UNPINNED"   # no corpus-version endpoint exposed by the platform; see brief.md
 definitions_used:

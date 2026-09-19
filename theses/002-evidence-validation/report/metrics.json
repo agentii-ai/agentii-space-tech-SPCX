@@ -1,0 +1,467 @@
+{
+  "pack_version": "2.0",
+  "thesis": "002-evidence-validation",
+  "tickers": {
+    "BA": {
+      "artifacts": [
+        "artifacts/BA/2026-09-18_1500_recent-quarter_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "BWXT": {
+      "artifacts": [
+        "artifacts/BWXT/2026-09-18_1500_recent-quarter_methodology.md",
+        "artifacts/BWXT/2026-09-18_1500_secular-trends_methodology.md",
+        "artifacts/BWXT/2026-09-18_1500_supply-chain_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "FLY": {
+      "artifacts": [
+        "artifacts/FLY/2026-09-18_1500_recent-quarter_methodology.md",
+        "artifacts/FLY/2026-09-18_1500_unit-economics_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "GOOG": {
+      "artifacts": [
+        "artifacts/GOOG/2026-09-18_1500_ratio-analysis_methodology.md",
+        "artifacts/GOOG/2026-09-18_1500_recent-quarter_methodology.md",
+        "artifacts/GOOG/2026-09-18_1500_secular-trends_methodology.md"
+      ],
+      "key_metrics": {
+        "cross_holding_share_of_net_income_pct": 68.7,
+        "net_margin_swing_pp": 59.32,
+        "ratio_series_converted": "2/14"
+      },
+      "metric_sources": {
+        "cross_holding_share_of_net_income_pct": [
+          "artifacts/GOOG/2026-09-18_1500_ratio-analysis_methodology.md"
+        ],
+        "net_margin_swing_pp": [
+          "artifacts/GOOG/2026-09-18_1500_ratio-analysis_methodology.md"
+        ],
+        "ratio_series_converted": [
+          "artifacts/GOOG/2026-09-18_1500_ratio-analysis_methodology.md"
+        ]
+      },
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "HAWK": {
+      "artifacts": [
+        "artifacts/HAWK/2026-09-18_1500_recent-quarter_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "IRDM": {
+      "artifacts": [
+        "artifacts/IRDM/2026-09-18_1500_competitive_methodology.md",
+        "artifacts/IRDM/2026-09-18_1500_recent-quarter_methodology.md"
+      ],
+      "key_metrics": {
+        "concept_series_stripped": 12,
+        "statements_affected": 4,
+        "weight_discriminator_facts_checked": 38
+      },
+      "metric_sources": {
+        "concept_series_stripped": [
+          "artifacts/IRDM/2026-09-18_1500_recent-quarter_methodology.md"
+        ],
+        "statements_affected": [
+          "artifacts/IRDM/2026-09-18_1500_recent-quarter_methodology.md"
+        ],
+        "weight_discriminator_facts_checked": [
+          "artifacts/IRDM/2026-09-18_1500_recent-quarter_methodology.md"
+        ]
+      },
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "LUNR": {
+      "artifacts": [
+        "artifacts/LUNR/2026-09-18_1500_recent-quarter_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "MRCY": {
+      "artifacts": [
+        "artifacts/MRCY/2026-09-18_1500_recent-quarter_methodology.md",
+        "artifacts/MRCY/2026-09-18_1500_secular-trends_methodology.md",
+        "artifacts/MRCY/2026-09-18_1500_supply-chain_methodology.md"
+      ],
+      "key_metrics": {
+        "periods_stripped": 11,
+        "periods_verified": 13,
+        "periods_correct": 2,
+        "served_series_negative_values": 0
+      },
+      "metric_sources": {
+        "periods_stripped": [
+          "artifacts/MRCY/2026-09-18_1500_recent-quarter_methodology.md"
+        ],
+        "periods_verified": [
+          "artifacts/MRCY/2026-09-18_1500_recent-quarter_methodology.md"
+        ],
+        "periods_correct": [
+          "artifacts/MRCY/2026-09-18_1500_recent-quarter_methodology.md"
+        ],
+        "served_series_negative_values": [
+          "artifacts/MRCY/2026-09-18_1500_recent-quarter_methodology.md"
+        ]
+      },
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "MSFT": {
+      "artifacts": [
+        "artifacts/MSFT/2026-09-18_1500_recent-quarter_methodology.md"
+      ],
+      "key_metrics": {
+        "capex_bases_disclosed": 4,
+        "capex_spread_pct": 63,
+        "facts_stripped": 27,
+        "facts_clean": 11
+      },
+      "metric_sources": {
+        "capex_bases_disclosed": [
+          "artifacts/MSFT/2026-09-18_1500_recent-quarter_methodology.md"
+        ],
+        "capex_spread_pct": [
+          "artifacts/MSFT/2026-09-18_1500_recent-quarter_methodology.md"
+        ],
+        "facts_stripped": [
+          "artifacts/MSFT/2026-09-18_1500_recent-quarter_methodology.md"
+        ],
+        "facts_clean": [
+          "artifacts/MSFT/2026-09-18_1500_recent-quarter_methodology.md"
+        ]
+      },
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "NVDA": {
+      "artifacts": [
+        "artifacts/NVDA/2026-09-18_1500_recent-quarter_methodology.md",
+        "artifacts/NVDA/2026-09-18_1500_secular-trends_methodology.md"
+      ],
+      "key_metrics": {
+        "operating_income_facts_nonnegative": 69,
+        "segment_substitution_error_pct": 5.12,
+        "computed_column_error_x": 37
+      },
+      "metric_sources": {
+        "operating_income_facts_nonnegative": [
+          "artifacts/NVDA/2026-09-18_1500_recent-quarter_methodology.md"
+        ],
+        "segment_substitution_error_pct": [
+          "artifacts/NVDA/2026-09-18_1500_recent-quarter_methodology.md"
+        ],
+        "computed_column_error_x": [
+          "artifacts/NVDA/2026-09-18_1500_recent-quarter_methodology.md"
+        ]
+      },
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "RKLB": {
+      "artifacts": [
+        "artifacts/RKLB/2026-09-18_1500_operational-kpi_methodology.md",
+        "artifacts/RKLB/2026-09-18_1500_ratio-analysis_methodology.md",
+        "artifacts/RKLB/2026-09-18_1500_unit-economics_methodology.md"
+      ],
+      "key_metrics": {
+        "operating_income_filed_thousands": -57514,
+        "operating_income_served_thousands": 57514,
+        "component_identity_residuals": 50,
+        "fcf_filed_fy2025_thousands": -321806,
+        "fcf_served_fy2025_thousands": 9236
+      },
+      "metric_sources": {
+        "operating_income_filed_thousands": [
+          "artifacts/RKLB/2026-09-18_1500_ratio-analysis_methodology.md"
+        ],
+        "operating_income_served_thousands": [
+          "artifacts/RKLB/2026-09-18_1500_ratio-analysis_methodology.md"
+        ],
+        "component_identity_residuals": [
+          "artifacts/RKLB/2026-09-18_1500_ratio-analysis_methodology.md"
+        ],
+        "fcf_filed_fy2025_thousands": [
+          "artifacts/RKLB/2026-09-18_1500_ratio-analysis_methodology.md"
+        ],
+        "fcf_served_fy2025_thousands": [
+          "artifacts/RKLB/2026-09-18_1500_ratio-analysis_methodology.md"
+        ]
+      },
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "SATS": {
+      "artifacts": [
+        "artifacts/SATS/2026-09-18_1500_competitive_methodology.md",
+        "artifacts/SATS/2026-09-18_1500_recent-quarter_methodology.md",
+        "artifacts/SATS/2026-09-18_1500_risk_methodology.md"
+      ],
+      "key_metrics": {
+        "impairment_charge_thousands": 16481468,
+        "da24_items_contaminated": 5,
+        "da24_items_clean": 10,
+        "second_order_improvement_share_pct": 80.6
+      },
+      "metric_sources": {
+        "impairment_charge_thousands": [
+          "artifacts/SATS/2026-09-18_1500_risk_methodology.md"
+        ],
+        "da24_items_contaminated": [
+          "artifacts/SATS/2026-09-18_1500_risk_methodology.md"
+        ],
+        "da24_items_clean": [
+          "artifacts/SATS/2026-09-18_1500_risk_methodology.md"
+        ],
+        "second_order_improvement_share_pct": [
+          "artifacts/SATS/2026-09-18_1500_risk_methodology.md"
+        ]
+      },
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "SPCX": {
+      "artifacts": [
+        "artifacts/SPCX/2026-09-18_1500_business-model_methodology.md",
+        "artifacts/SPCX/2026-09-18_1500_operational-kpi_methodology.md",
+        "artifacts/SPCX/2026-09-18_1500_ratio-analysis_methodology.md",
+        "artifacts/SPCX/2026-09-18_1500_recent-quarter_methodology.md",
+        "artifacts/SPCX/2026-09-18_1500_risk_methodology.md",
+        "artifacts/SPCX/2026-09-18_1500_unit-economics_methodology.md"
+      ],
+      "key_metrics": {
+        "operating_margin_basis_swing_pp": 46.47,
+        "da30_instances": 7,
+        "internal_launches_of_total": "27/37",
+        "filed_operating_margin_pct": -16.68,
+        "served_operating_margin_pct": 29.79
+      },
+      "metric_sources": {
+        "operating_margin_basis_swing_pp": [
+          "artifacts/SPCX/2026-09-18_1500_ratio-analysis_methodology.md"
+        ],
+        "da30_instances": [
+          "artifacts/SPCX/2026-09-18_1500_ratio-analysis_methodology.md"
+        ],
+        "internal_launches_of_total": [
+          "artifacts/SPCX/2026-09-18_1500_ratio-analysis_methodology.md"
+        ],
+        "filed_operating_margin_pct": [
+          "artifacts/SPCX/2026-09-18_1500_ratio-analysis_methodology.md"
+        ],
+        "served_operating_margin_pct": [
+          "artifacts/SPCX/2026-09-18_1500_ratio-analysis_methodology.md"
+        ]
+      },
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "UTHR": {
+      "artifacts": [
+        "artifacts/UTHR/2026-09-18_1500_recent-quarter_methodology.md",
+        "artifacts/UTHR/2026-09-18_1500_unit-economics_methodology.md"
+      ],
+      "key_metrics": {
+        "gross_margin_filed_pct": 87.3,
+        "gross_margin_band_pct": "82.93-89.24",
+        "figure_001_attributed_pct": 72.0,
+        "misattribution_pp": 15.3,
+        "gross_margin_bases": 5
+      },
+      "metric_sources": {
+        "gross_margin_filed_pct": [
+          "artifacts/UTHR/2026-09-18_1500_recent-quarter_methodology.md"
+        ],
+        "gross_margin_band_pct": [
+          "artifacts/UTHR/2026-09-18_1500_recent-quarter_methodology.md"
+        ],
+        "figure_001_attributed_pct": [
+          "artifacts/UTHR/2026-09-18_1500_recent-quarter_methodology.md"
+        ],
+        "misattribution_pp": [
+          "artifacts/UTHR/2026-09-18_1500_recent-quarter_methodology.md"
+        ],
+        "gross_margin_bases": [
+          "artifacts/UTHR/2026-09-18_1500_recent-quarter_methodology.md"
+        ]
+      },
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "VOYG": {
+      "artifacts": [
+        "artifacts/VOYG/2026-09-18_1500_recent-quarter_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "VRT": {
+      "artifacts": [
+        "artifacts/VRT/2026-09-18_1500_ratio-analysis_methodology.md",
+        "artifacts/VRT/2026-09-18_1500_recent-quarter_methodology.md",
+        "artifacts/VRT/2026-09-18_1500_unit-economics_methodology.md"
+      ],
+      "key_metrics": {
+        "debt_to_equity_overstatement_x": 3.79,
+        "quick_ratio_understatement_x": 2.33,
+        "ratio_fields_correct": "2/16",
+        "validator_false_positive_pct": 92.9
+      },
+      "metric_sources": {
+        "debt_to_equity_overstatement_x": [
+          "artifacts/VRT/2026-09-18_1500_ratio-analysis_methodology.md"
+        ],
+        "quick_ratio_understatement_x": [
+          "artifacts/VRT/2026-09-18_1500_ratio-analysis_methodology.md"
+        ],
+        "ratio_fields_correct": [
+          "artifacts/VRT/2026-09-18_1500_ratio-analysis_methodology.md"
+        ],
+        "validator_false_positive_pct": [
+          "artifacts/VRT/2026-09-18_1500_ratio-analysis_methodology.md"
+        ]
+      },
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    },
+    "YSS": {
+      "artifacts": [
+        "artifacts/YSS/2026-09-18_1500_operational-kpi_methodology.md",
+        "artifacts/YSS/2026-09-18_1500_recent-quarter_methodology.md"
+      ],
+      "key_metrics": {},
+      "metric_sources": {},
+      "entity_claims": [],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    }
+  },
+  "synthesis": {
+    "pillar_verdicts": {},
+    "capability_timeline": {}
+  }
+}

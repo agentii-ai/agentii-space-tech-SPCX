@@ -1,0 +1,114 @@
+# contracts/launch-cost-curve.yaml
+# Schema for PRIMARY artifact 1 of thesis 003 (spec.md §6). The vehicle × architecture ×
+# basis matrix with applied floors, grades and named absent cells. This is what 004 and 005
+# cite; a cell that cannot be filled is reported as absent WITH its resolving source, never
+# omitted and never proxied (spec §1c).
+schema: launch_cost_curve
+version: 1
+output_path: _cross/launch-cost-curve.md
+requires:
+  - contracts/artifact-frontmatter.yaml
+  - _cross/technology-baseline_synthesis.md   # 001's F1/F2/F5 bounds, consumed not re-derived
+  - theses/002-evidence-validation/artifacts/ # the denominators, consumed not re-derived
+
+entry:
+  vehicle:        {type: str, required: true}   # Falcon 9, Starship, Electron, Neutron, Alpha, ...
+  operator:       {type: str, required: true}   # ticker or named private
+
+  # DA-03. The word "reusable" conveys neither architecture nor denominator effect, so the
+  # label is mandatory — a bare "reusable: true" fails.
+  architecture:
+    type: str
+    required: true
+    enum: [fully_expendable, partially_reusable, fully_reusable]
+    # F5a covers fully_reusable, F5b partially_reusable.
+    # FULLY EXPENDABLE IS OUTSIDE BOTH — see the note at the foot of this file.
+
+  # DA-01. All four bases reported where disclosed. A cell quoting one basis without the
+  # others is a §1c violation (validation rule `no_single_basis_collapse`).
+  bases:
+    type: map
+    required: true
+    keys:
+      A:  {type: float, unit: USD/kg, note: "customer list price", required: false}
+      A_prime: {type: float, unit: USD/kg, note: "A′ — SPCX-specific variant, see spec §1b", required: false}
+      B:  {type: float, unit: USD/kg, note: "marginal cost per launch — the ONLY basis that tests the F5 floor", required: false}
+      C:  {type: float, unit: USD/kg, note: "fully-loaded amortized", required: false}
+    # A basis may be absent, but an absent basis MUST carry an `absent` record (below).
+
+  absent:
+    type: list
+    required: false
+    item:
+      basis:            {type: str, required: true, enum: [A, A_prime, B, C]}
+      reason:           {type: str, required: true}
+      resolving_source: {type: str, required: true}   # mandatory — spec §1c
+      # A cell absent WITHOUT a resolving source is a fail. The spec's rule is that an
+      # absent cell is named with what would fill it, because an unnameable gap is
+      # indistinguishable from an unsearched one.
+
+  denominator_orbit: {type: str, required: true}   # DA-02. LEO / SSO / GTO / delivered. GTO is ~3x LEO per kg; mixing silently invalidates every comparison.
+  payload_kg:        {type: float, required: true} # DA-02's companion: $/kg is meaningless without the kg
+
+  evidence_grade: {type: str, required: true, enum: [DEMONSTRATED, CLAIMED, MODELED, DERIVED]}
+
+  # The F5 floor applied to this cell, with the tier that supplied it.
+  # THREE tiers, and they are EXHAUSTIVE over the architecture enum above.
+  applied_floor:
+    tier:          {type: str, required: true, enum: [F5a, F5b, F5c, none]}
+    value:         {type: float, required: false, unit: USD/kg}
+    derivation:    {type: str, required: false}   # shown, not asserted (P4 rule 3)
+
+validation_rules:
+  - id: architecture_labeled
+    rule: "architecture must be one of the three enum values; 'reusable' alone fails DA-03"
+    level: fail
+  - id: no_single_basis_collapse
+    rule: >
+      a cell must not quote a DA-01 basis without reporting the competing bases it has.
+      Reporting one basis where two are disclosed is the DA-30 collapse (constitution
+      §Data-Integrity Register).
+    level: fail
+  - id: absent_cells_named
+    rule: "every absent basis carries a resolving_source; an unnamed absence fails"
+    level: fail
+  - id: denominator_named
+    rule: "denominator_orbit and payload_kg are required; a bare $/kg fails DA-02"
+    level: fail
+  - id: floor_architecture_consistency
+    rule: >
+      applied_floor.tier maps one-to-one onto architecture: F5a→fully_reusable,
+      F5b→partially_reusable, F5c→fully_expendable. The three tiers are EXHAUSTIVE, so
+      tier: none is admissible ONLY where the architecture itself is undetermined. A
+      fully_expendable vehicle MUST carry F5c — treating it as outside F5 re-raises a
+      coverage gap closed at constitution v1.3.0.
+    level: fail
+  - id: basis_b_grade
+    rule: >
+      basis B is the only basis that tests the F5 floor. Where B is quoted the artifact
+      states whether it is DEMONSTRATED (a filed figure) or MODELED (a derivation). The
+      distinction is load-bearing: the universe has exactly one DEMONSTRATED B (Electron).
+    level: fail
+
+# --- ⚠️ CORRECTED 2026-09-18: THE F5 COVERAGE GAP IS CLOSED. DO NOT RE-RAISE IT. ---
+# An earlier version of this file recorded "F5a/F5b do not reach Electron or Alpha" as an
+# open amendment candidate. THAT WAS WRONG, and the error is instructive.
+#
+# constitution.md v1.3.0 split F5 THREE ways, not two, and the third tier is the one that
+# matters here:
+#     F5a  fully reusable      propellant floor (hard)          no DEMONSTRATED price
+#     F5b  partially reusable  upper-stage mfg floor (soft)     no DEMONSTRATED price
+#     F5c  fully expendable    whole-vehicle mfg floor          THE ONLY ONE WITH A
+#                                                               DEMONSTRATED PRICE
+#   ("Added at v1.3.0, completing the split." — constitution.md §F5c, line 749;
+#    the tier table at line 713; the registry row at line 311.)
+#
+# So every architecture has a floor, and the tiers are exhaustive. The inversion the
+# constitution itself registers is NOT a coverage gap — it is that the sector's cost
+# conversation is conducted about the architectures whose floor is UNPROVEN (F5a/F5b),
+# while the only architecture with a demonstrated price is F5c, which F5 as originally
+# written did not bound at all.
+#
+# The version this file originally miscounted against is the version 003 pins (1.5.0 >
+# 1.3.0). Recorded rather than silently fixed: 003 nearly re-proposed a settled amendment,
+# which is the same class of defect as A29 — a correction that exists and is not read.

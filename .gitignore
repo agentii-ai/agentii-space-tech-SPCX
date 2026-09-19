@@ -2,3 +2,25 @@
 market-data/
 raw-data/
 # evidence quote snapshots inside each thesis ARE committed
+
+# Raw Claude session archives — large (~178 MB for 002; ~160 MB for 003's
+# report window), kept on disk for provenance only. The human-readable record is
+# session-history-*.md at the repo root; these are the primary source beneath it,
+# not version-controlled.
+#
+# The trailing `*` covers every variant of the directory name — `session-history/`
+# and `session-history-report/` today, anything else later. A bare
+# `theses/*/session-history/` does NOT match `session-history-report/`, which
+# would have left ~160 MB of raw context committable; verified with
+# `git check-ignore` both ways before and after.
+theses/*/session-history*/
+
+# Per-machine cruft — never has content anyone wants, and both were already
+# tracked before this rule existed (`theses/001-.../artifacts/.DS_Store`,
+# `tools/__pycache__/plan_audit.cpython-311.pyc`). A .gitignore rule does NOT
+# untrack an already-tracked path, so those two are removed from the index in the
+# same commit; without that the rule would be cosmetic and the files would keep
+# reappearing as modifications.
+.DS_Store
+__pycache__/
+*.pyc

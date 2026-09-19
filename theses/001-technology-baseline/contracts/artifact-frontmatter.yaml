@@ -19,7 +19,12 @@ fields:
   # which is exactly what happened to the first SPCX artifact. All five are mandatory.
   constitution_pin: {type: str, required: true, const: "1.2.0"}
   assumption_pin:   {type: str, required: true, const: "2"}
-  skill_pin:        {type: str, required: true}
+  # Canonical form enforced from 2026-09-19: 12 lowercase hex, or the sentinel `none`
+  # for a synthesis artifact with no single skill. The VALUE was previously unchecked —
+  # only presence was — so `registry-1.0.0` (a whole-registry version, not a skill hash)
+  # passed every check in this repo while pinning nothing. See `tools/check_contract.py`
+  # rule `skill_pin_wellformed`, which is the executable form of this pattern.
+  skill_pin:        {type: str, required: true, pattern: "^(none|n/a|[0-9a-f]{12})$"}
   as_of:            {type: date, required: true, const: "2026-09-18"}
   corpus_version:   {type: str, required: true}
 

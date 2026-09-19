@@ -9,7 +9,7 @@ task: T126
 generated_at: 2026-09-18T21:45:00-04:00
 constitution_pin: "1.2.0"
 assumption_pin: "2"
-skill_pin: "n/a"
+skill_pin: "none"
 as_of: 2026-09-18
 corpus_version: "UNPINNED"
 schema: technology_line_register
