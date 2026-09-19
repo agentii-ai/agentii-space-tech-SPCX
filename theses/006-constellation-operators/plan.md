@@ -41,7 +41,7 @@ Encoded as three rules that every phase below obeys:
 1. **CONSUME, DO NOT RE-RUN.** A `(ticker, skill)` pair 001–004 already produced an artifact for
    is **cited, never re-executed**. §0 of the spec is the propagation mechanism; the plan adds
    §F1's ledger of exactly which pairs those are.
-2. **RUN ONLY WHAT IS NEW** — the **83** pairs that no prior thesis touched, plus the five skills
+2. **RUN ONLY WHAT IS NEW** — the **79** pairs that no prior thesis touched, plus the five skills
    this thesis introduces (`trade-idea-generation`, `position-sizing`, `qualitative-filtering`,
    and — added at the evaluation, F12 — `sotp-valuation` and `residual-income`).
 3. **CHALLENGE AND VALIDATE WHAT IS INHERITED.** Where 006 consumes an upstream figure, it
@@ -62,15 +62,16 @@ reproduce a result that exists**, not on touching the same source.
 **Measured, not estimated.** Every artifact under `theses/00{1,2,3,4}/artifacts/` was parsed for
 its `{date}_{skill}_{mode}` filename and intersected with §3's declared matrix.
 
-| | at plan time | **after E1's valuation rows** |
-|---|---:|---:|
-| §3's declared `(ticker, skill)` pairs | **85** | **99** |
-| Already produced by 001–004 → **CONSUME** | **16** | **16** |
-| **Must be newly run** | **69** | **83** |
-| Repeat rate removed by this finding | **19%** | **16%** |
+| | at plan time | after F12 | **after the second pass** |
+|---|---:|---:|---:|
+| §3's declared `(ticker, skill)` pairs | **85** | 99 | **95** |
+| Already produced by 001–004 → **CONSUME** | **16** | 16 | **16** |
+| **Must be newly run** | **69** | 83 | **79** |
+| Repeat rate removed by this finding | **19%** | 16% | **17%** |
 
-*(E1 added 14 pairs — `sotp-valuation` and `residual-income` on seven names each — and **none of
-them is consumed**, so the new column is the one the plan now schedules.)*
+*(F12 added the two valuation skills; **the second pass settled their depth and scope** — Deep
+`sotp-valuation` on the scarce trio plus Standard on the granted four, and `residual-income` on
+the scarce trio only. **None of the 10 valuation pairs is consumed.**)*
 
 **The 16 consumed pairs, with their sources** — each is cited into §0, never re-run:
 
@@ -106,13 +107,13 @@ it wrong and the error is instructive.** *That draft's phase table carried hand-
 per-phase numbers that did not reconcile to 16; they were recomputed from §1b's `Subscribed`
 lines and the table above now matches this ledger.*
 
-| Layer | at plan time | **after E1 + F11's fix** |
+| Layer | at plan time | **now** |
 |---|---:|---:|
-| §3 declares | **85** | **99** |
-| Subscribed by a pillar (**union**) | 69 | **99** |
+| §3 declares | **85** | **95** |
+| Subscribed by a pillar (**union**) | 69 | **95** |
 | Subscribed by **no** pillar | **16** → **F11** | **0** ✅ |
 | Already run by 001–004 → **CONSUME** | **16** | **16** |
-| **Must be newly run** | **69** | **83** |
+| **Must be newly run** | **69** | **79** |
 
 **⚠️ The unowned-pair column is now ZERO, and it changed for a reason worth recording.** At plan
 time **16 rows had no pillar owner** (F11); the evaluation's fix extended P1, P2 and P3's
@@ -138,13 +139,14 @@ declares this structure; the plan adds the wiring, the gates and the F-findings 
 |:--:|---|:--:|---:|---:|---:|---:|:--:|
 | **0** | **Preconditions** — sector assignment, listing guards, the F1 ledger | — | — | — | — | — | 0 |
 | **1** | Decomposition — IRDM's residual decline by line | P1 | 12 | 5 | **7** | **19** | 1 |
-| **2** | Attribution — the three-basis SOTP (now via `sotp-valuation` + `residual-income`) | P2 | 29 | 1 | **28** | **52** | 2 |
+| **2** | Attribution — the three-basis SOTP via `sotp-valuation` + `residual-income` | P2 | 25 | 1 | **24** | **60** | 2 |
 | **3** | D2D placement — all eight names on the axis | P3 | 17 | 4 | **13** | **56** | 3 |
 | **4** | The gate chain — one dated checklist per name | P4 | 17 | 6 | **11** | **26** | 4–5 |
 | **5** | Queue close-out — the §0b scorecard | P5 | 9 | 1 | **8** | **8** | 6 |
 | **6** | **The sector book** — strategies, sizes, structural analogues | P6 | 18 | 0 | **18** | **18** | 7 |
 | **7** | Hand-off — the register and the sector book for 007 / 009 / 011 | — | — | — | — | — | 8 |
-| | **Total** | | **102** | **17** | **85** | **179** | |
+| | **Total (mentions)** | | **98** | **17** | **81** | **187** | |
+| | **Dispatch total (union)** | | **95** | **16** | **79** | **177** | |
 
 > **⚠️ THE `New pairs` COLUMN WAS MISLEADING AND IS NOW PAIRED WITH `New mode-tasks`.** At plan
 > time it read P6 = 18 as *"the largest single phase"* — **which was wrong.** P6's three skills are
@@ -153,13 +155,13 @@ declares this structure; the plan adds the wiring, the gates and the F-findings 
 > heaviest phase and the pair count hid it.** **Pairs measure scope; mode-tasks measure load, and
 > only the second schedules a week.** Both are shown now.
 >
-> **The columns sum to 102 / 17 / 85 / 179, while the dispatch total is 99 pairs / 16 consumed /
-> 83 new / 169 mode-tasks. Both are correct on their own basis, and the 10-task gap is named
+> **The columns sum to 98 / 17 / 81 / 187, while the dispatch total is 95 pairs / 16 consumed /
+> 79 new / 177 mode-tasks. Both are correct on their own basis, and the 10-task gap is named
 > rather than smoothed:** these columns are **per-pillar mentions** and **6 pairs are subscribed
 > by two pillars**, so the union is smaller than the sum. **The matrix dispatches each pair ONCE**
 > (`tasks_md` expands §3, not the `Subscribed` lines — the lines are a coverage invariant, I2), so
-> **169 is the scheduling number and 179 is the sum of what the pillar lists ask for.** Use the
-> mentions column to load a phase; use 169 against the budget.
+> **177 is the scheduling number and 187 is the sum of what the pillar lists ask for.** Use the
+> mentions column to load a phase; use **177 against the 180 budget — headroom 3.**
 
 > **These columns are computed from §1b's `Subscribed` lines against the F1 ledger, not assigned
 > by hand** — an earlier draft carried five hand-written numbers that did not reconcile to the
@@ -493,8 +495,16 @@ and the exact skill 004 ran for the exact same deliverable.**
 | `dcf` | `none` | ❌ no | ⚠️ **not adopted** — 004 found a forward DCF inadmissible **at SPCX** (negative consolidated FCF); **IRDM is profitable, so that verdict does not transfer** — but basis B is already covered, and a third valuation model would spend budget F13 shows is tight |
 | `valuation-methods` | `none` | ❌ no | ⚠️ generic; the specific skills are better instruments |
 
-**Adopted: `sotp-valuation` + `residual-income` on the seven names P2 values** — **14 pairs, 14
-mode-tasks.** Two consequences, both recorded rather than absorbed:
+**Adopted, and then CORRECTED on depth and scope at the second pass** — the first form put both
+skills at **Standard on all seven names**, and that was wrong on one of them. **004 runs
+`sotp-valuation` at Deep**, and its own purpose text calls it the *"constitution-mandated primary
+instrument"*; 006 had given **P2's only deliverable** a single mode. **Deep on all seven would
+cost 42 and put the total at 204 — twenty-four over budget.** The resolution is neither:
+**Deep on `sotp-valuation` for the scarce-licence trio (IRDM/GSAT/SATS), Standard for the
+granted-licence four, and `residual-income` on the scarce trio only** — because **basis C exists
+only where the licence is separable**, and Q-3 records that as RESOLVED for IRDM and OPEN for the
+other four. **Net +8 mode-tasks, 10 pairs, and the headroom falls 11 → 3.** Two consequences,
+both recorded rather than absorbed:
 
 1. **F2's scope changed** — three `late` rows, not one. See F2.
 2. **`plan_audit` I2 caught the first attempt to add them**, because the new rows' skill and
@@ -524,6 +534,64 @@ spec has twice refused to prune.** *The owner's directive not to repeat work is 
 for the two valuation skills the spec was missing.* **That is the opposite of the usual
 direction: a budget constraint normally forces work out; here, removing duplicated work is what
 lets the missing work in.**
+
+### 🆕 F14 — **The v1.6.0 re-cut's three names were never absorbed into §0 either.** *(Phase 0 — the second pass's largest finding)*
+
+**F1 said the 16 CONSUME pairs are *"cited into §0, never re-run."* That was an assertion the
+plan-time pass never checked, and it is 6/16 true.**
+
+Measured against §0's own artifact paths: **only 6 of the 16 consumed pairs could be located in
+§0.** Ten could not. And the shape is not random — **`HAWK` appeared ZERO times in the whole of §0
+despite having two upstream artifacts, and `PL` appeared twice despite having six.**
+
+**This is F11's twin, and the same root cause.** The v1.6.0 re-cut moved **PL, BKSY and HAWK**
+into Tier 2 and completed **neither** place that had to absorb them: their matrix rows carried
+**no pillar owner** (F11, open for six days) and **§0 carried no inheritance rows** (F14).
+**`plan_audit` passed 4/4 through the entire period** — because I1 asks whether a universe ticker
+appears *somewhere* in the matrix, and it did.
+
+**And one of the missing rows changes what a pillar must do.** 006's §2 inherits HAWK as **one**
+defect — a `DA-28` share-count candidate with a listing-date guard as the remedy. **002's artifact
+says HAWK is *"a DA-28 that MASKS a separate DA-23."*** **Two defects, stacked** — and a guard
+against the outer one leaves the inner one untested. **The guard stays; a DA-23 test is added
+behind it.**
+
+> ### ✅ FIXED — a new spec §0.6 was written.
+> **§0.6 "The v1.6.0 re-cut's three names — and the two places that never absorbed them"** now
+> carries **six PL rows and two HAWK rows with their real filed figures** (53.53% gross / −37.06%
+> operating; opex at **1.692×** gross profit; **33 of 33** PL operating facts stripped; the
+> two-basis cost-of-revenue gap at **32.3%** of the line; hosting-to-launch at **12.5×**; adjusted
+> EBITDA **positive** against a GAAP operating loss; the exact-magnitude-opposite-sign signature),
+> **plus the explicit note that BKSY's absence is CORRECT and must not be filled** — it has no
+> upstream artifacts, so a row would be an invention. **A-9.** The HAWK consequence is carried as
+> **A-10** and lands on **P4's checklist.**
+
+### 🆕 F15 — **A malformed cell in a machine-read table is dropped SILENTLY, and I made the same mistake three times in one session.** *(Phase 0 — a tooling gap)*
+
+**The matrix's first column and its ticker list are machine fields.** `parse_matrix` reads a bare
+skill slug and comma-separated bare tickers, and **anything it cannot parse it silently omits** —
+no warning, no count, no failure. **A bolded list loses its first and last entries:**
+`**IRDM, GSAT, SATS**` parses as **`GSAT` alone**; `VSAT, PL, BKSY, HAWK` in bold parses as
+`PL, BKSY`.
+
+**Three instances, all mine, all in this session:**
+
+| # | Where | What was silently lost |
+|---|---|---|
+| 1 | F12's first attempt to add the valuation rows | `**sotp-valuation**` did not resolve as a skill, and both bolded ticker lists lost 2 entries each — **`plan_audit` I2 caught this one** |
+| 2 | F12's own fix — I un-bolded those **two** rows and wrote the replacement rows **bolded again** | the same 2-per-list loss, **and nothing caught it**: the matrix simply counted **89 instead of 95** |
+| 3 | the new `Deep` row's depth cell, `**Deep**` | harmless to `plan_audit` (it does not filter on depth) but **my own analysis filter skipped the row entirely** |
+
+**The generalisable defect is not the bolding — it is that the parser cannot report what it
+dropped.** I4 exists precisely so that *"no row gets the `[P1]` fallback bracket"*; **but a row
+whose tickers failed to parse is not a bracket — it is a row that does not exist**, and no
+invariant sees it. **Recorded as A-11**, with three supporting cases and **the second one being
+the cleanest**: the fix was applied, and the defect reproduced anyway, because **nothing verifies
+that a written count equals a parsed count.**
+
+**What the plan does about it now:** the phase table's totals are **computed by script against
+§3's parsed matrix**, never carried by hand — and the two numbers it shows (mentions and union)
+are both emitted rather than one derived from the other.
 
 ## Constitution Check (second evaluation — the scalar-clearance pass, as promised)
 
@@ -570,6 +638,9 @@ applied here and caught the change.**
 | **A-6** | ✅ **APPLIED** — P1, P2 and P3's `Subscribed` lines extended to claim all 16 unowned pairs | **15 of the 16 belonged to PL, BKSY and HAWK** — the three names added at the v1.6.0 re-cut, whose rows were written without any pillar claiming them. **I4 passed while 16 rows got the `[P1]` fallback bracket its own text says it prevents** (F11). `plan_audit` now reports **0 unowned** |
 | **A-7** | ✅ **APPLIED** — §3 gains **`sotp-valuation`** and **`residual-income`**, both `late`, on the seven names P2 values; §4's budget note is corrected from the never-computed **"79"** to **87** distinct analyses, with the full mode reconciliation | **006 declared no valuation skill while its P2 deliverable was a valuation** (F12), and its budget had never been reconciled (F13) |
 | **A-8** | **Extend I4 to check PAIRS, not skills** | A-6 fixed this instance by adding rows; **the invariant is still under-strict**, so the next re-cut reproduces it. 004 recorded the same shape for **I1** — *"it checks a universe ticker appears somewhere"* — **so two of the four invariants pass while their own stated purpose fails** (F11) |
+| **A-9** | ✅ **APPLIED** — spec **§0.6** written, with six PL rows and two HAWK rows at their real filed figures, plus the explicit note that **BKSY's absence is correct** | **10 of the 16 CONSUME pairs had no §0 home**, and §0 is the propagation mechanism 002 says a downstream thesis must not bypass. `HAWK` appeared **zero times** in §0 despite two upstream artifacts (F14) |
+| **A-10** | **P4's HAWK checklist carries BOTH defects** — the listing-date guard **and** a DA-23 test behind it | 002: *"HAWK is a DA-28 that **masks a separate DA-23**."* §2 inherits only the DA-28, so the guard would suppress the false-positive **and leave the sign strip untested** (F14) |
+| **A-11** | **`parse_matrix` should REPORT what it dropped** — an unparseable skill or ticker cell must fail loudly, not vanish | **Three instances in one session, all mine**, and **the second reproduced inside the very fix for the first**: a bolded cell undercounts the matrix (89 vs 95) with no warning, and no invariant sees a row that failed to parse (F15) |
 
 ---
 

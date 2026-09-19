@@ -207,6 +207,45 @@ this thesis's entire scope:
 valuation, the transition and the deal mechanics.** The Tier 2-specific contested figures it
 must convert are enumerated below.
 
+### 0.6 ⚠️ The v1.6.0 re-cut's three names — and the two places that never absorbed them
+
+**Added at the plan's second evaluation (F14). The re-cut moved PL, BKSY and HAWK into Tier 2
+and completed NEITHER of the two places that had to absorb them.** F11 found the first — their
+matrix rows carried **no pillar owner** for six days. **This is the second: §0 had no rows for
+them**, so 001–003 work that already exists on two of the three names was **inherited nowhere.**
+
+**Measured, not assumed.** Of the **16 pairs** plan-F1 marks CONSUME, **only 6 could be located
+in §0 as `ticker + skill`.** Ten could not. And `HAWK` appeared **zero times** in the whole of
+§0 despite having **two upstream artifacts**; `PL` appeared **twice** despite having **six**.
+
+| Inherited result | Upstream artifact | Grade |
+|---|---|---|
+| **PL holds the universe's best gross margin — 53.53% GAAP (56% non-GAAP) — and a −37.06% operating line.** Opex runs **1.692×** gross profit, and **76.66%** of the net loss is **warrant remeasurement** | `003/artifacts/PL/2026-09-19_1545_sector-overview_methodology.md`; `003/artifacts/PL/2026-09-19_1600_ratio-analysis_methodology.md` | `DEMONSTRATED` |
+| ⚠️ **PL files `33 of 33` operating facts STRIPPED** — the DA-23 census is **universal at PL**, and the **inclusive-opex pairing is 2.25× the filed loss**. At **zero** cost of revenue the operating margin is **+9.4% (quarter) / +13.1% (annual)**, which is the size of the line's leverage | `003/artifacts/PL/2026-09-19_1430_recent-quarter_methodology.md` | `DEMONSTRATED` |
+| ⚠️ **PL's cost of revenue carries TWO bases differing by 32.3% of the line**, overstating **segment-basis gross margin by 11.4 pp**; **79.7%** of cost of revenue would have to come out to close the gap. **Hosting-to-launch commitment is 12.5×** | `003/artifacts/PL/2026-09-19_1400_supply-chain_methodology.md` | `DEMONSTRATED` |
+| **PL's adjusted EBITDA is POSITIVE ($15,495K FY2026) against a GAAP operating loss of $(95,073)K** — and **PL is `NON-FORMABLE`** on the test that produced it | `003/artifacts/PL/2026-09-19_1500_growth-strategy_methodology.md` | `DEMONSTRATED` |
+| ⚠️ **PL's sign pathology is an EXACT magnitude match with an opposite sign** — the same signature 002 measured at UTHR and MRCY, and **not** the 1,000× unit offset seen at GSAT | `001/artifacts/PL/2026-09-18_1239_operational-kpi_methodology.md` | `DEMONSTRATED` |
+| 🔴 **HAWK is a DA-28 that MASKS a separate DA-23.** ⚠️ **006's §2 inherits only the DA-28** — *"four non-agreeing share counts (4.2M–98.0M), EPS bridge failing by 72%"* — and **that is an understatement of the defect count, corrected here.** The share-count confusion **conceals a sign strip underneath it**, which is why §6's listing-date guard is necessary but **not sufficient**: a guard stops the DA-28 false-positive, and the DA-23 beneath it still has to be tested | `002/artifacts/HAWK/2026-09-18_1500_recent-quarter_methodology.md` | `DEMONSTRATED` |
+| **HAWK's 001 artifact reports a data-integrity finding, not an operating baseline** — there is **no usable HAWK KPI series in the corpus**, and the artifact says so rather than producing one | `001/artifacts/HAWK/2026-09-18_2225_operational-kpi_methodology.md` | `DEMONSTRATED` |
+| **BKSY has NO upstream coverage at all** — 0 artifacts from 001–004. **Its absence from §0 is CORRECT and must not be "filled"**: there is nothing to inherit, and a §0 row would be an invention | — | — (recorded as a gap, not proxied) |
+
+**Two consequences, and the second is the one that matters.**
+
+1. **The 10 previously-uncited CONSUME pairs now have a home.** Their rows are above, and plan-F1
+   can cite them instead of asserting an inheritance that §0 did not carry.
+2. **A HAWK row in §0 changes what P4 has to do.** §2's framing treats HAWK's capital structure
+   as **one** defect (DA-28) with a listing-date guard as the remedy. **002 found two, stacked** —
+   and a guard against the outer one leaves the inner one untested. **The guard stays; a DA-23
+   test is added behind it**, and P4's checklist for HAWK carries both.
+
+> **The pattern, recorded because it is now the fourth instance in this thesis.** The v1.6.0
+> re-cut added three names and propagated **neither** into the pillars (F11) **nor** into §0
+> (F14). Both were invisible: `plan_audit` passed 4/4 through the whole period, because **I1
+> asks whether a universe ticker appears somewhere in the matrix — and it did** — while the rows
+> had no owner and the inheritance had no citation. **A change applied in one place and never
+> propagated** is the same shape as every other finding this thesis has produced.
+
+
 ---
 
 ## 0b. Validation queue — the Tier 2 figures this thesis owns
@@ -455,7 +494,7 @@ for half or more of attributable enterprise value, at the scarce-licence names.
 
 **wrong_if**: `metric=share_of_tier2_attributable_enterprise_value_attributable_to_the_licensed_asset_per_sotp threshold=0.5 source=SPCX_EchoStar_transaction_mark_issuer_filed_operating_financials_and_filed_licence_carrying_values op=<`
 
-**Subscribed**: `SATS × unit-economics`, `SATS × business-model`, `SATS × ratio-analysis`, `GSAT × unit-economics`, `GSAT × ratio-analysis`, `IRDM × unit-economics`, `VSAT × business-model`, `PL × unit-economics`, `BKSY × business-model`, `HAWK × business-model`, **`SATS × sotp-valuation`, `GSAT × sotp-valuation`, `IRDM × sotp-valuation`, `VSAT × sotp-valuation`, `PL × sotp-valuation`, `BKSY × sotp-valuation`, `HAWK × sotp-valuation`, `SATS × residual-income`, `GSAT × residual-income`, `IRDM × residual-income`, `VSAT × residual-income`, `PL × residual-income`, `BKSY × residual-income`, `HAWK × residual-income`**, `BKSY × unit-economics`, `HAWK × unit-economics`, `PL × ratio-analysis`, `BKSY × ratio-analysis`, `PL × business-model`
+**Subscribed**: `SATS × unit-economics`, `SATS × business-model`, `SATS × ratio-analysis`, `GSAT × unit-economics`, `GSAT × ratio-analysis`, `IRDM × unit-economics`, `VSAT × business-model`, `PL × unit-economics`, `BKSY × business-model`, `HAWK × business-model`, **`IRDM × sotp-valuation`, `GSAT × sotp-valuation`, `SATS × sotp-valuation`, `VSAT × sotp-valuation`, `PL × sotp-valuation`, `BKSY × sotp-valuation`, `HAWK × sotp-valuation`, `IRDM × residual-income`, `GSAT × residual-income`, `SATS × residual-income`**, `BKSY × unit-economics`, `HAWK × unit-economics`, `PL × ratio-analysis`, `BKSY × ratio-analysis`, `PL × business-model`
 
 ---
 
@@ -933,8 +972,9 @@ tier retains a listed expression even if both transactions close.**
 | secular-trends | equity-research-core | Standard | ASTS, IRDM, PL | none | The D2D transition as a secular force, the licence-value read-through, and whether the granted-licence regime moves with it (**P3**) |
 | what-if | business-intelligence | Light | IRDM, GSAT | none | The close-versus-break scenario pair; on a break, re-underwrite from scratch (**P4**) |
 | growth-strategy | equity-research-core | Light | ASTS, GSAT, PL, BKSY | none | Primary-grant path versus acquisition path — the reachable proxy for PIL-6's falsifier (**P4**) |
-| sotp-valuation | equity-research-core | Standard | SATS, GSAT, IRDM, VSAT, PL, BKSY, HAWK | **late** | 🆕 **Added at the plan evaluation (E1), and it is a REGISTRY GAP THIS SPEC HAD.** P2's deliverable is *"a two-basis SOTP"* — and §3 declared **no valuation skill at all**, so the instrument was being hand-rolled while the registry ships the one **004 used for exactly this**. Splits the licensed position from the operating business on all three bases, **reported per licence regime** (**P2**) |
-| residual-income | equity-research-core | Standard | SATS, GSAT, IRDM, VSAT, PL, BKSY, HAWK | **late** | 🆕 **Basis B's proper instrument** (E1). *"Spectrum and licenses"* is an **indefinite-life intangible** — residual income is the model built for an asset with no finite life, which is what IRDM's $14,030K carrying value is. Replaces the hand-rolled *"capitalised licence-attributable cash flow"* (**P2**) |
+| sotp-valuation | models-and-pitches | Deep | IRDM, GSAT, SATS | late | 🆕 **Added at the plan evaluation (F12, depth corrected at the second pass).** P2's deliverable is *"a two-basis SOTP"* and §3 declared **no valuation skill at all** — the instrument was hand-rolled while the registry ships the one **004 ran for exactly this, at Deep**. **Deep on the SCARCE-licence trio only**, because that is where P2's two-sided claim predicts the licence exceeds half of EV — **the harder case gets the full mode set, and the granted-licence control does not** (**P2**) |
+| sotp-valuation | models-and-pitches | Standard | VSAT, PL, BKSY, HAWK | **late** | 🆕 The **granted-licence control** of the same instrument. Standard depth: the claim there is the *negative* limb (the **data product**, not the licence, carries the value), and a **METHODOLOGY**-only read tests it. ⚠️ **Cost is the binding reason and is stated rather than hidden** — Deep on all seven would need **+35 mode-tasks and put the thesis 24 over budget**; F13's reconciliation is what exposed it (**P2**) |
+| residual-income | quantitative-analysis | Standard | IRDM, GSAT, SATS | **late** | 🆕 **Basis C's proper instrument** (F12). *"Spectrum and licenses"* is an **indefinite-life intangible** — residual income is the model built for an asset with **no finite life**, which is what IRDM's $14,030K carrying value is. **Scoped to the scarce trio because basis C only exists where the licence is separable on the balance sheet** — Q-3 records that as **RESOLVED for IRDM** and **OPEN for GSAT, PL, BKSY and HAWK**; the four are not given an instrument for a basis they may not have (**P2**) |
 | trade-idea-generation | idea-generation | Standard | SATS, ASTS, VSAT, PL, BKSY, HAWK | none | 🆕 **The sector strategy set** (Q-15): per-name entry condition, a **dateable catalyst** with its source, and an `Actionable / Watchlist / Discard` disposition — **on the six non-P11 names only** (**P6**) |
 | position-sizing | portfolio-strategy | Standard | SATS, ASTS, VSAT, PL, BKSY, HAWK | **late** | 🆕 Each idea's size inside the tier's caps: ≤2 positions per sub-sector and the 2% binary cap on deal securities (**P6**, **P11**). ⚠️ **`late`, per the registry — and it is 006's ONLY `late` row, running at a stage this tier cannot supply data for. See the stage note below.** |
 | qualitative-filtering | idea-generation | Standard | SATS, ASTS, VSAT, PL, BKSY, HAWK | none | 🆕 The **structural-analogue retrieval** (§1c instrument 3) and the qualitative screen behind the disposition — retrieved by situation shape, never by sector (**P6**) |
@@ -989,16 +1029,26 @@ arithmetic is now stated rather than waved at** — see the reconciliation below
 | Full matrix at depth (Deep rows at **all modes**, Standard/Light at **1** — the registry declares `essentials_modes: []` for **every one of 006's 15 original rows**, so the fallback is the single `methodology` slug) | **202** |
 | **Released by the consume rule** — the 16 pairs 001–004 already ran (plan F1) | **−47** |
 | **Actually required** | **155** |
-| Added by E1 (`sotp-valuation` + `residual-income`, 7 names each, 1 mode) | **+14** |
-| **Total against a 180 budget** | **169** → **headroom 11** |
+| Added by F12 (`sotp-valuation` + `residual-income`), **at the depth the second pass settled** | **+8** |
+| **Total against a 180 budget** | **177** → **headroom 3** |
 
 **And the headroom is the finding, not a footnote.** *The consume rule pays for the depth.*
-Without plan F1's 16 consumed pairs, the matrix would need **202** against a budget of **180** —
-**over by 22, and the only levers left would be pruning rows this spec has twice refused to
+Without plan F1's 16 consumed pairs, the matrix would need **216** against a budget of **180** —
+**over by 36, and the only levers left would be pruning rows this spec has twice refused to
 prune.** The owner's directive to *not repeat work* is therefore what makes room for the two
 valuation skills the spec was missing. **Stated because it is the opposite of the usual
 direction** — a budget constraint usually forces work out; here, removing duplicated work is
 what lets the missing work in.
+
+⚠️ **And the depth split is the third pass's correction.** F12's first form put both valuation
+skills at **Standard on all seven names** (7 + 7 = 14). The second pass found **004 runs
+`sotp-valuation` at Deep** — its purpose text calls it the *"constitution-mandated primary
+instrument"* — so 006 had given **P2's only deliverable** a single mode. **Deep on all seven
+would cost 42 and put the total at 204, twenty-four over budget.** The resolution is neither
+"Standard" nor "Deep everywhere" but **Deep where P2's claim is hardest to establish**: the
+scarce-licence trio, where the licence is predicted to exceed half of EV. **The granted-licence
+control is a negative limb, and a methodology-only read tests it.** Net **+8**, and the headroom
+falls from 11 to **3** — which is the honest number and is why it is written down.
 
 ⚠️ *This note has now been corrected twice and the history is kept, because the pattern is the
 point.* It first read *"the `max_tasks: 40` currently recorded in `thesis.md` … recorded as an
