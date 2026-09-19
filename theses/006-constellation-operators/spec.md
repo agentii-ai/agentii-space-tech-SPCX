@@ -696,14 +696,25 @@ instrument 3, by structure, never sector-keyed), and **011 retains the programme
 inventory**; where the two overlap, 011's tag governs programme-level use and 006's governs
 this tier's.
 
-**Two gates, both reported, neither overridden — adopted from 005's rule.** The constitution's
-P9 sets a 180-day bar; `trade-idea-generation` carries its **own** hard gate, and the two
-disagree. 004 established the governing principle for exactly this shape: as filed, no consent
-date is disclosed and the close is expected mid-2027, far outside the window. 006 therefore
-**runs both bars and reports the narrower as the constraint**, publishing the headline as two
-counts rather than one — *"N of six sizeable names actionable at the skill's bar; M of six
-datable at 180 days."* **The disagreement is itself the finding**: it tells 011 how much of
-this tier is expressible now versus merely datable.
+**Two gates, both reported, neither overridden — and the narrower one is `20–60 days`.**
+The constitution's P9 sets a **180-day** bar; `trade-idea-generation` carries its **own** hard
+gate, and it is narrower: its SKILL.md states that *"a trade idea requires a specific, dateable
+catalyst within **20-60 days**. Without one, the idea is an investment, not a trade — move to
+watchlist."* **The number is named here rather than left as "the skill's gate"**, because a
+bar the spec does not state is a bar a reader cannot check. 004 established the governing
+principle for this shape: as filed, no consent date is disclosed and the close is expected
+**mid-2027**, far outside **both** windows. 006 therefore **runs both bars and reports the
+narrower as the constraint**, publishing the headline as two counts — *"N of six sizeable names
+actionable at 20–60 days; M of six datable at 180."* **The disagreement is itself the finding**:
+it tells 011 how much of this tier is expressible **now** versus merely **datable**.
+
+**And the all-zero case is pre-declared.** If **0 of six** clear 20–60 days, **that is the
+headline, not a failure**: reported as *"this tier has no immediately expressible trade at this
+run's `as_of`"* — a finding 011 sizes against, not a null result. **This mirrors §2's
+empty-result disposition**, which already refuses to close the tier as a null result when the
+universe empties; the strategy layer needs the same mechanism or the spec contradicts itself.
+**Both counts are always published**, because *"datable but not yet actionable"* and *"not
+datable at all"* are different states and 011 needs both.
 
 **Why this priority**: it is P6 because it *spends* the other five rather than adding to them —
 it is the only pillar whose inputs are all produced above it, and it is the pillar 011 actually
@@ -712,7 +723,20 @@ consumes as ideas. It is last because it is worthless until P1–P5 have landed.
 **Independently falsifiable**: an investable Tier 2 name that carries neither a strategy with a
 dateable catalyst nor a recorded finding that it admits none.
 
-**wrong_if**: `metric=count_of_tier2_investable_names_without_either_a_strategy_with_a_dateable_catalyst_or_a_recorded_finding_of_none threshold=0 source=sector_strategy_set_and_gate_cards`
+**wrong_if**: `metric=count_of_tier2_investable_names_without_either_a_strategy_with_a_dateable_catalyst_or_a_recorded_finding_of_none_classed_as_p11_forbids_or_no_dateable_catalyst_or_not_ready threshold=0 source=sector_strategy_set_and_classed_gate_cards`
+
+> ⚠️ **The class requirement is the fix, and it is not cosmetic** (Q-22). As first written the
+> falsifier fired on names carrying *"neither a strategy with a dateable catalyst **nor a
+> recorded finding of none**"* — and that second clause **absorbed IRDM and GSAT by
+> construction**, on a finding this thesis writes rather than a test it runs. **That is the
+> `UNEXERCISED`-versus-`CLEAN` defect in a new costume**, in a spec that inherits the rule
+> against it (*"a check that closes cleanly while testing nothing"*). **The clause is kept, not
+> deleted** — a P11 name genuinely has no strategy to give, and a falsifier that failed on
+> correct behaviour would be the worse error. **What changed is that the finding must name its
+> class** (`P11_FORBIDS_UNDERWRITING` / `NO_DATEABLE_CATALYST` / `NOT_READY`), so that *"none
+> because P11 forbids it"* is distinguishable from *"none because we could not find one"* —
+> the first a structural property of the tier, the second a research failure. **An artifact
+> recording a finding of none without a class fails the falsifier.**
 
 **Subscribed**: `SATS × trade-idea-generation`, `ASTS × trade-idea-generation`, `VSAT × trade-idea-generation`, `PL × trade-idea-generation`, `BKSY × trade-idea-generation`, `HAWK × trade-idea-generation`, `SATS × position-sizing`, `ASTS × position-sizing`, `VSAT × position-sizing`, `PL × position-sizing`, `BKSY × position-sizing`, `HAWK × position-sizing`, `SATS × qualitative-filtering`, `ASTS × qualitative-filtering`, `VSAT × qualitative-filtering`, `PL × qualitative-filtering`, `BKSY × qualitative-filtering`, `HAWK × qualitative-filtering`
 
@@ -910,7 +934,7 @@ tier retains a listed expression even if both transactions close.**
 | what-if | business-intelligence | Light | IRDM, GSAT | none | The close-versus-break scenario pair; on a break, re-underwrite from scratch (**P4**) |
 | growth-strategy | equity-research-core | Light | ASTS, GSAT, PL, BKSY | none | Primary-grant path versus acquisition path — the reachable proxy for PIL-6's falsifier (**P4**) |
 | trade-idea-generation | idea-generation | Standard | SATS, ASTS, VSAT, PL, BKSY, HAWK | none | 🆕 **The sector strategy set** (Q-15): per-name entry condition, a **dateable catalyst** with its source, and an `Actionable / Watchlist / Discard` disposition — **on the six non-P11 names only** (**P6**) |
-| position-sizing | portfolio-strategy | Standard | SATS, ASTS, VSAT, PL, BKSY, HAWK | none | 🆕 Each idea's size inside the tier's caps: ≤2 positions per sub-sector and the 2% binary cap on deal securities (**P6**, **P11**) |
+| position-sizing | portfolio-strategy | Standard | SATS, ASTS, VSAT, PL, BKSY, HAWK | **late** | 🆕 Each idea's size inside the tier's caps: ≤2 positions per sub-sector and the 2% binary cap on deal securities (**P6**, **P11**). ⚠️ **`late`, per the registry — and it is 006's ONLY `late` row, running at a stage this tier cannot supply data for. See the stage note below.** |
 | qualitative-filtering | idea-generation | Standard | SATS, ASTS, VSAT, PL, BKSY, HAWK | none | 🆕 The **structural-analogue retrieval** (§1c instrument 3) and the qualitative screen behind the disposition — retrieved by situation shape, never by sector (**P6**) |
 
 > **Coverage invariant.** Every ticker in §2's member table appears at least once above;
@@ -920,6 +944,16 @@ tier retains a listed expression even if both transactions close.**
 > subscribed somewhere, so no row gets the `[P1]` fallback bracket). **The four cited third
 > parties — SPCX, AMZN, AAPL, RKLB — and the five `NOT_READY` names are deliberately outside
 > the matrix: none can host research in this thesis.**
+>
+> ⚠️ **`position-sizing` is `late` and everything else here is `none` — a mismatch that is
+> DELIBERATE and must not be "corrected" in either direction** (Q-19). The registry declares
+> `position-sizing` `late` on every mode, and 005's matrix declares it `late` too. **But §0.4
+> records that no price series exists for any Tier 2 name**, so this row runs at a stage
+> **whose inputs this tier cannot supply**. That is not a reason to declare `none`: **a spec
+> that asserts a stage the registry contradicts is the defect 004 already paid for**, when it
+> pinned `sotp-valuation` and `ratio-analysis` where they could not obtain a price. **The row
+> stays `late` and every published size states in-line that its instrument had no price series
+> behind it** — which is what 004's `PRICE_ACCESS_PREMATURE` rule exists to enforce.
 >
 > ⚠️ **`IRDM` and `GSAT` are absent from the three `P6` rows ON PURPOSE, and the absence is
 > load-bearing** (Q-16). They are universe members and they appear in eight other matrix rows,
@@ -1047,7 +1081,15 @@ is the same failure the constitution records as the reason 005 was re-cut.
   `dispatch.resume_verdict()` can find it.
 - **Cross-cutting (not resume-tracked)**: `_cross/{name}.md` — `_cross/tier2-attribution-register.md`
   (primary), **`_cross/tier2-gate-chain.md` (the single dated checklist per name, absorbing the
-  former deal-conditions artifact)**, `_cross/tier2-d2d-placement.md`.
+  former deal-conditions artifact)**, `_cross/tier2-d2d-placement.md`, and
+  **`_cross/tier2-sector-book.md`** 🆕 (Q-21) — the per-name strategy set on the **six
+  non-P11 names** (entry condition, dateable catalyst with its source, disposition, size),
+  **plus the two gate cards explicitly marked `not sizeable` and carrying their class**, the
+  **structural-analogue inventory**, and the **two-count headline** (actionable at 20–60 days;
+  datable at 180). Isomorphic to 005's `_cross/tier1-value-capture-ranking.md`. **The
+  attribution register keeps its own semantics untouched** — it is what 007, 009 and 011 cite
+  for *value*, and mixing strategy and size into it would blur a document whose whole job is
+  attribution.
 - **Primary artifact**: `_cross/tier2-attribution-register.md` — per name: licence value on
   **all three bases (A transaction-mark, B capitalised licence cash flow, C filed carrying
   value where separable)**, operating-business value, the licence/service placement, the
@@ -1115,6 +1157,11 @@ is the same failure the constitution records as the reason 005 was re-cut.
 > produced the same artifact twice. One pillar, one phase, one checklist per name.
 
 ## Clarifications
+
+- [2026-09-20] Q: Q-19 (market_data_stage, a defect introduced at Q-15) — the 2026-09-20 round added `position-sizing` to §3's matrix with `market_data_stage: none`. **The registry declares it `late`** — on every one of its modes — and 005's matrix declares it `late` as well. This is the exact mismatch class 004's checklist named as *"a mismatch no existing check catches"*, and 004 shipped with `sotp-valuation` and `ratio-analysis` pinned where they could not obtain a price. What does 006 declare? → A: **Correct it to `late`, and state the consequence in-line rather than leaving it to be discovered.** `position-sizing` becomes **006's only `late` row**. The consequence is not incidental: **§0.4 records that 006's rows are all `none` because no price series exists for any Tier 2 name** (004's live feed reaches SPCX and no Tier 2 name). So the row runs at a stage **whose inputs this tier cannot supply**, and **the sizing output must say so in-line** — every published size carries the fact that its instrument had no price series behind it. That is precisely what 004's `PRICE_ACCESS_PREMATURE` rule was written to enforce, and it is the honest form of a row that is required by the sector-book scope but unsupported by the tier's data. **The alternative — declaring `none` to match the tier — would be a spec asserting a stage the registry contradicts**, which is the defect 004 already paid for.
+- [2026-09-20] Q: Q-20 (the 20-60 day gate, and the all-zero case) — §1b P6 says the narrower of the two bars governs, but never names it. `trade-idea-generation`'s own SKILL.md fixes the bar: *"A trade idea requires a specific, dateable catalyst within 20-60 days. Without one, the idea is an investment, not a trade — move to watchlist."* Meanwhile the tier's own close is expected **mid-2027**, far beyond both bars. Name the bar — and what does the thesis do if no name clears it? → A: **Name the bar explicitly, and pre-declare the all-zero case rather than discovering it.** The 20–60 day window is written into §1b P6 **and** §6 as a number, not as *"the skill's own gate"*. **The all-zero case is pre-declared**: if **0 of six** sizeable names clear 20–60 days, **that is the headline, not a failure** — reported as *"this tier has no immediately expressible trade at this run's `as_of`"*, which is a finding 011 sizes against rather than a null result. This mirrors §2's existing **empty-result disposition**, which already refuses to close the tier as a null result when the universe empties; **the strategy layer needs the same mechanism or the spec is inconsistent with itself.** The 180-day count is still published alongside, because *"datable but not yet actionable"* and *"not datable at all"* are different states and 011 needs both numbers.
+- [2026-09-20] Q: Q-21 (where does the sector book live?) — §6's output contract lists three cross-cutting artifacts (`tier2-attribution-register.md`, `tier2-gate-chain.md`, `tier2-d2d-placement.md`) and **none of them is the sector book**, so P6 now produces a deliverable with no declared home. 005 solved the same problem with a primary artifact of its own. Where does 006's strategy set live? → A: **A fourth cross-cutting artifact: `_cross/tier2-sector-book.md`.** It carries the per-name strategy set on the **six non-P11 names** — entry condition, the dateable catalyst with its source, the `Actionable / Watchlist / Discard` disposition, and the size — **plus the two gate cards explicitly marked `not sizeable`**, plus the **structural-analogue inventory** and the **two-count headline** (actionable at 20–60 days; datable at 180). It is declared alongside the existing three and is **isomorphic to 005's `_cross/tier1-value-capture-ranking.md`**. The attribution register keeps its own semantics untouched: it is what 007, 009 and 011 cite for *value*, and mixing strategy and size into it would blur a document whose whole job is attribution.
+- [2026-09-20] Q: Q-22 (P6's falsifier can be satisfied by its own recording) — P6's `wrong_if` fires on a count of names carrying *"neither a strategy with a dateable catalyst **nor a recorded finding of none**"*. The second clause absorbs IRDM and GSAT **by construction**, on a finding this thesis writes rather than a test it runs — the `UNEXERCISED`-versus-`CLEAN` defect this spec inherits a rule against. Fix it, or carry it? → A: **Fix it: the recorded finding must NAME ITS CLASS.** The falsifier becomes `count_of_tier2_investable_names_without_either_a_strategy_with_a_dateable_catalyst_or_a_recorded_finding_of_none_classed_as_p11_forbids_or_no_dateable_catalyst_or_not_ready`, with the class restricted to **`P11_FORBIDS_UNDERWRITING` / `NO_DATEABLE_CATALYST` / `NOT_READY`**. The effect is that **"none because P11 forbids it" becomes distinguishable from "none because we could not find one"** — the first is a structural property of the tier and the second is a research failure, and without the class the falsifier cannot tell them apart. **The clause is kept, not deleted**: a P11 name genuinely has no strategy to give, and a falsifier that failed on correct behaviour would be a worse error than the one being fixed. Every gate card in `_cross/tier2-sector-book.md` therefore carries its class, and an artifact that records a finding of none **without** a class fails the falsifier.
 
 - [2026-09-20] Q: Q-15 (scope — is 006 a segment thesis or a sector book?) — 006 currently produces the segment thesis (attribution register, D2D placement, gate checklist) and §7 Phase 6 hands `positions, sizing, analogues` to 011; §5 states `Size is 011's decision`. The owner has directed that 006 deliver a DEEP BUY-SIDE SECTOR ANALYSIS for constellation operators — strategies for investing the sub-sector, for the investable names, with historical cases for analogy — which is what 005 became in its 2026-09-20 round. Does 006 align with 005? → A: **YES — 006 is re-scoped to a SECTOR BOOK, fully aligned with 005.** Concretely: (1) §3's matrix gains **three rows** — `trade-idea-generation` (IRDM, GSAT, SATS, ASTS, VSAT, PL, BKSY, HAWK), `position-sizing`, and `qualitative-filtering`; (2) §1c gains a **fourth instrument — the structural-analogue retrieval**, isomorphic to 005's, retrieved by **structural situation shape** and never sector-keyed (a sector-keyed corpus query returns zero rows by construction, per PROGRAM.md §4); (3) the deliverables extend to a **per-name sector strategy set** with entry conditions, a **dateable catalyst** inside the constitution's 180-day bar, and an **Actionable / Watchlist / Discard** disposition, plus each idea's size inside the tier's caps; (4) **the seam with 011 is declared on 005's pattern**: 006 owns the **Tier 2 sector book**, 011 owns the **programme book** (cross-sector allocation, the 40% theme cap, long-short construction), and **006's ideas flow UP as inputs to 011's allocation, not as competitors to it**. 006 states no programme-level weight and does no cross-sector ranking. 005's market-data-stage precedent is NOT imported: 006's rows remain `none`.
 - [2026-09-20] Q: Q-16 (the P11 collision — can a buy-side strategy be written on a deal security?) — two of the eight names are P11 deal securities (IRDM $54.00/sh RKLB; GSAT $90.00/sh AMZN) and P11 forbids standalone underwriting, because under P11 their price tracks a merger spread rather than a fundamental. A sector strategy set that underwrites them would value something contractually ceasing to exist. How does the sector book carry them? → A: **The deal names get a gate-and-break card, NOT a buy-side strategy.** The strategy set is produced on the **six non-P11 names** (SATS, ASTS, VSAT, PL, BKSY, HAWK). **IRDM and GSAT receive P4's dated gate checklist plus the close-versus-break scenario pair, and the output states in-line that this is NOT a sizeable idea** — the `Actionable / Watchlist / Discard` vocabulary is **not applied to them**, because none of its three values is admissible for a security whose price is a spread. **This is a deliberate asymmetry and it is reported as one**, not smoothed: the sector book's coverage is **six sizeable names plus two gate cards**, and 011 is told plainly which is which. The `$223.6M` termination fee, the break-leg re-derivation from P2's basis B, and the Aireon/basis-discontinuity obstacles stay where P4 put them. IRDM remains **P1's subject** — its margin decomposition is unaffected by this answer; what changes is only that its *strategy* output is a gate card rather than an idea.

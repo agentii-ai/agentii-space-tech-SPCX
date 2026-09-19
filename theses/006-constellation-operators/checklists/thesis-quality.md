@@ -77,7 +77,7 @@ carry a new obligation, and neither is a regression.**
 | **CHK001** | ✅ **pass** | The new **P6** carries a machine-checkable `wrong_if` (`metric=count_of_tier2_investable_names_without_either_a_strategy_with_a_dateable_catalyst_or_a_recorded_finding_of_none`, `threshold=0`, `source=`) — **six pillars, six machine-checkable falsifiers**, no prose. ⚠️ **But P6's falsifier has a circularity the other five do not — see CHK004.** |
 | **CHK002** | ✅ **pass** | §2 unchanged. The round **deliberately removed IRDM and GSAT from the three new matrix rows** (P11 forbids underwriting them on fundamentals) and **recorded that absence as designed rather than as a gap**, in a note at §3. I1 still passes because both names remain in eight other rows — **the invariant is satisfied without being gamed**, which is the distinction the note exists to preserve. |
 | **CHK003** | ✅ **pass** | Unchanged, still discharged. |
-| **CHK004** | ✅ **pass**, with a **new and sharper** recorded tension | ⚠️ **P6's `wrong_if` can be satisfied by our own prior recording.** It fires on a count of names that carry *"neither a strategy with a dateable catalyst **nor a recorded finding of none**."* **The second clause is what absorbs IRDM and GSAT** — so the falsifier passes for them **by construction**, on a finding this thesis writes rather than on a test it runs. **That is the `UNEXERCISED`-versus-`CLEAN` defect in a new costume**, and this spec is unusually well-placed to see it: §0.2 inherits the rule that *"a check that closes cleanly while testing nothing"* must be reported as itself. **The remedy is not to delete the clause** — a P11 name genuinely has no strategy to give — **but to require that the recorded finding name its class**, so that "none because P11 forbids it" is distinguishable from "none because we could not find one." **Recorded as a live obligation on P6's output, not fixed here.** The earlier P2 tier-wide-vs-two-sided tension still stands. |
+| **CHK004** | ✅ **pass**, with a **new and sharper** recorded tension | ⚠️ **P6's `wrong_if` can be satisfied by our own prior recording.** It fires on a count of names that carry *"neither a strategy with a dateable catalyst **nor a recorded finding of none**."* **The second clause is what absorbs IRDM and GSAT** — so the falsifier passes for them **by construction**, on a finding this thesis writes rather than on a test it runs. **That is the `UNEXERCISED`-versus-`CLEAN` defect in a new costume**, and this spec is unusually well-placed to see it: §0.2 inherits the rule that *"a check that closes cleanly while testing nothing"* must be reported as itself. **The remedy is not to delete the clause** — a P11 name genuinely has no strategy to give — **but to require that the recorded finding name its class**, so that "none because P11 forbids it" is distinguishable from "none because we could not find one." **⚠️ UPDATED at the third round: this is now FIXED, not carried** — see the 2026-09-20 (third) entry below. The earlier P2 tier-wide-vs-two-sided tension still stands. |
 | **CHK005** | ✅ **pass**, with a stated reading | P6 introduces an **entry-timing** dimension P1–P5 do not have — a catalyst inside the **180-day** constitution bar, or the skill's narrower gate. **This is an output requirement, not a horizon change**: every pillar still shares `as_of: 2026-09-18` and the 2026-Q4 horizon, and the catalyst window describes *when an idea could be entered*, not what period it is about. The reading is stated because it is the kind of thing that would otherwise be assumed — and 005 adopted the same resolution (run both bars, report the narrower as the constraint). |
 
 **Regressions: none.** No box moved from checked to unchecked, and `agentii.converge
@@ -89,4 +89,35 @@ been corrected once and needed correcting again; and P6's falsifier reproduces a
 the spec itself documents. **In each case the failure was not a wrong statement but a statement
 that outlived the condition it was true under** — which is the same shape as 004's finding that
 *a closure chain carrying a rounding allowance cannot detect the error the allowance absorbs.*
+
+### 2026-09-20 — third `agentii.clarify` round · **5/5 passing · 0 regressions**
+
+**The round that audited the round before it, and found four defects — all of them created by
+the Q-15 re-scope.** `plan_audit.py` **4/4** unchanged. Boxes unchanged. The round encodes spec
+Q-19 … Q-22 and **fixes all four in the body**, so nothing here is carried.
+
+| ID | State | Basis |
+|---|---|---|
+| **CHK001** | ✅ **pass** | P6's `wrong_if` is **rewritten** (Q-22) to require the recorded finding to name its class — see CHK004. Still machine-checkable, still `metric=` + `threshold=` + `source=`. |
+| **CHK002** | ✅ **pass** | §2 unchanged. The round **fixed a stage declaration rather than a rationale**: `position-sizing` was declared `none` against a registry that says **`late`** on every mode. `plan_audit` does not check this and never did — see the note below. |
+| **CHK003** | ✅ **pass** | Unchanged, still discharged. **And this round's Q-20 extended its logic**: the **all-zero case for the strategy layer** is now pre-declared (*"this tier has no immediately expressible trade at this run's `as_of`"*), mirroring §2's universe-level disposition. **The strategy layer previously had no empty-result mechanism while the universe layer did** — an internal inconsistency the round removed. |
+| **CHK004** | ✅ **pass**, tension **FIXED** | **P6's circular falsifier is repaired, not carried.** The clause *"or a recorded finding of none"* absorbed IRDM and GSAT **by construction**; it now requires the class (`P11_FORBIDS_UNDERWRITING` / `NO_DATEABLE_CATALYST` / `NOT_READY`), so *"none because P11 forbids it"* is distinguishable from *"none because we could not find one."* **The clause was kept, not deleted** — a P11 name genuinely has no strategy, and a falsifier that failed on correct behaviour would be the worse error. The earlier P2 two-sided-vs-tier-wide tension still stands. |
+| **CHK005** | ✅ **pass** | Unchanged reading. **Q-20 sharpened it**: the **20–60 day** bar is now named in §1b P6 and §6 as a number, where the previous round wrote *"the skill's own gate"* — **a bar the spec does not state is a bar a reader cannot check**, and the spec was relying on the reader to look it up. |
+
+**Regressions: none.** `agentii.converge.re_evaluate_checklist` reported **0 regressions**.
+
+**⚠️ A check that does not exist, demonstrated for the second time.** 004's log proposed an
+**`I5` market-data-stage consistency check against the registry** and it was **never built**.
+This round is the evidence that the gap is real and recurring: **the Q-15 re-scope declared
+`position-sizing` as `none` in good faith, `plan_audit` returned 4/4, and nothing anywhere
+objected** — the mismatch was found only because a clarify round read the registry entry by
+hand. **That is the same shape as 004's two other unbuilt checks** (`I5` stage consistency,
+`I6` formability) and it is now the third instance. Recorded as a **proposal with three
+supporting cases**, not as a fix.
+
+**The pattern, now at four instances across three rounds.** Q-12's answer was correct on a
+premise Q-15 voided; §4's budget note needed correcting twice; P6's falsifier reproduced a
+defect class the spec documents; and the stage declaration contradicted the registry it was
+written from. **In every case the failure was not a wrong statement but a statement that
+outlived — or never checked — the condition it was true under.**
 
