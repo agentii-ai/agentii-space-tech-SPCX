@@ -691,7 +691,16 @@ is exactly the gap between the modelled 224 and the generated 266.
 > concealed it.**
 
 **Fixed at the source:** `max_tasks: 180 → 210`, set from the generator's 266, with 5 tasks of
-margin (005's own margin was ~2). **The spec's §4 and this plan now both carry 266 / −61 / 205.**
+margin (005's own margin was ~2).
+
+> **✅ AND THE 266 IS CORROBORATED BY A SECOND, INDEPENDENT IMPLEMENTATION.** The sixth pass ran
+> **both** generators: the platform's `agentii_cmd.py tasks` and the local `tools/tasks_md.py`
+> each emit **exactly 266**. They are separate code paths and neither reads the other. **They
+> also disagree on one thing and it is the thing that mattered:** the platform generator emits
+> **no phase at all** (0 `## Phase` sections — the same limitation 004's plan recorded), **which
+> is precisely why `phases.yaml` was required and why its absence blocked the run.** So the two
+> tools agreeing on the count is strong evidence the count is right, **and their differing phase
+> handling is why finding it required running them rather than modelling them.** **The spec's §4 and this plan now both carry 266 / −61 / 205.**
 **A-14.**
 
 **And running the generator exposed a second defect, in the same family.** The first run emitted
@@ -708,6 +717,47 @@ tasks, all its own. **A-15.**
 disagree, the generator's output is the number.* This is the fifth instance of the session's one
 defect — **a value computed by hand where the system owning it could have been asked** — and the
 first where the hand-computed value **changed a conclusion** rather than a description.
+
+### 🆕 F18 — **⚠️ `tools/gen_tasks_md.py` DESTROYS completion evidence, has no argument parsing, and I ran it by accident.** *(Phase 0 — a workspace hazard, and a disclosure)*
+
+**I ran `python3 tools/gen_tasks_md.py --help` intending to read its interface. It has no
+argument parsing at all — zero `argparse` lines — so it did not print help. IT RAN, with a
+default target, and OVERWROTE `theses/001-technology-baseline/tasks.md`.**
+
+**What was lost, briefly.** 001 is a **completed** thesis whose `tasks.md` recorded which tasks
+were satisfied and by which artifacts. The regeneration converted
+
+```
+- [x] T001 [P] [PIL-1] SPCX × operational-kpi × triggers — …  ✅ satisfied by: `2026-09-18_1239_…`
+```
+
+into
+
+```
+- [ ] T001 [P] [PIL-1] SPCX × operational-kpi × triggers — …
+```
+
+**`[x]` became `[ ]` and the `✅ satisfied by:` evidence was stripped — 124 insertions against
+157 deletions, and 77 satisfied tasks erased.** That is not a formatting change: it is the
+**audit trail** of a finished thesis, and it is the only record that those tasks were verified.
+
+> ### ✅ RESTORED FROM HEAD (`git checkout --`), and 001 verifies clean with all 77 satisfied tasks back.
+> **Disclosed because I caused it and because the hazard outlives my mistake.**
+
+**Three properties make this a workspace hazard rather than my slip:**
+
+1. **No argument parsing.** `--help`, `--dry-run`, `--thesis` — none exist. **Any invocation
+   executes the write.** A reader cannot ask what the tool does without causing it to do.
+2. **Not idempotent.** Running it on a thesis whose tasks are already satisfied **does not
+   no-op** — it produces a fresh `[ ]` file and discards the satisfaction state.
+3. **It defaults to a thesis rather than requiring one.** Nothing in the invocation named 001.
+
+**⚠️ AND IT IS LIVE FOR THE CONCURRENT SESSION.** Another session is actively running tooling
+across **005, 007, 008, 009, 010 and 011** — thirteen files are modified in the working tree
+right now, and `tools/clarify_scan.py` and `tools/plan_audit.py` are among them. **Any of those
+theses that is complete, and whose `tasks.md` records satisfaction, is one accidental
+`gen_tasks_md.py` away from the same loss** — and **005 has now reached the sector-book stage
+where tasks begin to be satisfied.** **Recorded as A-16.**
 
 ## Constitution Check (second evaluation — the scalar-clearance pass, as promised)
 
@@ -760,6 +810,7 @@ applied here and caught the change.**
 | **A-13** | ✅ **APPLIED** — F1's description column carries each artifact's **own title**, not a paraphrase | **Six of sixteen paraphrases did not match the artifact** (F16), and a CONSUME ledger that misdescribes what it consumes is worse than none: the citation resolves, so the failure is silent. **The root cause is that the column was written from §0's prose — and §0's own descriptions are not reliable** |
 | **A-14** | ✅ **APPLIED — `phases.yaml` written, and the budget set from the generator** | **`tasks_md` refuses to run without a phase map, and 006 had none** — the thesis could not generate a single task. Running it produced **266**, not the modelled 224, **without a phase map. Writing it was not a formality; it was what exposed F17.** `max_tasks` 180 → 210 |
 | **A-15** | ✅ **APPLIED** — §6's cross-reference to 005's artifact is reworded so it is not a backticked `_cross/*.md` token | **It emitted T904, instructing 006 to publish 005's artifact.** The tool scopes its scan to §6 to prevent exactly this, **but a citation inside §6 is indistinguishable from a declaration to a regex.** `cross_tasks` should exclude an artifact whose name is attributed to another thesis — or the scope should be a bullet list, not a section |
+| **A-16** | **`gen_tasks_md.py` needs `argparse` and an idempotence guard** — and a completion-state check before it writes | **It has zero argument handling, so `--help` executes a write**; it overwrites `tasks.md` without preserving `[x]` / `✅ satisfied by:` state; and it defaults to a thesis nobody named. **It erased 77 satisfied tasks from completed 001 in one invocation** (F18, restored). **005 is at the stage where its own tasks begin to be satisfied** |
 | **A-11** | **`parse_matrix` should REPORT what it dropped** — an unparseable skill or ticker cell must fail loudly, not vanish | **Three instances in one session, all mine**, and **the second reproduced inside the very fix for the first**: a bolded cell undercounts the matrix (89 vs 95) with no warning, and no invariant sees a row that failed to parse (F15) |
 
 ---
