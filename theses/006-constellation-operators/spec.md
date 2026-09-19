@@ -372,7 +372,7 @@ residual margin decline lands on the licensed-spectrum service line.
 
 **wrong_if**: `metric=share_of_irdm_operating_margin_decline_attributable_to_lines_other_than_licensed_spectrum_services threshold=0.5 source=IRDM_10-Q_revenue_and_cost_disaggregation op=<`
 
-**Subscribed**: `IRDM × unit-economics`, `IRDM × operational-kpi`, `IRDM × recent-quarter`, `IRDM × ratio-analysis`, `IRDM × competitive`, `GSAT × unit-economics`
+**Subscribed**: `IRDM × unit-economics`, `IRDM × operational-kpi`, `IRDM × recent-quarter`, `IRDM × ratio-analysis`, `IRDM × competitive`, `GSAT × unit-economics`, `PL × operational-kpi`, `PL × recent-quarter`, `BKSY × recent-quarter`, `HAWK × recent-quarter`, `ASTS × recent-quarter`, `VSAT × recent-quarter`
 
 ---
 
@@ -455,7 +455,7 @@ for half or more of attributable enterprise value, at the scarce-licence names.
 
 **wrong_if**: `metric=share_of_tier2_attributable_enterprise_value_attributable_to_the_licensed_asset_per_sotp threshold=0.5 source=SPCX_EchoStar_transaction_mark_issuer_filed_operating_financials_and_filed_licence_carrying_values op=<`
 
-**Subscribed**: `SATS × unit-economics`, `SATS × business-model`, `SATS × ratio-analysis`, `GSAT × unit-economics`, `GSAT × ratio-analysis`, `IRDM × unit-economics`, `VSAT × business-model`, `PL × unit-economics`, `BKSY × business-model`, `HAWK × business-model`
+**Subscribed**: `SATS × unit-economics`, `SATS × business-model`, `SATS × ratio-analysis`, `GSAT × unit-economics`, `GSAT × ratio-analysis`, `IRDM × unit-economics`, `VSAT × business-model`, `PL × unit-economics`, `BKSY × business-model`, `HAWK × business-model`, **`SATS × sotp-valuation`, `GSAT × sotp-valuation`, `IRDM × sotp-valuation`, `VSAT × sotp-valuation`, `PL × sotp-valuation`, `BKSY × sotp-valuation`, `HAWK × sotp-valuation`, `SATS × residual-income`, `GSAT × residual-income`, `IRDM × residual-income`, `VSAT × residual-income`, `PL × residual-income`, `BKSY × residual-income`, `HAWK × residual-income`**, `BKSY × unit-economics`, `HAWK × unit-economics`, `PL × ratio-analysis`, `BKSY × ratio-analysis`, `PL × business-model`
 
 ---
 
@@ -500,7 +500,7 @@ axis by P2's attribution rule.
 
 **wrong_if**: `metric=count_of_tier2_names_not_placeable_on_the_licence_service_axis_by_the_P2_attribution_rule threshold=0 source=SOTP_attribution_per_P2 op=>`
 
-**Subscribed**: `ASTS × competitive`, `ASTS × secular-trends`, `ASTS × operational-kpi`, `VSAT × competitive`, `VSAT × sector-overview`, `GSAT × competitive`, `GSAT × business-model`, `GSAT × operational-kpi`, `IRDM × secular-trends`, `PL × competitive`, `BKSY × competitive`, `HAWK × operational-kpi`
+**Subscribed**: `ASTS × competitive`, `ASTS × secular-trends`, `ASTS × operational-kpi`, `VSAT × competitive`, `VSAT × sector-overview`, `GSAT × competitive`, `GSAT × business-model`, `GSAT × operational-kpi`, `IRDM × secular-trends`, `PL × competitive`, `BKSY × competitive`, `HAWK × operational-kpi`, `HAWK × competitive`, `PL × secular-trends`, `PL × sector-overview`, `BKSY × sector-overview`, `HAWK × sector-overview`
 
 ---
 
@@ -933,6 +933,8 @@ tier retains a listed expression even if both transactions close.**
 | secular-trends | equity-research-core | Standard | ASTS, IRDM, PL | none | The D2D transition as a secular force, the licence-value read-through, and whether the granted-licence regime moves with it (**P3**) |
 | what-if | business-intelligence | Light | IRDM, GSAT | none | The close-versus-break scenario pair; on a break, re-underwrite from scratch (**P4**) |
 | growth-strategy | equity-research-core | Light | ASTS, GSAT, PL, BKSY | none | Primary-grant path versus acquisition path — the reachable proxy for PIL-6's falsifier (**P4**) |
+| sotp-valuation | equity-research-core | Standard | SATS, GSAT, IRDM, VSAT, PL, BKSY, HAWK | **late** | 🆕 **Added at the plan evaluation (E1), and it is a REGISTRY GAP THIS SPEC HAD.** P2's deliverable is *"a two-basis SOTP"* — and §3 declared **no valuation skill at all**, so the instrument was being hand-rolled while the registry ships the one **004 used for exactly this**. Splits the licensed position from the operating business on all three bases, **reported per licence regime** (**P2**) |
+| residual-income | equity-research-core | Standard | SATS, GSAT, IRDM, VSAT, PL, BKSY, HAWK | **late** | 🆕 **Basis B's proper instrument** (E1). *"Spectrum and licenses"* is an **indefinite-life intangible** — residual income is the model built for an asset with no finite life, which is what IRDM's $14,030K carrying value is. Replaces the hand-rolled *"capitalised licence-attributable cash flow"* (**P2**) |
 | trade-idea-generation | idea-generation | Standard | SATS, ASTS, VSAT, PL, BKSY, HAWK | none | 🆕 **The sector strategy set** (Q-15): per-name entry condition, a **dateable catalyst** with its source, and an `Actionable / Watchlist / Discard` disposition — **on the six non-P11 names only** (**P6**) |
 | position-sizing | portfolio-strategy | Standard | SATS, ASTS, VSAT, PL, BKSY, HAWK | **late** | 🆕 Each idea's size inside the tier's caps: ≤2 positions per sub-sector and the 2% binary cap on deal securities (**P6**, **P11**). ⚠️ **`late`, per the registry — and it is 006's ONLY `late` row, running at a stage this tier cannot supply data for. See the stage note below.** |
 | qualitative-filtering | idea-generation | Standard | SATS, ASTS, VSAT, PL, BKSY, HAWK | none | 🆕 The **structural-analogue retrieval** (§1c instrument 3) and the qualitative screen behind the disposition — retrieved by situation shape, never by sector (**P6**) |
@@ -945,9 +947,11 @@ tier retains a listed expression even if both transactions close.**
 > parties — SPCX, AMZN, AAPL, RKLB — and the five `NOT_READY` names are deliberately outside
 > the matrix: none can host research in this thesis.**
 >
-> ⚠️ **`position-sizing` is `late` and everything else here is `none` — a mismatch that is
-> DELIBERATE and must not be "corrected" in either direction** (Q-19). The registry declares
-> `position-sizing` `late` on every mode, and 005's matrix declares it `late` too. **But §0.4
+> ⚠️ **THREE ROWS ARE `late` — `position-sizing`, `sotp-valuation` and `residual-income` — and
+> everything else here is `none`. The mismatch is DELIBERATE and must not be "corrected" in
+> either direction** (Q-19; extended at the plan evaluation's F12, which added the two valuation
+> rows and **corrected this note's claim that `position-sizing` was the only one**). The registry
+> declares all three `late` on every mode, and 005's matrix declares `position-sizing` `late` too. **But §0.4
 > records that no price series exists for any Tier 2 name**, so this row runs at a stage
 > **whose inputs this tier cannot supply**. That is not a reason to declare `none`: **a spec
 > that asserts a stage the registry contradicts is the defect 004 already paid for**, when it
@@ -970,11 +974,31 @@ tier retains a listed expression even if both transactions close.**
 | Standard | business-model, recent-quarter, ratio-analysis, peer-bench, sector-overview, secular-trends, **trade-idea-generation, position-sizing, qualitative-filtering** | essentials_modes | As listed | Cross-sectional comparison, the corrected margin ladder, the placement map — and, from the 2026-09-20 round, **the sector strategy set, its sizes, and the structural analogues** |
 | Light | what-if, growth-strategy | essentials_modes | As listed | The break scenario and the falsifier proxy |
 
-**Budget note — SUPERSEDED AND RE-RESOLVED at Q-17, 2026-09-20.** The matrix yields **79
-distinct (ticker, skill) analyses across 8 names** — 67 before the 2026-09-20 round added the
-three **P6** rows. Mode expansion applies multiplicatively, as it did at 001 (2.07×). **The
-budget is `max_tasks: 180`, aligning 006 with 005, which raised 60 → 180 under the same
-owner-directed expansion.**
+**Budget note — CORRECTED AGAIN at the plan evaluation, 2026-09-20.** The matrix yields **87
+distinct (ticker, skill) analyses across 8 names**: 67 at the re-cut, **+18** for the three **P6**
+rows, **+14** for the two valuation rows the plan evaluation added (E1). ⚠️ *This note previously
+read **"79"** — **which was simply wrong**, and wrong from the moment it was written: `plan_audit`
+has always reported **85** for the pre-E1 matrix. The number was never computed.* **The mode
+arithmetic is now stated rather than waved at** — see the reconciliation below. **The budget is
+`max_tasks: 180`, aligning 006 with 005.**
+
+**The reconciliation, computed row by row rather than estimated:**
+
+| | mode-tasks |
+|---|---:|
+| Full matrix at depth (Deep rows at **all modes**, Standard/Light at **1** — the registry declares `essentials_modes: []` for **every one of 006's 15 original rows**, so the fallback is the single `methodology` slug) | **202** |
+| **Released by the consume rule** — the 16 pairs 001–004 already ran (plan F1) | **−47** |
+| **Actually required** | **155** |
+| Added by E1 (`sotp-valuation` + `residual-income`, 7 names each, 1 mode) | **+14** |
+| **Total against a 180 budget** | **169** → **headroom 11** |
+
+**And the headroom is the finding, not a footnote.** *The consume rule pays for the depth.*
+Without plan F1's 16 consumed pairs, the matrix would need **202** against a budget of **180** —
+**over by 22, and the only levers left would be pruning rows this spec has twice refused to
+prune.** The owner's directive to *not repeat work* is therefore what makes room for the two
+valuation skills the spec was missing. **Stated because it is the opposite of the usual
+direction** — a budget constraint usually forces work out; here, removing duplicated work is
+what lets the missing work in.
 
 ⚠️ *This note has now been corrected twice and the history is kept, because the pattern is the
 point.* It first read *"the `max_tasks: 40` currently recorded in `thesis.md` … recorded as an

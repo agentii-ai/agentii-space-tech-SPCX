@@ -41,8 +41,9 @@ Encoded as three rules that every phase below obeys:
 1. **CONSUME, DO NOT RE-RUN.** A `(ticker, skill)` pair 001–004 already produced an artifact for
    is **cited, never re-executed**. §0 of the spec is the propagation mechanism; the plan adds
    §F1's ledger of exactly which pairs those are.
-2. **RUN ONLY WHAT IS NEW** — the 69 pairs that no prior thesis touched, plus the three skills
-   this thesis introduces (`trade-idea-generation`, `position-sizing`, `qualitative-filtering`).
+2. **RUN ONLY WHAT IS NEW** — the **83** pairs that no prior thesis touched, plus the five skills
+   this thesis introduces (`trade-idea-generation`, `position-sizing`, `qualitative-filtering`,
+   and — added at the evaluation, F12 — `sotp-valuation` and `residual-income`).
 3. **CHALLENGE AND VALIDATE WHAT IS INHERITED.** Where 006 consumes an upstream figure, it
    **challenges it** — re-deriving on the inherited basis and recording disagreement — rather
    than accepting it. That is the layer 002 performed for 001, and it is now 006's obligation
@@ -56,17 +57,20 @@ reproduce a result that exists**, not on touching the same source.
 
 ---
 
-## 🔴 F1 — 16 of §3's 85 analyses already ran in 001–004, and three names are untouched. *(Phase 0 — changes the work)*
+## 🔴 F1 — 16 of §3's analyses already ran in 001–004, and three names are untouched. *(Phase 0 — changes the work)*
 
 **Measured, not estimated.** Every artifact under `theses/00{1,2,3,4}/artifacts/` was parsed for
 its `{date}_{skill}_{mode}` filename and intersected with §3's declared matrix.
 
-| | |
-|---|---:|
-| §3's declared `(ticker, skill)` pairs | **85** |
-| Already produced by 001–004 → **CONSUME** | **16** |
-| **Must be newly run** | **69** |
-| Repeat rate removed by this finding | **19%** |
+| | at plan time | **after E1's valuation rows** |
+|---|---:|---:|
+| §3's declared `(ticker, skill)` pairs | **85** | **99** |
+| Already produced by 001–004 → **CONSUME** | **16** | **16** |
+| **Must be newly run** | **69** | **83** |
+| Repeat rate removed by this finding | **19%** | **16%** |
+
+*(E1 added 14 pairs — `sotp-valuation` and `residual-income` on seven names each — and **none of
+them is consumed**, so the new column is the one the plan now schedules.)*
 
 **The 16 consumed pairs, with their sources** — each is cited into §0, never re-run:
 
@@ -102,17 +106,20 @@ it wrong and the error is instructive.** *That draft's phase table carried hand-
 per-phase numbers that did not reconcile to 16; they were recomputed from §1b's `Subscribed`
 lines and the table above now matches this ledger.*
 
-| Layer | Pairs |
-|---|---:|
-| §3 declares | **85** |
-| Subscribed by a pillar (**union**; the sum of mentions is 72 because 3 pairs are subscribed twice) | **69** |
-| Subscribed by **no** pillar | **16** → **F11** |
-| Already run by 001–004 → **CONSUME** | **16** |
-| — of those, inside a subscribed pillar | 11 |
-| — of those, among the unsubscribed | 5 |
-| **Must be newly run** (85 − 16) | **69** |
-| — of those, subscribed by a pillar | **58** |
-| — of those, subscribed by none | 11 → **F11** |
+| Layer | at plan time | **after E1 + F11's fix** |
+|---|---:|---:|
+| §3 declares | **85** | **99** |
+| Subscribed by a pillar (**union**) | 69 | **99** |
+| Subscribed by **no** pillar | **16** → **F11** | **0** ✅ |
+| Already run by 001–004 → **CONSUME** | **16** | **16** |
+| **Must be newly run** | **69** | **83** |
+
+**⚠️ The unowned-pair column is now ZERO, and it changed for a reason worth recording.** At plan
+time **16 rows had no pillar owner** (F11); the evaluation's fix extended P1, P2 and P3's
+`Subscribed` lines to claim all 16, and E1's two valuation rows were **subscribed at the moment
+they were written** — so the gap closed rather than recurring. **`plan_audit` I2 would have
+caught E1's omission** (it did, in fact, on the first attempt — see F12), **but it cannot catch
+F11's shape**, which is why F11 was found by hand.
 
 **Why this is F1 and not a footnote.** The pre-F1 plan would have dispatched 85 analyses; **19%
 of them would have reproduced work that already exists**, and — worse — **would have produced a
@@ -127,16 +134,32 @@ divergence §0 exists to prevent. **The remedy is a spec-level one and is record
 **Seven phases, mapped one-to-one onto §1b's six pillars plus a hand-off.** §7 of the spec
 declares this structure; the plan adds the wiring, the gates and the F-findings beneath it.
 
-| # | Phase | Pillar | New pairs | Consumed | Week |
-|:--:|---|:--:|---:|---:|:--:|
-| **0** | **Preconditions** — sector assignment, listing guards, the F1 ledger | — | — | — | 0 |
-| **1** | Decomposition — IRDM's residual decline by line | P1 | **4** | **2** | 1 |
-| **2** | Attribution — the three-basis SOTP, per licence regime | P2 | **10** | **0** | 2 |
-| **3** | D2D placement — all eight names on the axis | P3 | **9** | **3** | 3 |
-| **4** | The gate chain — one dated checklist per name | P4 | **11** | **6** | 4–5 |
-| **5** | Queue close-out — the §0b scorecard | P5 | **8** | **1** | 6 |
-| **6** | **The sector book** — strategies, sizes, structural analogues | P6 | **18** | **0** | 7 |
-| **7** | Hand-off — the register and the sector book for 007 / 009 / 011 | — | — | — | 8 |
+| # | Phase | Pillar | Pairs | Consumed | **New pairs** | **New mode-tasks** | Week |
+|:--:|---|:--:|---:|---:|---:|---:|:--:|
+| **0** | **Preconditions** — sector assignment, listing guards, the F1 ledger | — | — | — | — | — | 0 |
+| **1** | Decomposition — IRDM's residual decline by line | P1 | 12 | 5 | **7** | **19** | 1 |
+| **2** | Attribution — the three-basis SOTP (now via `sotp-valuation` + `residual-income`) | P2 | 29 | 1 | **28** | **52** | 2 |
+| **3** | D2D placement — all eight names on the axis | P3 | 17 | 4 | **13** | **56** | 3 |
+| **4** | The gate chain — one dated checklist per name | P4 | 17 | 6 | **11** | **26** | 4–5 |
+| **5** | Queue close-out — the §0b scorecard | P5 | 9 | 1 | **8** | **8** | 6 |
+| **6** | **The sector book** — strategies, sizes, structural analogues | P6 | 18 | 0 | **18** | **18** | 7 |
+| **7** | Hand-off — the register and the sector book for 007 / 009 / 011 | — | — | — | — | — | 8 |
+| | **Total** | | **102** | **17** | **85** | **179** | |
+
+> **⚠️ THE `New pairs` COLUMN WAS MISLEADING AND IS NOW PAIRED WITH `New mode-tasks`.** At plan
+> time it read P6 = 18 as *"the largest single phase"* — **which was wrong.** P6's three skills are
+> all `Standard` with an empty `essentials_modes`, so each pair costs **one** mode-task: 18 pairs
+> = **18 tasks**. P2's ten pairs include `unit-economics` at **Deep**, so **P2 was always the
+> heaviest phase and the pair count hid it.** **Pairs measure scope; mode-tasks measure load, and
+> only the second schedules a week.** Both are shown now.
+>
+> **The columns sum to 102 / 17 / 85 / 179, while the dispatch total is 99 pairs / 16 consumed /
+> 83 new / 169 mode-tasks. Both are correct on their own basis, and the 10-task gap is named
+> rather than smoothed:** these columns are **per-pillar mentions** and **6 pairs are subscribed
+> by two pillars**, so the union is smaller than the sum. **The matrix dispatches each pair ONCE**
+> (`tasks_md` expands §3, not the `Subscribed` lines — the lines are a coverage invariant, I2), so
+> **169 is the scheduling number and 179 is the sum of what the pillar lists ask for.** Use the
+> mentions column to load a phase; use 169 against the budget.
 
 > **These columns are computed from §1b's `Subscribed` lines against the F1 ledger, not assigned
 > by hand** — an earlier draft carried five hand-written numbers that did not reconcile to the
@@ -186,9 +209,16 @@ rules permit the work being scheduled**. The rule lives in `refusal.py`, not in 
 **006 is now the second thesis in the workspace with a `late` row** — and the first with exactly
 one, sitting inside an otherwise-`none` tier. Three consequences the plan must enforce:
 
-1. **Tool split, exact:** `market_data.get_quote` ✅ admissible at the end of Phase 6 ·
-   `get_price_history` ❌ **refused**. ⚠️ `live_snapshot.py` calls **both**, so it must not run
-   against 006 at all.
+1. **Tool split, exact:** `market_data.get_quote` ✅ admissible at the end of a `late` row's
+   phase · `get_price_history` ❌ **refused**. ⚠️ `live_snapshot.py` calls **both**, so it must
+   not run against 006 at all.
+
+   > ⚠️ **SCOPE CORRECTED at the plan evaluation (F12): F2 originally said 006 had exactly ONE
+   > `late` row. It now has THREE** — `position-sizing`, plus the two valuation skills F12 added.
+   > **The finding was understated rather than wrong** — it was computed before those rows
+   > existed and then asserted *"the only `late` row"* in a document whose job is to stay true
+   > when read. **The rule does not change; its scope does**, and that scope is now three rows
+   > across Phases 2 and 6 rather than one in Phase 6.
 2. **And the row cannot obtain its inputs anyway.** §0.4 records that **no price series exists
    for any Tier 2 name**, so this is a `late` skill in a tier with no prices. **Every published
    size states in-line that its instrument had no price series behind it** (Q-19) — which is a
@@ -433,10 +463,100 @@ applied in one place and never propagated to the places that depend on it.**
 ones**. The consumed five need no work. **The 11 new ones would still dispatch** — the fallback
 bracket does not *skip* a row, it *mis-files* it — so the cost is not lost work but **work filed
 against a pillar that did not ask for it**, which corrupts the phase-level accounting this plan
-is built on. **Recorded as A-6.** This is the **second** I4-class defect: 004's round 4 recorded
+is built on.
+
+> ### ✅ FIXED AT THE EVALUATION — applied, not merely recorded.
+> **P1, P2 and P3's `Subscribed` lines were extended to claim all 16**, and `plan_audit` now
+> reports **0 unowned pairs** (99 subscribed of 99 declared). The assignment follows each skill's
+> existing home: **P1** takes the freshness rows (`PL × operational-kpi` and `recent-quarter` on
+> PL, BKSY, HAWK, ASTS, VSAT) because P1 is the decomposition pillar and **IRDM × recent-quarter
+> was already there**; **P2** takes the value rows (`unit-economics`, `ratio-analysis`,
+> `business-model`); **P3** takes the placement rows (`competitive`, `secular-trends`,
+> `sector-overview`). **A-6 is CLOSED.** This is the **second** I4-class defect: 004's round 4 recorded
 that *"I1 is too weak — it checks a universe ticker appears somewhere, and it passed while a
 matrix row named cuts the filer does not report."* **Both invariants are under-strict relative to
 their stated purpose, and both passed.**
+
+### 🆕 F12 — **006 declared NO valuation skill at all, while its P2 deliverable IS a valuation.** *(Phase 2 — found by the evaluation, not by any gate)*
+
+**The largest gap the plan-time pass missed, and it was hiding in plain sight.**
+
+§1b P2's claim is *"running a **two-basis SOTP** per name"*; §7 Phase 2's task is *"build the
+three-basis SOTP"*. **§3's matrix declared fifteen skills and not one was a valuation skill.**
+The instrument was **hand-rolled**, while the registry ships `sotp-valuation` — **stage `late`,
+and the exact skill 004 ran for the exact same deliverable.**
+
+| Available | Stage | Declared by 006? | Verdict |
+|---|---|---|---|
+| **`sotp-valuation`** | `late` | ❌ no | ✅ **adopted** — 004's precedent, same deliverable |
+| **`residual-income`** | `late` | ❌ no | ✅ **adopted** — *"Spectrum and licenses"* is an **indefinite-life intangible**, and residual income is the model built for an asset with **no finite life**. **It is the correct instrument for basis B** |
+| `dcf` | `none` | ❌ no | ⚠️ **not adopted** — 004 found a forward DCF inadmissible **at SPCX** (negative consolidated FCF); **IRDM is profitable, so that verdict does not transfer** — but basis B is already covered, and a third valuation model would spend budget F13 shows is tight |
+| `valuation-methods` | `none` | ❌ no | ⚠️ generic; the specific skills are better instruments |
+
+**Adopted: `sotp-valuation` + `residual-income` on the seven names P2 values** — **14 pairs, 14
+mode-tasks.** Two consequences, both recorded rather than absorbed:
+
+1. **F2's scope changed** — three `late` rows, not one. See F2.
+2. **`plan_audit` I2 caught the first attempt to add them**, because the new rows' skill and
+   ticker cells were **bolded** and the parser reads a bare slug: `**sotp-valuation**` ≠
+   `sotp-valuation`, and a bolded list **drops its first and last tickers** (`**SATS` /
+   `HAWK**`). **Both were fixed by un-bolding, not by weakening the invariant** — the matrix's
+   first column is a machine field, the same lesson 004 recorded when it bolded a skill name.
+   **I2 failing there is the invariant working correctly.**
+
+### 🆕 F13 — **The budget had never been reconciled, and the consume rule is what pays for the depth.** *(all phases)*
+
+**The plan-time pass set `max_tasks: 180` and never showed the arithmetic.** Worse, the spec's §4
+note recorded the matrix as **"79 distinct analyses"** — **a number that was never computed and
+was wrong from the moment it was written**; `plan_audit` has always reported **85**.
+
+| | mode-tasks |
+|---|---:|
+| Full matrix at depth (Deep rows at **all modes**; Standard/Light at **1**, because the registry declares `essentials_modes: []` for **every one** of 006's original 15 rows) | **216** |
+| **Released by the consume rule** (the 16 pairs 001–004 already ran) | **−47** |
+| **Required** | **169** |
+| Budget | **180** |
+| **Headroom** | **11** |
+
+**And the headroom is the finding.** Without F1's 16 consumed pairs the matrix needs **216**
+against a budget of **180** — **over by 36, and the only levers left would be pruning rows this
+spec has twice refused to prune.** *The owner's directive not to repeat work is what makes room
+for the two valuation skills the spec was missing.* **That is the opposite of the usual
+direction: a budget constraint normally forces work out; here, removing duplicated work is what
+lets the missing work in.**
+
+## Constitution Check (second evaluation — the scalar-clearance pass, as promised)
+
+**The first check's note said a second evaluation would run because F1 and F2 *"change what the
+plan schedules"*. It has now run, and the evaluation changed more than the plan-time pass did.**
+
+| Requirement | After the evaluation | Verdict |
+|---|---|---|
+| **P4 — a grade is not a basis** | unchanged | ✅ |
+| **P11 — no fundamentals underwrite on a deal security** | unchanged; **and Q-16's extension into the strategy layer is untouched by F12** (the valuation skills run on the seven names P2 values, and IRDM/GSAT are among them **as deal securities valued as spread securities** — see the note below) | ⚠️ **see note** |
+| **P9 / F6 — a dateable catalyst inside 180 days** | unchanged | ✅ |
+| **F6 — gating assets are not paperwork** | unchanged | ✅ |
+| **Risk Framework — caps** | unchanged | ✅ |
+| **The membership test** | unchanged | ✅ |
+| **Q33 — the pin** | **unchanged, and F3 still stands**: the pin resolves against the constitution's *body*, while its Sync Impact Report and yaml mirror disagree | ⚠️ **F3 open** |
+| **Q41 — `PRICE_ACCESS_PREMATURE`** | **SCOPE WIDENED**: three `late` rows now, not one (F2/F12). `get_price_history` is refused in all three | ⚠️ **see F2** |
+
+> **The P11 note, stated precisely because F12 brushes against it.** §1b P2 **does** value IRDM
+> and GSAT — it always did, and P2's two-sided claim depends on the scarce-licence group. **What
+> P11 forbids is not valuing them; it is underwriting them on fundamentals.** P2 values them **on
+> their filed financials and their own disclosed transactions**, and §1b P4 states the deal price
+> is a **spread** that 006 does not trade. **What Q-16 forbids — and what F12 does not touch — is
+> a buy-side *strategy*** for them. **`sotp-valuation` on IRDM produces an attribution, not an
+> idea; `trade-idea-generation` on IRDM would produce an idea and is not declared.** The line is
+> between *valuing* and *recommending*, and the matrix now draws it in two places rather than one.
+
+**Second-pass verdict: the plan schedules no work the platform's rules forbid, and the one
+constraint that moved (Q41's scope) moved because the evaluation added rows rather than because
+the rule was misread.** The plan-time pass's own lesson — from 004's F13, that *both plan passes
+evaluated internal consistency and neither asked whether the platform permits the work* — **was
+applied here and caught the change.**
+
+---
 
 ## Amendments this plan proposes (A-2 applied; A-1, A-3 … A-6 recorded and NOT applied)
 
@@ -447,7 +567,9 @@ their stated purpose, and both passed.**
 | **A-3** | **Correct `constitution.yaml`'s attestation and add the 1.6.0 Sync Impact Report** | Three places record the version; two disagree (F3). **Owner: the constitution, not this thesis** |
 | **A-4** | **PATCH 005's header** — it calls 006 wave-2 and mislabels 008 and 009 | Contradicts PROGRAM.md §3 and 006's own declaration (Q-11, Q-18) |
 | **A-5** | **Build `I5`** (stage vs registry) and **`I6`** (formability) | Two demonstrated cases each, and no tool catches either (F8) |
-| **A-6** | **Extend I4 to check ROWS, not skills** — or extend a `Subscribed` line to claim all 16 | **15 of the 16 unowned pairs belong to PL, BKSY and HAWK** — the three names added at the v1.6.0 re-cut, whose rows were written without any pillar claiming them. **I4 passes while 16 rows get the `[P1]` fallback bracket its own text says it prevents** (F11) |
+| **A-6** | ✅ **APPLIED** — P1, P2 and P3's `Subscribed` lines extended to claim all 16 unowned pairs | **15 of the 16 belonged to PL, BKSY and HAWK** — the three names added at the v1.6.0 re-cut, whose rows were written without any pillar claiming them. **I4 passed while 16 rows got the `[P1]` fallback bracket its own text says it prevents** (F11). `plan_audit` now reports **0 unowned** |
+| **A-7** | ✅ **APPLIED** — §3 gains **`sotp-valuation`** and **`residual-income`**, both `late`, on the seven names P2 values; §4's budget note is corrected from the never-computed **"79"** to **87** distinct analyses, with the full mode reconciliation | **006 declared no valuation skill while its P2 deliverable was a valuation** (F12), and its budget had never been reconciled (F13) |
+| **A-8** | **Extend I4 to check PAIRS, not skills** | A-6 fixed this instance by adding rows; **the invariant is still under-strict**, so the next re-cut reproduces it. 004 recorded the same shape for **I1** — *"it checks a universe ticker appears somewhere"* — **so two of the four invariants pass while their own stated purpose fails** (F11) |
 
 ---
 
