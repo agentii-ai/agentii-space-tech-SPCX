@@ -1,0 +1,470 @@
+# Research Plan: 006 — Tier 2 — Constellation Operators: Connectivity, Spectrum & Geospatial
+
+**Status**: Active · **Generated**: 2026-09-20 · **Constitution pin**: `1.6.0`
+**Author**: `agentii.plan` is **not a command** in `agentii_cmd.py` — the kit ships
+`specify, clarify, tasks, constitution, singleskill, converge, challenge, implement, status`.
+This plan is authored by hand against **003's and 004's** `plan.md`, which are the workspace's
+two passing precedents. That is stated rather than implied, because a plan that claims a
+generator it did not use is the same defect class as a figure that claims a basis it lacks.
+
+---
+
+## Constitution Check (first evaluation — Q35)
+
+| Requirement | Where 006 stands | Verdict |
+|---|---|---|
+| **P4 — evidence discipline; a grade is not a basis** | §1c mandates the component identity in-line for every `operating_income` read, and §0.2 inherits the rule that a `DEMONSTRATED` grade is not sufficient for an input | ✅ satisfied by construction |
+| **P11 — deal securities are not underwritten on fundamentals** | IRDM and GSAT are P11; §1b P4 forbids a fundamentals underwrite and **Q-16 extends the ban into the strategy layer** — they get gate cards, not ideas | ✅ satisfied, and **strengthened at Q-16** |
+| **P9 / F6 — a dateable catalyst inside 180 days** | §1b P6 instruments it directly, and names the narrower skill bar (**20–60 days**) as the binding constraint (Q-20) | ✅ satisfied |
+| **F6 — spectrum and orbital slots are gating assets, not paperwork** | §1c instrument 2 makes the checklist dated and sourced per name and per gate; §1b P4 lists the gates | ✅ satisfied |
+| **Risk Framework — ≤2 positions per sub-sector; 2% binary cap** | §5 states it; §3's `position-sizing` row sizes inside it | ✅ satisfied |
+| **The membership test — one axis: primary revenue from operating a constellation** | §2 states it and applies it to all 8 members, 5 `NOT_READY` names and 4 cited third parties | ✅ satisfied |
+| **Q33 — a thesis must pin a constitution version, and a stale pin is a hard failure** | See **F3** — the pin resolves, but **two of the three places the version is recorded disagree** | ⚠️ **see F3** |
+
+**Scalar-clearance note (why a second check is still run).** 003 and 004 each ran this check
+twice, the second time after the plan's findings had changed the work. The same applies here and
+for a sharper reason: **F1 below removes 16 of §3's 85 analyses from the schedule**, and
+**F2 adds a sequencing constraint the spec does not express**. Both change what the plan
+schedules, so the second evaluation is not a formality.
+
+---
+
+## ⭐ The governing directive — consume, never re-run
+
+**This is the owner's instruction for this thesis, and it is the plan's first constraint:**
+
+> 001–004 已经跑了大量调研与分析。**不要重复做。** 006 只能在它们的基础上**更广、更深**。
+> **不要重复跑相同的 skills。** 在前面的基础上只有 **Challenge and validation**，更深入分析。
+
+Encoded as three rules that every phase below obeys:
+
+1. **CONSUME, DO NOT RE-RUN.** A `(ticker, skill)` pair 001–004 already produced an artifact for
+   is **cited, never re-executed**. §0 of the spec is the propagation mechanism; the plan adds
+   §F1's ledger of exactly which pairs those are.
+2. **RUN ONLY WHAT IS NEW** — the 69 pairs that no prior thesis touched, plus the three skills
+   this thesis introduces (`trade-idea-generation`, `position-sizing`, `qualitative-filtering`).
+3. **CHALLENGE AND VALIDATE WHAT IS INHERITED.** Where 006 consumes an upstream figure, it
+   **challenges it** — re-deriving on the inherited basis and recording disagreement — rather
+   than accepting it. That is the layer 002 performed for 001, and it is now 006's obligation
+   toward 001–004. **§The challenge layer** below specifies it.
+
+**A note on what "do not repeat" does NOT mean.** It does not mean *do not read the same
+filing*. 006 legitimately re-reads the same 10-Qs, because a component identity computed on a
+filed cell is a **different object** from a margin read off a served metrics block — 002 proved
+that they differ by **46.47 pp** at SPCX. The prohibition is on **re-running a skill to
+reproduce a result that exists**, not on touching the same source.
+
+---
+
+## 🔴 F1 — 16 of §3's 85 analyses already ran in 001–004, and three names are untouched. *(Phase 0 — changes the work)*
+
+**Measured, not estimated.** Every artifact under `theses/00{1,2,3,4}/artifacts/` was parsed for
+its `{date}_{skill}_{mode}` filename and intersected with §3's declared matrix.
+
+| | |
+|---|---:|
+| §3's declared `(ticker, skill)` pairs | **85** |
+| Already produced by 001–004 → **CONSUME** | **16** |
+| **Must be newly run** | **69** |
+| Repeat rate removed by this finding | **19%** |
+
+**The 16 consumed pairs, with their sources** — each is cited into §0, never re-run:
+
+| Pair | Source theses | The inherited result is |
+|---|---|---|
+| `IRDM × competitive` | 001, 002, 003 | the Aireon unconstructibility finding + the licence inventory |
+| `IRDM × recent-quarter` | 002, 003 | component identity closing **zero residual on 7 of 7 periods** |
+| `IRDM × risk` | 003 | the RKLB gate chain as filed |
+| `IRDM × secular-trends` | 003 | the D2D read-through |
+| `GSAT × competitive` | 001, 003 | the monopsony case |
+| `GSAT × recent-quarter` | 003 | the **−7.37%** corrected margin |
+| `GSAT × risk` | 003 | the DA-23 + 1,000× unit-offset census |
+| `SATS × recent-quarter` | 002, 003 | the DA-24 impairment chronology |
+| `SATS × risk` | 001, 002 | the deal terms as filed |
+| `PL × growth-strategy` | 003 | the EO test that left this tier |
+| `PL × operational-kpi` | 001 | the constellation KPI series |
+| `PL × ratio-analysis` | 003 | **−37.06%** on a **53.53%** gross margin |
+| `PL × recent-quarter` | 003 | the latest reported quarter |
+| `PL × sector-overview` | 003 | the EO segment structure |
+| `HAWK × operational-kpi` | 001 | the KPI series |
+| `HAWK × recent-quarter` | 002 | the four non-agreeing share counts |
+
+**And the three names with ZERO upstream coverage — every one of their pairs is new:**
+
+| Name | New pairs | Why untouched |
+|---|---:|---|
+| **BKSY** | **12** | never read by any prior thesis; `sector` unassigned |
+| **ASTS** | **10** | 002 recorded it as a *spectrum counter-party*, never a competitor; **no ASTS financials exist anywhere in 002** |
+| **VSAT** | **9** | `PARTIAL`; 002 measured the served defect (**19 of 30 rows fail, 11 with the `2×` fingerprint**) but never read the filings for a thesis |
+
+**The full accounting, stated once and consistently — because the first draft of this plan got
+it wrong and the error is instructive.** *That draft's phase table carried hand-written
+per-phase numbers that did not reconcile to 16; they were recomputed from §1b's `Subscribed`
+lines and the table above now matches this ledger.*
+
+| Layer | Pairs |
+|---|---:|
+| §3 declares | **85** |
+| Subscribed by a pillar (**union**; the sum of mentions is 72 because 3 pairs are subscribed twice) | **69** |
+| Subscribed by **no** pillar | **16** → **F11** |
+| Already run by 001–004 → **CONSUME** | **16** |
+| — of those, inside a subscribed pillar | 11 |
+| — of those, among the unsubscribed | 5 |
+| **Must be newly run** (85 − 16) | **69** |
+| — of those, subscribed by a pillar | **58** |
+| — of those, subscribed by none | 11 → **F11** |
+
+**Why this is F1 and not a footnote.** The pre-F1 plan would have dispatched 85 analyses; **19%
+of them would have reproduced work that already exists**, and — worse — **would have produced a
+second, parallel copy of a figure under a different thesis_id**, which is precisely the
+divergence §0 exists to prevent. **The remedy is a spec-level one and is recorded as A-1 below:
+§3's matrix should mark the 16 consumed pairs, so that `tasks_md` does not dispatch them.**
+
+---
+
+## Phases
+
+**Seven phases, mapped one-to-one onto §1b's six pillars plus a hand-off.** §7 of the spec
+declares this structure; the plan adds the wiring, the gates and the F-findings beneath it.
+
+| # | Phase | Pillar | New pairs | Consumed | Week |
+|:--:|---|:--:|---:|---:|:--:|
+| **0** | **Preconditions** — sector assignment, listing guards, the F1 ledger | — | — | — | 0 |
+| **1** | Decomposition — IRDM's residual decline by line | P1 | **4** | **2** | 1 |
+| **2** | Attribution — the three-basis SOTP, per licence regime | P2 | **10** | **0** | 2 |
+| **3** | D2D placement — all eight names on the axis | P3 | **9** | **3** | 3 |
+| **4** | The gate chain — one dated checklist per name | P4 | **11** | **6** | 4–5 |
+| **5** | Queue close-out — the §0b scorecard | P5 | **8** | **1** | 6 |
+| **6** | **The sector book** — strategies, sizes, structural analogues | P6 | **18** | **0** | 7 |
+| **7** | Hand-off — the register and the sector book for 007 / 009 / 011 | — | — | — | 8 |
+
+> **These columns are computed from §1b's `Subscribed` lines against the F1 ledger, not assigned
+> by hand** — an earlier draft carried five hand-written numbers that did not reconcile to the
+> ledger's 16, and they were replaced rather than rounded.
+>
+> ⚠️ **The columns sum to 60 new and 12 consumed, while F1's ledger reports 58 and 11. Both are
+> correct on their own basis**: these are **per-pillar mentions**, and **3 pairs are subscribed by
+> two pillars** (2 new + 1 consumed), so the union is smaller than the sum. **Use the mentions
+> column to plan a phase's load and the union column to count distinct work.** Stated because a
+> reader who adds the column and compares it to F1 would otherwise find a 2-pair discrepancy with
+> no explanation — which is the defect this programme spends its time removing.
+>
+> **P6's 18 is the largest single phase**, and it is the arithmetic behind the Q-17 budget.
+
+### ⚠️ Phase 0 exists because three of §3's rows cannot evaluate without it
+
+§2 records three **preconditions that are not assumptions**:
+
+1. **ASTS, VSAT and BKSY carry `sector: null`.** *"No sector-aggregate constraint evaluates until
+   it is assigned by hand, and the assignment is recorded in every artifact's frontmatter."*
+   **Three of 006's eight names — 31 new pairs between them — are blocked on a manual field.**
+2. **HAWK carries a `DA-28` candidate** — four non-agreeing share counts (4.2M–98.0M) and an EPS
+   bridge failing by 72%. *"No DA-23 detector may be run on HAWK without a listing-date guard."*
+3. **The F1 ledger** must exist before dispatch, or 19% of the matrix re-runs.
+
+**Phase 0 has no pillar and therefore no `tasks.md` row** — the same structural position 004's
+Phase 0 held, and tracked here for the same reason: *a phase that produces no artifact is
+invisible to the dispatcher.*
+
+---
+
+## 🔴 F2 — `position-sizing` is `late`, and 006 is otherwise `none`. The price rule bites here. *(Phase 6 — changes the schedule)*
+
+**Found by applying 004's F13 to the row this thesis added yesterday.** 004 discovered that
+`data-tools/refusal.py` implements **`PRICE_ACCESS_PREMATURE`**:
+
+```python
+if stage == "late" and tool == "get_price_history":
+    return refuse("PRICE_ACCESS_PREMATURE",
+        "price is the FINAL CHECK for fundamental work, never the raw material")
+```
+
+**004's plan recorded the generalisable lesson, and it transfers verbatim:** *both plan passes
+evaluated the schedule's internal consistency and **neither asked whether the platform's own
+rules permit the work being scheduled**. The rule lives in `refusal.py`, not in any gate.*
+
+**006 is now the second thesis in the workspace with a `late` row** — and the first with exactly
+one, sitting inside an otherwise-`none` tier. Three consequences the plan must enforce:
+
+1. **Tool split, exact:** `market_data.get_quote` ✅ admissible at the end of Phase 6 ·
+   `get_price_history` ❌ **refused**. ⚠️ `live_snapshot.py` calls **both**, so it must not run
+   against 006 at all.
+2. **And the row cannot obtain its inputs anyway.** §0.4 records that **no price series exists
+   for any Tier 2 name**, so this is a `late` skill in a tier with no prices. **Every published
+   size states in-line that its instrument had no price series behind it** (Q-19) — which is a
+   disclosure obligation on Phase 6's output, not a reason to lower the stage.
+3. **`as_of` discipline.** The `as_of` is **2026-09-18** for every artifact. A size published in
+   Phase 6 carries that stamp, not the date it was computed.
+
+---
+
+## 🔴 F3 — The constitution's 1.6.0 amendment has no Sync Impact Report, and its YAML mirror is stale. *(Constitution Check — a provenance defect)*
+
+**Found by checking the pin rather than trusting it** — 006's own header says *"a stale pin is a
+hard failure under P4, not a footnote."*
+
+| Where the version is recorded | Says |
+|---|---|
+| `constitution.md` body (`**CONSTITUTION_VERSION**`) | **1.6.0** ✅ |
+| `constitution.md` — the Sync Impact Report block | **last entry is `1.4.0 → 1.5.0`** ❌ no 1.6.0 entry |
+| `constitution.yaml` — the ratified-against attestation | **v1.5.0** ❌ |
+| 006's spec / thesis.md / contract `const` | **1.6.0** ✅ (all three agree) |
+
+**So the pin RESOLVES — 006 is not pinning a version that does not exist — but the amendment
+that created 1.6.0 was applied to the body without its record.** The 1.6.0 content **is**
+present: the one-axis re-cut, the `PARTIAL` redefinition, the DA-26 census correction, the GSAT
+addition to the DA-23 census, VRT's removal from membership, BKSY's reclassification.
+
+**What is missing is the record of why, and its classification.** Every prior bump carries a
+Sync Impact Report naming the amendment, its MINOR/PATCH rationale, and what it touched. **1.6.0
+has none — which means a downstream reader cannot reconstruct what changed or why**, and the
+`constitution.yaml` mirror that the executable constraints are ratified against **attests a
+version four theses have already moved past.**
+
+> **Recorded as a workspace finding, not a 006 blocker.** 006 proceeds at `1.6.0` because its own
+> three declarations agree and the body supports them. **The remedy belongs to the constitution's
+> owner, not to this thesis** — and it is the same class as 004's unbuilt `I5`: *a version is
+> recorded in three places and nothing checks that they agree.*
+
+---
+
+## 🔴 F4 — §6's "second contract gap" does not exist. *(spec correction)*
+
+§6 records **two** contract gaps. The first (PIL-6 unused) **was already withdrawn** at my
+2026-09-20 round. **The second is false and this plan records it:**
+
+> §6 states the `da_id_registered` rule validates against **`DA-23…DA-28`**, so *"DA-29 and DA-30 …
+> cannot yet be declared in `definitions_used` without failing the rule."*
+
+**006's own contract already reads `DA-23..DA-30`.** The rule was widened before this thesis was
+chartered. **The stale range is in 004's contract, not 006's** — so the spec is describing a
+constraint it does not have, and **P2's obligation to declare `DA-30` in `definitions_used` is
+discharged, not blocked.** Recorded as **A-2** below.
+
+---
+
+## Dependency graph and critical path
+
+```
+001 ──┐
+002 ──┼──► 006 ──► 007   (primes as incumbent satcom competition)
+003 ──┤      │  ──► 009   (D2D as compute-adjacent demand)
+004 ──┤      │  ──► 011   (the sector book as INPUTS to its allocation)
+005 ──┘      └──► 005   (the gate chain, BY CITATION — 005 consumes it)
+```
+
+| Edge | Direction | Nature |
+|---|---|---|
+| 001 → 006 | inbound | the panorama — consumed, §0.1 |
+| 002 → 006 | inbound | the validated input set **with its verdicts**, §0.2 |
+| 003 → 006 | inbound | the value-pool map + the corrected operator ladder, §0.3 |
+| 004 → 006 | inbound | the Connectivity reference + the **permitted-consumer boundary** |
+| **005 → 006** | **inbound, citation-only** | RKLB's financing facts — the $3.6B bridge, the consideration mix |
+| **006 → 005** | **outbound** | **the IRDM/RKLB gate chain.** 005 carries its RKLB row `known-open` until 006's P4 lands |
+| 006 → 007/009/011 | outbound | the attribution register + the sector book |
+
+**Ordering (Q-18): 005 and 006 run in TRUE PARALLEL.** The edge to 005 is a citation rather than
+a data dependency, and the two are now **parallel sector books on different tiers** (005's six
+names, 006's eight) with no resource contention. **The gate chain is a mid-flight delivery.**
+
+**Critical path**: `Phase 0 → 1 → 2 → 3 → 4 → 5 → 6`. **Phase 1 is the true gate** — see F6.
+
+⚠️ **The wave defect is still open.** PROGRAM.md §3 places **006 and 008 in wave 1**, 006
+self-declares Wave 1, and **005's header calls 006 wave-2** and mislabels 008 and 009 in the same
+sentence. Two sources to one; 005's header is the outlier and needs its own PATCH. Recorded at
+Q-11 and Q-18, **not resolved here because it is not 006's file to change.**
+
+---
+
+## Gates per phase — the tools that exist, and the ones that do not
+
+| Gate | Tool | Status |
+|---|---|---|
+| Plan invariants **I1–I4** | `tools/plan_audit.py` | ✅ exists — **4/4** today (85 pairs, 72 subscriptions) |
+| Citation well-formedness + resolution | `tools/check_citations.py` | ✅ exists |
+| Frontmatter / contract conformance | `tools/check_contract.py` | ✅ exists |
+| **DA-23 sign strip** | `tools/check_sign_strip.py` | ✅ exists |
+| Artifact frontmatter (**G1**) | `plugin/scripts/g1_gate.py` | ✅ exists — **but latent**: `data_class` is required by the gate and absent from 001–003's contracts |
+| Clarify candidates | `tools/clarify_scan.py` | ✅ exists — **2 candidates, both false positives** (F9) |
+| Task generation | `tools/tasks_md.py`, `tools/gen_tasks_md.py` | ✅ exist |
+| **Market-data-stage vs registry** | — | ❌ **proposed as `I5`, never built** — see F8 |
+| **Formability of a declared input** | — | ❌ **proposed as `I6`, never built** |
+| **Version-record agreement** | — | ❌ **F3's shape; nothing checks it** |
+
+### Wiring, phase by phase
+
+| Phase | Gate that must pass before it closes |
+|---|---|
+| **0** | `plan_audit` 4/4 · sector assigned for ASTS/VSAT/BKSY in frontmatter · HAWK listing guard in place · **F1 ledger written** |
+| **1** | `check_sign_strip` on every IRDM figure · **component identity in-line** (DA-23) · **002-F8's re-run landed** or the pillar is recorded `UNEXERCISED`, not carried |
+| **2** | `check_contract` · **every margin carries a named denominator** (DA-30) · all three bases printed per name · `g1_gate` on each artifact |
+| **3** | all 8 names placed, **including the granted-licence trio without D2D** · ASTS placeable or the axis is restated |
+| **4** | every gate either **dated with a filed source** or recorded as a disclosure-quality finding · `deal_security_basis` set on all IRDM/GSAT artifacts (P11, **fail-level**) |
+| **5** | every §0b row converted or **classed with a named resolving source** · verdicts preserved as verdicts |
+| **6** | **`get_price_history` never called** (F2) · every size states its missing price series · **`as_of` 2026-09-18** on all · the all-zero case reported if it obtains |
+| **7** | `check_citations` clean · the register and the sector book published · 005's gate-chain citation named |
+
+---
+
+## ⭐ The challenge layer — what 006 owes 001–004
+
+**This is the second half of the owner's directive, and it had no home in the spec.** Where 006
+consumes an upstream result, it **challenges** it. Not a re-run — a **validation on the inherited
+basis**, in the shape 002 performed for 001.
+
+| What is inherited | The challenge 006 runs | Where |
+|---|---|---|
+| 001's IRDM margin direction (*"the licence is durable, the service business is not"*) | **re-derive on the FY basis** — 003 already showed the margin RISES (**24.12% → 27.07%**) and that the Q2 decline is **63.8% non-recurring deal cost**. 006 tests whether the corrected framing survives | Phase 1 |
+| 002's `validate_calculation` failure modes | **re-verify the four modes at a Tier 2 name** — 002 demonstrated them at SATS; 006 asks whether they reproduce at IRDM and GSAT | Phase 1 |
+| 003's operator margin ladder | **re-derive the Tier 2 rows on the filed component identity**, and report any row that moves — the ladder's own anchors are FY and its operator rows 3M, **and the two ends are not on the same basis** | Phase 2 |
+| 003's GSAT **−7.37%** | **confirm the sign strip and the 1,000× unit offset directly**, by calling both endpoints on one accession | Phase 2 |
+| 004's Connectivity reference | **verify it is consumed inside its boundary** — 004 permits a *benchmark*, never a borrowed multiple, and admits **0 of 11** comparators | Phase 2 |
+| 004's **312.8×** | **test whether it is reusable at all here** — 004's own finding is that a `P11` price is inadmissible as a fundamental, **and IRDM and GSAT are both `P11`** | Phase 2 |
+| Every inherited `DEMONSTRATED` | **carry the basis as well as the grade** — 002's programme result is that a grade does not carry one (SPCX `operating_margin` reproduced on two bases **46.47 pp apart**) | all phases |
+| Every inherited correction | **verify it reached a pin** — 002 measured that **only 3 of 32 corrections did**, and *"a correction that is recorded and never propagated is indistinguishable, in effect, from one never made"* | Phase 5 |
+
+**The rule that governs it**: a challenge that **agrees** is recorded as a confirmation with its
+basis; a challenge that **disagrees** is recorded as a correction and **propagated** — never
+silently resolved in favour of the newer thesis.
+
+---
+
+## Side artifacts (Q36 — produced by `agentii.plan`)
+
+| Artifact | Purpose |
+|---|---|
+| `theses/006-constellation-operators/plan.md` | **this file** |
+| `_cross/tier2-attribution-register.md` | the primary — what 007, 009 and 011 cite **for value** |
+| `_cross/tier2-gate-chain.md` | the one dated checklist per name — **005 consumes it by citation** |
+| `_cross/tier2-d2d-placement.md` | the placement map |
+| `_cross/tier2-sector-book.md` | 🆕 **Q-21** — the strategy set, the gate cards, the structural analogues, the two-count headline |
+
+---
+
+## Phase-by-phase evaluation against upstream results — the F-findings
+
+`F1`–`F4` are recorded above at their phases. The remainder, in the order they change the work:
+
+### F5 — IRDM's SERVED margins are inadmissible, so P1 cannot read them. *(Phase 1 — changes the method)*
+
+003 measured the defect exactly: **every served quarterly IRDM margin divides by a single
+`$200,000` thousand denominator** — the Aireon hosting-agreement revenue **ceiling**
+(`srt:MaximumMember`, six-month period) — and **8 of 8 reproduce to the basis point**. 003's
+verdict is unambiguous: *"IRDM's served margins do not measure IRDM and NONE of them is
+admissible to this map."*
+
+**P1's entire object is a margin decomposition.** So Phase 1 **must** recompute from filed
+components, and **the served metrics block may not be opened for a margin**. This is the same
+discipline 004 applied to SPCX's sign strip, at a different defect.
+
+### F6 — P1 is gated on `002-F8`, and until it lands IRDM's ladder admission is `UNEXERCISED`. *(Phase 1 — a genuine blocker)*
+
+003 records: *"IRDM's ladder admission is `UNEXERCISED`, pending the component re-run **002-F8**
+requires. The served `operating_income` carries a **DA-29 signature**: `computed −51,791,000`
+against `reported +51,791,000`."*
+
+**A `DA-29` signature is the back-solve flag** — *"if any term in a reconciliation appears NOWHERE
+in the source, the check is a BACK-SOLVE — and a back-solve closes exactly, so it cannot be
+caught on the closure."* **So Phase 1 inherits a reconciliation that closes and may be a
+back-solve.** The plan's position: **run the component re-run first, and if it does not land, P1
+is recorded `UNEXERCISED` rather than reported as a pass.** P1 is the Minimum Defensible View;
+**a MDV that rests on an unexercised check is not defensible.**
+
+### F7 — Three names are blocked on a manual field, and one needs a guard before any detector runs. *(Phase 0)*
+
+Already stated in Phase 0 above. Recorded here for the F-ledger's completeness: **the
+`PARTIAL` precondition is not an assumption but a task**, and it blocks **31 pairs across ASTS,
+VSAT and BKSY**.
+
+### F8 — No tool checks a declared stage against the registry, and that is now demonstrated twice. *(all phases)*
+
+004's checklist proposed an **`I5` market-data-stage consistency check** and it was **never
+built**. **006 is the second supporting case and the cleaner one**: my 2026-09-20 re-scope
+declared `position-sizing` as `none` **in good faith**, `plan_audit` returned **4/4**, and
+**nothing anywhere objected** — the mismatch (registry: `late`) was found only because a human
+read the registry entry. **Recorded as a proposal with two supporting cases, not as a fix.**
+
+### F9 — Two scanner candidates are false positives, and the tool should not be "fixed" by changing the spec. *(Phase 0)*
+
+`clarify_scan.py` returns `rationale-SPIR` and `rationale-TSAT`. **Both are false positives.** The
+regex `^\|\s*([A-Z0-9]{1,5})\s*\|[^|]*\|[^|]*\|[^|]*\|\s*\|` uses `[^|]*`, which **spans
+newlines** — so it reads a row's *closing* pipe plus the next row's *opening* pipe as an empty
+cell. **SPIR and TSAT both carry full rationale, and neither is a universe member.** The fix
+belongs in the regex, not in the spec.
+
+### F10 — Q-5 and Q-8 remain flagged for human confirmation, and the plan carries them as bounds. *(Phases 4 and 6)*
+
+**Q-5** — spread width is unmeasurable (Market Data Stage `none` for all eight names). Carried
+qualitatively. **Q-8** — the **6.0×** pro-forma net-debt-to-gross-profit bar is a **spec-set
+threshold, not a measurement**, and RKLB's loss-making status makes any leverage denominator
+sign-sensitive. **P4's falsifier does not rest on it**; it rests on the consent-date test, which
+is mechanical. **Neither is silently resolved.**
+
+---
+
+### F11 — **16 matrix pairs are subscribed by no pillar, and `plan_audit` I4 passes anyway.** *(Phase 0 — an invariant defect)*
+
+**Found by reconciling this plan's own phase table**, which is the only reason it was found at
+all — **no tool reports it.**
+
+§3 states I4's purpose in its own words: *"**I4** (every matrix skill is subscribed somewhere, **so
+no row gets the `[P1]` fallback bracket**)."* **Its stated purpose is about ROWS. Its
+implementation is about SKILLS.** So it passes — and it *should* pass, because every one of the
+15 skills appears in some `Subscribed` line — while **16 of the 85 rows carry no pillar owner
+and will each receive the `[P1]` fallback bracket the invariant exists to prevent.**
+
+**The 16 unowned pairs:**
+
+| Name | Unowned pairs |
+|---|---|
+| **PL** (6) | `business-model`, `operational-kpi`, `ratio-analysis`, `recent-quarter`, `sector-overview`, `secular-trends` |
+| **BKSY** (5) | `ratio-analysis`, `recent-quarter`, `sector-overview`, `unit-economics` |
+| **HAWK** (4) | `competitive`, `recent-quarter`, `sector-overview`, `unit-economics` |
+| **ASTS** (1) | `recent-quarter` |
+| **VSAT** (1) | `recent-quarter` |
+
+**The pattern is not random, and it is the finding.** **PL, BKSY and HAWK account for 15 of the
+16** — the three names added to this tier at the v1.6.0 re-cut. **Their matrix rows were written
+when the names joined the universe, and no pillar's `Subscribed` line was extended to claim
+them.** That is the same defect shape as everything else this programme keeps finding: **a change
+applied in one place and never propagated to the places that depend on it.**
+
+**Consequences, stated rather than assumed.** Those 16 rows are **11 new pairs plus 5 consumed
+ones**. The consumed five need no work. **The 11 new ones would still dispatch** — the fallback
+bracket does not *skip* a row, it *mis-files* it — so the cost is not lost work but **work filed
+against a pillar that did not ask for it**, which corrupts the phase-level accounting this plan
+is built on. **Recorded as A-6.** This is the **second** I4-class defect: 004's round 4 recorded
+that *"I1 is too weak — it checks a universe ticker appears somewhere, and it passed while a
+matrix row named cuts the filer does not report."* **Both invariants are under-strict relative to
+their stated purpose, and both passed.**
+
+## Amendments this plan proposes (A-2 applied; A-1, A-3 … A-6 recorded and NOT applied)
+
+| # | Amendment | Why |
+|---|---|---|
+| **A-1** | **Mark the 16 consumed pairs in §3**, so `tasks_md` does not dispatch them | Otherwise **19% of the matrix re-runs** and produces a second, parallel copy of an existing figure under a different `thesis_id` |
+| **A-2** | ✅ **APPLIED** — §6's second "contract gap" is withdrawn in the spec | The contract already validates `DA-23..DA-30`; the stale range is **004's**, not this thesis's (F4). **Left unapplied it would have suppressed a `definitions_used` declaration P2 is entitled to make** |
+| **A-3** | **Correct `constitution.yaml`'s attestation and add the 1.6.0 Sync Impact Report** | Three places record the version; two disagree (F3). **Owner: the constitution, not this thesis** |
+| **A-4** | **PATCH 005's header** — it calls 006 wave-2 and mislabels 008 and 009 | Contradicts PROGRAM.md §3 and 006's own declaration (Q-11, Q-18) |
+| **A-5** | **Build `I5`** (stage vs registry) and **`I6`** (formability) | Two demonstrated cases each, and no tool catches either (F8) |
+| **A-6** | **Extend I4 to check ROWS, not skills** — or extend a `Subscribed` line to claim all 16 | **15 of the 16 unowned pairs belong to PL, BKSY and HAWK** — the three names added at the v1.6.0 re-cut, whose rows were written without any pillar claiming them. **I4 passes while 16 rows get the `[P1]` fallback bracket its own text says it prevents** (F11) |
+
+---
+
+## What upstream supplies — consume, do not re-derive
+
+**The full inventory is spec §0, and it is already a propagation mechanism rather than a
+courtesy.** The plan adds only the routing rule:
+
+| From | Consumed as | Never |
+|---|---|---|
+| **001** | the panorama — quantities, the L-band scarcity finding, the sequential-gate identity | re-derived |
+| **002** | the validated input set **with its verdicts and their kinds** (`UNEXERCISED` ≠ `CLEAN`) | re-opened, or its denominators and physics recomputed |
+| **003** | the value-pool map and the **corrected** operator margin ladder | re-mapped, or the cross-issuer margin test re-run |
+| **004** | the Connectivity figures and the **`MODELED` regime — as a benchmark, inside its boundary** | used to import a satellite peer multiple (partition admits **0 of 11**) |
+| **005** | RKLB's financing facts — the bridge and the consideration mix | used to underwrite RKLB's runway or model a combined entity |
+
+**And the one-way rule from §5b, restated because it is the failure this plan most needs to
+prevent:** *a cross-tier question answered here without a citation back to its owner* is the
+failure mode that section exists to stop — and it is the same failure the constitution records
+as the reason **005 was itself re-cut.**

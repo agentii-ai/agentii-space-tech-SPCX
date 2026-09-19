@@ -1124,16 +1124,18 @@ is the same failure the constitution records as the reason 005 was re-cut.
   **1.6.0**`, `assumption_pin: "2"`, `skill_pin`, `as_of`, `corpus_version`. `definitions_used`
   is required with at least one `DA-NN` — **DA-17, DA-18, DA-19, DA-21 and DA-24 are live
   for every artifact in this thesis.**
-  > ⚠️ **Two contract gaps, recorded rather than silently worked around.** (1) The
-  > `pillar` enum is `[PIL-1 … PIL-6, cross]`; after the P4/P5 merge this thesis assigned
-  > **PIL-1 … PIL-5 only** and the spec recorded **PIL-6 as unused and unassignable**.
-  > **⚠️ THAT NOTE IS NOW OBSOLETE AND IS WITHDRAWN** — the 2026-09-20 round added
-  > **Pillar 6 (the sector book)**, so **artifacts on that pillar carry `PIL-6` and must**.
-  > The enum always admitted it; what changed is that a pillar now exists to use it. **(2) The
-  > `da_id_registered` rule validates against **DA-23…DA-28**, so **DA-29 and DA-30 —
-  > registered at v1.5.0 and binding P2's two-basis reporting — cannot yet be declared** in
-  > `definitions_used` without failing the rule. §1c carries them as prose obligations until
-  > the enum is extended. Both are housekeeping for the next contract revision, not blockers.
+  > ⚠️ **This block once recorded "two contract gaps". BOTH ARE NOW WITHDRAWN, and the second
+  > was never real — corrected here after `plan.md` F4 checked it against the contract rather
+  > than against the prose.** **(1) The `pillar` enum** — the spec recorded *"PIL-6 is unused and
+  > unassignable"* after the P4/P5 merge. **Withdrawn**: the 2026-09-20 round added **Pillar 6
+  > (the sector book)**, so **artifacts on that pillar carry `PIL-6` and must**. The enum always
+  > admitted it; what changed is that a pillar now exists to use it. **(2) `da_id_registered`** —
+  > the spec claimed the rule validates only **`DA-23…DA-28`**, so *"DA-29 and DA-30 … cannot yet
+  > be declared."* **That is FALSE.** **006's own contract reads `DA-23..DA-30`** — the rule was
+  > widened before this thesis was chartered. **The stale range is 004's contract, not this
+  > one's.** ⇒ **P2's obligation to declare `DA-30` in `definitions_used` is DISCHARGED, not
+  > blocked**, and §1c's prose treatment of DA-29/DA-30 is now belt-and-braces rather than the
+  > only available route.
 - **The ERI decision**: `Astro-ERI-1.0` — `inquiry_type: analytical`, `coherence_state: coherent_emergent`
 - **`PARTIAL` precondition**: ASTS, VSAT and BKSY artifacts record the manual sector
   assignment in the frontmatter before any sector-aggregate constraint evaluates. **HAWK
