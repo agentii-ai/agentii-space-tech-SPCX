@@ -134,6 +134,71 @@ divergence §0 exists to prevent. **The remedy is a spec-level one and is record
 
 ---
 
+---
+
+## §Declared-N/A Register
+
+**⚠️ THIS SECTION IS REFERENCED BY THE TOOL.** `tasks_md.py`, when given a `--declared-na`
+entry, appends *"⚠️ DECLARED N/A — see plan.md §Declared-N/A Register"* to every matching task.
+**It is written here because `tasks.md` currently carries NO such annotation — and the tasks it
+should annotate are being dispatched.**
+
+### The 61 tasks that must not run, and why
+
+**`tasks_md` generates from §3's matrix, and the matrix does not know what has already been
+researched.** So the generated `tasks.md` dispatches **266** tasks — **including all 61 that
+belong to the 16 pairs 001–004 have already produced** (F1). **Those 61 are the duplication the
+owner's directive forbids**, and nothing in the generated file marks them.
+
+| Pair | Tasks | Satisfied by (upstream artifact) |
+|---|---:|---|
+| `GSAT × competitive` | 8 | `001/…_2040_competitive_methodology.md`; `003/…_1330_competitive_methodology.md` |
+| `IRDM × competitive` | 8 | `001/…_1239_competitive_methodology.md`; `002/…_1500_competitive_methodology.md` |
+| `HAWK × operational-kpi` | 5 | `001/…_2225_operational-kpi_methodology.md` |
+| `PL × operational-kpi` | 5 | `001/…_1239_operational-kpi_methodology.md` |
+| `GSAT × risk` | 4 | `003/…_1515_risk_methodology.md` |
+| `IRDM × risk` | 4 | `003/…_1515_risk_methodology.md` |
+| `SATS × risk` | 4 | `001/…_1239_risk_methodology.md`; `001/…_2359_risk_methodology.md` |
+| `GSAT × recent-quarter` | 3 | `003/…_1415_recent-quarter_methodology.md` |
+| `HAWK × recent-quarter` | 3 | `002/…_1500_recent-quarter_methodology.md` |
+| `IRDM × recent-quarter` | 3 | `002/…_1500_recent-quarter_methodology.md`; `003/…_1415_recent-quarter_methodology.md` |
+| `IRDM × secular-trends` | 3 | `003/…_1530_secular-trends_methodology.md` |
+| `PL × growth-strategy` | 3 | `003/…_1500_growth-strategy_methodology.md` |
+| `PL × recent-quarter` | 3 | `003/…_1430_recent-quarter_methodology.md` |
+| `SATS × recent-quarter` | 3 | `002/…_1500_recent-quarter_methodology.md`; `003/…_1415_recent-quarter_methodology.md` |
+| `PL × ratio-analysis` | 1 | `003/…_1600_ratio-analysis_methodology.md` |
+| `PL × sector-overview` | 1 | `003/…_1545_sector-overview_methodology.md` |
+| **Total** | **61** | **→ 205 tasks actually run** |
+
+> ⚠️ **These are DECLARED N/A, not deleted.** The tasks stay visible in `tasks.md` and carry their
+> upstream artifact here, because **a task silently removed is indistinguishable from a task
+> never generated** — the same failure the `UNEXERCISED`-versus-`CLEAN` rule exists to prevent.
+> **A consumer that re-runs one of these produces a second, parallel copy of an existing figure
+> under a different `thesis_id`, which is precisely the divergence §0 exists to stop.**
+
+### 🔴 AND THE TOOL CANNOT EXPRESS THIS — recorded because it was measured, not assumed
+
+`--declared-na` takes **`SKILL:MODE_PREFIX` pairs**. **It is keyed by SKILL and has no ticker
+dimension.** The consume rule is inherently **per `(ticker, skill)`** — and **0 of the 8 affected
+skills can be declared N/A wholesale**, because **every one of them has active names at other
+tickers**:
+
+| Skill | Consumed at | Still active at |
+|---|---|---|
+| `competitive` | GSAT, IRDM | ASTS, BKSY, HAWK, PL, VSAT |
+| `risk` | GSAT, IRDM, SATS | ASTS, BKSY, HAWK, PL, VSAT |
+| `recent-quarter` | GSAT, HAWK, IRDM, PL, SATS | ASTS, BKSY, VSAT |
+| `operational-kpi` | HAWK, PL | ASTS, GSAT, IRDM |
+| `secular-trends` | IRDM | ASTS, PL |
+| `growth-strategy` | PL | ASTS, BKSY, GSAT |
+| `ratio-analysis` | PL | BKSY, GSAT, IRDM, SATS |
+| `sector-overview` | PL | BKSY, HAWK, SATS, VSAT |
+
+**Declaring `competitive:` N/A would suppress 16 tasks that must run to suppress 16 that must
+not.** So the flag is **structurally unable to carry the one rule this thesis most needs it
+for** — and this register is the manual substitute until it gains a ticker dimension. **A-19.**
+
+
 ## Phases
 
 **Seven phases, mapped one-to-one onto §1b's six pillars plus a hand-off.** §7 of the spec
@@ -834,6 +899,46 @@ names jointly mean it — **but it is the spec describing a value the thesis doe
 the declaration is **blocked by F19**. A note stating this is added in place; **their prose is
 left intact.** **A-18.**
 
+### 🆕 F21 — **`tasks.md` dispatches all 61 duplicated tasks, and the tool's only N/A mechanism cannot stop it.** *(all phases — the eighth evaluation, on `tasks.md` itself)*
+
+**The plan has said since F1 that 16 pairs must not be re-run. Until this pass, nothing checked
+whether the generated task list obeys that — and it does not.**
+
+| | |
+|---|---:|
+| Tasks `tasks.md` dispatches | **266** |
+| **Of those, belonging to the 16 consumed pairs** | **61** |
+| Tasks that should actually run | **205** |
+
+**`tasks_md` generates from §3's matrix, and the matrix does not know what has already been
+researched.** So the directive's central rule — *do not repeat* — **is enforced by the plan and
+ignored by the artifact that schedules the work.** A consumer running `tasks.md` as written
+would produce **61 duplicate analyses**, each a second copy of an existing figure under a
+different `thesis_id` — the exact divergence §0 exists to stop.
+
+> ### ✅ FIXED BY WRITING `§Declared-N/A Register` — the section the tool's own annotation names.
+> `tasks_md` annotates a declared-N/A task with *"⚠️ DECLARED N/A — see plan.md §Declared-N/A
+> Register"* — **and that section did not exist.** It is now written: **all 16 pairs, their 61
+> tasks, and the upstream artifact satisfying each.** **Declared, not deleted** — a task silently
+> removed is indistinguishable from one never generated.
+
+### 🔴 AND THE TOOL'S ONLY N/A MECHANISM CANNOT EXPRESS THE RULE — measured, not assumed
+
+`--declared-na` takes **`SKILL:MODE_PREFIX`** pairs. **It is keyed by SKILL; there is no ticker
+dimension.** The consume rule is inherently **per `(ticker, skill)`** — and **0 of the 8 affected
+skills can be declared wholesale**, because **every one has active names at other tickers**:
+`competitive` is consumed at GSAT and IRDM and **must run** at ASTS, BKSY, HAWK, PL and VSAT;
+`recent-quarter` is consumed at five names and must run at three; and so on for all eight.
+
+**Declaring `competitive:` N/A would suppress 16 tasks that must run in order to suppress 16 that
+must not.** So the flag is **structurally unable to carry the one rule this thesis most needs it
+for**, and the register is a manual substitute until it gains a ticker dimension. **A-19.**
+
+**This is the same shape as F17 one level down.** F17 found the budget **modelled rather than
+run**; F21 finds the task list **generated rather than checked against the directive that governs
+it**. In both cases **the artifact and the rule that should bind it were never compared** — and in
+both cases the comparison was cheap once made.
+
 ## Constitution Check (second evaluation — the scalar-clearance pass, as promised)
 
 **The first check's note said a second evaluation would run because F1 and F2 *"change what the
@@ -885,6 +990,7 @@ applied here and caught the change.**
 | **A-13** | ✅ **APPLIED** — F1's description column carries each artifact's **own title**, not a paraphrase | **Six of sixteen paraphrases did not match the artifact** (F16), and a CONSUME ledger that misdescribes what it consumes is worse than none: the citation resolves, so the failure is silent. **The root cause is that the column was written from §0's prose — and §0's own descriptions are not reliable** |
 | **A-14** | ✅ **APPLIED — `phases.yaml` written, and the budget set from the generator** | **`tasks_md` refuses to run without a phase map, and 006 had none** — the thesis could not generate a single task. Running it produced **266**, not the modelled 224, **without a phase map. Writing it was not a formality; it was what exposed F17.** `max_tasks` 180 → 210 |
 | **A-15** | ✅ **APPLIED** — §6's cross-reference to 005's artifact is reworded so it is not a backticked `_cross/*.md` token | **It emitted T904, instructing 006 to publish 005's artifact.** The tool scopes its scan to §6 to prevent exactly this, **but a citation inside §6 is indistinguishable from a declaration to a regex.** `cross_tasks` should exclude an artifact whose name is attributed to another thesis — or the scope should be a bullet list, not a section |
+| **A-19** | **`--declared-na` needs a TICKER dimension** — e.g. `TICKER:SKILL:MODE_PREFIX` | **0 of the 8 consumed skills can be declared wholesale**, because every one has active names at other tickers. **The flag is keyed by skill alone, so it cannot express a per-`(ticker, skill)` rule** — and the consume rule is exactly that. Until it changes, the manual `§Declared-N/A Register` is the only carrier (F21) |
 | **A-18** | ✅ **APPLIED** — all 18 §3 rows audited against the registry (**0 mismatches**), and a note added at §5 recording that `per_row` is undeclared | **My Q-19 fix was a PARTIAL SWEEP**: it corrected `position-sizing` and missed `ratio-analysis` **in the same table**, which a concurrent session then fixed. **Sweep the table the rule lives in; do not fix the instance in front of you** (F20) |
 | **A-17** | **Convert 006's `thesis.md` to `---` frontmatter at byte 0 with `writer: agentii.specify`, and move machine state to `thesis.reduce.json`** — **owner: `agentii.specify`, NOT this thesis** | **0 of 11 `thesis.md` are readable** and 0 have a `reduce.json`. `thesis_status` reports `known_open: 0` for every thesis, so **006's `known-open` disposal of the P11 deal names is unenforceable** (F19). **Rule 1 of `contracts/thesis.md` fixes the writer as `agentii.specify` — hand-editing would be the second-writer violation the boundary refuses** |
 | **A-16** | **`gen_tasks_md.py` needs `argparse` and an idempotence guard** — and a completion-state check before it writes | **It has zero argument handling, so `--help` executes a write**; it overwrites `tasks.md` without preserving `[x]` / `✅ satisfied by:` state; and it defaults to a thesis nobody named. **It erased 77 satisfied tasks from completed 001 in one invocation** (F18, restored). **005 is at the stage where its own tasks begin to be satisfied** |
