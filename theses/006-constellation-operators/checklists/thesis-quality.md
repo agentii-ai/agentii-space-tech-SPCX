@@ -64,3 +64,29 @@ every spec write**. The round encoded four answers (spec Q-11 … Q-14).
 **Carried, not resolved:** the P2 tier-wide-vs-two-sided tension above; the `formability`
 invariant that no tool yet checks; and **Q-5 and Q-8 remain flagged for human confirmation**
 and are carried as bounds (see `spec.md` §Clarifications).
+
+### 2026-09-20 — second `agentii.clarify` round · **5/5 passing · 0 regressions**
+
+The round that **re-scoped 006 into a sector book** (spec Q-15 … Q-18): three new matrix rows,
+a new **Pillar 6**, a third §1c instrument, and the 011 seam declared. `plan_audit.py` **4/4**
+(matrix pairs **67 → 85**, subscriptions **54 → 72**). Boxes unchanged; **two of the five now
+carry a new obligation, and neither is a regression.**
+
+| ID | State | Basis |
+|---|---|---|
+| **CHK001** | ✅ **pass** | The new **P6** carries a machine-checkable `wrong_if` (`metric=count_of_tier2_investable_names_without_either_a_strategy_with_a_dateable_catalyst_or_a_recorded_finding_of_none`, `threshold=0`, `source=`) — **six pillars, six machine-checkable falsifiers**, no prose. ⚠️ **But P6's falsifier has a circularity the other five do not — see CHK004.** |
+| **CHK002** | ✅ **pass** | §2 unchanged. The round **deliberately removed IRDM and GSAT from the three new matrix rows** (P11 forbids underwriting them on fundamentals) and **recorded that absence as designed rather than as a gap**, in a note at §3. I1 still passes because both names remain in eight other rows — **the invariant is satisfied without being gamed**, which is the distinction the note exists to preserve. |
+| **CHK003** | ✅ **pass** | Unchanged, still discharged. |
+| **CHK004** | ✅ **pass**, with a **new and sharper** recorded tension | ⚠️ **P6's `wrong_if` can be satisfied by our own prior recording.** It fires on a count of names that carry *"neither a strategy with a dateable catalyst **nor a recorded finding of none**."* **The second clause is what absorbs IRDM and GSAT** — so the falsifier passes for them **by construction**, on a finding this thesis writes rather than on a test it runs. **That is the `UNEXERCISED`-versus-`CLEAN` defect in a new costume**, and this spec is unusually well-placed to see it: §0.2 inherits the rule that *"a check that closes cleanly while testing nothing"* must be reported as itself. **The remedy is not to delete the clause** — a P11 name genuinely has no strategy to give — **but to require that the recorded finding name its class**, so that "none because P11 forbids it" is distinguishable from "none because we could not find one." **Recorded as a live obligation on P6's output, not fixed here.** The earlier P2 tier-wide-vs-two-sided tension still stands. |
+| **CHK005** | ✅ **pass**, with a stated reading | P6 introduces an **entry-timing** dimension P1–P5 do not have — a catalyst inside the **180-day** constitution bar, or the skill's narrower gate. **This is an output requirement, not a horizon change**: every pillar still shares `as_of: 2026-09-18` and the 2026-Q4 horizon, and the catalyst window describes *when an idea could be entered*, not what period it is about. The reading is stated because it is the kind of thing that would otherwise be assumed — and 005 adopted the same resolution (run both bars, report the narrower as the constraint). |
+
+**Regressions: none.** No box moved from checked to unchecked, and `agentii.converge
+.re_evaluate_checklist` reported **0 regressions** after the write.
+
+**The pattern this round confirms, and it is the third instance in two rounds.** Q-12's answer
+was **correct on its premise and its premise was voided** by Q-15; §4's budget note had already
+been corrected once and needed correcting again; and P6's falsifier reproduces a defect class
+the spec itself documents. **In each case the failure was not a wrong statement but a statement
+that outlived the condition it was true under** — which is the same shape as 004's finding that
+*a closure chain carrying a rounding allowance cannot detect the error the allowance absorbs.*
+

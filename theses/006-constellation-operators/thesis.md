@@ -24,8 +24,15 @@ pillars:
   - The D2D transition compresses the service layer while raising the value of the licensed layer, and every Tier 2 name is placeable on one side
   - The deal gate chain is a dated checklist per name, and a break is re-underwritten from scratch
   - Every Tier 2 contested figure converts to `DEMONSTRATED` or is recorded as unresolvable
+  - The sector book: every investable name carries a strategy, an entry condition and a dated catalyst — or is recorded as having none
 known-open: []
-budget: {max_tasks: 60, max_retries_per_task: 2}
+# Q58. Raised 60 -> 180 at the 2026-09-20 clarify round (spec Q-17), aligning 006 with 005.
+# The scope expansion was OWNER-DIRECTED (Q-15: the sector book, the strategy set, the
+# structural analogues, three new matrix rows), and 005's governing reasoning transfers
+# verbatim: a budget that silently truncates an owner-directed scope is the failure mode the
+# budget exists to prevent. The Q-12 answer ("keep 60, prune Standard and Light") was correct
+# on its premise -- an unchanged scope -- and Q-15 voided that premise.
+budget: {max_tasks: 180, max_retries_per_task: 2}
 # Q59. Declared at the 2026-09-20 clarify round (spec Q-13). Six, at the finest granularity,
 # because each names a distinct datum that would move a verdict -- and two of them name events
 # that may never occur, which is why they are triggers and not assumptions.

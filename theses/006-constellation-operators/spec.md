@@ -27,9 +27,13 @@ re-derives none of it, and the edge does not run the other way** — 005 carries
 (a) the **IRDM/RKLB deal gate chain** (FCC → ITU → DCSA, dated catalysts, break re-underwrite);
 (b) **operator margins by segment**. Everything else in the tier is a cited dependency, not a
 pillar (§5b).
-**Produces**: the **segment thesis for Tier 2** — a licence-versus-business value attribution
-per name, a direct-to-cell (D2D) placement map, and **one dated regulatory gate checklist per
-name**. Sizes no position above P11's 2% binary cap.
+**Produces**: the **Tier 2 sector book** — a licence-versus-business value attribution per
+name, a direct-to-cell (D2D) placement map, **one dated regulatory gate checklist per name**,
+and, **added at the 2026-09-20 clarify round (Q-15)**, a **per-name sector strategy set** with
+entry conditions, a dateable catalyst inside the constitution's 180-day bar, an
+`Actionable / Watchlist / Discard` disposition, and a size inside the tier's caps — plus a
+**structural-analogue inventory** retrieved by situation shape. **Sizes nothing above P11's
+2% binary cap**, and **produces no buy-side strategy for the two P11 deal names** (Q-16).
 
 ---
 
@@ -659,6 +663,61 @@ named resolving source.
 
 ---
 
+### Pillar 6 — The sector book: every investable name carries a strategy, an entry condition and a dated catalyst — or is recorded as having none (Priority: P6) 🆕
+
+**Added at the 2026-09-20 clarify round (Q-15), aligning 006 with 005's sector book.** The
+first five pillars produce the *analysis*: an attribution, a placement, a gate chain and a
+scorecard. **None of them produces an investment expression**, and until this round §7 handed
+`sizing` and `analogues` to 011. This pillar is the expression.
+
+**The claim, and it is deliberately asymmetric.** Across the tier, **every name that can host
+a buy-side idea carries one** — an entry condition, a **dateable catalyst inside the 180-day
+bar the constitution's P9 sets**, and a disposition — **and the two P11 deal securities carry a
+gate-and-break card instead, with that asymmetry stated in the output rather than smoothed
+over.** The coverage is therefore **six sizeable names plus two gate cards**, and the count is
+the finding: a reader is told how much of this tier is expressible **now** and which part of it
+is legally unable to be.
+
+**Why the asymmetry is the honest form, not a gap.** Under P11 the deal names' price tracks a
+**merger spread** rather than a fundamental, so none of `Actionable / Watchlist / Discard` is
+admissible for them — a "buy" on a spread is a bet on a close, not on the business. IRDM and
+GSAT therefore receive **P4's dated gate checklist plus the close-versus-break scenario pair**,
+and the output says in-line that **this is not a sizeable idea**. IRDM remains P1's subject;
+only its *strategy* output changes form.
+
+**The seam with 011 is declared, and it is the sector/programme split stated by 005's round.**
+006 owns the **Tier 2 sector book** — trade ideas, entry conditions and sizes for its own eight
+names. 011 owns the **programme book** — cross-sector allocation, the 40%-of-NAV theme cap, and
+any long/short construction. **006's ideas flow UP as inputs to 011's allocation, not as
+competitors to it**: 006 states no programme-level weight, does no cross-sector ranking, and
+subscribes no `long-short-construction` row. **The analogue inventory is the same seam in the
+other direction** — 006 retrieves analogues for the situations *its own cohort* is in (§1c
+instrument 3, by structure, never sector-keyed), and **011 retains the programme-wide case
+inventory**; where the two overlap, 011's tag governs programme-level use and 006's governs
+this tier's.
+
+**Two gates, both reported, neither overridden — adopted from 005's rule.** The constitution's
+P9 sets a 180-day bar; `trade-idea-generation` carries its **own** hard gate, and the two
+disagree. 004 established the governing principle for exactly this shape: as filed, no consent
+date is disclosed and the close is expected mid-2027, far outside the window. 006 therefore
+**runs both bars and reports the narrower as the constraint**, publishing the headline as two
+counts rather than one — *"N of six sizeable names actionable at the skill's bar; M of six
+datable at 180 days."* **The disagreement is itself the finding**: it tells 011 how much of
+this tier is expressible now versus merely datable.
+
+**Why this priority**: it is P6 because it *spends* the other five rather than adding to them —
+it is the only pillar whose inputs are all produced above it, and it is the pillar 011 actually
+consumes as ideas. It is last because it is worthless until P1–P5 have landed.
+
+**Independently falsifiable**: an investable Tier 2 name that carries neither a strategy with a
+dateable catalyst nor a recorded finding that it admits none.
+
+**wrong_if**: `metric=count_of_tier2_investable_names_without_either_a_strategy_with_a_dateable_catalyst_or_a_recorded_finding_of_none threshold=0 source=sector_strategy_set_and_gate_cards`
+
+**Subscribed**: `SATS × trade-idea-generation`, `ASTS × trade-idea-generation`, `VSAT × trade-idea-generation`, `PL × trade-idea-generation`, `BKSY × trade-idea-generation`, `HAWK × trade-idea-generation`, `SATS × position-sizing`, `ASTS × position-sizing`, `VSAT × position-sizing`, `PL × position-sizing`, `BKSY × position-sizing`, `HAWK × position-sizing`, `SATS × qualitative-filtering`, `ASTS × qualitative-filtering`, `VSAT × qualitative-filtering`, `PL × qualitative-filtering`, `BKSY × qualitative-filtering`, `HAWK × qualitative-filtering`
+
+---
+
 > **Delivering P1 alone yields a defensible partial conclusion** — the tier's one
 > profitable constellation operator either holds its licence revenue while the service
 > overlay absorbs the compression, or it does not. That single decomposition decides
@@ -666,7 +725,8 @@ named resolving source.
 
 ## 1c. Method — the attribution and gate instruments
 
-Two capabilities are specific to this thesis and are not used elsewhere in the program.
+Three capabilities are specific to this thesis and are not used elsewhere in the program.
+**The third was added at the 2026-09-20 clarify round (Q-15)**, aligning 006 with 005.
 
 1. **The split of the regulatory asset from the operating business.** Every Tier 2 name
    is decomposed into (a) the licensed position and (b) the operating business, valued on
@@ -687,6 +747,21 @@ Two capabilities are specific to this thesis and are not used elsewhere in the p
    **ITU leg is not a gate on the issuer**, because the United States files on IRDM's behalf —
    and the inherited `UNRESOLVABLE-FROM-PLATFORM` boundary is respected rather than
    re-attempted.
+
+3. **Structural-analogue retrieval — the case inventory, retrieved by shape.** The corpus
+   carries **historical investment cases and strategies**, and 006 retrieves them for the
+   situations **its own cohort is in** — *an asset sale of a licence*, *an in-flight merger
+   spread*, *a monopoly asset with a commoditising service layer*, *a licensed incumbent
+   facing a primary-grant entrant* — and **never by sector**. This is not a stylistic
+   preference: **PROGRAM.md §4 records that the knowledge registry has no industrial or
+   aerospace domain** (`list_domains` returns 9 domains whose `applicable_sectors` are
+   `["med","tech","fin"]` only), so **a sector-keyed strategy or case query returns zero rows
+   by construction**. A retrieval that returns nothing is not evidence of absence and must
+   never be reported as one. Every analogue used is **labelled borrowed**, carries the
+   structural tag it was retrieved on, and is **never presented as sector evidence** — the
+   same discipline §5's corpus note already imposes, now given a deliverable. **The
+   programme-wide case inventory and its tags remain 011's**; 006's inventory is scoped to
+   this tier's situations, and where the two overlap 011's tag governs.
 
 **Evidence discipline.** Per P4 and the v1.3.0 register, any artifact reading
 `operating_income` shows the component derivation in-line — which is mandatory here for a
@@ -834,6 +909,9 @@ tier retains a listed expression even if both transactions close.**
 | secular-trends | equity-research-core | Standard | ASTS, IRDM, PL | none | The D2D transition as a secular force, the licence-value read-through, and whether the granted-licence regime moves with it (**P3**) |
 | what-if | business-intelligence | Light | IRDM, GSAT | none | The close-versus-break scenario pair; on a break, re-underwrite from scratch (**P4**) |
 | growth-strategy | equity-research-core | Light | ASTS, GSAT, PL, BKSY | none | Primary-grant path versus acquisition path — the reachable proxy for PIL-6's falsifier (**P4**) |
+| trade-idea-generation | idea-generation | Standard | SATS, ASTS, VSAT, PL, BKSY, HAWK | none | 🆕 **The sector strategy set** (Q-15): per-name entry condition, a **dateable catalyst** with its source, and an `Actionable / Watchlist / Discard` disposition — **on the six non-P11 names only** (**P6**) |
+| position-sizing | portfolio-strategy | Standard | SATS, ASTS, VSAT, PL, BKSY, HAWK | none | 🆕 Each idea's size inside the tier's caps: ≤2 positions per sub-sector and the 2% binary cap on deal securities (**P6**, **P11**) |
+| qualitative-filtering | idea-generation | Standard | SATS, ASTS, VSAT, PL, BKSY, HAWK | none | 🆕 The **structural-analogue retrieval** (§1c instrument 3) and the qualitative screen behind the disposition — retrieved by situation shape, never by sector (**P6**) |
 
 > **Coverage invariant.** Every ticker in §2's member table appears at least once above;
 > every `Subscribed` pair in §1b generates at least one task. Verified mechanically by
@@ -842,24 +920,39 @@ tier retains a listed expression even if both transactions close.**
 > subscribed somewhere, so no row gets the `[P1]` fallback bracket). **The four cited third
 > parties — SPCX, AMZN, AAPL, RKLB — and the five `NOT_READY` names are deliberately outside
 > the matrix: none can host research in this thesis.**
+>
+> ⚠️ **`IRDM` and `GSAT` are absent from the three `P6` rows ON PURPOSE, and the absence is
+> load-bearing** (Q-16). They are universe members and they appear in eight other matrix rows,
+> so invariant **I1** is satisfied — but **they carry no `trade-idea-generation`,
+> `position-sizing` or `qualitative-filtering` row**, because **P11 forbids underwriting them
+> on fundamentals**. A run that finds those three skills missing at IRDM and GSAT has found
+> the **designed asymmetry**, not a coverage gap, and must not "fix" it by adding rows.
 
 ## 4. Depth Tiers
 
 | Tier | Skills | mode-set | Tickers | Output |
 |:---:|------|---|--------|------|
 | Deep | unit-economics, operational-kpi, competitive, risk | all modes | IRDM, GSAT, SATS, ASTS | Full-mode work on the names carrying P1–P4 |
-| Standard | business-model, recent-quarter, ratio-analysis, peer-bench, sector-overview, secular-trends | essentials_modes | As listed | Cross-sectional comparison, the corrected margin ladder, the placement map |
+| Standard | business-model, recent-quarter, ratio-analysis, peer-bench, sector-overview, secular-trends, **trade-idea-generation, position-sizing, qualitative-filtering** | essentials_modes | As listed | Cross-sectional comparison, the corrected margin ladder, the placement map — and, from the 2026-09-20 round, **the sector strategy set, its sizes, and the structural analogues** |
 | Light | what-if, growth-strategy | essentials_modes | As listed | The break scenario and the falsifier proxy |
 
-**Budget note — RESOLVED at Q-12, 2026-09-20.** The matrix yields **67 distinct (ticker,
-skill) analyses across 8 names** — up from 39 across 5 before the re-cut. Mode expansion
-applies multiplicatively, as it did at 001 (2.07×), giving roughly **140 mode-tasks**.
-⚠️ *This note previously read "the `max_tasks: 40` currently recorded in `thesis.md`" and
-closed "recorded as an open item rather than silently reconciled". **Both statements are now
-wrong and are corrected in place**: `thesis.md` records **60**, not 40, and the item is **no
-longer open** — **the budget stays at 60 and the Standard and Light rows are pruned to
-essentials-only before dispatch.** The decision, and the binding prune order, are at **Q-12**.*
-If it must come down further, drop the
+**Budget note — SUPERSEDED AND RE-RESOLVED at Q-17, 2026-09-20.** The matrix yields **79
+distinct (ticker, skill) analyses across 8 names** — 67 before the 2026-09-20 round added the
+three **P6** rows. Mode expansion applies multiplicatively, as it did at 001 (2.07×). **The
+budget is `max_tasks: 180`, aligning 006 with 005, which raised 60 → 180 under the same
+owner-directed expansion.**
+
+⚠️ *This note has now been corrected twice and the history is kept, because the pattern is the
+point.* It first read *"the `max_tasks: 40` currently recorded in `thesis.md` … recorded as an
+open item rather than silently reconciled"* — **both statements were wrong** (the file recorded
+60, and it was not left open). **Q-12 then answered "keep 60, prune Standard and Light"**, and
+**Q-17 superseded that answer because its premise — an unchanged scope — was voided by Q-15.**
+**Q-12's answer was correct on its premise; the premise is gone.** The reasoning now governing
+is 005's and transfers verbatim: **a budget that silently truncates an owner-directed scope is
+the failure mode the budget exists to prevent.**
+
+**The Q-12 prune order is RETAINED AS A CONTINGENCY, not exercised.** If the counted matrix
+later exceeds 180, drop the
 Light rows first — never the `risk` row, which is the entire delivery mechanism for **P4**,
 never `recent-quarter` at SATS, which carries the DA-24 hygiene the tier's only clean
 operating read depends on, and never `recent-quarter` at VSAT, where the served duration
@@ -904,8 +997,19 @@ defect means the row is the only way the correct quarter is ever produced.
   pair is the natural expression of P3, but the Risk Framework caps the tier at **≤ 2
   positions in any single sub-sector** and the theme cap (40% NAV) binds first in a
   single-theme book. With two of eight names being P11 securities, at most two Tier 2
-  expressions exist at any time, and the pair is one of them. Size is 011's decision; this
-  thesis supplies the attribution and the gates.
+  expressions exist at any time, and the pair is one of them.
+
+  ⚠️ **This paragraph previously closed "Size is 011's decision; this thesis supplies the
+  attribution and the gates." That is no longer true and is corrected in place** (Q-15). From
+  the 2026-09-20 round **006 sizes its own ideas inside the tier's caps** — ≤2 positions per
+  sub-sector and the 2% binary cap on deal securities — and publishes them with entry
+  conditions. **What remains 011's is the allocation across sectors**, not the size within this
+  one. The seam is stated in full at §1b P6.
+
+  **And the strategy set covers six names, not eight.** IRDM and GSAT are P11 deal securities:
+  their price is a merger spread, so no `Actionable / Watchlist / Discard` value is admissible
+  for them. **They carry P4's gate card and the close-versus-break pair instead, and the output
+  says so in-line** (Q-16).
 
 ## 5b. Cross-tier dependencies — declared, not absorbed
 
@@ -949,6 +1053,21 @@ is the same failure the constitution records as the reason 005 was re-cut.
   value where separable)**, operating-business value, the licence/service placement, the
   licence regime (allocated vs granted), the dated next gate, and the deal status. This is
   what 007, 009 and 011 cite.
+- **The sector strategy set (P6) — and the P11 asymmetry that shapes it.**
+  `trade-idea-generation` and `position-sizing` rows are produced **for the six non-P11 names
+  only** (SATS, ASTS, VSAT, PL, BKSY, HAWK). **IRDM and GSAT receive no strategy row, no size,
+  and no disposition** — under P11 their price tracks a merger spread, so none of
+  `Actionable / Watchlist / Discard` is admissible. They carry P4's **dated gate checklist plus
+  the close-versus-break scenario pair**, and **every output that names them states in-line
+  that this is not a sizeable idea.** **This asymmetry is reported, never smoothed**: the
+  sector book's coverage is **six sizeable names plus two gate cards**, and 011 is told which
+  is which. Each idea is published with a **dateable catalyst**, the **narrower** of the two
+  gates (the skill's, not P9's 180-day bar) as the stated constraint, and its size inside the
+  ≤2-per-sub-sector cap.
+- **The structural-analogue inventory (P6).** Cases and strategies retrieved by **situation
+  shape**, never by sector — a sector-keyed query returns zero rows by construction
+  (PROGRAM.md §4). Every analogue is **labelled borrowed** and carries the structural tag it
+  was retrieved on. **The programme-wide case inventory remains 011's.**
 - **⚠️ P11 — `deal_security_basis` is mandatory on IRDM and GSAT artifacts.** Every
   artifact written for IRDM or GSAT **must set `deal_security_basis`** in its frontmatter
   (`standalone_pre_merger` while the transaction is unclosed; `post_close` after), and
@@ -964,9 +1083,11 @@ is the same failure the constitution records as the reason 005 was re-cut.
   is required with at least one `DA-NN` — **DA-17, DA-18, DA-19, DA-21 and DA-24 are live
   for every artifact in this thesis.**
   > ⚠️ **Two contract gaps, recorded rather than silently worked around.** (1) The
-  > `pillar` enum is `[PIL-1 … PIL-6, cross]`; after the P4/P5 merge this thesis assigns
-  > **PIL-1 … PIL-5 only**, so **PIL-6 is unused and must not be assigned** — an artifact
-  > carrying PIL-6 would be mapped to a pillar that no longer exists. (2) The
+  > `pillar` enum is `[PIL-1 … PIL-6, cross]`; after the P4/P5 merge this thesis assigned
+  > **PIL-1 … PIL-5 only** and the spec recorded **PIL-6 as unused and unassignable**.
+  > **⚠️ THAT NOTE IS NOW OBSOLETE AND IS WITHDRAWN** — the 2026-09-20 round added
+  > **Pillar 6 (the sector book)**, so **artifacts on that pillar carry `PIL-6` and must**.
+  > The enum always admitted it; what changed is that a pillar now exists to use it. **(2) The
   > `da_id_registered` rule validates against **DA-23…DA-28**, so **DA-29 and DA-30 —
   > registered at v1.5.0 and binding P2's two-basis reporting — cannot yet be declared** in
   > `definitions_used` without failing the rule. §1c carries them as prose obligations until
@@ -987,12 +1108,18 @@ is the same failure the constitution records as the reason 005 was re-cut.
 | 3 — D2D placement (P3) | Service-layer compression evidence; place all eight names on the axis by the P2 rule; test whether ASTS is placeable at all, **and whether the granted-licence trio places without D2D** | Week 3 | Phase 2 |
 | 4 — **The gate chain (P4)** | **One deliverable, one phase**: the dated checklist per name and per gate for both deals and both licence regimes; classify filing-evidenced vs registry-blocked; build the primary-grant proxy test; run close-versus-break on IRDM with the Aireon and basis-discontinuity adjustments | Week 4–5 | Phase 3 |
 | 5 — Queue close-out (P5) | Scorecard for §0b: convert or classify every Tier 2 contested figure, **preserving verdicts as verdicts** | Week 6 | Phase 4 |
-| 6 — Hand-off | The attribution register for 007 (primes as incumbent satcom competition), 009 (D2D as compute-adjacent demand), 011 (positions, sizing, analogues). **005 takes the gate chain by citation to `_cross/tier2-gate-chain.md`** | Week 7 | Phase 5 |
+| 6 — **The sector book (P6)** 🆕 | **Added at the 2026-09-20 round.** The per-name strategy set on the **six non-P11 names** — entry condition, dateable catalyst with its source, `Actionable / Watchlist / Discard`, size inside the tier's caps — plus the **structural-analogue inventory** and the two-count headline. IRDM and GSAT receive their gate cards and the close-versus-break pair, **marked as not sizeable** | Week 7 | Phase 5 |
+| 7 — Hand-off | The attribution register and the sector book for 007 (primes as incumbent satcom competition), 009 (D2D as compute-adjacent demand), 011 (**the sector book's ideas as inputs to its allocation — not competitors to it**). **005 takes the gate chain by citation to `_cross/tier2-gate-chain.md`** | Week 8 | Phase 6 |
 
 > **Phases 4 and 5 are merged.** They were separate phases in the pre-re-cut spec and they
 > produced the same artifact twice. One pillar, one phase, one checklist per name.
 
 ## Clarifications
+
+- [2026-09-20] Q: Q-15 (scope — is 006 a segment thesis or a sector book?) — 006 currently produces the segment thesis (attribution register, D2D placement, gate checklist) and §7 Phase 6 hands `positions, sizing, analogues` to 011; §5 states `Size is 011's decision`. The owner has directed that 006 deliver a DEEP BUY-SIDE SECTOR ANALYSIS for constellation operators — strategies for investing the sub-sector, for the investable names, with historical cases for analogy — which is what 005 became in its 2026-09-20 round. Does 006 align with 005? → A: **YES — 006 is re-scoped to a SECTOR BOOK, fully aligned with 005.** Concretely: (1) §3's matrix gains **three rows** — `trade-idea-generation` (IRDM, GSAT, SATS, ASTS, VSAT, PL, BKSY, HAWK), `position-sizing`, and `qualitative-filtering`; (2) §1c gains a **fourth instrument — the structural-analogue retrieval**, isomorphic to 005's, retrieved by **structural situation shape** and never sector-keyed (a sector-keyed corpus query returns zero rows by construction, per PROGRAM.md §4); (3) the deliverables extend to a **per-name sector strategy set** with entry conditions, a **dateable catalyst** inside the constitution's 180-day bar, and an **Actionable / Watchlist / Discard** disposition, plus each idea's size inside the tier's caps; (4) **the seam with 011 is declared on 005's pattern**: 006 owns the **Tier 2 sector book**, 011 owns the **programme book** (cross-sector allocation, the 40% theme cap, long-short construction), and **006's ideas flow UP as inputs to 011's allocation, not as competitors to it**. 006 states no programme-level weight and does no cross-sector ranking. 005's market-data-stage precedent is NOT imported: 006's rows remain `none`.
+- [2026-09-20] Q: Q-16 (the P11 collision — can a buy-side strategy be written on a deal security?) — two of the eight names are P11 deal securities (IRDM $54.00/sh RKLB; GSAT $90.00/sh AMZN) and P11 forbids standalone underwriting, because under P11 their price tracks a merger spread rather than a fundamental. A sector strategy set that underwrites them would value something contractually ceasing to exist. How does the sector book carry them? → A: **The deal names get a gate-and-break card, NOT a buy-side strategy.** The strategy set is produced on the **six non-P11 names** (SATS, ASTS, VSAT, PL, BKSY, HAWK). **IRDM and GSAT receive P4's dated gate checklist plus the close-versus-break scenario pair, and the output states in-line that this is NOT a sizeable idea** — the `Actionable / Watchlist / Discard` vocabulary is **not applied to them**, because none of its three values is admissible for a security whose price is a spread. **This is a deliberate asymmetry and it is reported as one**, not smoothed: the sector book's coverage is **six sizeable names plus two gate cards**, and 011 is told plainly which is which. The `$223.6M` termination fee, the break-leg re-derivation from P2's basis B, and the Aireon/basis-discontinuity obstacles stay where P4 put them. IRDM remains **P1's subject** — its margin decomposition is unaffected by this answer; what changes is only that its *strategy* output is a gate card rather than an idea.
+- [2026-09-20] Q: Q-17 (budget, superseding Q-12) — Q-12 answered `keep 60, prune Standard and Light` on the premise that the scope was unchanged. That premise is now void. 005 raised `60 -> 180` under the same owner-directed expansion, on the stated ground that *"a budget that silently truncates an owner-directed scope is the failure mode the budget exists to prevent."* What is 006's budget? → A: **Raise `max_tasks` to 180, aligning 006 with 005.** **Q-12 is SUPERSEDED**, not amended: its answer was correct on its premise and its premise is gone. The reasoning is 005's and it transfers verbatim — **a budget that silently truncates an owner-directed scope is the failure mode the budget exists to prevent** — and it is strengthened here because 006's expansion adds **three skills** rather than re-weighting existing ones. The §4 prune order recorded at Q-12 is **retained as a contingency, not exercised**: if the counted matrix later exceeds 180, drop Light first, never `risk`, never `recent-quarter` at SATS or VSAT. §4's budget note and `thesis.md` are both updated.
+- [2026-09-20] Q: Q-18 (sequencing, superseding Q-11's scheduling half) — Q-11 ruled that 005 completes first and 006 consumes it by citation, with 005 carrying its RKLB gate `known-open` pending 006's P4. 005 has since expanded to 178 mode-tasks as a sector book, so `005 completes first` would serialize 006 behind a much larger thesis. Does the sequencing change? → A: **YES — the two run in TRUE PARALLEL, and Q-11's scheduling half is superseded while its EDGE half stands.** The edge remains one-way and declared on the consuming side: 006 keeps `005` in its `Depends on` as a citation dependency, and 006 still owns the IRDM/RKLB gate chain. What changes is only that 005 no longer completes before 006 begins — **the gate chain becomes a mid-flight delivery**, and 005 carries its RKLB row `known-open` until 006's P4 lands. Two independent reasons: 005's dependency on 006 is a citation rather than a data edge, and the two are now **parallel sector books on different tiers** (005's six names, 006's eight) with no resource contention between them. ⚠️ **The wave defect Q-11 recorded is unaffected and still open** — PROGRAM.md §3 places 006 and 008 in wave 1, 006 self-declares Wave 1, and 005's header calls 006 wave-2; 005's header remains the outlier and still needs its own PATCH.
 
 - [2026-09-20] Q: Q-11 (the 005 edge, and whether the two theses may run in parallel) — 006 and 005 each cite the other in the body (§5b / §2b) but NEITHER declares the other in its `Depends on` header, and the wave declarations disagree: 005's header reads "wave-2 hand-off to 006/008/009" while PROGRAM.md §3 and 006 both place 006 in wave 1. The edge is substantively two-way — 006 owns the IRDM/RKLB gate chain that 005's RKLB row turns on, and 006 §5b names 005 as owner of the financing-runway and combined-entity framing. Which way does the edge run, and do the two run concurrently? → A: **005 completes first and 006 consumes it by citation — the edge is declared ONE-WAY, on the consuming side only.** The gate chain stays 006's sole deliverable, but 005 does not wait for it: 005's RKLB row is carried `known-open` pending 006's P4, and 005's `Depends on` header is unchanged. **006 adds `005` to its own `Depends on`** as a citation dependency — it cites 005's Tier 1 cross-section for RKLB's financing facts (the $3.6B committed bridge, the consideration mix) and re-derives nothing. 006's §5b rows naming 005 are therefore re-read as citations, not as blockers. ⚠️ **A WAVE DEFECT IS RECORDED AND NOT RESOLVED BY THIS ANSWER:** PROGRAM.md §3 places **006 and 008 in wave 1** and 006 self-declares Wave 1, so **005's header is the outlier** — and it mislabels 008 and 009 in the same sentence. That is a separate PATCH to 005's header, not part of this answer, and it is left open rather than papered over by the sequencing decision.
 - [2026-09-20] Q: Q-12 (budget) — three sources disagree: `thesis.md` records `max_tasks: 60`, this spec's Q-7 states `thesis.md` records 40 (stale), and §3's matrix yields 67 analyses / ~140 mode-tasks. Raise the budget, or prune the matrix? → A: **Keep `max_tasks: 60`; prune the Standard and Light rows to essentials-only.** The prune order is this spec's own and is binding: **drop the Light rows first** (`what-if`, `growth-strategy`), **never the `risk` row** — it is P4's entire delivery mechanism — **never `recent-quarter` at SATS**, which carries the DA-24/DA-23 hygiene the tier's only clean operating read depends on, and **never `recent-quarter` at VSAT**, where the served duration defect means that row is the only route to the correct quarter. Q-7's premise is corrected here: the 40 it attributes to `thesis.md` is stale, the file records **60**. §7's phase structure and the P5 hand-off are unaffected.
