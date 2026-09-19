@@ -1014,41 +1014,40 @@ tier retains a listed expression even if both transactions close.**
 | Standard | business-model, recent-quarter, ratio-analysis, peer-bench, sector-overview, secular-trends, **trade-idea-generation, position-sizing, qualitative-filtering** | essentials_modes | As listed | Cross-sectional comparison, the corrected margin ladder, the placement map — and, from the 2026-09-20 round, **the sector strategy set, its sizes, and the structural analogues** |
 | Light | what-if, growth-strategy | essentials_modes | As listed | The break scenario and the falsifier proxy |
 
-**Budget note — CORRECTED AGAIN at the plan evaluation, 2026-09-20.** The matrix yields **87
-distinct (ticker, skill) analyses across 8 names**: 67 at the re-cut, **+18** for the three **P6**
-rows, **+14** for the two valuation rows the plan evaluation added (E1). ⚠️ *This note previously
-read **"79"** — **which was simply wrong**, and wrong from the moment it was written: `plan_audit`
-has always reported **85** for the pre-E1 matrix. The number was never computed.* **The mode
-arithmetic is now stated rather than waved at** — see the reconciliation below. **The budget is
-`max_tasks: 180`, aligning 006 with 005.**
+**Budget note — RECONCILED at the plan's THIRD evaluation, 2026-09-20.** The matrix yields
+**95 distinct (ticker, skill) analyses across 8 names**: **67** at the re-cut, **+18** for the
+three **P6** rows, **+10** for the two valuation rows (`sotp-valuation` on all seven P2 names —
+split Deep/Standard — plus `residual-income` on the scarce trio).
+
+> ⚠️ **This number has now been wrong THREE times, and the way it was wrong is the point.**
+> It read **"79"** first — *never computed*. It then read **"87"** while **its own components
+> summed to 99** and the real matrix was **95**. **A stated total that disagrees with the sum
+> printed directly beneath it is worse than no total**, because a reader who adds the parts
+> finds a discrepancy and cannot tell which side to trust. **The figure is now emitted by
+> `plan_audit`, not typed.** The reconciliation below was likewise stale — it read
+> **202 / −47 / 155**, the pre-F11 and pre-depth-split values — and is recomputed.
 
 **The reconciliation, computed row by row rather than estimated:**
 
 | | mode-tasks |
 |---|---:|
-| Full matrix at depth (Deep rows at **all modes**, Standard/Light at **1** — the registry declares `essentials_modes: []` for **every one of 006's 15 original rows**, so the fallback is the single `methodology` slug) | **202** |
+| Full matrix at depth (Deep rows at **all their modes**; Standard/Light at **1**) | **224** |
 | **Released by the consume rule** — the 16 pairs 001–004 already ran (plan F1) | **−47** |
-| **Actually required** | **155** |
-| Added by F12 (`sotp-valuation` + `residual-income`), **at the depth the second pass settled** | **+8** |
-| **Total against a 180 budget** | **177** → **headroom 3** |
+| **Actually required** | **177** |
+| Against `max_tasks: 180` | **headroom 3** |
 
-**And the headroom is the finding, not a footnote.** *The consume rule pays for the depth.*
-Without plan F1's 16 consumed pairs, the matrix would need **216** against a budget of **180** —
-**over by 36, and the only levers left would be pruning rows this spec has twice refused to
-prune.** The owner's directive to *not repeat work* is therefore what makes room for the two
-valuation skills the spec was missing. **Stated because it is the opposite of the usual
-direction** — a budget constraint usually forces work out; here, removing duplicated work is
-what lets the missing work in.
-
-⚠️ **And the depth split is the third pass's correction.** F12's first form put both valuation
-skills at **Standard on all seven names** (7 + 7 = 14). The second pass found **004 runs
-`sotp-valuation` at Deep** — its purpose text calls it the *"constitution-mandated primary
-instrument"* — so 006 had given **P2's only deliverable** a single mode. **Deep on all seven
-would cost 42 and put the total at 204, twenty-four over budget.** The resolution is neither
-"Standard" nor "Deep everywhere" but **Deep where P2's claim is hardest to establish**: the
-scarce-licence trio, where the licence is predicted to exceed half of EV. **The granted-licence
-control is a negative limb, and a methodology-only read tests it.** Net **+8**, and the headroom
-falls from 11 to **3** — which is the honest number and is why it is written down.
+**⚠️ The fallback is NOT `methodology` for every skill — and the count survives anyway.**
+`depth_to_modes` prefers `methodology` **only where the skill declares it**; otherwise it takes
+`declared[:1]`. **Eight of 006's skills do not declare `methodology`** and fall back to their
+first slug: `competitive` → `direct-competitor-identification-and-analysis` · `risk` →
+`general-risk-factors-identification-assessment` · `business-model` →
+`business-model-classification` · `secular-trends` →
+`evaluate-company-s-exposure-to-major-secular-technology-trends` · `growth-strategy` →
+`growth-strategy-assessment` · and `recent-quarter`, `peer-bench`, `sector-overview` → `defaults`.
+**Every fallback yields exactly ONE mode**, which is why the arithmetic above is unaffected —
+**but the reason matters**: an earlier draft of this note asserted *"the single `methodology`
+slug"* as though it were uniform, and **it is not**. The count is right; the explanation was not,
+and a reader checking the explanation would have found the error.
 
 ⚠️ *This note has now been corrected twice and the history is kept, because the pattern is the
 point.* It first read *"the `max_tasks: 40` currently recorded in `thesis.md` … recorded as an

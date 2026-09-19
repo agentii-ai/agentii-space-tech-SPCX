@@ -23,7 +23,7 @@ generator it did not use is the same defect class as a figure that claims a basi
 
 **Scalar-clearance note (why a second check is still run).** 003 and 004 each ran this check
 twice, the second time after the plan's findings had changed the work. The same applies here and
-for a sharper reason: **F1 below removes 16 of §3's 85 analyses from the schedule**, and
+for a sharper reason: **F1 below removes 16 of §3's analyses from the schedule**, and
 **F2 adds a sequencing constraint the spec does not express**. Both change what the plan
 schedules, so the second evaluation is not a formality.
 
@@ -122,7 +122,8 @@ they were written** — so the gap closed rather than recurring. **`plan_audit` 
 caught E1's omission** (it did, in fact, on the first attempt — see F12), **but it cannot catch
 F11's shape**, which is why F11 was found by hand.
 
-**Why this is F1 and not a footnote.** The pre-F1 plan would have dispatched 85 analyses; **19%
+**Why this is F1 and not a footnote.** The plan-time matrix declared **85** pairs (**95** after
+F12); the pre-F1 schedule would have dispatched all of them, and **17%**
 of them would have reproduced work that already exists**, and — worse — **would have produced a
 second, parallel copy of a figure under a different thesis_id**, which is precisely the
 divergence §0 exists to prevent. **The remedy is a spec-level one and is recorded as A-1 below:
@@ -312,7 +313,7 @@ Q-11 and Q-18, **not resolved here because it is not 006's file to change.**
 
 | Gate | Tool | Status |
 |---|---|---|
-| Plan invariants **I1–I4** | `tools/plan_audit.py` | ✅ exists — **4/4** today (85 pairs, 72 subscriptions) |
+| Plan invariants **I1–I4** | `tools/plan_audit.py` | ✅ exists — **4/4** today (**95 pairs, 98 subscriptions, 0 unowned**) |
 | Citation well-formedness + resolution | `tools/check_citations.py` | ✅ exists |
 | Frontmatter / contract conformance | `tools/check_contract.py` | ✅ exists |
 | **DA-23 sign strip** | `tools/check_sign_strip.py` | ✅ exists |
@@ -469,7 +470,7 @@ is built on.
 
 > ### ✅ FIXED AT THE EVALUATION — applied, not merely recorded.
 > **P1, P2 and P3's `Subscribed` lines were extended to claim all 16**, and `plan_audit` now
-> reports **0 unowned pairs** (99 subscribed of 99 declared). The assignment follows each skill's
+> reports **0 unowned pairs** (95 subscribed of 95 declared). The assignment follows each skill's
 > existing home: **P1** takes the freshness rows (`PL × operational-kpi` and `recent-quarter` on
 > PL, BKSY, HAWK, ASTS, VSAT) because P1 is the decomposition pillar and **IRDM × recent-quarter
 > was already there**; **P2** takes the value rows (`unit-economics`, `ratio-analysis`,
@@ -522,14 +523,20 @@ was wrong from the moment it was written**; `plan_audit` has always reported **8
 
 | | mode-tasks |
 |---|---:|
-| Full matrix at depth (Deep rows at **all modes**; Standard/Light at **1**, because the registry declares `essentials_modes: []` for **every one** of 006's original 15 rows) | **216** |
+| Full matrix at depth (Deep rows at **all their modes**; Standard/Light at **1**) | **224** |
 | **Released by the consume rule** (the 16 pairs 001–004 already ran) | **−47** |
-| **Required** | **169** |
+| **Required** | **177** |
 | Budget | **180** |
-| **Headroom** | **11** |
+| **Headroom** | **3** |
 
-**And the headroom is the finding.** Without F1's 16 consumed pairs the matrix needs **216**
-against a budget of **180** — **over by 36, and the only levers left would be pruning rows this
+> ⚠️ **This table read 216 / −47 / 169 until the third pass, and the spec's §4 had already been
+> corrected to 224 / −47 / 177 — so the two documents disagreed on the same computation.** That is
+> the identical defect to everything else this thesis has found: **a correction applied where it
+> was noticed and not propagated to the other place that quotes it.** Both now read the same
+> numbers, and both were emitted by script rather than typed.
+
+**And the headroom is the finding.** Without F1's 16 consumed pairs the matrix needs **224**
+against a budget of **180** — **over by 44, and the only levers left would be pruning rows this
 spec has twice refused to prune.** *The owner's directive not to repeat work is what makes room
 for the two valuation skills the spec was missing.* **That is the opposite of the usual
 direction: a budget constraint normally forces work out; here, removing duplicated work is what
@@ -636,10 +643,11 @@ applied here and caught the change.**
 | **A-4** | **PATCH 005's header** — it calls 006 wave-2 and mislabels 008 and 009 | Contradicts PROGRAM.md §3 and 006's own declaration (Q-11, Q-18) |
 | **A-5** | **Build `I5`** (stage vs registry) and **`I6`** (formability) | Two demonstrated cases each, and no tool catches either (F8) |
 | **A-6** | ✅ **APPLIED** — P1, P2 and P3's `Subscribed` lines extended to claim all 16 unowned pairs | **15 of the 16 belonged to PL, BKSY and HAWK** — the three names added at the v1.6.0 re-cut, whose rows were written without any pillar claiming them. **I4 passed while 16 rows got the `[P1]` fallback bracket its own text says it prevents** (F11). `plan_audit` now reports **0 unowned** |
-| **A-7** | ✅ **APPLIED** — §3 gains **`sotp-valuation`** and **`residual-income`**, both `late`, on the seven names P2 values; §4's budget note is corrected from the never-computed **"79"** to **87** distinct analyses, with the full mode reconciliation | **006 declared no valuation skill while its P2 deliverable was a valuation** (F12), and its budget had never been reconciled (F13) |
+| **A-7** | ✅ **APPLIED** — §3 gains **`sotp-valuation`** and **`residual-income`**, both `late`, on the seven names P2 values; §4's budget note is corrected from the never-computed **"79"** — and then from a **"87"** whose own components summed to 99 — to **95**, emitted by `plan_audit` rather than typed, with the full mode reconciliation | **006 declared no valuation skill while its P2 deliverable was a valuation** (F12), and its budget had never been reconciled (F13) |
 | **A-8** | **Extend I4 to check PAIRS, not skills** | A-6 fixed this instance by adding rows; **the invariant is still under-strict**, so the next re-cut reproduces it. 004 recorded the same shape for **I1** — *"it checks a universe ticker appears somewhere"* — **so two of the four invariants pass while their own stated purpose fails** (F11) |
 | **A-9** | ✅ **APPLIED** — spec **§0.6** written, with six PL rows and two HAWK rows at their real filed figures, plus the explicit note that **BKSY's absence is correct** | **10 of the 16 CONSUME pairs had no §0 home**, and §0 is the propagation mechanism 002 says a downstream thesis must not bypass. `HAWK` appeared **zero times** in §0 despite two upstream artifacts (F14) |
 | **A-10** | **P4's HAWK checklist carries BOTH defects** — the listing-date guard **and** a DA-23 test behind it | 002: *"HAWK is a DA-28 that **masks a separate DA-23**."* §2 inherits only the DA-28, so the guard would suppress the false-positive **and leave the sign strip untested** (F14) |
+| **A-12** | ✅ **APPLIED** — §4's reconciliation is **emitted by script**, and a stated total must equal the sum printed beside it | **§4's total was wrong three times** — *"79"* (never computed), then *"87"* whose **own components summed to 99**, while the real matrix was 95 — **and the plan's F13 table quoted a different set again (216/169 vs the spec's 224/177)**. A total that disagrees with the sum beneath it is worse than no total: a reader who adds the parts cannot tell which side to trust (third-pass finding) |
 | **A-11** | **`parse_matrix` should REPORT what it dropped** — an unparseable skill or ticker cell must fail loudly, not vanish | **Three instances in one session, all mine**, and **the second reproduced inside the very fix for the first**: a bolded cell undercounts the matrix (89 vs 95) with no warning, and no invariant sees a row that failed to parse (F15) |
 
 ---
