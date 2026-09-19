@@ -1,0 +1,741 @@
+{
+  "pack_version": "2.0",
+  "thesis": "004-tier0-spacex-anchor",
+  "tickers": {
+    "SPCX": {
+      "artifacts": [
+        "artifacts/SPCX/2026-09-19_competitive_direct-competitor-identification-and-analysis.md",
+        "artifacts/SPCX/2026-09-19_competitive_market-share-dynamics-analysis.md",
+        "artifacts/SPCX/2026-09-19_competitive_market-share-evolution-and-competitive-benchmarking.md",
+        "artifacts/SPCX/2026-09-19_comps_retrieval-scope.md",
+        "artifacts/SPCX/2026-09-19_growth-strategy_growth-strategy-assessment.md",
+        "artifacts/SPCX/2026-09-19_growth-strategy_organic-growth-driver-execution-assessment.md",
+        "artifacts/SPCX/2026-09-19_growth-strategy_organic-growth-drivers-analysis.md",
+        "artifacts/SPCX/2026-09-19_revenue-decomp_defaults.md",
+        "artifacts/SPCX/2026-09-19_revenue-decomp_methodology.md",
+        "artifacts/SPCX/2026-09-19_revenue-decomp_retrieval-scope.md",
+        "artifacts/SPCX/2026-09-19_revenue-decomp_retrieval-strategy.md",
+        "artifacts/SPCX/2026-09-19_revenue-decomp_triggers.md",
+        "artifacts/SPCX/2026-09-19_reverse-dcf_methodology.md",
+        "artifacts/SPCX/2026-09-19_risk_general-risk-factors-identification-assessment.md",
+        "artifacts/SPCX/2026-09-19_risk_regulatory-compliance-risk-assessment.md",
+        "artifacts/SPCX/2026-09-19_risk_technology-disruption-risk-analysis.md",
+        "artifacts/SPCX/2026-09-19_sotp-valuation_defaults.md",
+        "artifacts/SPCX/2026-09-19_sotp-valuation_methodology.md",
+        "artifacts/SPCX/2026-09-19_sotp-valuation_preflight.md",
+        "artifacts/SPCX/2026-09-19_sotp-valuation_retrieval-scope.md",
+        "artifacts/SPCX/2026-09-19_sotp-valuation_triggers.md"
+      ],
+      "key_metrics": {
+        "customer_launch_count_q2_2026": 10,
+        "total_launch_count_q2_2026": 38,
+        "customer_launch_share_q2_2026": 0.263,
+        "customer_launch_share_h1_2026": 0.218,
+        "customer_launch_share_q2_2025": 0.196,
+        "customer_launch_share_h1_2025": 0.25,
+        "rklb_periods_with_inventory_drawdown": 2,
+        "fly_operating_margin": -0.809,
+        "admissible_segment_comparators": 0,
+        "investing_outflow_h1_2026_usd_m": -34487,
+        "financing_inflow_h1_2026_usd_m": 100291,
+        "conn_revenue_q2_2026_usd_m": 4291,
+        "conn_revenue_h1_2026_usd_m": 7548,
+        "conn_entgov_q2_2026_usd_m": 1806,
+        "conn_consumer_q2_2026_usd_m": 2485,
+        "connectivity_closure_residual_usd_m": 0,
+        "conn_entgov_h1_2026_usd_m": 2915,
+        "space_launch_services_h1_2026_usd_m": 978,
+        "space_launch_and_dev_h1_2026_usd_m": 603,
+        "conn_consumer_h1_2026_usd_m": 4633,
+        "ai_solutions_h1_2026_usd_m": 2669,
+        "ai_advertising_h1_2026_usd_m": 710,
+        "admitted_dimensional_axes": 3,
+        "retrieval_queries_to_find_deep_cut": 1,
+        "falsifier_count": 6,
+        "live_market_cap_usd_t": 2.0718,
+        "connectivity_annualised_opinc_usd_m": 6624,
+        "implied_perpetual_growth_lo": 0.1468,
+        "implied_perpetual_growth_hi": 0.2468,
+        "coverage_ratio_h1_2026": 0.1005,
+        "notes_effective_interest_rate": 0.0603,
+        "echostar_spectrum_instalments_usd_m": 856,
+        "nameplate_compute_draw_it_load_gw": 1.4,
+        "annualised_connectivity_opinc_usd_m": 6624,
+        "consolidated_revenue_q2_2026_usd_m": 7814,
+        "consolidated_operating_loss_q2_2026_usd_m": -143,
+        "shares_outstanding_2026_06_30": 13176000000,
+        "cursor_shares_issued": 391041680,
+        "live_price_usd": 152.71,
+        "segment_capex_total_q2_2026_usd_m": 18369,
+        "ai_capex_q2_2026_usd_m": 15828,
+        "connectivity_capex_q2_2026_usd_m": 1367,
+        "space_capex_q2_2026_usd_m": 1174,
+        "ai_capex_share_q2_2026": 0.8617,
+        "separable_segments": 3,
+        "admissible_comparators": 0
+      },
+      "metric_sources": {
+        "customer_launch_count_q2_2026": [
+          "artifacts/SPCX/2026-09-19_competitive_direct-competitor-identification-and-analysis.md"
+        ],
+        "total_launch_count_q2_2026": [
+          "artifacts/SPCX/2026-09-19_competitive_direct-competitor-identification-and-analysis.md"
+        ],
+        "customer_launch_share_q2_2026": [
+          "artifacts/SPCX/2026-09-19_competitive_market-share-dynamics-analysis.md"
+        ],
+        "customer_launch_share_h1_2026": [
+          "artifacts/SPCX/2026-09-19_competitive_market-share-dynamics-analysis.md"
+        ],
+        "customer_launch_share_q2_2025": [
+          "artifacts/SPCX/2026-09-19_competitive_market-share-dynamics-analysis.md"
+        ],
+        "customer_launch_share_h1_2025": [
+          "artifacts/SPCX/2026-09-19_competitive_market-share-dynamics-analysis.md"
+        ],
+        "rklb_periods_with_inventory_drawdown": [
+          "artifacts/SPCX/2026-09-19_competitive_market-share-evolution-and-competitive-benchmarking.md"
+        ],
+        "fly_operating_margin": [
+          "artifacts/SPCX/2026-09-19_competitive_market-share-evolution-and-competitive-benchmarking.md"
+        ],
+        "admissible_segment_comparators": [
+          "artifacts/SPCX/2026-09-19_comps_retrieval-scope.md"
+        ],
+        "investing_outflow_h1_2026_usd_m": [
+          "artifacts/SPCX/2026-09-19_growth-strategy_growth-strategy-assessment.md"
+        ],
+        "financing_inflow_h1_2026_usd_m": [
+          "artifacts/SPCX/2026-09-19_growth-strategy_growth-strategy-assessment.md"
+        ],
+        "conn_revenue_q2_2026_usd_m": [
+          "artifacts/SPCX/2026-09-19_growth-strategy_organic-growth-driver-execution-assessment.md"
+        ],
+        "conn_revenue_h1_2026_usd_m": [
+          "artifacts/SPCX/2026-09-19_growth-strategy_organic-growth-driver-execution-assessment.md"
+        ],
+        "conn_entgov_q2_2026_usd_m": [
+          "artifacts/SPCX/2026-09-19_growth-strategy_organic-growth-drivers-analysis.md"
+        ],
+        "conn_consumer_q2_2026_usd_m": [
+          "artifacts/SPCX/2026-09-19_growth-strategy_organic-growth-drivers-analysis.md"
+        ],
+        "connectivity_closure_residual_usd_m": [
+          "artifacts/SPCX/2026-09-19_revenue-decomp_defaults.md"
+        ],
+        "conn_entgov_h1_2026_usd_m": [
+          "artifacts/SPCX/2026-09-19_revenue-decomp_defaults.md",
+          "artifacts/SPCX/2026-09-19_revenue-decomp_methodology.md"
+        ],
+        "space_launch_services_h1_2026_usd_m": [
+          "artifacts/SPCX/2026-09-19_revenue-decomp_methodology.md"
+        ],
+        "space_launch_and_dev_h1_2026_usd_m": [
+          "artifacts/SPCX/2026-09-19_revenue-decomp_methodology.md"
+        ],
+        "conn_consumer_h1_2026_usd_m": [
+          "artifacts/SPCX/2026-09-19_revenue-decomp_methodology.md"
+        ],
+        "ai_solutions_h1_2026_usd_m": [
+          "artifacts/SPCX/2026-09-19_revenue-decomp_methodology.md"
+        ],
+        "ai_advertising_h1_2026_usd_m": [
+          "artifacts/SPCX/2026-09-19_revenue-decomp_methodology.md"
+        ],
+        "admitted_dimensional_axes": [
+          "artifacts/SPCX/2026-09-19_revenue-decomp_retrieval-scope.md"
+        ],
+        "retrieval_queries_to_find_deep_cut": [
+          "artifacts/SPCX/2026-09-19_revenue-decomp_retrieval-strategy.md"
+        ],
+        "falsifier_count": [
+          "artifacts/SPCX/2026-09-19_revenue-decomp_triggers.md",
+          "artifacts/SPCX/2026-09-19_sotp-valuation_triggers.md"
+        ],
+        "live_market_cap_usd_t": [
+          "artifacts/SPCX/2026-09-19_reverse-dcf_methodology.md",
+          "artifacts/SPCX/2026-09-19_sotp-valuation_defaults.md"
+        ],
+        "connectivity_annualised_opinc_usd_m": [
+          "artifacts/SPCX/2026-09-19_reverse-dcf_methodology.md"
+        ],
+        "implied_perpetual_growth_lo": [
+          "artifacts/SPCX/2026-09-19_reverse-dcf_methodology.md"
+        ],
+        "implied_perpetual_growth_hi": [
+          "artifacts/SPCX/2026-09-19_reverse-dcf_methodology.md"
+        ],
+        "coverage_ratio_h1_2026": [
+          "artifacts/SPCX/2026-09-19_risk_general-risk-factors-identification-assessment.md"
+        ],
+        "notes_effective_interest_rate": [
+          "artifacts/SPCX/2026-09-19_risk_general-risk-factors-identification-assessment.md"
+        ],
+        "echostar_spectrum_instalments_usd_m": [
+          "artifacts/SPCX/2026-09-19_risk_regulatory-compliance-risk-assessment.md"
+        ],
+        "nameplate_compute_draw_it_load_gw": [
+          "artifacts/SPCX/2026-09-19_risk_technology-disruption-risk-analysis.md"
+        ],
+        "annualised_connectivity_opinc_usd_m": [
+          "artifacts/SPCX/2026-09-19_sotp-valuation_defaults.md"
+        ],
+        "consolidated_revenue_q2_2026_usd_m": [
+          "artifacts/SPCX/2026-09-19_sotp-valuation_methodology.md"
+        ],
+        "consolidated_operating_loss_q2_2026_usd_m": [
+          "artifacts/SPCX/2026-09-19_sotp-valuation_methodology.md"
+        ],
+        "shares_outstanding_2026_06_30": [
+          "artifacts/SPCX/2026-09-19_sotp-valuation_methodology.md"
+        ],
+        "cursor_shares_issued": [
+          "artifacts/SPCX/2026-09-19_sotp-valuation_methodology.md"
+        ],
+        "live_price_usd": [
+          "artifacts/SPCX/2026-09-19_sotp-valuation_methodology.md"
+        ],
+        "segment_capex_total_q2_2026_usd_m": [
+          "artifacts/SPCX/2026-09-19_sotp-valuation_methodology.md"
+        ],
+        "ai_capex_q2_2026_usd_m": [
+          "artifacts/SPCX/2026-09-19_sotp-valuation_methodology.md"
+        ],
+        "connectivity_capex_q2_2026_usd_m": [
+          "artifacts/SPCX/2026-09-19_sotp-valuation_methodology.md"
+        ],
+        "space_capex_q2_2026_usd_m": [
+          "artifacts/SPCX/2026-09-19_sotp-valuation_methodology.md"
+        ],
+        "ai_capex_share_q2_2026": [
+          "artifacts/SPCX/2026-09-19_sotp-valuation_methodology.md"
+        ],
+        "separable_segments": [
+          "artifacts/SPCX/2026-09-19_sotp-valuation_preflight.md"
+        ],
+        "admissible_comparators": [
+          "artifacts/SPCX/2026-09-19_sotp-valuation_retrieval-scope.md"
+        ]
+      },
+      "entity_claims": [
+        {
+          "claim_id": "comp-space-customer-launches-q2",
+          "ticker": "SPCX",
+          "metric": "customer_launch_count",
+          "value": 10,
+          "unit": "count",
+          "basis": "customer-only launch count, Q2 2026; 3M duration, quarter ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "003/artifacts/SPCX/2026-09-19_2310_operational-kpi — consumed, not re-derived"
+        },
+        {
+          "claim_id": "comp-space-total-launches-q2",
+          "ticker": "SPCX",
+          "metric": "total_launch_count",
+          "value": 38,
+          "unit": "count",
+          "basis": "all-vehicles basis, Q2 2026; 3M duration, quarter ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "003/artifacts/SPCX — all-vehicles basis, derived; the filed basis set is three-way"
+        },
+        {
+          "claim_id": "msd-customer-share-q2-2026",
+          "ticker": "SPCX",
+          "metric": "customer_launch_share",
+          "value": 0.263,
+          "unit": "ratio",
+          "basis": "customer launches / all launches, Q2 2026, all-vehicles denominator; 3M duration, quarter ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "003/artifacts/SPCX/2026-09-19_2310_operational-kpi — consumed"
+        },
+        {
+          "claim_id": "msd-customer-share-h1-2026",
+          "ticker": "SPCX",
+          "metric": "customer_launch_share",
+          "value": 0.218,
+          "unit": "ratio",
+          "basis": "customer launches / all launches, H1 2026; 6M duration, six months ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "003/artifacts/SPCX/2026-09-19_2310_operational-kpi — consumed"
+        },
+        {
+          "claim_id": "msd-customer-share-q2-2025",
+          "ticker": "SPCX",
+          "metric": "customer_launch_share",
+          "value": 0.196,
+          "unit": "ratio",
+          "basis": "customer launches / all launches, Q2 2025; 3M duration, quarter ended 2025-06-30",
+          "period": "2025Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "003/artifacts/SPCX — consumed"
+        },
+        {
+          "claim_id": "msd-customer-share-h1-2025",
+          "ticker": "SPCX",
+          "metric": "customer_launch_share",
+          "value": 0.25,
+          "unit": "ratio",
+          "basis": "customer launches / all launches, H1 2025; 6M duration, six months ended 2025-06-30",
+          "period": "2025Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "003/artifacts/SPCX — consumed"
+        },
+        {
+          "claim_id": "mse-rklb-inventory-drawdown-periods",
+          "ticker": "RKLB",
+          "metric": "periods_with_inventory_drawdown",
+          "value": 2,
+          "unit": "count",
+          "basis": "of 3 comparable periods (2024, 2025, H1 2026); build 14/24/11 vs launch 16/21/12",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "003/artifacts/RKLB — consumed, not re-derived"
+        },
+        {
+          "claim_id": "mse-fly-margin",
+          "ticker": "FLY",
+          "metric": "operating_margin",
+          "value": -0.809,
+          "unit": "ratio",
+          "basis": "filed, FLY consolidated — the universe's worst verified margin; 3M duration",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "003/_cross/value-pool-map.md §4.4 — consumed"
+        },
+        {
+          "claim_id": "comps-admissible-count",
+          "ticker": "SPCX",
+          "metric": "count_of_admissible_segment_comparators",
+          "value": 0,
+          "unit": "count",
+          "basis": "comparators admitted to carry a P6 boundary; all eleven named names excluded with a class. 6M duration, six months ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "this artifact §2 — the partition, with each exclusion classed"
+        },
+        {
+          "claim_id": "gs-investing-h1-2026",
+          "ticker": "SPCX",
+          "metric": "investing_cash_outflow",
+          "value": -34487000000,
+          "unit": "USD",
+          "basis": "H1 2026 investing; 6M duration, six months ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "001/artifacts/SPCX/2026-09-18_2310_operational-kpi §5 — consumed"
+        },
+        {
+          "claim_id": "gs-financing-h1-2026",
+          "ticker": "SPCX",
+          "metric": "financing_cash_inflow",
+          "value": 100291000000,
+          "unit": "USD",
+          "basis": "H1 2026 financing = IPO 85,675 + notes 40,869 + other; 6M duration, six months ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "001/artifacts/SPCX/2026-09-18_2310_operational-kpi §5 — consumed"
+        },
+        {
+          "claim_id": "oge-conn-revenue-q2-2026",
+          "ticker": "SPCX",
+          "metric": "segment_revenue",
+          "value": 4291000000,
+          "unit": "USD",
+          "basis": "Connectivity segment, Q2 2026; 3M duration, quarter ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "SPCX 10-Q spcx-20260630.htm — consumed via 003 and re-read here"
+        },
+        {
+          "claim_id": "oge-conn-revenue-h1-2026",
+          "ticker": "SPCX",
+          "metric": "segment_revenue",
+          "value": 7548000000,
+          "unit": "USD",
+          "basis": "Connectivity segment, H1 2026; 6M duration, six months ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "SPCX 10-Q spcx-20260630.htm"
+        },
+        {
+          "claim_id": "ogd-conn-entgov-q2",
+          "ticker": "SPCX",
+          "metric": "segment_product_revenue",
+          "value": 1806000000,
+          "unit": "USD",
+          "basis": "Connectivity Enterprise & Government, Q2 2026, filed dimension; 3M duration, quarter ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "artifacts/SPCX/2026-09-19_revenue-decomp_methodology.md — this thesis's own, from spcx-20260630.htm"
+        },
+        {
+          "claim_id": "ogd-conn-consumer-q2",
+          "ticker": "SPCX",
+          "metric": "segment_product_revenue",
+          "value": 2485000000,
+          "unit": "USD",
+          "basis": "Connectivity Consumer, Q2 2026, filed dimension; 3M duration, quarter ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "artifacts/SPCX/2026-09-19_revenue-decomp_methodology.md"
+        },
+        {
+          "claim_id": "rdf-closure-residual-zero",
+          "ticker": "SPCX",
+          "metric": "segment_closure_residual",
+          "value": 0,
+          "unit": "USD",
+          "basis": "Connectivity child-sum 4,633 + 2,915 = 7,548 vs filed parent 7,548; 6M duration, six months ended 2026-06-30. CLOSES EXACTLY",
+          "period": "2026Q2",
+          "evidence_grade": "DERIVED",
+          "source": "SPCX 10-Q spcx-20260630.htm p.13 (Note 3) — arithmetic on filed cells"
+        },
+        {
+          "claim_id": "rd-space-launchservices-h1-2026",
+          "ticker": "SPCX",
+          "metric": "segment_product_revenue",
+          "value": 978000000,
+          "unit": "USD",
+          "basis": "filed, segment x product-or-service; 6M duration, six months ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "SPCX 10-Q, spcx-20260630.htm — us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax x srt:ProductOrServiceAxis=spcx:LaunchServicesMember x us-gaap:StatementBusinessSegmentsAxis=spcx:SpaceMember"
+        },
+        {
+          "claim_id": "rd-space-launchanddev-h1-2026",
+          "ticker": "SPCX",
+          "metric": "segment_product_revenue",
+          "value": 603000000,
+          "unit": "USD",
+          "basis": "filed, segment x product-or-service; 6M duration, six months ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "SPCX 10-Q, spcx-20260630.htm — …Axis=spcx:LaunchAndDevelopmentMember x spcx:SpaceMember"
+        },
+        {
+          "claim_id": "rd-conn-consumer-h1-2026",
+          "ticker": "SPCX",
+          "metric": "segment_product_revenue",
+          "value": 4633000000,
+          "unit": "USD",
+          "basis": "filed, segment x product-or-service; 6M duration, six months ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "SPCX 10-Q, spcx-20260630.htm — …Axis=spcx:ConsumerMember x spcx:ConnectivityMember"
+        },
+        {
+          "claim_id": "rd-conn-entgov-h1-2026",
+          "ticker": "SPCX",
+          "metric": "segment_product_revenue",
+          "value": 2915000000,
+          "unit": "USD",
+          "basis": "filed, segment x product-or-service; 6M duration, six months ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "SPCX 10-Q, spcx-20260630.htm — …Axis=spcx:EnterpriseAndGovernmentMember x spcx:ConnectivityMember"
+        },
+        {
+          "claim_id": "rd-ai-solutions-h1-2026",
+          "ticker": "SPCX",
+          "metric": "segment_product_revenue",
+          "value": 2669000000,
+          "unit": "USD",
+          "basis": "filed, segment x product-or-service; 6M duration, six months ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "SPCX 10-Q, spcx-20260630.htm — …Axis=spcx:AISolutionsAndInfrastructureMember x spcx:AIMember"
+        },
+        {
+          "claim_id": "rd-ai-advertising-h1-2026",
+          "ticker": "SPCX",
+          "metric": "segment_product_revenue",
+          "value": 710000000,
+          "unit": "USD",
+          "basis": "filed, segment x product-or-service; 6M duration, six months ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "SPCX 10-Q, spcx-20260630.htm — …Axis=us-gaap:AdvertisingMember x spcx:AIMember"
+        },
+        {
+          "claim_id": "rd-nature-service-h1-2026",
+          "ticker": "SPCX",
+          "metric": "consolidated_revenue_by_nature",
+          "value": 11667000000,
+          "unit": "USD",
+          "basis": "filed, consolidated x product-or-service NATURE; 6M duration, six months ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "SPCX 10-Q, spcx-20260630.htm — …Axis=us-gaap:ServiceMember"
+        },
+        {
+          "claim_id": "rd-nature-product-h1-2026",
+          "ticker": "SPCX",
+          "metric": "consolidated_revenue_by_nature",
+          "value": 841000000,
+          "unit": "USD",
+          "basis": "filed, consolidated x product-or-service NATURE; 6M duration, six months ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "SPCX 10-Q, spcx-20260630.htm — …Axis=us-gaap:ProductMember"
+        },
+        {
+          "claim_id": "rs-segment-axes-admitted-count",
+          "ticker": "SPCX",
+          "metric": "admitted_dimensional_axes",
+          "value": 3,
+          "unit": "count",
+          "basis": "axes carrying segment-scoped revenue facts admitted for the deep cut; 6M duration, six months ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "SPCX 10-Q spcx-20260630.htm — dimensional enumeration via search_xbrl_facts(view=detailed)"
+        },
+        {
+          "claim_id": "rst-deep-cut-found-at-query-1",
+          "ticker": "SPCX",
+          "metric": "retrieval_queries_to_find_deep_cut",
+          "value": 1,
+          "unit": "count",
+          "basis": "queries required to surface srt:ProductOrServiceAxis; 6M duration, six months ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "self-reported search trace; reproducible via the query in §1"
+        },
+        {
+          "claim_id": "rdt-trigger-count",
+          "ticker": "SPCX",
+          "metric": "falsifier_count",
+          "value": 6,
+          "unit": "count",
+          "basis": "checkable triggers over the decomposition finding; 6M duration, six months ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "MODELED",
+          "source": "this artifact — the trigger set itself"
+        },
+        {
+          "claim_id": "rdcf-live-market-cap",
+          "ticker": "SPCX",
+          "metric": "market_capitalisation",
+          "value": 2071800000000,
+          "unit": "USD",
+          "basis": "13,567,041,680 shares x $152.71; price observed 2026-09-18",
+          "period": "2026Q3",
+          "evidence_grade": "DERIVED",
+          "source": "10-Q share count + 8-K Cursor shares + live nasdaq quote"
+        },
+        {
+          "claim_id": "rdcf-connectivity-annualised-opinc",
+          "ticker": "SPCX",
+          "metric": "annualised_operating_income",
+          "value": 6624000000,
+          "unit": "USD",
+          "basis": "1,656 x 4 — annualisation of the filed 3M rate",
+          "period": "2026Q2",
+          "evidence_grade": "MODELED",
+          "source": "SPCX 10-Q Note 18, filed segment operating income"
+        },
+        {
+          "claim_id": "rdcf-implied-perpetual-growth-lo",
+          "ticker": "SPCX",
+          "metric": "implied_perpetual_growth_rate",
+          "value": 0.1468,
+          "unit": "ratio",
+          "basis": "Gordon: r - 1/multiple = 0.15 - 1/312.8; at the constitution's 15% required return",
+          "period": "2026Q3",
+          "evidence_grade": "MODELED",
+          "source": "arithmetic on live price and filed segment income"
+        },
+        {
+          "claim_id": "rdcf-implied-perpetual-growth-hi",
+          "ticker": "SPCX",
+          "metric": "implied_perpetual_growth_rate",
+          "value": 0.2468,
+          "unit": "ratio",
+          "basis": "Gordon: 0.25 - 1/312.8; at the constitution's 25% required return",
+          "period": "2026Q3",
+          "evidence_grade": "MODELED",
+          "source": "arithmetic on live price and filed segment income"
+        },
+        {
+          "claim_id": "risk-coverage-ratio-h1-2026",
+          "ticker": "SPCX",
+          "metric": "operating_cash_flow_coverage_of_investing",
+          "value": 0.1005,
+          "unit": "ratio",
+          "basis": "operating 3,466 / investing 34,487, H1 2026; 6M duration, six months ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "SPCX 10-Q — cash flow statement, via 001's capital row; consumed"
+        },
+        {
+          "claim_id": "risk-notes-coupon",
+          "ticker": "SPCX",
+          "metric": "effective_interest_rate",
+          "value": 0.0603,
+          "unit": "ratio",
+          "basis": "40,869 notes at a 6.03% effective rate; 6M duration, six months ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "001/artifacts/SPCX — consumed"
+        },
+        {
+          "claim_id": "rr-echostar-instalments",
+          "ticker": "SPCX",
+          "metric": "spectrum_instalment_obligation",
+          "value": 856000000,
+          "unit": "USD",
+          "basis": "EchoStar spectrum instalments; 6M duration, six months ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "001/artifacts/SPCX/2026-09-18_2310_operational-kpi §5 — consumed"
+        },
+        {
+          "claim_id": "risk-nameplate-draw",
+          "ticker": "SPCX",
+          "metric": "nameplate_compute_draw_it_load",
+          "value": 1.4,
+          "unit": "GW",
+          "basis": "IT load only, excluding cooling and distribution (DA-11); nameplate, not measured; 3M duration",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "001/artifacts/SPCX/2026-09-18_1239_operational-kpi §AI — consumed; 002 owns the restatement"
+        },
+        {
+          "claim_id": "sotpf-annualised-connectivity-opinc",
+          "ticker": "SPCX",
+          "metric": "annualised_operating_income",
+          "value": 6624000000,
+          "unit": "USD",
+          "basis": "1,656 x 4 — annualisation of the 3M rate, NOT a forecast; 3M duration, quarter ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "MODELED",
+          "source": "arithmetic on filed cells; the annualisation multiplier is the default"
+        },
+        {
+          "claim_id": "sotpf-live-market-cap",
+          "ticker": "SPCX",
+          "metric": "market_capitalisation",
+          "value": 2071800000000,
+          "unit": "USD",
+          "basis": "13,567,041,680 shares x $152.71; price observed 2026-09-18, retrieved 2026-09-19",
+          "period": "2026Q3",
+          "evidence_grade": "DERIVED",
+          "source": "10-Q share count + 8-K Cursor shares + live nasdaq quote"
+        },
+        {
+          "claim_id": "sotp-q2-consolidated-revenue",
+          "ticker": "SPCX",
+          "metric": "consolidated_revenue",
+          "value": 7814000000,
+          "unit": "USD",
+          "basis": "filed consolidated; 3M duration, quarter ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "SPCX 10-Q spcx-20260630.htm p.30 (Note 18) — consumed via 003, re-read here; https://agentii.ai/v/SPCX/sec8/30"
+        },
+        {
+          "claim_id": "sotp-q2-consolidated-operating-loss",
+          "ticker": "SPCX",
+          "metric": "operating_income_loss",
+          "value": -143000000,
+          "unit": "USD",
+          "basis": "filed consolidated, DA-23-corrected; 3M duration, quarter ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "SPCX 10-Q — segments sum exactly to (143); the served layer returns +143,000,000 (DA-23)"
+        },
+        {
+          "claim_id": "sotp-shares-outstanding-2026-06-30",
+          "ticker": "SPCX",
+          "metric": "common_shares_outstanding",
+          "value": 13176000000,
+          "unit": "shares",
+          "basis": "Class A 7,607,000,000 + Class B 5,569,000,000, instant 2026-06-30; closes exactly",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "SPCX 10-Q spcx-20260630.htm — us-gaap:CommonStockSharesOutstanding x StatementClassOfStockAxis"
+        },
+        {
+          "claim_id": "sotp-cursor-shares-issued",
+          "ticker": "SPCX",
+          "metric": "shares_issued_acquisition",
+          "value": 391041680,
+          "unit": "shares",
+          "basis": "389,289,254 at close + 1,752,426 vested RSUs; instant 2026-08-14",
+          "period": "2026Q3",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "8-K 0001628280-26-056945 (2026-08-14) Item 2.01 — https://agentii.ai/v/SPCX/sec9/2"
+        },
+        {
+          "claim_id": "sotp-live-quote",
+          "ticker": "SPCX",
+          "metric": "share_price",
+          "value": 152.71,
+          "unit": "USD",
+          "basis": "close, source nasdaq, data_class fast; observed 2026-09-18, retrieved 2026-09-19",
+          "period": "2026Q3",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "data-tools/market_data.py get_quote — keyless NASDAQ"
+        },
+        {
+          "claim_id": "sotp-preflight-separable-segments",
+          "ticker": "SPCX",
+          "metric": "count_of_spcx_segments_with_a_discrete_filed_revenue_line_and_operating_result",
+          "value": 3,
+          "unit": "count",
+          "basis": "Space, Connectivity, AI — each with a filed revenue line AND a filed operating result; 3M duration, quarter ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "SPCX 10-Q spcx-20260630.htm p.30 (Note 18) — three segments, each with Income (loss) from operations"
+        },
+        {
+          "claim_id": "sotprs-admitted-comparators",
+          "ticker": "SPCX",
+          "metric": "count_of_admissible_comparators",
+          "value": 0,
+          "unit": "count",
+          "basis": "of eleven named comparators across P6's partition; 3M duration, quarter ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "DEMONSTRATED",
+          "source": "this thesis's comps artifact — the partition, with each exclusion classed"
+        },
+        {
+          "claim_id": "sotpt-trigger-count",
+          "ticker": "SPCX",
+          "metric": "falsifier_count",
+          "value": 7,
+          "unit": "count",
+          "basis": "checkable triggers over the SOTP; 3M duration, quarter ended 2026-06-30",
+          "period": "2026Q2",
+          "evidence_grade": "MODELED",
+          "source": "this artifact"
+        }
+      ],
+      "conclusions": [],
+      "counts": {
+        "facts_count": 0,
+        "deducted_count": 0,
+        "views_count": 0,
+        "citation_count": 0
+      }
+    }
+  },
+  "synthesis": {
+    "pillar_verdicts": {
+      "PIL-1": "HOLDS — 3 of 3 segments carry a discrete filed revenue line AND a discrete filed operating result. The Minimum Defensible View is delivered; the decomposition is real.",
+      "PIL-2": "HOLDS, with the DA-10 bound carried — operating leverage is demonstrated (+79.4% income on +65.8% revenue) and the channel mix moves toward the higher-value channel. Price erosion cannot be fully separated from mix shift from public disclosure.",
+      "PIL-3": "HOLDS AS A BOUND, not as a value — the AI segment has no admissible multiple from filed or peer data. Carried at INVESTED CAPITAL; advertising IS separable at 21.0% of the segment, Grok and compute are not.",
+      "PIL-4": "HOLDS — the ex-R&D operating result is POSITIVE at +$534M, so launch carries standalone value. The numerator is MODELED (the filing does not split Starship from Falcon R&D) and the DA-06 non-comparability flag travels with the row.",
+      "PIL-5": "HOLDS — coverage 0.1005x, an order of magnitude below the 1.0x falsifier. CAPITAL binds, and at this moment it binds through one unresolved disclosure (the Cursor dilution) now RESOLVED at 391,041,680 shares.",
+      "PIL-6": "HOLDS — the comparability partition admits 0 of 11, and every published anchor row carries a boundary naming 005, 006 and 009 as its permitted consumers."
+    },
+    "capability_timeline": [
+      {
+        "note": "Partial. This thesis is `market_data_stage: per_row` — `sotp-valuation` and `reverse-dcf` run at `late`, the other five executed rows at `none`. It is the FIRST thesis in the workspace with a live market-data dependency, and the first where `PRICE_ACCESS_PREMATURE` could fire. The nearest timeline equivalent is the seven-trigger register (T-1 … T-7), which is datability-driven rather than capability-adoption-driven.\n"
+      }
+    ]
+  }
+}

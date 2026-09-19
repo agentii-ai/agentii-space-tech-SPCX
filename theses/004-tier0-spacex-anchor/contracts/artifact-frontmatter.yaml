@@ -16,11 +16,47 @@ fields:
   generated_at:   {type: iso8601, required: true}
 
   # --- pins (Q33 / Q8 contract 5) — all five mandatory ---
-  constitution_pin: {type: str, required: true, const: "1.4.0"}
+  # ⚠️ `const: "1.4.0"` was left stale when 004 was RE-PINNED TO 1.5.0 at clarify round 2.
+  # The spec header, §6, §7 Phase 1 and thesis.md were all updated; THIS FILE WAS NOT, so
+  # every artifact carrying the current pin would have violated its own contract. Verified
+  # 2026-09-19 against thesis.md (`constitution_pin: 1.5.0`) before the first dispatch.
+  constitution_pin: {type: str, required: true, const: "1.5.0"}
   assumption_pin:   {type: str, required: true, const: "2"}
   skill_pin:        {type: str, required: true}
   as_of:            {type: date, required: true}
   corpus_version:   {type: str, required: true}
+
+  # `data_class` — REQUIRED BY `g1_gate.check_frontmatter`, and absent from every thesis
+  # contract here (001, 002, 003 and 004 all omit it), while 003's produced artifacts carry
+  # no `data_class` and were accepted. So the gate is LATENT, not enforced on the path
+  # 001–003 used. Declared anyway: it costs nothing and satisfies the gate if it ever runs.
+  # Enum per `contracts/get-realtime-quote-tool.md`: market data is `fast` (Q72 — fast data
+  # never triggers a rescan); filing-derived figures are `slow`.
+  data_class:       {type: str, required: true, enum: [slow, fast]}
+
+  # `key_metrics` — ⚠️ REQUIRED BY `synthesize_report.py pack`, and absent from 003's contract
+  # too (it was added there after the fact, with the same warning). Without it on ANY artifact:
+  #   `_require_metrics()` raises `MetricsMissingError: PACK REFUSED (Q97(1))`
+  # **BEFORE writing anything** — the report pipeline cannot start at all.
+  #
+  # The refusal is deliberate. Its docstring records what happened before it existed: a thesis
+  # whose artifacts lacked this produced *"an EMPTY `metrics.json` AND a success exit — the
+  # report then rendered with no KPI tiles and nothing anywhere said why."*
+  #
+  # Measured 2026-09-19: 003 carried it on **45 files**; 004 on **0 of 21** until the report run
+  # added it. That is exactly the silent failure the refusal was written to prevent, one thesis
+  # later.
+  #
+  # SHAPE: a flat map of `metric_name: number`. These are the report's KPI tiles and its
+  # `kpi_trend` chart inputs, so the VALUES MUST BE RAW — no percentages pre-multiplied, no
+  # strings. `synthesize_report.py` reads them with no interpretation.
+  key_metrics:
+    type: map
+    required: true
+    value_type: number
+    note: >
+      Raw numbers only. A ratio goes in as 0.3859, not "38.59%". Names are snake_case and
+      carry their own unit and period suffix, e.g. `space_launch_services_h1_2026_usd_m: 978`.
 
   # §1c standing rule: every artifact must label which definition it quotes.
   definitions_used:

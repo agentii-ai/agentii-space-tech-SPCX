@@ -1,0 +1,77 @@
+# phases.yaml — pillar → phase map for `tools/tasks_md.py`
+#
+# ⚠️ SCHEMA LINE DELIBERATELY NOT WRITTEN AS A KEY. `tasks_md.parse_phases` reads the map with
+# `re.search(r"phases:\s*\{([^}]*)\}")` — a bare SEARCH, not an anchored match — so a comment
+# containing a literal `phases:` followed by a brace block is parsed as the declaration and the
+# real one is never read. Copying the platform's own PHASES_FILE header verbatim therefore
+# raises `invalid literal for int(): '<int>'`. The schema is stated in prose instead:
+#   keys PIL-N  ->  phase number (int)
+#   key  names  ->  phase number  ->  label
+#   key  depends ->  phase number  ->  dependency text
+#
+# The platform's `agentii.tasks` emits no phase at all. This file supplies the map. It lives
+# with the thesis so the phasing is versioned alongside the spec that justifies it (spec §7).
+#
+# 004's assignment, and why it is not pillar order:
+#
+#     PIL-1 (separability)            -> 7   ⚠️ SEE BELOW — this is the one non-obvious mapping
+#     PIL-2 (Connectivity)            -> 3   needs the granularity cut first
+#     PIL-3 (AI admissibility)        -> 4   needs the Connectivity margin as its contrast
+#     PIL-4 (Space standalone)        -> 5
+#     PIL-5 (Capital)                 -> 6
+#     PIL-6 (boundaries + hand-off)   -> 7   the anchor table and its boundaries
+#
+#   ⚠️ WHY PIL-1 MAPS TO 7, NOT 1 — a DEPENDENCY VIOLATION WAS FOUND HERE 2026-09-19.
+#   P1's ONLY subscribed matrix row is `SPCX × sotp-valuation`, because every other skill P1
+#   names is CONSUMED from 003 and generates no task. `sotp-valuation` is bracketed
+#   [PIL-1/PIL-6], and `tasks_md.py` files by FIRST pillar — so with PIL-1 at 1, the anchor
+#   computation was filed at PHASE 1: before Connectivity, AI, Space, Capital, and before
+#   **V-5**, the blocking Cursor dilution on the critical path. That is not load imbalance,
+#   it is a dependency violation, and the phase map is the only lever (`parse_phases` reads
+#   `phases` and `names` only — `depends` is documentation and changes nothing).
+#
+#   P1's MDV is still delivered FIRST; only its INSTRUMENT moves. The separability test —
+#   does each segment file a discrete operating result? — is answered from 003's artifacts at
+#   Phase 0/1 and needs no task. What runs at Phase 7 is the valuation those three
+#   separable segments receive.
+#
+#   PHASE 0 IS NOT A PILLAR, and it generates NO task. It is the `003 → 004` consume edge —
+#   reading the curve matrix, the value-pool map and the nine consumed SPCX artifacts, and
+#   capturing the live quote. It is ingestion, not research, so `tasks_md.py` files nothing
+#   there. **It is therefore hand-emitted in plan.md, which is where it must be tracked.**
+#
+#   PHASE 2 vs PHASE 3 — `revenue-decomp` is subscribed by P2, P3 and P4, and first-pillar
+#   filing places it at PIL-2's phase. **There is no pillar whose first phase is 2**, so the
+#   generator will NOT produce a Phase 2 section: the granularity work appears under Phase 3.
+#   plan.md's phase crosswalk names this rather than letting the numbering silently disagree.
+#
+# PHASE LOADS OVERLAP, as in 003. A task bracketed [PIL-2/PIL-3] is filed once, under its
+# FIRST pillar, but serves both. The gap between that and the true per-pillar load is the
+# first-pillar heuristic, not missing work.
+#
+# NOTE the phase numbers here are the spec's §7 numbers. Round 3's clarification created a
+# real dependency the spec's own table records: Phase 7 gates on V-5, which is `blocking`
+# because the headline was made PRO-FORMA at round 4. See plan.md's critical path.
+phases: {PIL-1: 7, PIL-2: 3, PIL-3: 4, PIL-4: 5, PIL-5: 6, PIL-6: 7}
+
+names:
+  0: "Consume 003 — the curve matrix, the value-pool map, the nine SPCX artifacts, and the live quote"
+  1: "Separability (P1) — the three segments carry discrete filed revenue and operating lines"
+  2: "Granularity — revenue-decomp, the cut inside each segment, derived from the filings"
+  3: "Connectivity (P2) — ARPU decay, the DA-10 readings, and the mix-shift test"
+  4: "AI admissibility (P3) — three framings, headline = invested capital, under the A4/P10 ceiling"
+  5: "Space standalone (P4) — ex-R&D margin, DA-08 internal transfer, DA-06 non-comparability"
+  6: "Capital (P5) — coverage, Cursor dilution, control and float, beta from live data"
+  7: "SOTP (P1, P6) — pro-forma regime, scenario weights, the discount decomposition"
+  8: "Hand-off (P6) — publish the anchor with boundaries for 005, 006 and 009"
+
+depends:
+  0: "003 COMPLETE; constitution 1.5.0 loaded; live feed verified"
+  1: "Phase 0 — 003's segment artifacts are the input"
+  2: "Phase 1; `get_segment_data` is UNUSABLE (003 plan F4) — read pages, use search_xbrl_facts(view=detailed)"
+  3: "Phase 2 — needs the cohort cut; `subscribers x ARPU x 3` does not reproduce consumer revenue"
+  4: "Phase 3; DA-11 restatement consumed from 002, never re-derived"
+  5: "Phase 2; Space has NO transaction price (DA-06) — carry as a stated limitation"
+  6: "Phase 3; **V-5 is blocking** — the pro-forma headline requires the Cursor dilution"
+  7: "Phases 1-6 AND V-5; two price bases, spread reported as its own component"
+  8: "Phase 7; boundaries name 005, 006 and 009 — not 005 alone"

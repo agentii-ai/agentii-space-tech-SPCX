@@ -1,0 +1,79 @@
+# contracts/segment-attribution-ledger.yaml — the SECONDARY artifact contract (spec §6)
+#
+# `_cross/segment-attribution-ledger.md` carries the V-1 … V-7 validation queue with each item's
+# disposition. Its whole purpose is that an item CANNOT quietly disappear: every V-item names the
+# pillar it gates, the source class that would resolve it, and its disposition.
+artifact: "_cross/segment-attribution-ledger.md"
+thesis_id: "004-tier0-spacex-anchor"
+primary: false
+
+frontmatter:
+  required: [thesis_id, pillar, ticker, skill, mode, generated_at,
+             constitution_pin, assumption_pin, skill_pin, as_of, corpus_version]
+
+# --- one ledger row per V-item --------------------------------------------------------------
+ledger_row:
+  required_fields:
+    - item_id                  # V-1 .. V-7, stable
+    - question                 # what it asks, in one sentence
+    - gates                    # the pillar(s) it blocks
+    - status                   # RESOLVED | BLOCKING | WARN | UNRESOLVABLE-FROM-*
+    - disposition              # what was decided, and on what evidence
+    - resolving_source         # ALWAYS named, even when unresolved
+    - consumed_from            # 003 path, where the answer came from 003 or 002
+
+# --- the disposition classes: distinct, never collapsed -------------------------------------
+disposition_classes:
+  UNRESOLVABLE-FROM-PUBLIC-SOURCES:
+    means: "the disclosure does not exist anywhere"
+    remedy: "a named EXTERNAL source"
+  UNRESOLVABLE-FROM-PLATFORM:
+    means: "the disclosure exists; the platform cannot reach it"
+    remedy: "a read route or a tool fix"
+  NON_FORMABLE:
+    means: "the falsifier's inputs do not exist"
+    rule: "NON-FORMABLE IS NOT PASS (003's F16). Recorded, never marked passing."
+
+# --- the blocking set as at 2026-09-19 -------------------------------------------------------
+blocking_set:
+  V-1: {status: RESOLVED, note: "the AI segment DOES file an operating result"}
+  V-2: {status: BLOCKING, note: "segment-to-consolidated residual — show in-line"}
+  V-5:
+    status: BLOCKING
+    moved_from: warn
+    moved_at: "clarify round 4, 2026-09-19"
+    why: "the headline was made PRO-FORMA; the $60B all-stock Cursor consideration and its
+          dilution became an INPUT to P1, not a sensitivity"
+    critical_path: true
+    note: "V-5 is now the only blocking item on the critical path that is not already resolved"
+  V-7:
+    status: RESOLVED
+    moved_at: "clarify round 4, 2026-09-19"
+    resolved_from: "XBRL dimensional facts, NOT Note 3 prose"
+    values:
+      customer_A: {H1_2026: 0.1789, Q2_2026: 0.1830, H1_2025: 0.1989, Q2_2025: 0.1670}
+      customer_B: {H1_2026: 0.1220, Q2_2026: 0.1950}
+      combined_H1_2026: 0.3009
+    route: "search_xbrl_facts(concept=ConcentrationRiskPercentage1, view=detailed)"
+    findings:
+      - "Customer A repeats the two-bases-opposite-signs pattern: H1 FALLS, Q2 RISES (DA-30)"
+      - "Customer B has no 2025 comparative — consistent with an entity acquired inside the
+         period; carries the DA-19 common-control flag"
+      - "the DCF's backlog limb goes from UNQUANTIFIED to BOUNDED"
+warn_set:
+  V-3: "AI segment homogeneity — aggregates Grok, X-advertising and compute"
+  V-4: "does the Space series survive the entity boundary (DA-19)?"
+  V-6: "price-input datability — now PARTLY SUPERSEDED by the live feed"
+
+# --- rules the ledger artifact must obey ------------------------------------------------------
+rules:
+  - "Every row carries its basis in-line. 002's programme result: a grade does not carry a basis
+     (SPCX operating_margin, 46.47pp apart on two bases)."
+  - "No row may be deleted for being inconvenient. An item that cannot be resolved is RECORDED
+     with its class and its resolving source."
+  - "Where a figure is consumed from 003 or 002, the ledger cites the artifact PATH and the
+     BASIS — not only the grade."
+  - "V-1 was WRONG once and the ledger records it: an earlier version concluded the AI operating
+     line was 'DERIVED, not disclosed' on the strength of a nominal supersession. The lesson
+     rides in the row: a SUPERSESSION claim is itself an evidence claim and needs the same
+     page-level verification as any other."

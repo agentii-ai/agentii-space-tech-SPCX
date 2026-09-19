@@ -1,0 +1,99 @@
+# contracts/anchor-sotp.yaml — the PRIMARY artifact contract (spec §6)
+#
+# `_cross/anchor-sotp.md` is what 005–009 cite. This contract fixes what each row must carry.
+# An artifact satisfying this shape is citable; one missing a field is not, and the failure is
+# silent unless the field is required here.
+artifact: "_cross/anchor-sotp.md"
+thesis_id: "004-tier0-spacex-anchor"
+primary: true
+
+frontmatter:
+  required: [thesis_id, pillar, ticker, skill, mode, generated_at,
+             constitution_pin, assumption_pin, skill_pin, as_of, corpus_version]
+
+# --- the anchor table: one row per segment, three regimes --------------------------------
+anchor_table:
+  row_count: 3
+  required_fields_per_row:
+    - segment                    # Space | Connectivity | AI — the issuer's own boundary (DA-21)
+    - revenue_basis              # and whether the figure is CONSUMED from 003 or re-derived
+    - operating_result           # with the component identity in-line
+    - component_identity         # MANDATORY: "gross profit - opex = operating_income" shown
+    - multiple_regime            # the regime itself
+    - multiple_basis             # what the multiple is a multiple OF
+    - grade                      # DEMONSTRATED | MODELED | CLAIMED | DERIVED
+    - source                     # 10-Q p.N / 003 artifact path / read-through
+    - comparability_boundary     # MANDATORY — see the rule below
+  forbidden:
+    - a single blended multiple across the three segments
+    - "a bare number with no `basis` field"
+    - "`EPS × shares` as a sign test anywhere in the artifact"
+      # NOTE: quoted deliberately. An unquoted backtick cannot start a YAML token —
+      # `ScannerError: found character '`' that cannot start any token`. Markdown-style
+      # code spans must be quoted in this file, which is a contract rather than prose.
+
+# --- the comparability boundary: a PARTITION, confirmed at clarify round 4 ----------------
+comparability_boundary:
+  shape: partition               # IN or OUT. A graded score is REJECTED (round 4, Q-5)
+  required_clauses:
+    - peer_set_drawn_from
+    - excluded_class             # one of: P11 | loss_making | PARTIAL_coverage | non_disclosure
+    - excluded_reason            # the class is named WITH its reason, not merely listed
+    - downstream_permitted       # which theses may price off this row
+  downstream_permitted_default: ["005", "006", "009"]
+    # NOT 005 alone. 004 is the programme's ONLY valuation of SPCX's Connectivity and AI
+    # segments — SPCX is in neither 006's universe nor 009's — so those two rows are reusable
+    # references (clarify round 2).
+  rules:
+    - "A live price does NOT make a P11 security admissible. IRDM and GSAT are P11 deal
+       securities: their price is a SPREAD. A live multiple on a spread is no more admissible
+       than a stale one (round 4)."
+    - "Space carries an explicit NON-COMPARABILITY boundary (DA-06): a captive-integrated
+       launcher has NO transaction price. No external multiple is borrowed; Space's value comes
+       from segment contribution (round 4)."
+
+# --- scenario weights ----------------------------------------------------------------------
+scenario_weights:
+  required: [scenario, probability, justification_in_line]
+  rules:
+    - "assumptions.yaml carries NO scenario-weight field. A weight not justified in-line is
+       SILENT DRIFT (spec §1c)."
+    - "Every weight is MODELED. No vendor source exists for them."
+  banned: ["vendor_default", "unstated"]
+
+# --- the headline basis: PRO-FORMA (overridden at clarify round 4) -------------------------
+headline_basis:
+  value: pro_forma
+  means: "Cursor is INSIDE the headline — its $60B all-stock consideration and dilution are
+          inputs, not sensitivities."
+  blocking_dependency: "V-5 — the dilution. P1 CANNOT be delivered without it."
+  prior_provisional: "pre_close — overridden. The pre-close basis existed precisely to avoid
+                      this dependency; the owner chose pro-forma and the cost is stated."
+
+# --- the discount decomposition ------------------------------------------------------------
+discount_decomposition:
+  shape: "three named components, never one blended figure"
+  required_components:
+    - conglomerate_discount
+    - control_float_discount
+    - unallocated_corporate_cost
+    - price_basis_spread        # NEW at round 4 — see below
+  price_basis_spread:
+    means: "the gap between the LIVE quote and the DATED constitution print"
+    values: {live: 152.71, live_as_of: "2026-09-18", dated: 135.00, dated_as_of: "2026-06"}
+    pct: 13.1
+    rule: "REPORTED AS ITS OWN COMPONENT. It is not a conglomerate discount and must not be
+           silently attributed to one."
+  rules:
+    - "Where a component cannot be separated from another, that is REPORTED AS A FINDING,
+       never allocated arbitrarily."
+    - "Pro-forma, the control/float component is partly a discount CREATED BY the transaction
+       the anchor now includes (the Cursor consideration is Class A stock). Where the two
+       cannot be separated, that is the finding."
+
+# --- price stamps --------------------------------------------------------------------------
+price_stamp:
+  required_on: "every market-referenced figure"
+  fields: [basis, observed_at, source]
+  rule: "A figure quoted without all three is INADMISSIBLE."
+  refusal: "Where the feed refuses, record the refusal with equal fidelity."
