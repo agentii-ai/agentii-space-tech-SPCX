@@ -17,7 +17,12 @@ is a hard failure under P4, not a footnote.
 `003-launch-cost-curve-value-migration` (**added at the re-cut** — 006 consumes the value-pool
 map and the corrected operator margin ladder and never re-derives either) ·
 `004-tier0-spacex-anchor` (the operating-leverage benchmark and the **permitted Connectivity
-reference**; 004's comparability boundaries name 006)
+reference**; 004's comparability boundaries name 006) ·
+`005-launch-spacecraft-services` (**added at the 2026-09-20 clarify round, Q-11** — a
+**citation-only** dependency: 005 completes first and 006 cites its Tier 1 cross-section for
+RKLB's financing facts, the $3.6B committed bridge and the consideration mix. **006
+re-derives none of it, and the edge does not run the other way** — 005 carries its RKLB gate
+`known-open` pending 006's P4 rather than waiting)
 **Owns**: two questions, and only these two, per the constitution's ownership table —
 (a) the **IRDM/RKLB deal gate chain** (FCC → ITU → DCSA, dated catalysts, break re-underwrite);
 (b) **operator margins by segment**. Everything else in the tier is a cited dependency, not a
@@ -846,12 +851,15 @@ tier retains a listed expression even if both transactions close.**
 | Standard | business-model, recent-quarter, ratio-analysis, peer-bench, sector-overview, secular-trends | essentials_modes | As listed | Cross-sectional comparison, the corrected margin ladder, the placement map |
 | Light | what-if, growth-strategy | essentials_modes | As listed | The break scenario and the falsifier proxy |
 
-**Budget note.** The matrix yields **67 distinct (ticker, skill) analyses across 8 names** —
-up from 39 across 5 before the re-cut. Mode expansion applies multiplicatively, as it did at
-001 (2.07×), giving roughly **140 mode-tasks**. The `max_tasks: 40` currently recorded in
-`thesis.md` **counts mode-tasks and is far below the matrix as drawn**; the budget rises to
-**~140**, or the Standard and Light rows are pruned to essentials-only before dispatch.
-Recorded as an open item rather than silently reconciled. If it must come down, drop the
+**Budget note — RESOLVED at Q-12, 2026-09-20.** The matrix yields **67 distinct (ticker,
+skill) analyses across 8 names** — up from 39 across 5 before the re-cut. Mode expansion
+applies multiplicatively, as it did at 001 (2.07×), giving roughly **140 mode-tasks**.
+⚠️ *This note previously read "the `max_tasks: 40` currently recorded in `thesis.md`" and
+closed "recorded as an open item rather than silently reconciled". **Both statements are now
+wrong and are corrected in place**: `thesis.md` records **60**, not 40, and the item is **no
+longer open** — **the budget stays at 60 and the Standard and Light rows are pruned to
+essentials-only before dispatch.** The decision, and the binding prune order, are at **Q-12**.*
+If it must come down further, drop the
 Light rows first — never the `risk` row, which is the entire delivery mechanism for **P4**,
 never `recent-quarter` at SATS, which carries the DA-24 hygiene the tier's only clean
 operating read depends on, and never `recent-quarter` at VSAT, where the served duration
@@ -986,9 +994,21 @@ is the same failure the constitution records as the reason 005 was re-cut.
 
 ## Clarifications
 
+- [2026-09-20] Q: Q-11 (the 005 edge, and whether the two theses may run in parallel) — 006 and 005 each cite the other in the body (§5b / §2b) but NEITHER declares the other in its `Depends on` header, and the wave declarations disagree: 005's header reads "wave-2 hand-off to 006/008/009" while PROGRAM.md §3 and 006 both place 006 in wave 1. The edge is substantively two-way — 006 owns the IRDM/RKLB gate chain that 005's RKLB row turns on, and 006 §5b names 005 as owner of the financing-runway and combined-entity framing. Which way does the edge run, and do the two run concurrently? → A: **005 completes first and 006 consumes it by citation — the edge is declared ONE-WAY, on the consuming side only.** The gate chain stays 006's sole deliverable, but 005 does not wait for it: 005's RKLB row is carried `known-open` pending 006's P4, and 005's `Depends on` header is unchanged. **006 adds `005` to its own `Depends on`** as a citation dependency — it cites 005's Tier 1 cross-section for RKLB's financing facts (the $3.6B committed bridge, the consideration mix) and re-derives nothing. 006's §5b rows naming 005 are therefore re-read as citations, not as blockers. ⚠️ **A WAVE DEFECT IS RECORDED AND NOT RESOLVED BY THIS ANSWER:** PROGRAM.md §3 places **006 and 008 in wave 1** and 006 self-declares Wave 1, so **005's header is the outlier** — and it mislabels 008 and 009 in the same sentence. That is a separate PATCH to 005's header, not part of this answer, and it is left open rather than papered over by the sequencing decision.
+- [2026-09-20] Q: Q-12 (budget) — three sources disagree: `thesis.md` records `max_tasks: 60`, this spec's Q-7 states `thesis.md` records 40 (stale), and §3's matrix yields 67 analyses / ~140 mode-tasks. Raise the budget, or prune the matrix? → A: **Keep `max_tasks: 60`; prune the Standard and Light rows to essentials-only.** The prune order is this spec's own and is binding: **drop the Light rows first** (`what-if`, `growth-strategy`), **never the `risk` row** — it is P4's entire delivery mechanism — **never `recent-quarter` at SATS**, which carries the DA-24/DA-23 hygiene the tier's only clean operating read depends on, and **never `recent-quarter` at VSAT**, where the served duration defect means that row is the only route to the correct quarter. Q-7's premise is corrected here: the 40 it attributes to `thesis.md` is stale, the file records **60**. §7's phase structure and the P5 hand-off are unaffected.
+- [2026-09-20] Q: Q-13 (expiry triggers) — neither `thesis.md` nor `spec.md` declares `expiry_triggers` (Q59 requires them; 004 declares six). What should 006's be? → A: **Six, at the finest granularity.** (1) **`deal_close_or_break`** — either IRDM/RKLB or GSAT/AMZN closing or terminating; both are P11 and a break re-underwrites from scratch. (2) **`sats_spectrum_agreement_completion`** — EchoStar's two pending agreements completing; P2's sell-side basis and the ~$19.6B mark both move. (3) **`next_quarter_filing`** — the DA-26, DA-23 and duration defects are re-verified against every new filing set, and P1–P3 are quarter-bound. (4) **`constitution_bump`** — the 1.6.0 pin expires. (5) **`spir_coverage_arrival`** — P2's granted-licence control moves from three names to four. (6) **`asts_first_filed_service_revenue`** — the trigger for P4's primary-grant proxy test, which is the only evaluable route to PIL-6's falsifier.
+- [2026-09-20] Q: Q-14 (P2's granted-licence control size) — the control group is three names (PL, BKSY, HAWK) because SPIR is `NOT_READY`. Is three enough for P2's two-sided claim to be falsifiable, or is SPIR's coverage a precondition? → A: **Three is sufficient and SPIR's coverage is NOT made a precondition.** P2's two-sided claim requires at least one counter-group; **one name would not distinguish the readings and three does**. The limitation travels with the pillar as a recorded bound under the §1c standing rule: the granted-licence group is a group of **three, not four**, because SPIR's `xbrl_facts`, `src_documents` and `sec_filings` are all **zero**. Waiting for coverage would suspend P2 indefinitely, which is the disposition this answer rejects — the same reasoning 004 applied to its own `UNRESOLVABLE` bounds.
+
 Recorded by `agentii.specify` at creation, 2026-09-18; **revised at the v1.6.0 re-cut,
-2026-09-19.** No `agentii.clarify` round has run; the following are recorded as open for
-that pass.
+2026-09-19.** **The first `agentii.clarify` round ran 2026-09-20** — its four answers are
+Q-11 … Q-14 at the head of this section.
+
+**Which entries that round moved, stated exactly rather than implied:**
+**Q-7 (budget) is ANSWERED at Q-12** and **Q-10 (control-group size) at Q-14.**
+**Q-1, Q-2, Q-3, Q-4, Q-5, Q-6, Q-8 and Q-9 retain their provisional answers** — Q-5 and
+Q-8 remain **flagged for human confirmation** and are carried as bounds, not resolved.
+A provisional answer that has not been confirmed is still a provisional answer, and this
+spec does not report it as settled.
 
 - **Q-1 (P1, attribution granularity)** — Does IRDM's filed disaggregation separate
   licensed-spectrum service revenue from the equipment and other lines finely enough to
@@ -1033,11 +1053,13 @@ that pass.
   `UNRESOLVABLE-FROM-PLATFORM` and is not retired. **002 adds a constraint the provisional
   answer did not carry**: at `threshold=0` the falsifier is **`UNCLEARABLE`**, so the proxy
   is not a substitute for a test that could pass — it is the only test that can run.
-- **Q-7 (P5, budget)** — `thesis.md` records `max_tasks: 40`, which is far below the **67
-  analyses** the matrix yields after the re-cut (roughly **140 mode-tasks**). Raise the budget
-  or prune the Light rows? **Provisional:** raise to ~140; pruning `what-if` would remove the
-  break-case re-underwrite that P11 requires. **Unchanged in substance, larger in magnitude,
-  and now genuinely blocking rather than advisory.**
+- **Q-7 (P5, budget)** — **ANSWERED at Q-12, 2026-09-20.** `thesis.md` records
+  `max_tasks:` **60** — *this entry previously read 40, which was stale; corrected in place.*
+  The matrix still yields **67 analyses / ~140 mode-tasks**, well above 60. **Decision: keep 60
+  and prune the Standard and Light rows to essentials-only**, with a binding prune order —
+  Light rows first, never `risk` (P4's whole delivery mechanism), never `recent-quarter` at
+  SATS (DA-24/DA-23 hygiene) or at VSAT (the duration defect is only correctable there).
+  The pre-clarify provisional ("raise to ~140") is **superseded**.
 - **Q-8 (P4, the 6.0× pro-forma bar — absorbed from 005's Q-2)** — The pro-forma
   net-debt-to-gross-profit test is a **spec-set threshold, not a measurement**, and RKLB's
   loss-making status makes any leverage denominator sign-sensitive. Is 6.0× the right bar to

@@ -26,4 +26,20 @@ pillars:
   - Every Tier 2 contested figure converts to `DEMONSTRATED` or is recorded as unresolvable
 known-open: []
 budget: {max_tasks: 60, max_retries_per_task: 2}
+# Q59. Declared at the 2026-09-20 clarify round (spec Q-13). Six, at the finest granularity,
+# because each names a distinct datum that would move a verdict -- and two of them name events
+# that may never occur, which is why they are triggers and not assumptions.
+expiry_triggers:
+  - deal_close_or_break                # IRDM/RKLB or GSAT/AMZN closing or terminating; both are
+                                       # P11, and on a break the standalone case is NOT the
+                                       # pre-merger case
+  - sats_spectrum_agreement_completion # EchoStar's two pending agreements; moves P2's
+                                       # sell-side basis AND the ~$19.6B mark
+  - next_quarter_filing                # DA-26 / DA-23 / duration defects re-verified against
+                                       # each new filing set; P1-P3 are quarter-bound
+  - constitution_bump                  # the 1.6.0 pin expires
+  - spir_coverage_arrival              # P2's granted-licence control moves from three names
+                                       # to four
+  - asts_first_filed_service_revenue   # the trigger for P4's primary-grant proxy test -- the
+                                       # only evaluable route to PIL-6's falsifier
 ```
