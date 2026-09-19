@@ -73,26 +73,29 @@ its `{date}_{skill}_{mode}` filename and intersected with §3's declared matrix.
 `sotp-valuation` on the scarce trio plus Standard on the granted four, and `residual-income` on
 the scarce trio only. **None of the 10 valuation pairs is consumed.**)*
 
-**The 16 consumed pairs, with their sources** — each is cited into §0, never re-run:
+**The 16 consumed pairs, with their sources.** ⚠️ **The description column is the artifact's OWN
+title, taken from the file — not a paraphrase.** The first version of this table paraphrased, and
+**six of the sixteen paraphrases did not match the artifact they pointed at** (F16). Each row is
+cited into §0, never re-run:
 
-| Pair | Source theses | The inherited result is |
+| Pair | Source theses | What the artifact actually contains |
 |---|---|---|
-| `IRDM × competitive` | 001, 002, 003 | the Aireon unconstructibility finding + the licence inventory |
-| `IRDM × recent-quarter` | 002, 003 | component identity closing **zero residual on 7 of 7 periods** |
-| `IRDM × risk` | 003 | the RKLB gate chain as filed |
-| `IRDM × secular-trends` | 003 | the D2D read-through |
-| `GSAT × competitive` | 001, 003 | the monopsony case |
-| `GSAT × recent-quarter` | 003 | the **−7.37%** corrected margin |
-| `GSAT × risk` | 003 | the DA-23 + 1,000× unit-offset census |
-| `SATS × recent-quarter` | 002, 003 | the DA-24 impairment chronology |
-| `SATS × risk` | 001, 002 | the deal terms as filed |
-| `PL × growth-strategy` | 003 | the EO test that left this tier |
-| `PL × operational-kpi` | 001 | the constellation KPI series |
-| `PL × ratio-analysis` | 003 | **−37.06%** on a **53.53%** gross margin |
-| `PL × recent-quarter` | 003 | the latest reported quarter |
-| `PL × sector-overview` | 003 | the EO segment structure |
-| `HAWK × operational-kpi` | 001 | the KPI series |
-| `HAWK × recent-quarter` | 002 | the four non-agreeing share counts |
+| `IRDM × competitive` | 001, 002, 003 | **Competitive Position, Q2 2026** — P11 deal-security status and the pre-merger standalone basis |
+| `IRDM × recent-quarter` | 002, 003 | **recent-quarter methodology** — the component identity closing **zero residual on 7 of 7 periods** |
+| `IRDM × risk` | 003 | **P11 deal-security tagging and the falsifier-reachability census** |
+| `IRDM × secular-trends` | 003 | ⚠️ **"the platform cannot represent this thesis's question"** — a **negative** result |
+| `GSAT × competitive` | 001, 003 | **Competitive Position (Mobile Satellite Services)** — the revenue series ($64.772M / $67.148M, −3.5%) |
+| `GSAT × recent-quarter` | 003 | **the corrected series, the sign layer, and a two-basis Q1 2026** |
+| `GSAT × risk` | 003 | **the register has absorbed the platform's own defect** — the DA-23 + 1,000× census |
+| `SATS × recent-quarter` | 002, 003 | **the register's own DA-24 origin instance, RE-TESTED** — and the independence claim **FAILS** |
+| `SATS × risk` | 001, 002 | **Regulatory Risk, Q1 2026** — *"why SATS carries the P6 regulatory analysis"* |
+| `PL × growth-strategy` | 003 | **"A Launch Share That Cannot Be Drawn, at the Customer the Curve Is Supposed to Reach"** |
+| `PL × operational-kpi` | 001 | **Operating Baseline** — whose finding is *"exact magnitude match, opposite sign"*, i.e. a **defect**, not a baseline |
+| `PL × ratio-analysis` | 003 | **the margin ladder, the served-sign defect, and the demand-side programme-cost shares** |
+| `PL × recent-quarter` | 003 | **the best gross margin in the universe, and a fixed-cost wall** |
+| `PL × sector-overview` | 003 | **the highest gross margin in the universe, at −37% operating** |
+| `HAWK × operational-kpi` | 001 | ⚠️ **an Operating-Baseline artifact whose own `definitions_used` reads `operating_income UNVERIFIABLE`** — **there is no usable HAWK KPI series in the corpus** |
+| `HAWK × recent-quarter` | 002 | **the DA-28 site** — and *"a DA-28 that MASKS a separate DA-23"* |
 
 **And the three names with ZERO upstream coverage — every one of their pairs is new:**
 
@@ -600,6 +603,45 @@ that a written count equals a parsed count.**
 §3's parsed matrix**, never carried by hand — and the two numbers it shows (mentions and union)
 are both emitted rather than one derived from the other.
 
+### 🆕 F16 — **F1's "the inherited result is" column was written from §0's prose, and six of sixteen did not match the artifact.** *(Phase 0 — the fourth pass, and the deepest of the F1 findings)*
+
+**Every pass has found a different layer of the same defect, and this is the layer underneath the
+first three.** F1 built a CONSUME ledger so that 006 would not re-run 16 existing analyses. **The
+ledger's premise is a claim about what each artifact contains** — and until this pass, **that
+claim had never been checked against a single artifact.**
+
+**Six of the sixteen descriptions do not describe the artifact they point at:**
+
+| Pair | F1 said | The artifact's own title says |
+|---|---|---|
+| `PL × growth-strategy` | *"the EO test that left this tier"* | **"A Launch Share That Cannot Be Drawn"** — nothing to do with the EO test |
+| `IRDM × secular-trends` | *"the D2D read-through"* | **"the platform cannot represent this thesis's question"** — a **negative** result |
+| `IRDM × risk` | *"the RKLB gate chain as filed"* | **"P11 deal-security tagging and the falsifier-reachability census"** |
+| `IRDM × competitive` | *"the Aireon unconstructibility finding + the licence inventory"* | **"Competitive Position, Q2 2026"** — P11 status and the pre-merger basis |
+| `SATS × risk` | *"the deal terms as filed"* | **"Regulatory Risk, Q1 2026"** — why SATS carries the P6 analysis |
+| `HAWK × operational-kpi` | *"the KPI series"* | **an Operating-Baseline artifact whose `definitions_used` reads `operating_income UNVERIFIABLE`** |
+
+**Why this is the most consequential F1 finding and not a wording quibble.** A CONSUME ledger's
+whole function is to tell a future author **"cite this, do not re-run it."** **Six of its sixteen
+rows would have sent that author to an artifact for a figure the artifact does not carry** — and
+the failure is silent, because the file exists and the citation resolves. **That is the same shape
+as a citation whose page number is plausible but wrong**, which this programme's citation rule was
+written about: *"a guessed page number resolves to the wrong page — which is worse than no link,
+because it looks correct."*
+
+**And the root cause is that I wrote the column from §0.** Pass 2 found §0 was **incomplete**
+(missing PL and HAWK rows entirely); this pass finds that **the descriptions §0 does carry are not
+reliable either**. **§0 is a propagation mechanism, and a propagation mechanism built on
+paraphrase propagates the paraphrase.**
+
+> ### ✅ FIXED — the column now carries each artifact's OWN TITLE, taken from the file.
+> **Not a better paraphrase — the artifact's own heading.** A title cannot drift from the document
+> it belongs to, which is the property a CONSUME ledger needs and a paraphrase does not have.
+> **A-13.** Note the two rows that are now **more** informative than before: `PL × operational-kpi`
+> and `HAWK × operational-kpi` are both *Operating Baseline* artifacts **whose own finding is that
+> no trustworthy baseline exists** — which is exactly the kind of thing a consumer must know
+> **before** citing them.
+
 ## Constitution Check (second evaluation — the scalar-clearance pass, as promised)
 
 **The first check's note said a second evaluation would run because F1 and F2 *"change what the
@@ -648,6 +690,7 @@ applied here and caught the change.**
 | **A-9** | ✅ **APPLIED** — spec **§0.6** written, with six PL rows and two HAWK rows at their real filed figures, plus the explicit note that **BKSY's absence is correct** | **10 of the 16 CONSUME pairs had no §0 home**, and §0 is the propagation mechanism 002 says a downstream thesis must not bypass. `HAWK` appeared **zero times** in §0 despite two upstream artifacts (F14) |
 | **A-10** | **P4's HAWK checklist carries BOTH defects** — the listing-date guard **and** a DA-23 test behind it | 002: *"HAWK is a DA-28 that **masks a separate DA-23**."* §2 inherits only the DA-28, so the guard would suppress the false-positive **and leave the sign strip untested** (F14) |
 | **A-12** | ✅ **APPLIED** — §4's reconciliation is **emitted by script**, and a stated total must equal the sum printed beside it | **§4's total was wrong three times** — *"79"* (never computed), then *"87"* whose **own components summed to 99**, while the real matrix was 95 — **and the plan's F13 table quoted a different set again (216/169 vs the spec's 224/177)**. A total that disagrees with the sum beneath it is worse than no total: a reader who adds the parts cannot tell which side to trust (third-pass finding) |
+| **A-13** | ✅ **APPLIED** — F1's description column carries each artifact's **own title**, not a paraphrase | **Six of sixteen paraphrases did not match the artifact** (F16), and a CONSUME ledger that misdescribes what it consumes is worse than none: the citation resolves, so the failure is silent. **The root cause is that the column was written from §0's prose — and §0's own descriptions are not reliable** |
 | **A-11** | **`parse_matrix` should REPORT what it dropped** — an unparseable skill or ticker cell must fail loudly, not vanish | **Three instances in one session, all mine**, and **the second reproduced inside the very fix for the first**: a bolded cell undercounts the matrix (89 vs 95) with no warning, and no invariant sees a row that failed to parse (F15) |
 
 ---
