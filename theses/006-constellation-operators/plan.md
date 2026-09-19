@@ -759,6 +759,81 @@ theses that is complete, and whose `tasks.md` records satisfaction, is one accid
 `gen_tasks_md.py` away from the same loss** — and **005 has now reached the sector-book stage
 where tasks begin to be satisfied.** **Recorded as A-16.**
 
+### 🆕 F19 — **006's `thesis.md` is unreadable by every tool that reads it, and so are all eleven.** *(Phase 0 — a workspace-wide contract violation, owner NOT 006)*
+
+**Found by running `agentii status`, which is a tool I had never run on 006.** It reported
+**`no frontmatter` for all eleven theses** — including 001–004, which are complete and carry
+full pins. That is not a coincidence; it is a format failure with a census.
+
+| | count |
+|---|---:|
+| `theses/*/thesis.md` beginning with `---` at byte 0 (**readable**) | **0 of 11** |
+| `# H1` + fenced ```yaml (**readable by NO reader**) | **11 of 11** |
+| `thesis.reduce.json` files present | **0 of 11** |
+
+**006 is one of the eleven.** Its `thesis.md` opens with `# Thesis: tier2 connectivity spectrum`;
+the machine-readable block — `known-open`, `budget`, `expiry_triggers`, `pin_note`, `pillars` —
+sits inside a fenced ```yaml further down. **`g1_gate.parse_frontmatter` requires `---` at byte
+0, so it returns `{}`** — and `thesis_status` therefore reports **`known_open: 0`** for every
+thesis in the workspace.
+
+> ### 🔴 THIS IS NOT A COSMETIC MISMATCH, AND THE TOOL AUTHORS ALREADY KNEW THE SHAPE.
+> `g1_gate`'s own docstring: *"'the file does not begin with `---`' and 'five pins are missing'
+> are different facts with different remedies… **Reporting the format failure as the pin failure
+> sends a reader to add five fields to a document that has all five, in a place this parser never
+> looks.**"* **`thesis_doc.py` documents the whole history** — `agentii_cmd.specify()` scaffolded
+> this form, `reduce_journals` then could not write through the boundary, **the reducer discarded
+> its `Result` and printed success anyway**, and the file stayed at its scaffold. It records a
+> further incident: **commit `cdc5ce3` overwrote a thesis's prose with a 526-byte empty reduce.**
+
+**Why it matters to THIS plan, concretely.** §1b P4 and §5 dispose of the P11 deal names as
+*"carried `known-open`, not as a position"* — **and `known-open` is precisely the field the
+tooling cannot read.** The disposal is currently **unenforceable**: the thesis declares it,
+`thesis_status` reports `0`, and nothing reconciles the two. **A disposal the tooling cannot see
+is the same class as the `UNEXERCISED` check that closes while testing nothing** — it is present
+in prose and absent from the machine's view of the thesis.
+
+> ### ⚠️ NOT FIXED HERE, DELIBERATELY, AND THE REASON IS THE CONTRACT'S OWN RULE.
+> `contracts/thesis.md` Rule 1: `thesis.md` **MUST** begin with `---` at byte 0 **and declare
+> `writer:`** — and the contract fixes that writer as **`agentii.specify`**. **Hand-editing it
+> would be exactly the second-writer violation the write boundary exists to refuse**, and would
+> produce a file declaring a writer that did not write it. **The remedy belongs to
+> `agentii.specify` (or to the migration `thesis_doc.py` describes), not to this plan.**
+>
+> **Recorded as A-17 with the census, because it is workspace-wide — eleven of eleven — and
+> `thesis_doc.py` and `contracts/thesis.md` are both NEW files, so another session appears to be
+> running this migration right now.** 006 needs the same conversion, and **its `known-open`
+> disposal is not enforceable until it lands.**
+
+### 🆕 F20 — **My own Q-19 fix was a PARTIAL SWEEP, and a concurrent session caught what I missed.** *(Phase 0 — a correction to my own correction)*
+
+**Q-19 found that `position-sizing` was declared `none` against a registry that says `late` — I
+fixed that one row, wrote the governing rule, and declared it *"006's only `late` row."*** The
+rule I wrote was: *"a spec that asserts a stage the registry contradicts is the defect 004
+already paid for."*
+
+**`ratio-analysis` sat in the SAME TABLE, in the SAME `none` column, and the registry declares it
+`late` too.** I did not sweep the table the rule lived in — **I applied the rule to the instance
+that happened to be in front of me, which is the exact behaviour the rule was written to stop.**
+
+**It was found by a CONCURRENT SESSION working in this same file** — the working tree shows
+`ratio-analysis` corrected to `late` with a 2026-09-20 note. **I verified it independently: the
+registry does declare `ratio-analysis: late`, and the fix is right.**
+
+> ### ✅ THE TABLE IS NOW SWEPT, NOT SAMPLED.
+> **All 18 §3 rows were audited against the registry — 0 mismatches.** Before the concurrent fix
+> there was **1** (`ratio-analysis`). **The audit is the deliverable.** The workspace has now paid
+> for this defect class **twice**: 004 shipped `sotp-valuation` and `ratio-analysis` pinned where
+> they could not obtain a price, and **006's Q-19 found one of that pair and missed the other.**
+
+**And the concurrent session's companion edit has a gap, recorded additively rather than
+rewritten.** It changes §5's prose to *"`per_row`, as 004's is"* — and **006 declares no
+thesis-level stage anywhere** (004 declares `market_data_stage: per_row` in `thesis.md`; 005 does
+not declare one either). **`per_row` is the right model** — the four `late` rows and eight `none`
+names jointly mean it — **but it is the spec describing a value the thesis does not carry**, and
+the declaration is **blocked by F19**. A note stating this is added in place; **their prose is
+left intact.** **A-18.**
+
 ## Constitution Check (second evaluation — the scalar-clearance pass, as promised)
 
 **The first check's note said a second evaluation would run because F1 and F2 *"change what the
@@ -810,6 +885,8 @@ applied here and caught the change.**
 | **A-13** | ✅ **APPLIED** — F1's description column carries each artifact's **own title**, not a paraphrase | **Six of sixteen paraphrases did not match the artifact** (F16), and a CONSUME ledger that misdescribes what it consumes is worse than none: the citation resolves, so the failure is silent. **The root cause is that the column was written from §0's prose — and §0's own descriptions are not reliable** |
 | **A-14** | ✅ **APPLIED — `phases.yaml` written, and the budget set from the generator** | **`tasks_md` refuses to run without a phase map, and 006 had none** — the thesis could not generate a single task. Running it produced **266**, not the modelled 224, **without a phase map. Writing it was not a formality; it was what exposed F17.** `max_tasks` 180 → 210 |
 | **A-15** | ✅ **APPLIED** — §6's cross-reference to 005's artifact is reworded so it is not a backticked `_cross/*.md` token | **It emitted T904, instructing 006 to publish 005's artifact.** The tool scopes its scan to §6 to prevent exactly this, **but a citation inside §6 is indistinguishable from a declaration to a regex.** `cross_tasks` should exclude an artifact whose name is attributed to another thesis — or the scope should be a bullet list, not a section |
+| **A-18** | ✅ **APPLIED** — all 18 §3 rows audited against the registry (**0 mismatches**), and a note added at §5 recording that `per_row` is undeclared | **My Q-19 fix was a PARTIAL SWEEP**: it corrected `position-sizing` and missed `ratio-analysis` **in the same table**, which a concurrent session then fixed. **Sweep the table the rule lives in; do not fix the instance in front of you** (F20) |
+| **A-17** | **Convert 006's `thesis.md` to `---` frontmatter at byte 0 with `writer: agentii.specify`, and move machine state to `thesis.reduce.json`** — **owner: `agentii.specify`, NOT this thesis** | **0 of 11 `thesis.md` are readable** and 0 have a `reduce.json`. `thesis_status` reports `known_open: 0` for every thesis, so **006's `known-open` disposal of the P11 deal names is unenforceable** (F19). **Rule 1 of `contracts/thesis.md` fixes the writer as `agentii.specify` — hand-editing would be the second-writer violation the boundary refuses** |
 | **A-16** | **`gen_tasks_md.py` needs `argparse` and an idempotence guard** — and a completion-state check before it writes | **It has zero argument handling, so `--help` executes a write**; it overwrites `tasks.md` without preserving `[x]` / `✅ satisfied by:` state; and it defaults to a thesis nobody named. **It erased 77 satisfied tasks from completed 001 in one invocation** (F18, restored). **005 is at the stage where its own tasks begin to be satisfied** |
 | **A-11** | **`parse_matrix` should REPORT what it dropped** — an unparseable skill or ticker cell must fail loudly, not vanish | **Three instances in one session, all mine**, and **the second reproduced inside the very fix for the first**: a bolded cell undercounts the matrix (89 vs 95) with no warning, and no invariant sees a row that failed to parse (F15) |
 

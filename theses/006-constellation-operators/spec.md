@@ -966,7 +966,7 @@ tier retains a listed expression even if both transactions close.**
 | risk | equity-research-core | Deep | IRDM, GSAT, SATS, ASTS, VSAT, PL, BKSY, HAWK | none | **P4's single deliverable**: the dated gate checklist per name, the deal conditions in the agreements, and the licensing obligations on the Earth-observation constellation |
 | business-model | equity-research-core | Standard | SATS, GSAT, VSAT, PL, BKSY, HAWK | none | Classify each model and separate licence revenue from service revenue before any comparison (**DA-21**; **P2**, **P3**) |
 | recent-quarter | equity-research-core | Standard | IRDM, GSAT, SATS, ASTS, VSAT, PL, BKSY, HAWK | none | Latest reported quarters on the component identity — **and DA-24/DA-23 hygiene at SATS, DA-26 at IRDM, the duration defect at VSAT** (**P1**, **P4**) |
-| ratio-analysis | quantitative-analysis | Standard | IRDM, SATS, GSAT, PL, BKSY | none | Margin and return ratios recomputed from components; catches DA-23/DA-24/DATA_STALE residues (**P1**, **P2**) |
+| ratio-analysis | quantitative-analysis | Standard | IRDM, SATS, GSAT, PL, BKSY | **`late`** | Margin and return ratios recomputed from components; catches DA-23/DA-24/DATA_STALE residues. **Registry-`late`, corrected 2026-09-20** — and by this spec's own Q-19 rule, *"a spec that asserts a stage the registry contradicts is the defect 004 already paid for"* (**P1**, **P2**) |
 | peer-bench | industry-analysis | Standard | IRDM, GSAT, SATS, ASTS, VSAT, PL, BKSY, HAWK | none | All eight names against each other: **the corrected margin ladder**, leverage, and the licence/service mix — reported **per licence regime, not blended** (**P5**) |
 | sector-overview | industry-analysis | Standard | VSAT, SATS, PL, BKSY, HAWK | none | D2D, GEO/LEO and Earth-observation segment structure; where the tier's capacity and data products are actually sold (**P3**, **P4**) |
 | secular-trends | equity-research-core | Standard | ASTS, IRDM, PL | none | The D2D transition as a secular force, the licence-value read-through, and whether the granted-licence regime moves with it (**P3**) |
@@ -1108,9 +1108,22 @@ defect means the row is the only way the correct quarter is ever produced.
   equities** in a NEUTRAL-bias, long-end-hostile regime (10Y at 4.80%); **two are
   spread-driven and therefore almost rate-insensitive at the margin.** The tier's macro
   sensitivity falls as the deal securities become a larger share of it — an unusual and
-  worth-stating property in a single-theme book. **Market Data Stage is `none` for all eight
-  names** while 004 runs at `per_row`: the tier cannot price its own spreads, and Q-5 records
-  that as an open question rather than a workaround.
+  worth-stating property in a single-theme book. **Market Data Stage is `per_row`, as 004's
+  is**: `none` for all eight **names** — the tier cannot price its own spreads, and Q-5
+  records that as an open question rather than a workaround — and **`late` on the four §3
+  rows the registry declares that way** (`sotp-valuation`, `residual-income`,
+  `position-sizing`, and `ratio-analysis`, corrected 2026-09-20). ⚠️ **BUT THIS SENTENCE
+  ASSERTS A FIELD 006 DOES NOT DECLARE** — 004 declares `market_data_stage: per_row` in
+  `thesis.md` explicitly; **006 declares no thesis-level stage anywhere, and 005 does not
+  either.** `per_row` is the right MODEL and is what the four `late` rows and eight `none` names
+  jointly mean — **but it is the spec describing a value rather than a value the thesis carries,
+  and the declaration is blocked by plan-F19** (unreadable frontmatter, so the field would be
+  invisible). **Recorded, not papered over.** **The two axes are
+  different and the sentence previously used one word for both**, which is the same
+  ambiguity 004 resolved when it moved from a single thesis-level value to `per_row`:
+  **a name can lack a price series while a skill that would consume one still runs at
+  `late`**, and the consequence is stated in-line on each such row (per Q-19) rather than
+  papered over by declaring the skill `none`.
 - **Constitution interaction.** P11 governs IRDM and GSAT at every step — no standalone
   underwriting, 2% binary cap, re-underwrite on a break. **DA-24 governs any SATS read** (a
   non-cash impairment charge flowed through the operating line; the clean read is the
