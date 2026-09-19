@@ -158,7 +158,30 @@ this spec previously carried in its stale form.
 | **The corrected operator margin ladder** (3M basis unless noted): SPCX `Connectivity` **+38.59%** · SATS `Pay-TV` **+20.55%** · **IRDM +15.10%** (ex-transaction-costs **21.45%**) · SATS `Broadband and Satellite Services` **+13.40%** · SATS consolidated **+10.71%** · SPCX consolidated **−1.83%** · SATS `Wireless` **−3.72%** · **GSAT −7.37%** · LUNR **−22.86%** · RKLB **−24.57%** · **PL −37.06%** (gross margin **53.53%**, the universe's best) · YSS **−44.64%** · SPCX `AI` **−49.08%** · SPCX `Space` **−56.34%** · FLY **−80.90%** (the floor) · SATS `Other` **−95.95%** as reported / **−168.66%** ex-DA-24 | `003/_cross/value-pool-map.md` §4; `003/_cross/launch-cost-curve-value-migration_synthesis.md` §3 | `DEMONSTRATED` — **the anchor rows are FY basis and the operator rows are 3M; the two ends are not on the same basis** |
 | **The ladder is BIMODAL, not monotone — high at both ends, negative through the middle.** ANCHOR (a) **holds at 2.02×** (component suppliers mean **22.76%** ÷ prime integrators mean **11.25%**, both FY basis). ANCHOR (b) is **FALSIFIED**: the worst verified margin is FLY's **−80.90%, a manufacturer**, 24.56 pp below the next-worst row — **not** the single-customer operator at −7.37% | same, lines 1143–1197; synthesis §3 | `DEMONSTRATED` |
 | ⚠️ **IRDM's 15.10% and 23.17% are CONFIRMED — but the DIRECTION claim is corrected, and this changes P1's arithmetic.** On the fiscal-year basis IRDM's margin **RISES**: **24.12% (FY2024) → 27.07% (FY2025)**. *"The direction of the 'trend' therefore depends on the period basis chosen, and the only basis on which it is a decline is one contaminated by non-recurring deal costs."* **63.8% of the $22,417 thousand SG&A increase is Rocket Lab Merger Agreement and Aireon transaction costs** ($14.3M); on the six-month basis **46.2%** ($15.0M of $32,443 thousand). Ex-transaction-cost margin **21.45%** | `003/artifacts/IRDM/2026-09-19_1515_risk_methodology.md` lines 138, 152–155; `003/_cross/value-pool-map.md` lines 818–824, 834–837 | `DEMONSTRATED` |
-| **IRDM's ladder admission is `UNEXERCISED`**, pending the component re-run 002-F8 requires. The served `operating_income` carries a **DA-29 signature**: `computed −51,791,000` against `reported +51,791,000` | `003/_cross/value-pool-map.md` lines 851–855, §8 item 11 | **`UNEXERCISED`** — not a pass |
+| **IRDM's ladder admission is `UNEXERCISED`**, pending the component re-run **003's plan F8** requires. The served `operating_income` carries a **DA-29 signature**: `computed −51,791,000` against `reported +51,791,000` | `003/_cross/value-pool-map.md` lines 851–855, §8 item 11 — ⚠️ **which reads *"002's F8"*; that label is WRONG and is corrected here at the implement round. See the citation note below** | **`UNEXERCISED`** — not a pass |
+
+> ### 🔴 CITATION CORRECTED AT THE IMPLEMENT ROUND — `"002's F8"` RESOLVES TO THE WRONG FINDING
+>
+> 003's `value-pool-map.md` says the re-run is *"the component re-run that **002's F8** requires"*
+> and that *"**002's F8** refuted the DA-23 clearance for IRDM."* **Traced to source, that label
+> is wrong, and the citation resolves to something unrelated:**
+>
+> | | What `F8` actually is |
+> |---|---|
+> | **002's `F8`** | **"Amazon Leo as a comparator"** — a falsifier-**reachability** row, `UNRESOLVABLE-FROM-PUBLIC-SOURCES`, kind 2. **002 carries no thesis-level F-series at all**; `F8` appears in exactly **one** artifact, its SATS competitive census, where the `F0…F8` series enumerates *falsifier limbs* |
+> | **003's own `F8`** | **"IRDM's DA-23 clearance is REFUTED, and IRDM is P2's positive control"** — **which is exactly what the citation describes** |
+>
+> **So the finding is real and the label is wrong**: 003 attributed **its own** `F8` to 002, and
+> 006 inherited the misattribution **three times** (§0.3, §1b P1, §7 Phase 1), each citing 003.
+> **The correct citation is 003's own plan F8, whose INPUT is 002 correction 23** (*"001's DA-23
+> clearance is REFUTED for GOOG, IRDM, VRT, UTHR, NVDA"*).
+>
+> **Why it matters and why no gate caught it.** The substance is intact — the DA-23 refutation and
+> the re-run requirement both stand — so **every check that verifies a finding's content passes.**
+> What fails is the *address*, and this programme's citation rule states the consequence exactly:
+> ***"a guessed page number resolves to the wrong page — which is worse than no link, because it
+> looks correct."*** **Found by tracing the reference to the thesis it names, which is the one
+> thing an evaluation round cannot do without reading upstream.**
 | **DA-30 at IRDM, worse than at any other name:** every served quarterly margin **divides by a single `$200,000` thousand denominator** — the Aireon hosting-agreement revenue **ceiling** (`srt:MaximumMember`, six-month period). **8 of 8 reproduce to the basis point.** *"IRDM's served margins do not measure IRDM and NONE of them is admissible to this map."* | `003/_cross/value-pool-map.md` lines 838–843 | `DEMONSTRATED` (the defect) |
 | **The tier's two observed deal multiples, and one is `UNRESOLVED`.** GSAT **41.55×** ($11,660.7M ÷ $280,642K TTM; band 41.4×–41.6×). **IRDM's `8.3×` is NOT sourced in IRDM's own filing set** — IRDM's artifacts give **~13× revenue** ($8.0B EV ÷ $601.8M FY2025) and **3.4× total assets**; the armed reproduction gives **≈6.5× equity-only** and **≈8.5× EV**. **Class: `UNRESOLVED`, band 6.5×–8.5×** | `003/_cross/value-pool-map.md` lines 1257–1273, §8 item 3 | `DERIVED` / **`UNRESOLVED`** |
 | **The contrast, and its direction is basis-invariant:** the demand owner pays **≈41.4–41.6×** for the **unprofitable** operator; the launcher pays **≈6.5–8.5×** for the **profitable** one — against a **22.5-point** margin differential in the **opposite** direction | same, lines 1269–1273 | `DERIVED` |
@@ -402,7 +425,8 @@ IRDM's revenue movement — **$21,977K (53.6%) sits outside it**, because that t
 *service-revenue* disaggregation, not a total-revenue one; **(b)** IRDM's **served** margins are
 inadmissible (DA-30: 8 of 8 divide by a single $200,000 thousand denominator, the Aireon hosting
 ceiling), so the decomposition must be recomputed from filed components — which is also the
-component re-run **002-F8** requires before IRDM's ladder admission can move off `UNEXERCISED`.
+component re-run **003's plan F8** requires (⚠️ *the source label reads "002's F8"; corrected — see
+the citation note at §0.3*) before IRDM's ladder admission can move off `UNEXERCISED`.
 Where the filing does not disaggregate finely enough, the pillar defaults to the coarser
 gross-profit − opex test and the limitation is recorded.
 
@@ -1267,7 +1291,7 @@ is the same failure the constitution records as the reason 005 was re-cut.
 
 | Phase | Tasks | Duration | Dependencies |
 |:---:|------|:---:|------|
-| 1 — Decomposition (P1) | Line-level attribution of IRDM's residual decline on the component identity; isolate the 63.8% transaction-cost share and the $1.251M R&D step-up; test the licensed-service line against the $9.030M residual | Week 1 | **Constitution v1.6.0 loaded**; 002's validated inputs where they apply; the component re-run **002-F8** |
+| 1 — Decomposition (P1) | Line-level attribution of IRDM's residual decline on the component identity; isolate the 63.8% transaction-cost share and the $1.251M R&D step-up; test the licensed-service line against the $9.030M residual | Week 1 | **Constitution v1.6.0 loaded**; 002's validated inputs where they apply; the component re-run **003's plan F8** (not "002's F8" — see §0.3) |
 | 2 — Attribution (P2) | Build the three-basis SOTP; assemble the $19.6B mark with its DA-17 limits and its re-grade to `DERIVED`; run the split for all eight names, **reported per licence regime** | Week 2 | Phase 1 |
 | 3 — D2D placement (P3) | Service-layer compression evidence; place all eight names on the axis by the P2 rule; test whether ASTS is placeable at all, **and whether the granted-licence trio places without D2D** | Week 3 | Phase 2 |
 | 4 — **The gate chain (P4)** | **One deliverable, one phase**: the dated checklist per name and per gate for both deals and both licence regimes; classify filing-evidenced vs registry-blocked; build the primary-grant proxy test; run close-versus-break on IRDM with the Aireon and basis-discontinuity adjustments | Week 4–5 | Phase 3 |
