@@ -142,15 +142,19 @@ declares this structure; the plan adds the wiring, the gates and the F-findings 
 | # | Phase | Pillar | Pairs | Consumed | **New pairs** | **New mode-tasks** | Week |
 |:--:|---|:--:|---:|---:|---:|---:|:--:|
 | **0** | **Preconditions** — sector assignment, listing guards, the F1 ledger | — | — | — | — | — | 0 |
-| **1** | Decomposition — IRDM's residual decline by line | P1 | 12 | 5 | **7** | **19** | 1 |
+| **1** | Decomposition — IRDM's residual decline by line | P1 | 12 | 5 | **7** | **25** | 1 |
 | **2** | Attribution — the three-basis SOTP via `sotp-valuation` + `residual-income` | P2 | 25 | 1 | **24** | **60** | 2 |
-| **3** | D2D placement — all eight names on the axis | P3 | 17 | 4 | **13** | **56** | 3 |
-| **4** | The gate chain — one dated checklist per name | P4 | 17 | 6 | **11** | **26** | 4–5 |
+| **3** | D2D placement — all eight names on the axis | P3 | 17 | 4 | **13** | **62** | 3 |
+| **4** | The gate chain — one dated checklist per name | P4 | 17 | 6 | **11** | **32** | 4–5 |
 | **5** | Queue close-out — the §0b scorecard | P5 | 9 | 1 | **8** | **8** | 6 |
 | **6** | **The sector book** — strategies, sizes, structural analogues | P6 | 18 | 0 | **18** | **18** | 7 |
-| **7** | Hand-off — the register and the sector book for 007 / 009 / 011 | — | — | — | — | — | 8 |
-| | **Total (mentions)** | | **98** | **17** | **81** | **187** | |
-| | **Dispatch total (union)** | | **95** | **16** | **79** | **177** | |
+| **7** | Hand-off — the register and the sector book for 007 / 009 / 011 | — | — | — | — | 0 (hand-emitted) | 8 |
+| | **Total** | | **98** | **17** | **81** | **205** | |
+
+> ⚠️ **The `New tasks` column is `tasks_md`'s OUTPUT, not a model of it** — see F17. It read
+> **19 / 60 / 56 / 26 / 8 / 18 = 187** until the fifth evaluation ran the generator, which
+> produces **205**. **The column was wrong by 18 and the total by 89**, because it was computed
+> from the registry's `essentials_modes` rather than from the tool that generates the work.
 
 > **⚠️ THE `New pairs` COLUMN WAS MISLEADING AND IS NOW PAIRED WITH `New mode-tasks`.** At plan
 > time it read P6 = 18 as *"the largest single phase"* — **which was wrong.** P6's three skills are
@@ -159,13 +163,14 @@ declares this structure; the plan adds the wiring, the gates and the F-findings 
 > heaviest phase and the pair count hid it.** **Pairs measure scope; mode-tasks measure load, and
 > only the second schedules a week.** Both are shown now.
 >
-> **The columns sum to 98 / 17 / 81 / 187, while the dispatch total is 95 pairs / 16 consumed /
-> 79 new / 177 mode-tasks. Both are correct on their own basis, and the 10-task gap is named
+> **The pair columns sum to 98 / 17 / 81, while the pair union is 95 pairs / 16 consumed /
+> 79 new. Both are correct on their own basis, and the gap is named
 > rather than smoothed:** these columns are **per-pillar mentions** and **6 pairs are subscribed
 > by two pillars**, so the union is smaller than the sum. **The matrix dispatches each pair ONCE**
 > (`tasks_md` expands §3, not the `Subscribed` lines — the lines are a coverage invariant, I2), so
-> **177 is the scheduling number and 187 is the sum of what the pillar lists ask for.** Use the
-> mentions column to load a phase; use **177 against the 180 budget — headroom 3.**
+> **205 is the scheduling number** — and **tasks are NOT double-counted the way pairs are**,
+> because the generator emits them from the matrix per `(ticker, skill, mode)`. Use
+> **205 against the `max_tasks: 210` budget — headroom 5.**
 
 > **These columns are computed from §1b's `Subscribed` lines against the F1 ledger, not assigned
 > by hand** — an earlier draft carried five hand-written numbers that did not reconcile to the
@@ -526,11 +531,11 @@ was wrong from the moment it was written**; `plan_audit` has always reported **8
 
 | | mode-tasks |
 |---|---:|
-| Full matrix at depth (Deep rows at **all their modes**; Standard/Light at **1**) | **224** |
-| **Released by the consume rule** (the 16 pairs 001–004 already ran) | **−47** |
-| **Required** | **177** |
-| Budget | **180** |
-| **Headroom** | **3** |
+| **Full matrix, as `tools/tasks_md.py` actually generates it** | **266** |
+| **Released by the consume rule** (the 16 pairs 001–004 already ran) | **−61** |
+| **Required** | **205** |
+| Budget (raised to 210 at this evaluation) | **210** |
+| **Headroom** | **5** |
 
 > ⚠️ **This table read 216 / −47 / 169 until the third pass, and the spec's §4 had already been
 > corrected to 224 / −47 / 177 — so the two documents disagreed on the same computation.** That is
@@ -538,9 +543,9 @@ was wrong from the moment it was written**; `plan_audit` has always reported **8
 > was noticed and not propagated to the other place that quotes it.** Both now read the same
 > numbers, and both were emitted by script rather than typed.
 
-**And the headroom is the finding.** Without F1's 16 consumed pairs the matrix needs **224**
-against a budget of **180** — **over by 44, and the only levers left would be pruning rows this
-spec has twice refused to prune.** *The owner's directive not to repeat work is what makes room
+**And the consume rule is what keeps this NEAR the budget, not what puts it under.** Without
+F1's 16 consumed pairs the generator produces **266** against a budget of **210** — **over by 56,
+and the only levers left would be pruning rows this spec has twice refused to prune.** *The owner's directive not to repeat work is what makes room
 for the two valuation skills the spec was missing.* **That is the opposite of the usual
 direction: a budget constraint normally forces work out; here, removing duplicated work is what
 lets the missing work in.**
@@ -642,6 +647,68 @@ paraphrase propagates the paraphrase.**
 > no trustworthy baseline exists** — which is exactly the kind of thing a consumer must know
 > **before** citing them.
 
+### 🆕 F17 — **The budget was MODELLED, not RUN — and three passes "corrected" it on the same wrong model.** *(all phases — the fifth evaluation, and the largest number in this plan)*
+
+**A phase map was missing, and finding that led to the real finding.**
+
+`tools/tasks_md.py` **refuses to run without `phases.yaml`**: `ERROR: no phase map. Pass
+--phases or add phases.yaml.` **006 had none — so the thesis could not generate a single task.**
+plan.md described a phase table, a dispatch model and a mode-task budget, and **the machine that
+turns a plan into work could not read any of it.** (Only 002, 003 and 004 carried a map; 001 and
+005–009 did not. `phases.yaml` is now written for 006 — **A-14**.)
+
+**Then the generator was run, and it disagreed with the plan by 89 tasks.**
+
+| | tasks |
+|---|---:|
+| **`tasks_md` full matrix — RUN** | **266** |
+| Released by the consume rule (61 tasks belong to the 16 consumed pairs) | **−61** |
+| **Required** | **205** |
+| Budget | **180 → 210** |
+
+**The plan said 177. It was wrong by 28 on the requirement and 89 on the full matrix, and the
+error has one cause: I computed the mode expansion from the registry instead of running the
+tool.**
+
+`agentii_cmd.depth_to_modes` returns **one** mode for an empty `essentials_modes`.
+**`tasks_md` gives three** to the four Standard skills that do not declare `methodology` —
+`recent-quarter` (`consolidated-p-and-l`, `earnings-vs-consensus`, `margin-analysis`),
+`business-model`, `growth-strategy`, `secular-trends` — and **`8×2 + 6×2 + 4×2 + 3×2 = 42`**, which
+is exactly the gap between the modelled 224 and the generated 266.
+
+> ### 🔴 THREE ROUNDS "CORRECTED" THIS ARITHMETIC AND EVERY CORRECTION WAS BUILT ON THE SAME WRONG MODEL.
+> F13 opened by saying **the budget *"had never been reconciled"***. **It had never been RUN.**
+> Round 2 rebuilt the reconciliation, round 3 fixed its stale numbers, and both were arithmetic
+> **over a model of the generator rather than over its output.** The corrections were real —
+> 79→87→95 was a genuine sequence of fixes — and **all of them were scored against the wrong
+> denominator.**
+>
+> **And the conclusion INVERTS.** The plan said **headroom 3**. The truth is **25 over budget**
+> at 180. **A budget that reads "just fits" while being 25 short is worse than one that reads
+> "over"**, because the plan's own §4 rule — inherited from 005 — is that *a budget which
+> silently truncates an owner-directed scope is the failure mode the budget exists to prevent.*
+> **A silent 25-task truncation is exactly that failure, and the plan's arithmetic would have
+> concealed it.**
+
+**Fixed at the source:** `max_tasks: 180 → 210`, set from the generator's 266, with 5 tasks of
+margin (005's own margin was ~2). **The spec's §4 and this plan now both carry 266 / −61 / 205.**
+**A-14.**
+
+**And running the generator exposed a second defect, in the same family.** The first run emitted
+**T904 — a task instructing 006 to publish `_cross/tier1-value-capture-ranking.md`**, which is
+**005's artifact.** `tasks_md` reads any backticked `_cross/*.md` token inside §6 as a
+*deliverable of this thesis*, and **my §6 cross-reference to 005's artifact** — *"Isomorphic to
+005's `_cross/tier1-value-capture-ranking.md`"* — was parsed as one. **The tool already guards
+this** (its docstring: *"emitting a task for another thesis's artifact is worse than emitting
+none"*) by scoping the scan to §6 — **but a citation inside §6 is still a citation, and the scope
+guard cannot tell one from a declaration.** Reworded; the thesis now emits **4** cross-cutting
+tasks, all its own. **A-15.**
+
+**The generalisable rule, which the spec now states once:** *where a model and the generator
+disagree, the generator's output is the number.* This is the fifth instance of the session's one
+defect — **a value computed by hand where the system owning it could have been asked** — and the
+first where the hand-computed value **changed a conclusion** rather than a description.
+
 ## Constitution Check (second evaluation — the scalar-clearance pass, as promised)
 
 **The first check's note said a second evaluation would run because F1 and F2 *"change what the
@@ -691,6 +758,8 @@ applied here and caught the change.**
 | **A-10** | **P4's HAWK checklist carries BOTH defects** — the listing-date guard **and** a DA-23 test behind it | 002: *"HAWK is a DA-28 that **masks a separate DA-23**."* §2 inherits only the DA-28, so the guard would suppress the false-positive **and leave the sign strip untested** (F14) |
 | **A-12** | ✅ **APPLIED** — §4's reconciliation is **emitted by script**, and a stated total must equal the sum printed beside it | **§4's total was wrong three times** — *"79"* (never computed), then *"87"* whose **own components summed to 99**, while the real matrix was 95 — **and the plan's F13 table quoted a different set again (216/169 vs the spec's 224/177)**. A total that disagrees with the sum beneath it is worse than no total: a reader who adds the parts cannot tell which side to trust (third-pass finding) |
 | **A-13** | ✅ **APPLIED** — F1's description column carries each artifact's **own title**, not a paraphrase | **Six of sixteen paraphrases did not match the artifact** (F16), and a CONSUME ledger that misdescribes what it consumes is worse than none: the citation resolves, so the failure is silent. **The root cause is that the column was written from §0's prose — and §0's own descriptions are not reliable** |
+| **A-14** | ✅ **APPLIED — `phases.yaml` written, and the budget set from the generator** | **`tasks_md` refuses to run without a phase map, and 006 had none** — the thesis could not generate a single task. Running it produced **266**, not the modelled 224, **without a phase map. Writing it was not a formality; it was what exposed F17.** `max_tasks` 180 → 210 |
+| **A-15** | ✅ **APPLIED** — §6's cross-reference to 005's artifact is reworded so it is not a backticked `_cross/*.md` token | **It emitted T904, instructing 006 to publish 005's artifact.** The tool scopes its scan to §6 to prevent exactly this, **but a citation inside §6 is indistinguishable from a declaration to a regex.** `cross_tasks` should exclude an artifact whose name is attributed to another thesis — or the scope should be a bullet list, not a section |
 | **A-11** | **`parse_matrix` should REPORT what it dropped** — an unparseable skill or ticker cell must fail loudly, not vanish | **Three instances in one session, all mine**, and **the second reproduced inside the very fix for the first**: a bolded cell undercounts the matrix (89 vs 95) with no warning, and no invariant sees a row that failed to parse (F15) |
 
 ---

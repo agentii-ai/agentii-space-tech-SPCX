@@ -32,7 +32,12 @@ known-open: []
 # verbatim: a budget that silently truncates an owner-directed scope is the failure mode the
 # budget exists to prevent. The Q-12 answer ("keep 60, prune Standard and Light") was correct
 # on its premise -- an unchanged scope -- and Q-15 voided that premise.
-budget: {max_tasks: 180, max_retries_per_task: 2}
+# Q58. 60 -> 180 at clarify Q-17 (owner-directed sector-book scope), then 180 -> 210 at the
+# plan's FIFTH evaluation, which RAN tasks_md instead of modelling it. The generator produces
+# 266 tasks at full matrix; 61 belong to the 16 pairs plan-F1 marks CONSUME; 205 are required.
+# 180 was therefore 25 SHORT. The per-rule reasoning is unchanged and is 005's: a budget that
+# silently truncates an owner-directed scope is the failure mode the budget exists to prevent.
+budget: {max_tasks: 210, max_retries_per_task: 2}
 # Q59. Declared at the 2026-09-20 clarify round (spec Q-13). Six, at the finest granularity,
 # because each names a distinct datum that would move a verdict -- and two of them name events
 # that may never occur, which is why they are triggers and not assumptions.

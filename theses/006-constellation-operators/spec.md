@@ -1027,27 +1027,54 @@ split Deep/Standard — plus `residual-income` on the scarce trio).
 > `plan_audit`, not typed.** The reconciliation below was likewise stale — it read
 > **202 / −47 / 155**, the pre-F11 and pre-depth-split values — and is recomputed.
 
-**The reconciliation, computed row by row rather than estimated:**
+**The reconciliation — and it is now RUN, not modelled.**
 
 | | mode-tasks |
 |---|---:|
-| Full matrix at depth (Deep rows at **all their modes**; Standard/Light at **1**) | **224** |
-| **Released by the consume rule** — the 16 pairs 001–004 already ran (plan F1) | **−47** |
-| **Actually required** | **177** |
-| Against `max_tasks: 180` | **headroom 3** |
+| **Full matrix, as `tools/tasks_md.py` actually generates it** | **266** |
+| **Released by the consume rule** — the 16 pairs 001–004 already ran (plan F1) | **−61** |
+| **Actually required** | **205** |
+| Against `max_tasks` | **210** → **headroom 5** |
 
-**⚠️ The fallback is NOT `methodology` for every skill — and the count survives anyway.**
-`depth_to_modes` prefers `methodology` **only where the skill declares it**; otherwise it takes
-`declared[:1]`. **Eight of 006's skills do not declare `methodology`** and fall back to their
-first slug: `competitive` → `direct-competitor-identification-and-analysis` · `risk` →
+> ### 🔴 THIS TABLE SAID 177 AND "HEADROOM 3", AND IT WAS WRONG BY 28 — because it was MODELLED.
+>
+> **Three successive rounds "corrected" this table and every correction was built on the same
+> wrong model.** I computed the mode expansion from the registry's `essentials_modes` via
+> `agentii_cmd.depth_to_modes`, which for an empty essentials set returns **one** mode. **The
+> generator does not use that rule.** `tasks_md.py` gives **three** modes to the four Standard
+> skills that do not declare `methodology` — `recent-quarter` (`consolidated-p-and-l`,
+> `earnings-vs-consensus`, `margin-analysis`), `business-model`, `growth-strategy` and
+> `secular-trends` — and **+42 is exactly the difference** (`8×2 + 6×2 + 4×2 + 3×2`).
+>
+> **There are two mode-expansion rules in this workspace and I budgeted off the one that does
+> not produce the work.** The remedy is not a better model: **`tasks_md` is the generator, so
+> its output is the number**, and `max_tasks` is now set from it.
+
+**⚠️ The fallback is NOT `methodology` for every skill — AND THIS IS WHERE THE 42-TASK ERROR
+CAME FROM.** `depth_to_modes` prefers `methodology` **only where the skill declares it**;
+otherwise it takes `declared[:1]` — **one mode**. **Eight of 006's skills do not declare
+`methodology`** and fall back to their first slug: `competitive` →
+`direct-competitor-identification-and-analysis` · `risk` →
 `general-risk-factors-identification-assessment` · `business-model` →
 `business-model-classification` · `secular-trends` →
 `evaluate-company-s-exposure-to-major-secular-technology-trends` · `growth-strategy` →
 `growth-strategy-assessment` · and `recent-quarter`, `peer-bench`, `sector-overview` → `defaults`.
-**Every fallback yields exactly ONE mode**, which is why the arithmetic above is unaffected —
-**but the reason matters**: an earlier draft of this note asserted *"the single `methodology`
-slug"* as though it were uniform, and **it is not**. The count is right; the explanation was not,
-and a reader checking the explanation would have found the error.
+
+> ### 🔴 THIS PARAGRAPH USED TO CLOSE *"Every fallback yields exactly ONE mode, which is why the arithmetic above is unaffected."* **THAT SENTENCE WAS THE ERROR, AND IT SAT DIRECTLY BENEATH THE TABLE IT CONTRADICTED.**
+>
+> The sentence is **true of `depth_to_modes`** and **false of the generator**. `tasks_md.py`
+> gives **three** modes to four of those skills — `recent-quarter`, `business-model`,
+> `growth-strategy`, `secular-trends` — and **+42 is exactly the difference between the modelled
+> 224 and the generated 266.**
+>
+> **A paragraph that certifies the arithmetic above it, sitting inside the same block, is the
+> most dangerous form of the defect this thesis keeps finding**: earlier drafts corrected the
+> *table* and left the *sentence that vouched for the table's method* untouched. **A reader who
+> checked the reasoning rather than the number would have been told the answer was right.**
+>
+> **The governing rule is now stated once, here:** where a model and the generator disagree,
+> **the generator's output is the number.** `max_tasks: 210` is set from `tasks_md`'s 266, not
+> from any model of it.
 
 ⚠️ *This note has now been corrected twice and the history is kept, because the pattern is the
 point.* It first read *"the `max_tasks: 40` currently recorded in `thesis.md` … recorded as an
@@ -1159,7 +1186,14 @@ is the same failure the constitution records as the reason 005 was re-cut.
   non-P11 names** (entry condition, dateable catalyst with its source, disposition, size),
   **plus the two gate cards explicitly marked `not sizeable` and carrying their class**, the
   **structural-analogue inventory**, and the **two-count headline** (actionable at 20–60 days;
-  datable at 180). Isomorphic to 005's `_cross/tier1-value-capture-ranking.md`. **The
+  datable at 180). Isomorphic to **005's own primary cross-cutting artifact** — which is
+  named here WITHOUT the backticked-path form, deliberately: `tools/tasks_md.py` reads any
+  ``_cross/*.md`` token inside §6 as a deliverable of THIS thesis, so a cross-reference written
+  that way emitted **T904, a task instructing 006 to publish 005's artifact.** The tool's own
+  docstring warns that *"emitting a task for another thesis's artifact is worse than emitting
+  none"* and scopes its scan to §6 — **but a citation inside §6 is still a citation, and the
+  scope guard cannot tell one from a declaration.** **The
+  
   attribution register keeps its own semantics untouched** — it is what 007, 009 and 011 cite
   for *value*, and mixing strategy and size into it would blur a document whose whole job is
   attribution.

@@ -1,0 +1,72 @@
+# phases.yaml — pillar → phase map for `tools/tasks_md.py`
+#
+# ⚠️ ADDED AT THE PLAN'S FIFTH EVALUATION, AND IT WAS BLOCKING. `tasks_md.py` refuses to run
+# without a phase map — literally: `ERROR: no phase map. Pass --phases or add phases.yaml.` —
+# so **006 could not generate a single task.** plan.md described a phase table, a dispatch
+# model and a mode-task budget, and **the machine that turns a plan into work could not read
+# any of it.** Only 002, 003 and 004 carried a map; 001 and 005–009 did not.
+#
+# ⚠️ THE SCHEMA LINE IS DELIBERATELY NOT WRITTEN AS A KEY. `tasks_md.parse_phases` reads the
+# map with `re.search(r"phases:\s*\{([^}]*)\}")` — a bare SEARCH, not an anchored match — so a
+# comment containing a literal brace-block after that word is parsed as the declaration and the
+# real one is never read. Copying the platform's own PHASES_FILE header verbatim therefore
+# raises `invalid literal for int()`. The schema is stated in prose instead:
+#   keys PIL-N  ->  phase number (int)
+#   key  names  ->  phase number  ->  label
+#   key  depends ->  phase number  ->  dependency text
+#
+# 006's assignment, and it IS pillar order — which is the one thing that differs from 004:
+#
+#     PIL-1 (decomposition)     -> 1
+#     PIL-2 (attribution)       -> 2
+#     PIL-3 (D2D placement)     -> 3
+#     PIL-4 (the gate chain)    -> 4
+#     PIL-5 (queue close-out)   -> 5
+#     PIL-6 (the sector book)   -> 6
+#
+#   ⚠️ WHY PILLAR ORDER IS SAFE HERE, WHERE IT WAS NOT AT 004. 004's PIL-1 had to move to
+#   phase 7 because its only subscribed matrix row was `SPCX × sotp-valuation` — every other
+#   skill it named was CONSUMED and generated no task — so first-pillar filing put the anchor
+#   computation ahead of its own inputs, a dependency violation. **006's PIL-1 carries four
+#   NEW pairs and two consumed ones**, so it produces real tasks at phase 1 legitimately: the
+#   decomposition is genuinely the first analytical step, and P2–P6 each consume what precedes
+#   them. **That difference is the check 004's finding implies, and it was run rather than
+#   assumed.**
+#
+#   PHASE 0 IS NOT A PILLAR and generates NO task. It is the preconditions — assigning `sector`
+#   for ASTS/VSAT/BKSY, the HAWK listing-date guard, and writing the F1 consume ledger. It is
+#   ingestion and setup, not research, so nothing is filed there. **It is hand-emitted in
+#   plan.md, which is where it must be tracked.**
+#
+#   PHASE 7 IS NOT A PILLAR either. The hand-off — the attribution register and the sector book
+#   for 007, 009 and 011, and the gate-chain citation to 005 — is publication, not analysis.
+#
+#   ⚠️ THE `P11` BRACKET IS NOT A PILLAR. `position-sizing`'s row carries `(P6, P11)` and the
+#   deal-security tagging rules are cited as `P11` throughout. P11 is a **constitution policy**,
+#   not one of the six pillars; a reader who maps it to a phase number will crash `int()`. It is
+#   filed under its first REAL pillar.
+#
+# PHASE LOADS OVERLAP, as in 003 and 004. A task bracketed [PIL-2/PIL-6] is filed once, under
+# its FIRST pillar, but serves both. The gap between that and the true per-pillar load is the
+# first-pillar heuristic, not missing work.
+phases: {PIL-1: 1, PIL-2: 2, PIL-3: 3, PIL-4: 4, PIL-5: 5, PIL-6: 6}
+
+names:
+  0: "Preconditions — sector assignment for ASTS/VSAT/BKSY, the HAWK listing-date guard, and the F1 consume ledger"
+  1: "Decomposition (P1) — IRDM's residual margin decline attributed by revenue line, on the component identity"
+  2: "Attribution (P2) — the three-basis SOTP per licence regime, via sotp-valuation and residual-income"
+  3: "D2D placement (P3) — all eight names on the licence/service axis, and whether the granted-licence trio places without D2D"
+  4: "The gate chain (P4) — one dated checklist per name, for both deals and both licence regimes"
+  5: "Queue close-out (P5) — the §0b scorecard: every contested figure converted or classed"
+  6: "The sector book (P6) — the strategy set on the six non-P11 names, the structural analogues, the two-count headline"
+  7: "Hand-off — the attribution register and the sector book for 007, 009 and 011, and the gate chain to 005 by citation"
+
+depends:
+  0: "Constitution 1.6.0 loaded; 001–004 COMPLETE; plan F1's consume ledger written"
+  1: "Phase 0; **`002-F8`'s component re-run is a genuine blocker** — until it lands IRDM's ladder admission is `UNEXERCISED`, and P1 is the Minimum Defensible View. IRDM's SERVED margins are inadmissible (DA-30: 8 of 8 divide by the Aireon hosting ceiling)"
+  2: "Phase 1; 004's comparability partition admits **0 of 11** — no satellite peer multiple may be imported, and `sotp-valuation` runs Deep on the scarce trio only"
+  3: "Phase 2 — the placement rule IS P2's attribution, so P3 cannot precede it"
+  4: "Phase 3; every gate is dated with a filed source or recorded as a disclosure-quality finding. **HAWK carries TWO defects** (a DA-28 that masks a DA-23) — the listing guard does not test the strip beneath it"
+  5: "Phase 4; a verdict is not a grade — `UNEXERCISED` / `UNEVIDENT` / `WITHHELD` are reported as themselves"
+  6: "Phase 5; **`get_price_history` is REFUSED** (`position-sizing` is `late`) and no price series exists for any Tier 2 name — every published size states that in-line"
+  7: "Phase 6; boundaries name 007, 009 and 011; the gate chain is cited to 005, never re-derived"
